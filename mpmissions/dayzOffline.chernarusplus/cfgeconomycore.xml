@@ -37,5 +37,9 @@ Do not forget to add attribute act="car", if root class represents moveable vehi
 	</defaults>
 	<ce folder="custom">
 		<file name="types_zenskills.xml" type="types" />
+		<file name="types_zentreasure.xml" type="types" />
+		<file name="types_nemsis.xml" type="types" />
+		<file name="types_lmplanes.xml" type="types" />
+		<file name="types_cookz.xml" type="types" />
 	</ce>
 </economycore>

@@ -59,8 +59,9 @@ docs/
 sakhal/
 server_manager/
 
-# --- Ignore profiles/logs/runtime ---
+# --- Allow config folder (mod configs only, not logs/runtime) ---
+!config/
 config/*
-!config/NotificationsSystem/
-!config/NotificationsSystem/**
+!config/CarePackagesV2/
+!config/CarePackagesV2/**
 battleye/

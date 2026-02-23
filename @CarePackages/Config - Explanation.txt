@@ -1,0 +1,173 @@
+{
+    "Locations": [							// Configure where you want the Packages to be sent here
+        {
+            "Name": "Krasnostav Airstrip",	// Name of the town the CarePackage is located
+            "Location": [
+                11930, 						// X Coordinate
+				12490 						// Y Coordinate
+            ],
+            "Accuracy": 50,					// Accuracy of the CarePackage in meters
+            "AllowedPackageIDs": [
+                1,2,3						// Which CarePackage runs are allowed to spawn at this location
+            ]
+        },
+        {
+            "Name": "Northwest Airfield",
+            "Location": [
+                4349,
+				9826
+            ],
+            "Accuracy": 50,
+            "AllowedPackageIDs": [
+                1,3,4
+            ]
+        }
+    ],
+    "Packages": [
+        {
+            "Package_name": "Military",							// This isnt used yet, but can be set to whatever you like
+            "object_type": "CarePackage_typhon",				// Object name for the CarePackage that holds the loot, options available are listed in Types.txt
+            "parachute_type": "ArmyParachute_typhon",			// Object name for the Paracute, options available are listed in Types.txt
+            "MinWeapons": 1,									// Minimum amount of items from the "Weapons" list to be spawned
+            "MaxWeapons": 4,									// Maximum amount of items from the "Weapons" list to be spawned
+            "MinMiscItems": 5,									// Minimum amount of items from the "Items" list to be spawned
+            "MaxMiscItems": 10,									// Maximum amount of items from the "Items" list to be spawned
+            "AllowedPackageIDs": [
+                1,3,5											// Which CarePackage runs are allowed to spawn this Care Package type
+            ],
+            "Items": [
+                {												
+                    "Item": "Mag_AKM_Drum75rnd",				// Name of the item to be spawned as loot
+                    "MinQty": 1,								// Minimum and maximum quantity the item spawned will be set at
+                    "MaxQty": 75,								// For example you might set VitaminBottle to spawn a minimum of 12 tablets and a max of 32
+                    "Attachments": [							// For items that dont use quantity just set the min and max as 1	
+					]											// Attachments to spawn on this loot object
+                },
+                {
+                    "Item": "Mag_SVD_10rnd",
+                    "MinQty": 1,
+                    "MaxQty": 10,
+                    "Attachments": []
+                }
+            ],
+            "Weapons": [
+                {
+                    "Item": "FAL",
+                    "Attachments": [
+                        "Mag_FAL_20Rnd",
+                        "Fal_FoldingBttstck",
+                        "ACOGOptic"
+                    ]
+                },
+                {
+                    "Item": "AKM",
+                    "Attachments": [
+                        "Mag_AKM_Drum75rnd",
+                        "AK_WoodHndgrd",
+                        "AK_woodBttStck",
+                        "KobraOptic"
+                    ]
+                },
+                {
+                    "Item": "SVD",
+                    "Attachments": [
+                        "Mag_SVD_10rnd",
+                        "PSO1Optic"
+                    ]
+                }
+            ]
+        },
+        {
+            "Package_name": "Medical",
+            "object_type": "CarePackage_red",
+            "parachute_type": "ArmyParachute_black_digital",
+            "MinWeapons": 0,
+            "MaxWeapons": 0,
+            "MinMiscItems": 5,
+            "MaxMiscItems": 10,
+            "AllowedPackageIDs": [
+                2,4,6
+            ],
+            "Items": [
+                {
+                    "Item": "Nail",
+                    "MinQty": 17,
+                    "MaxQty": 69,
+                    "Attachments": []
+                },
+                {
+                    "Item": "TetracyclineAntibiotics",
+                    "MinQty": 4,
+                    "MaxQty": 10,
+                    "Attachments": []
+                },
+                {
+                    "Item": "VitaminBottle",
+                    "MinQty": 10,
+                    "MaxQty": 25,
+                    "Attachments": []
+                }
+            ],
+            "Weapons": []
+        }
+    ],
+    "InfectedTypes": [						// If you have custom zombies they can be added to this list to be spawned at the CarePackage
+        "ZmbM_CitizenASkinny_Blue",			// You could also add wolves of bears here
+        "ZmbM_CitizenASkinny_Brown",
+        "ZmbM_CitizenASkinny_Grey",
+        "ZmbM_MotobikerFat_Beige",
+        "ZmbM_MotobikerFat_Black",
+        "ZmbM_MotobikerFat_Blue",
+        "ZmbM_JoggerSkinny_Red",
+        "ZmbM_SkaterYoung_Blue",
+        "ZmbM_SkaterYoung_Brown",
+        "ZmbM_SkaterYoung_Green",
+        "ZmbM_SkaterYoung_Grey",
+        "ZmbM_ClerkFat_Brown",
+        "ZmbM_ClerkFat_Khaki",
+        "ZmbF_JournalistNormal_White",
+        "ZmbF_Clerk_Normal_White",
+        "ZmbF_CitizenANormal_Blue",
+        "ZmbF_CitizenBSkinny",
+        "ZmbF_HikerSkinny_Grey",
+        "ZmbF_SurvivorNormal_Orange",
+        "ZmbF_HikerSkinny_Green",
+        "ZmbF_JoggerSkinny_Green",
+        "ZmbF_SkaterYoung_Striped",
+        "ZmbF_BlueCollarFat_Red",
+        "ZmbF_MechanicNormal_Beige",
+        "ZmbF_PatientOld",
+        "ZmbF_ShortSkirt_beige",
+        "ZmbF_VillagerOld_Red",
+        "ZmbF_JoggerSkinny_Red",
+        "ZmbF_MilkMaidOld_Beige",
+        "ZmbF_VillagerOld_Green",
+        "ZmbF_ShortSkirt_yellow",
+        "ZmbF_NurseFat",
+        "ZmbF_PoliceWomanNormal",
+        "ZmbF_HikerSkinny_Blue",
+        "ZmbF_ParamedicNormal_Green",
+        "ZmbF_JournalistNormal_Red",
+        "ZmbF_SurvivorNormal_White",
+        "ZmbF_JoggerSkinny_Brown",
+        "ZmbF_MechanicNormal_Grey",
+        "ZmbF_BlueCollarFat_Green",
+        "ZmbF_DoctorSkinny"
+    ],
+    "LootSpawnType": 0,											// 0 = Spawn items randomly // 1 = Spawn all items in the list
+    "MinutesBetweenPackages": 31,								// A new CarePackage will be called at this interval starting from when it is called not when its dropped
+    "DropHeight": 200,											// Height at which the CarePackage will start from the ground
+    "DropTime": 15,												// Ammount of time in minutes before the CarePackage is dropped from the sky at the location
+    "MinimumPlayers": -1,										// How many players should there be at minimum for a Package to be called. // -1 = ignore this check
+    "PackagesBeingRan": 6,										// How many Care Package runs should there be, each will be its own instance and run the same timings as if you only had one package run.
+    "PackageCallDelay": 5,										// How many minuites between the start of each care package run should there be
+    "MinutesAway": 4,											// This is how many minutes before the CarePackage is dropped that the players will be warned
+    "ZombiesToSpawn": 1,										// Amount of zombies to spawn at the CarePackage
+	"LocationHistoryCheckRange": 3,								// How many of the last x pack
+	"LockPackages": true,										// true = Care Packages will be locked on drop and players will need to hit F to open them (stops people looting from cars)
+    "Title": "Care Package",									// Title of the in game announcements
+    "DroppedMessage": "The care package has been deployed", 	// Message that plays when the CarePackage is dropped
+    "StartMessage": "A care package is on its way to ",			// Message played when the location is chosen for the CarePackage
+    "MinutesAwayPrefix": "The care package is ",				// Message that is played x minutes before the package is dropped
+    "MinutesAwaySuffix": " minutes away from "					// This example will say: "The care package is 2 minutes away from Berezino."
+}

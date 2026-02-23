@@ -1,0 +1,10 @@
+name = "CookZ";
+picture = "CookZ\data\cookZLogo.edds"; // picture in expanded description
+logoSmall = "CookZ\data\cookZLogo.edds"; // icon next to mod name when description is not expanded
+logo = "CookZ\data\cookZLogo.edds"; // logo below game menu
+logoOver = "Cook the mouse over!"; // on mouse hover over logo
+tooltip = "Cook it!"; // tool tip on mouse hover
+overview = "Provides some recipes for pan and pot."; // overview
+action = "https://dayz.com/"; // link
+author = "peetpan"; // author
+version = "0.1"; // version

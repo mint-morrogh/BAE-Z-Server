@@ -1,0 +1,36 @@
+* multiple images created with
+** https://magicstudio.com
+** local setup of https://replicate.com/vetkastar/fooocus
+** DALL.E via chat gtp
+** https://designer.microsoft.com/image-creator
+* box model based on https://sketchfab.com/3d-models/chinese-take-out-boxes-254dac595ad3482a97455176366dde19
+    by gulvtaepper
+    under https://creativecommons.org/licenses/by/4.0/
+* sausage model based on https://www.cgtrader.com/free-3d-models/food/miscellaneous/raw-pork-sausage
+    by https://www.cgtrader.com/designers/realityscanning
+    under Editorial No Ai License
+* other models and textures based on vanilla assets
+* json configuration inspired by same feature in mod RaG_Hunting_Cabin
+* sausage brandings
+** bull     <a href="https://www.flaticon.com/free-icons/bull" title="bull icons">Bull icons created by Triangle Squad - Flaticon</a>
+** pig      <a href="https://www.flaticon.com/free-icons/pig" title="pig icons">Pig icons created by photo3idea_studio - Flaticon</a>
+** goat     <a href="https://www.flaticon.com/free-icons/goat" title="goat icons">Goat icons created by UIUX Mall - Flaticon</a>
+** bear     <a href="https://www.flaticon.com/free-icons/bear" title="bear icons">Bear icons created by Freepik - Flaticon</a>
+** sheap    <a href="https://www.flaticon.com/free-icons/sheep" title="sheep icons">Sheep icons created by Icongeek26 - Flaticon</a>
+** boar     <a href="https://www.flaticon.com/free-icons/boar" title="boar icons">Boar icons created by Freepik - Flaticon</a>
+** deer     <a href="https://www.flaticon.com/free-icons/deer" title="deer icons">Deer icons created by Delwar018 - Flaticon</a>
+** rabbit   <a href="https://www.flaticon.com/free-icons/rabbit" title="rabbit icons">Rabbit icons created by Icongeek26 - Flaticon</a>
+** human    <a href="https://www.flaticon.com/free-icons/forbidden" title="forbidden icons">Forbidden icons created by Fathema Khanom - Flaticon</a>
+** fox      <a href="https://www.flaticon.com/free-icons/fauna" title="fauna icons">Fauna icons created by G-CAT - Flaticon</a>
+** reindeer <a href="https://www.flaticon.com/free-icons/deer" title="deer icons">Deer icons created by Icons_Field - Flaticon</a>
+** can      <a href="https://www.flaticon.com/free-icons/canned-food" title="canned food icons">Canned food icons created by Freepik - Flaticon</a>
+** food box <a href="https://www.flaticon.com/free-icons/food-delivery" title="food delivery icons">Food delivery icons created by Freepik - Flaticon</a>
+** read     <a href="https://www.flaticon.com/free-icons/read" title="read icons">Read icons created by Aranagraphics - Flaticon</a>
+** sausage  <a href="https://www.flaticon.com/free-icons/sausage" title="sausage icons">Sausage icons created by Mzipi - Flaticon</a>
+** cheese   <a href="https://www.flaticon.com/free-icons/cheese-slice" title="cheese slice icons">Cheese slice icons created by icon-kreativ-schmiede - Flaticon</a>
+** wheat    <a href="https://www.flaticon.com/free-icons/wheat" title="wheat icons">Wheat icons created by Freepik - Flaticon</a>
+** blood    <a href="https://www.flaticon.com/free-icons/blood" title="blood icons">Blood icons created by Good Ware - Flaticon</a>
+** chicken  https://www.freepik.com/icon/hen_9516115 by Hen icon | Freepik
+** wolf     https://www.freepik.com/icon/wolf_8531941 by Wolf icon | FreepikGeneric Glyph
+** cow      <a href="https://www.flaticon.com/free-icons/cow" title="cow icons">Cow icons created by Freepik - Flaticon</a>
+* https://www.freepik.com/free-photo/old-book-open-dark-wood-background_1273906.htm#query=open%20book%20texture&position=4&from_view=keyword&track=ais_hybrid&uuid=fd155083-6853-4f27-b9b2-36a027d6efc1

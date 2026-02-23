@@ -1,6 +1,22 @@
-# DayZ Private Server Setup Guide
+# Blood & Barter — DayZ Private Server
 
 A private DayZ co-op server configured for small groups (2-4 players) on Chernarus. Designed for a relaxed survival experience with quality-of-life mods, faster day/night cycles, and customized zombie spawns.
+
+### Features
+
+- **17 mods** — all preconfigured and ready to go
+- **Flyable planes** — DC-3, Spitfire, Cessna 180, Catalina seaplane, Tigermoth, Stuntplane (14 planes across the map)
+- **Care package supply drops** — military, medical, survival, and building supplies parachute in every 30 minutes with zombie guards
+- **700+ crafting recipes** — weapons, armor, ammo, vehicles, bushcraft, NBC gear, and more via Nemsis Craftingpack
+- **Advanced cooking** — 30+ recipes for dishes, soups, sausages, and cheese via CookZ
+- **Skill tree** — earn XP and unlock perks in survival, crafting, hunting, and gathering
+- **Treasure hunting** — find photos, travel to the location, dig up randomized loot stashes
+- **NPC traders** — buy and sell items at safe zones
+- **Slower zombies** — no sprinting infected, reduced coastal spawns for easier starts
+- **Unlimited stamina** — no stamina drain while sprinting
+- **One-file configuration** — all server settings in `server_settings.json`, applied with a single click
+- **Auto-restart** — server automatically restarts every 4 hours
+- **Full persistence** — bases, vehicles, and inventory survive restarts
 
 ## Quick Start
 
@@ -173,18 +189,13 @@ These mods must be installed on both the **server** and **client**.
 | [No Sprinting Zombies](https://steamcommunity.com/sharedfiles/filedetails/?id=1816010715) | 1816010715 | Zombies walk and jog but don't sprint |
 | [Zenarchist's Skills](https://steamcommunity.com/sharedfiles/filedetails/?id=3601119520) | 3601119520 | Skill perk tree — survival, crafting, hunting, gathering |
 | [CZ Optics](https://steamcommunity.com/sharedfiles/filedetails/?id=3571068454) | 3571068454 | Additional optics and scopes |
-
-### Server-Side Only Mods
-
-These mods run on the server only — players do **not** need to download them.
-
-| Mod | Workshop ID | Description |
-|---|---|---|
-| [GameLabs](https://steamcommunity.com/sharedfiles/filedetails/?id=2464526692) | 2464526692 | CFTools integration framework for server management |
-| [CW GameLabs](https://steamcommunity.com/sharedfiles/filedetails/?id=3548025008) | 3548025008 | Dynamic & static map markers on CFTools web-map (tracks dropped items, POIs) |
-| [NotificationsSystem](https://steamcommunity.com/sharedfiles/filedetails/?id=3624261153) | 3624261153 | In-game notification broadcasts — welcome messages, event warnings, server alerts |
-
-> **Note:** Server-side mods use `-serverMod=` in `start.bat` instead of `-mod=`. They are already configured in the launch script.
+| [PercentageHUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3443562573) | 3443562573 | Shows health, blood, hunger, thirst, and stamina as percentages on the HUD |
+| [Zen's Treasure](https://steamcommunity.com/sharedfiles/filedetails/?id=3426979799) | 3426979799 | Photo-based treasure hunting — find photos, travel to the location, dig up randomized loot stashes |
+| [Care Packages V2](https://steamcommunity.com/sharedfiles/filedetails/?id=2691041685) | 2691041685 | Randomized care package drops with notifications, locked containers, and custom loot |
+| [Nemsis Craftingpack All-in-One](https://steamcommunity.com/sharedfiles/filedetails/?id=3606014796) | 3606014796 | 500+ items, 700+ crafting recipes — weapons, armor, vehicles, bushcraft, ammo crafting, and more |
+| [LMs Planes](https://steamcommunity.com/sharedfiles/filedetails/?id=3639695989) | 3639695989 | Flyable planes — DC-3, Cessna 180, Spitfire, Catalina seaplane, Tigermoth, Stuntplane |
+| [CookZ](https://steamcommunity.com/sharedfiles/filedetails/?id=3302732231) | 3302732231 | Advanced cooking — 30+ recipes for dishes, soups, sausages, marmalades, cheese |
+| [CookZ Realistic Packaging](https://steamcommunity.com/sharedfiles/filedetails/?id=3566508757) | 3566508757 | Realistic textures for CookZ food packaging |
 
 ### Mod Installation
 
@@ -202,9 +213,13 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `1816010715` | `@No-Sprinting-Zombies` |
 | `3601119520` | `@ZenSkills` |
 | `3571068454` | `@CZOptics` |
-| `2464526692` | `@GameLabs` |
-| `3548025008` | `@CW_GameLabs` |
-| `3624261153` | `@NotificationsSystem` |
+| `3443562573` | `@PercentageHUD` |
+| `3426979799` | `@ZenTreasure` |
+| `2691041685` | `@CarePackages` |
+| `3606014796` | `@NemsisCraftingpack` |
+| `3639695989` | `@LMsPlanes` |
+| `3302732231` | `@CookZ` |
+| `3566508757` | `@CookZRealisticPackaging` |
 
 ### Zenarchist's Skills — Loot Spawns
 
@@ -221,11 +236,9 @@ Skill-related items spawn across the map (configurable in `server_settings.json`
 
 Items respawn automatically when the count drops below the minimum.
 
-## Dynamic Events & Notifications
+## Dynamic Events
 
-The server features boosted dynamic events and a timed notification system that creates an immersive, living world.
-
-### Dynamic Events (events.xml)
+### Static Events (events.xml)
 
 | Event | Vanilla | This Server | Effect |
 |---|---|---|---|
@@ -233,24 +246,54 @@ The server features boosted dynamic events and a timed notification system that 
 | Military convoys | 5 | 8 (min 2) | More ambushed convoys on roads |
 | Contaminated zones | 2-4 | Unchanged | Dynamic NBC zones |
 
-### Notification Schedule
+### Care Packages
 
-Timed broadcasts appear in-game to create atmosphere:
+Randomized supply drops land across the map every 30 minutes. Players are notified in-game with the drop location and distance. Packages are **locked** on drop — press F to open.
 
-| Time | Type | Message |
+| Package Type | Container | Loot |
 |---|---|---|
-| On join | Welcome | Personalized greeting with player name |
-| Every 20 min | Radio Intercept | Military convoy / supply reports |
-| Every 30 min | Emergency Broadcast | Zombie activity warnings for specific cities |
-| Every 45 min | Survivor Radio | Helicopter crash site spotted |
-| Every 60 min | Radio Chatter | Trader stock updates |
-| Every 80 min | Warning | Contaminated zone alerts |
-| Every 100 min | Survivor Tip | Exploration hints |
-| Every 120 min | Emergency Broadcast | Zombie horde sightings |
-| 3 hours | Server | 1-hour restart warning |
-| 3 hr 50 min | Server | 10-minute restart warning |
+| Military | Typhon camo | 1-3 guns (FAL, AKM, SVD, M4, Mosin, SKS, VSS, Scout) + ammo, mags, optics, NVGs |
+| Medical | Red | 8-15 medical items — bandages, morphine, antibiotics, iodine, saline, blood bags |
+| Survival | Green | 10-18 food/drink items — canned food, sodas, water, rice + hunting knife or shotgun |
+| Tools & Building | Black | 8-14 items — nails, pliers, hacksaw, rope, duct tape, code lock, planks + axes |
 
-Edit notifications in `config/NotificationsSystem/NotificationSettings.json`. The mod supports hot-reload — changes apply without a restart.
+17 drop locations spread across Chernarus. 6 zombies guard each drop. Edit loot, locations, and timing in `config/CarePackagesV2/config.json`.
+
+### Nemsis Craftingpack
+
+Adds 500+ craftable items and 700+ recipes. Crafting is vanilla-style — no workbenches needed. Players discover recipes by finding **recipe sketches** in the world, which can be collected in a notebook.
+
+Crafting categories: bushcrafting, makeshift weapons, ammo crafting, armor, improvised NBC gear, vehicles, raiding tools, signs, writing, repairing, and more.
+
+Item spawns are configured in `custom/types_nemsis.xml`.
+
+> **Note:** The Airbrushing addon (`nm_Crafting_Part_Airbrushing.pbo`) was removed from `@NemsisCraftingpack/addons/` because it references classes from a newer version of Mass's Many Item Overhaul than this server uses. This only removes item painting/recoloring — all 700+ crafting recipes still work.
+
+### LMs Planes
+
+Flyable planes spawn across the map at towns, industrial areas, and farms. Find spare wheels at industrial locations to repair them.
+
+| Plane | Count | Notes |
+|---|---|---|
+| DC-3 | 2 | Large transport plane |
+| Stuntplane | 2 | Aerobatic biplane |
+| Catalina | 2 | Amphibious seaplane — lands on water |
+| Tigermoth | 2 | Classic biplane |
+| Tigermoth MK2 | 1 | Variant |
+| Tigermoth MK3 | 1 | Variant |
+| Spitfire | 2 | WWII fighter |
+| Cessna 180 | 2 | Utility plane |
+| **Total** | **14** | Keep under 15-30 for performance |
+
+Plane spawns are configured in `custom/types_lmplanes.xml`.
+
+### CookZ
+
+Adds 30+ craftable food recipes — dishes, soups, sausages, marmalades, and cheese. All items are **crafted only** (nothing spawns in the world). Recipes use vanilla DayZ ingredients and cooking tools.
+
+CookZ Realistic Packaging replaces the default food textures with realistic-looking packaging. It's a visual-only addon — no gameplay changes.
+
+CookZ config auto-generates in `config/CookZ/` on first server start. Item definitions are in `custom/types_cookz.xml`.
 
 ## Launching the Server
 
@@ -277,6 +320,11 @@ DayZServer/
 ├── start.bat                    # Launch script with mod list
 ├── whitelist.txt                # Player whitelist (disabled by default)
 ├── keys/                        # Mod signature keys (.bikey)
+├── config/                      # Server profiles dir (-profiles=config)
+│   ├── CarePackagesV2/
+│   │   └── config.json          # Care package loot, locations, timing
+│   ├── CookZ/                   # Auto-generated on first start
+│   └── *.RPT                    # Server crash/debug logs
 ├── @CF/                         # Community Framework mod
 ├── @Trader/                     # Trader mod
 ├── @Mass'sManyItemOverhaul/     # Item overhaul mod
@@ -287,15 +335,23 @@ DayZServer/
 ├── @No-Sprinting-Zombies/       # Zombie behavior mod
 ├── @ZenSkills/                  # Skill perk tree mod
 ├── @CZOptics/                   # Additional optics and scopes
-├── @GameLabs/                   # CFTools integration (server-side)
-├── @CW_GameLabs/                # CFTools map markers (server-side)
-├── @NotificationsSystem/        # In-game notifications (server-side)
+├── @PercentageHUD/              # HUD percentage indicators
+├── @ZenTreasure/                # Photo-based treasure hunting
+├── @CarePackages/               # Care package supply drops
+├── @NemsisCraftingpack/         # 500+ craftable items
+├── @LMsPlanes/                  # Flyable planes
+├── @CookZ/                      # Advanced cooking recipes
+├── @CookZRealisticPackaging/    # Realistic food textures
 └── mpmissions/
     └── dayzOffline.chernarusplus/
         ├── cfggameplay.json     # Gameplay settings (patched automatically)
         ├── cfgeconomycore.xml   # Economy config (references custom types)
         ├── custom/
-        │   └── types_zenskills.xml  # ZenSkills item spawns (patched automatically)
+        │   ├── types_zenskills.xml    # ZenSkills item spawns (patched automatically)
+        │   ├── types_zentreasure.xml  # Zen's Treasure item spawns
+        │   ├── types_nemsis.xml       # Nemsis Craftingpack item spawns
+        │   ├── types_lmplanes.xml     # LMs Planes vehicle spawns
+        │   └── types_cookz.xml        # CookZ crafted item definitions
         └── db/
             ├── events.xml       # Zombie spawns (patched automatically)
             └── globals.xml      # Loot economy (patched automatically)

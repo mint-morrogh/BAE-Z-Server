@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<types>
+	<type name="ZenTreasure_Photo51">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo52">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo53">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo54">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo55">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo56">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo57">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo58">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo59">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+	<type name="ZenTreasure_Photo60">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+		<category name="food"/>
+		<tag name="shelves"/>
+		<usage name="Coast"/>
+		<usage name="Village"/>
+		<usage name="Town"/>
+	</type>
+</types>
