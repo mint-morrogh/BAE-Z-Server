@@ -1,0 +1,61 @@
+# ==========================================
+# DayZ Server - Git Ignore
+# Only track config files, mission customizations,
+# mod folders, and launch scripts.
+# ==========================================
+
+# --- Ignore everything by default ---
+*
+
+# --- Allow top-level config & launch files ---
+!.gitignore
+!README.md
+!serverDZ.cfg
+!start.bat
+!whitelist.txt
+!ban.txt
+
+# --- Allow mod folders (configs/docs only, not binaries) ---
+!@*/
+!@*/**
+# Ignore compiled mod binaries (users download fresh from Workshop)
+@*/addons/
+@*/keys/
+
+# --- Allow server keys folder ---
+!keys/
+!keys/*.bikey
+
+# --- Allow mission folder ---
+!mpmissions/
+!mpmissions/dayzOffline.chernarusplus/
+!mpmissions/dayzOffline.chernarusplus/**
+
+# Ignore persistence/runtime data inside mission
+mpmissions/dayzOffline.chernarusplus/storage_0/
+mpmissions/dayzOffline.chernarusplus/storage_1/
+mpmissions/dayzOffline.chernarusplus/backups/
+
+# --- Ignore game binaries & engine files ---
+*.exe
+*.dll
+*.pbo
+*.bisign
+*.bikey
+*.bin
+*.map
+dayz.gproj
+dayzsetting.xml
+steam_appid.txt
+
+# --- Ignore engine/data folders ---
+addons/
+bliss/
+dta/
+docs/
+sakhal/
+server_manager/
+
+# --- Ignore profiles/logs/runtime ---
+config/
+battleye/

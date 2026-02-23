@@ -1,0 +1,10 @@
+name = "Zenarchist's Skills"; // name
+picture = ""; // picture in expanded description
+logoSmall = ""; // icon next to mod name when description is not expanded
+logo = ""; // logo below game menu
+logoOver = ""; // on mouse hover over logo
+tooltip = "Zenarchist's Skills"; // tool tip on mouse hover
+overview = "Adds a basic skill perk tree to the game."; // overview
+action = "https://zenarchist.com/"; // link
+author = "Zenarchist"; // author
+version = "1.0"; // version

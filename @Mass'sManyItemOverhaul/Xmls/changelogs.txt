@@ -1,0 +1,10 @@
+I'm back bitches.
+
+PKM now properly reloads.
+PKM mag now uses the proper texture.
+M98B and its now variants use the correct textures
+
+Removed M1-9 and overhauled the mini-14
+Mini-14 now takes its own magazines : Mass_Mag_Mini14_5rnd , Mass_Mag_Mini14_10rnd
+
+Got some MRE stuff in store for the next update. you can expect an overhaul.

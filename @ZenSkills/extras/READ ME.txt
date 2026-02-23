@@ -1,0 +1,1 @@
+Don't add either of these pbo files to your modpack unless you're either running MapLink, or you want to force-enable verbose debug print logs and in-game debug messages for testing settings/new features/etc.
