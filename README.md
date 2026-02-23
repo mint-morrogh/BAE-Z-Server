@@ -4,7 +4,7 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 
 ### Features
 
-- **27 mods** — all preconfigured and ready to go
+- **28 mods** — all preconfigured and ready to go
 - **GPS minimap** — on-screen minimap with player position via DayZ Expansion
 - **Companion dogs** — 17 breeds of tameable dogs, equip collars/vests/gas masks, build dog houses
 - **Rideable horses** — 5 horse colours, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
@@ -16,7 +16,7 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 - **Skill tree** — earn XP and unlock perks in survival, crafting, hunting, and gathering
 - **Treasure hunting** — find photos, travel to the location, dig up randomized loot stashes
 - **NPC traders** — buy and sell items at safe zones
-- **Slower zombies** — no sprinting infected, reduced coastal spawns for easier starts
+- **Customisable zombies** — walk/jog by day, rare sprinters at night, shorter vision, hit harder but die easier
 - **Sleep & fatigue system** — realistic tiredness mechanic with sleeping bags, hallucinations, and immunity effects
 - **Sleep till morning** — if all players lie down to sleep at night, time skips to dawn
 - **Unlimited stamina** — no stamina drain while sprinting
@@ -197,7 +197,7 @@ These mods must be installed on both the **server** and **client**.
 | [VanillaPlusPlusMap](https://steamcommunity.com/sharedfiles/filedetails/?id=1623711988) | 1623711988 | Enhanced map with markers and details |
 | [GoreZ](https://steamcommunity.com/sharedfiles/filedetails/?id=1648967877) | 1648967877 | Enhanced blood and gore effects |
 | [Inventory Move Sounds](https://steamcommunity.com/sharedfiles/filedetails/?id=2444247391) | 2444247391 | Adds sounds when moving items in inventory |
-| [No Sprinting Zombies](https://steamcommunity.com/sharedfiles/filedetails/?id=1816010715) | 1816010715 | Zombies walk and jog but don't sprint |
+| [PvZmoD Customisable Zombies](https://steamcommunity.com/sharedfiles/filedetails/?id=2051775667) | 2051775667 | Configurable zombie speed, health, damage, vision — day/night variants |
 | [Zenarchist's Skills](https://steamcommunity.com/sharedfiles/filedetails/?id=3601119520) | 3601119520 | Skill perk tree — survival, crafting, hunting, gathering |
 | [CZ Optics](https://steamcommunity.com/sharedfiles/filedetails/?id=3571068454) | 3571068454 | Additional optics and scopes |
 | [PercentageHUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3443562573) | 3443562573 | Shows health, blood, hunger, thirst, and stamina as percentages on the HUD |
@@ -231,7 +231,7 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `1623711988` | `@VanillaPlusPlusMap` |
 | `1648967877` | `@GoreZ` |
 | `2444247391` | `@Inventory-Move-Sounds` |
-| `1816010715` | `@No-Sprinting-Zombies` |
+| `2051775667` | `@PvZmoD` |
 | `3601119520` | `@ZenSkills` |
 | `3571068454` | `@CZOptics` |
 | `3443562573` | `@PercentageHUD` |
@@ -382,6 +382,19 @@ Attach saddlebags for mobile storage. Build a stable from kits found at farms to
 
 Horse tack is configured in `custom/types_dayzhorse.xml`. Requires the **Survivor Animations** mod as a dependency (included and loaded automatically).
 
+### PvZmoD — Customisable Zombies
+
+Replaces the broken No Sprinting Zombies mod with a fully configurable zombie behaviour system. All settings can be changed in XML files and applied in-game without restart (press numpad4).
+
+| Setting | Day | Night |
+|---|---|---|
+| Speed | Walk/jog only (1-2) | Walk to rare sprint (1-3) |
+| Health | Slightly lower than vanilla | Same as day |
+| Damage dealt | Higher than vanilla | Same as day |
+| Vision range | Shorter than vanilla | Same as day |
+
+Config files are auto-generated at `config/` on first server start. Edit `PvZmoD_CustomisableZombies_Characteristics.xml` to tweak values — the `ZombieBase` section at the bottom applies to all zombie types.
+
 ### Zen's Sleeping Mod
 
 Adds a fatigue stat (moon icon) that drains over time. Players must use the **Lie Down** emote to sleep. Ignoring fatigue causes yawning (gives away position), hallucinations, reduced immunity, and eventually random unconsciousness.
@@ -459,7 +472,7 @@ DayZServer/
 ├── @VanillaPlusPlusMap/         # Enhanced map mod
 ├── @GoreZ/                      # Gore effects mod
 ├── @Inventory-Move-Sounds/      # Inventory sound mod
-├── @No-Sprinting-Zombies/       # Zombie behavior mod
+├── @PvZmoD/                     # Customisable zombie behaviour
 ├── @ZenSkills/                  # Skill perk tree mod
 ├── @CZOptics/                   # Additional optics and scopes
 ├── @PercentageHUD/              # HUD percentage indicators
