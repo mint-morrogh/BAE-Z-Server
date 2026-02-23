@@ -170,6 +170,7 @@ All mods must be installed on both the **server** and **client**.
 | [Inventory Move Sounds](https://steamcommunity.com/sharedfiles/filedetails/?id=2444247391) | 2444247391 | Adds sounds when moving items in inventory |
 | [No Sprinting Zombies](https://steamcommunity.com/sharedfiles/filedetails/?id=1816010715) | 1816010715 | Zombies walk and jog but don't sprint |
 | [Zenarchist's Skills](https://steamcommunity.com/sharedfiles/filedetails/?id=3601119520) | 3601119520 | Skill perk tree — survival, crafting, hunting, gathering |
+| [CZ Optics](https://steamcommunity.com/sharedfiles/filedetails/?id=3571068454) | 3571068454 | Additional optics and scopes |
 
 ### Mod Installation
 
@@ -186,6 +187,7 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `2444247391` | `@Inventory-Move-Sounds` |
 | `1816010715` | `@No-Sprinting-Zombies` |
 | `3601119520` | `@ZenSkills` |
+| `3571068454` | `@CZOptics` |
 
 ### Zenarchist's Skills — Loot Spawns
 
@@ -236,6 +238,7 @@ DayZServer/
 ├── @Inventory-Move-Sounds/      # Inventory sound mod
 ├── @No-Sprinting-Zombies/       # Zombie behavior mod
 ├── @ZenSkills/                  # Skill perk tree mod
+├── @CZOptics/                   # Additional optics and scopes
 └── mpmissions/
     └── dayzOffline.chernarusplus/
         ├── cfggameplay.json     # Gameplay settings (patched automatically)

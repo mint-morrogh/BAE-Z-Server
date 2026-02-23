@@ -2,7 +2,7 @@
     "_README": "Edit the values below and run apply_settings.bat to patch all server config files at once.",
 
     "server": {
-        "name": "Mint Mundane Server",
+        "name": "Blood & Barter",
         "password": "mintmorrogh",
         "adminPassword": "mintmorrogh",
         "maxPlayers": 4
