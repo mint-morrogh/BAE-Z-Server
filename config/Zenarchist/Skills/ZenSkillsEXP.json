@@ -1,0 +1,308 @@
+{
+    "CONFIG_VERSION": "1",
+    "ExpNerfConfig": {
+        "GlobalExpMultiplier": 1.0,
+        "EnableExpNerf": 1,
+        "NerfBubbleMaxActions": 25,
+        "NerfBubbleRadiusMeters": 100.0,
+        "NerfActionResetTimeMs": 600000.0,
+        "NerfPercentPerActionInBubble": 0.009999999776482582,
+        "NerfPercentPerActionRepeat": 0.009999999776482582,
+        "NerfMaxForBubbleAction": 0.5,
+        "NerfMaxForRepeatAction": 0.5
+    },
+    "ExpDefs": {
+        "survival": {
+            "ExpDefs": {
+                "Killed_Zombie_Generic": {
+                    "EXP": 5,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "Killed_Player": {
+                    "EXP": 100,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionTestBloodSelf": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "HandDrillKitSuccess": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ChelateWater": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ReadSkillBookSurvival": {
+                    "EXP": 1500,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 0,
+                    "ApplyBoosts": 0
+                },
+                "ActionBandageTarget": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "Stabbed_Zombie_Generic": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "BloodTest": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "Killed_Entity_Generic": {
+                    "EXP": 10,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionBandageSelf": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CraftSalineBagIV": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "Cooking": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "DisinfectItem": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "PurifyWater": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CraftBloodBagIV": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionCookOnStick": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                }
+            }
+        },
+        "hunting": {
+            "ExpDefs": {
+                "Killed_Animal_Generic": {
+                    "EXP": 1,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ReadSkillBookHunting": {
+                    "EXP": 1500,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 0,
+                    "ApplyBoosts": 0
+                },
+                "PrepareFish": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionSkinning": {
+                    "EXP": 50,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CraftRabbitSnare": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CaughtFish": {
+                    "EXP": 25,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CraftTannedLeather": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CleanWeapon": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CraftSmallFishTrap": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "Killed_Animal_CerbusElaphus": {
+                    "EXP": 100,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CraftFishNetTrap": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "PrepareAnimal": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "Killed_Animal_UrsusArctos": {
+                    "EXP": 250,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                }
+            }
+        },
+        "gathering": {
+            "ExpDefs": {
+                "ActionMineBush": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionDigWorms": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionSawPlanks": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionMineBushByHand": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "SawWoodenLog": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionMineRock": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ReadSkillBookGathering": {
+                    "EXP": 1500,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 0,
+                    "ApplyBoosts": 0
+                },
+                "ActionHarvestCrops": {
+                    "EXP": 20,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "CraftWoodenPlank": {
+                    "EXP": 5,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionMineTree": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                }
+            }
+        },
+        "crafting": {
+            "ExpDefs": {
+                "ActionRepairPart": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionDismantlePart": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ReadSkillBookCrafting": {
+                    "EXP": 1500,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 0,
+                    "ApplyBoosts": 0
+                },
+                "ActionBuildPart": {
+                    "EXP": 10,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "ActionBuildShelter": {
+                    "EXP": 25,
+                    "AllowModifier": 0,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                },
+                "GenericCrafting": {
+                    "EXP": 10,
+                    "AllowModifier": 1,
+                    "ApplyNerf": 1,
+                    "ApplyBoosts": 1
+                }
+            }
+        }
+    }
+}

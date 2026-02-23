@@ -64,4 +64,10 @@ server_manager/
 config/*
 !config/CarePackagesV2/
 !config/CarePackagesV2/**
+!config/Zenarchist/
+!config/Zenarchist/**
+# Ignore player-specific runtime data inside Zenarchist
+config/Zenarchist/Skills/Analytics/
+config/Zenarchist/Skills/PlayerDB/
+config/Zenarchist/Skills/ZenSkillsHighscoresDB.json
 battleye/

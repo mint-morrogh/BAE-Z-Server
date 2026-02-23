@@ -4,7 +4,7 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 
 ### Features
 
-- **17 mods** — all preconfigured and ready to go
+- **19 mods** — all preconfigured and ready to go
 - **Flyable planes** — DC-3, Spitfire, Cessna 180, Catalina seaplane, Tigermoth, Stuntplane (14 planes across the map)
 - **Care package supply drops** — military, medical, survival, and building supplies parachute in every 30 minutes with zombie guards
 - **700+ crafting recipes** — weapons, armor, ammo, vehicles, bushcraft, NBC gear, and more via Nemsis Craftingpack
@@ -13,6 +13,8 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 - **Treasure hunting** — find photos, travel to the location, dig up randomized loot stashes
 - **NPC traders** — buy and sell items at safe zones
 - **Slower zombies** — no sprinting infected, reduced coastal spawns for easier starts
+- **Sleep & fatigue system** — realistic tiredness mechanic with sleeping bags, hallucinations, and immunity effects
+- **Sleep till morning** — if all players lie down to sleep at night, time skips to dawn
 - **Unlimited stamina** — no stamina drain while sprinting
 - **One-file configuration** — all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** — server automatically restarts every 4 hours
@@ -152,18 +154,19 @@ Zombie spawns have been customized for a small-group experience:
 
 | Category | Nominal / Min / Max | Notes |
 |---|---|---|
-| City (regular) | 50 / 25 / 250 | Full vanilla density |
-| City (coastal/Tier 1) | 12 / 6 / 60 | 25% of vanilla — lighter starts |
-| Village (coastal/Tier 1) | 12 / 6 / 25 | 25% of vanilla |
-| Wilderness (forest) | 5 / 2 / 15 | Very rare — forests are mostly clear |
-| Military | 50 / 25 / 250 | Full vanilla density |
-| All others (police, medic, etc.) | 50 / 25 / 100 | Vanilla defaults |
+| City (regular) | 25 / 12 / 120 | Half vanilla density |
+| City (coastal/Tier 1) | 6 / 3 / 30 | Light — easier coastal starts |
+| Village | 20 / 10 / 50 | Moderate |
+| Village (coastal/Tier 1) | 6 / 3 / 15 | Light |
+| Wilderness (forest) | 2 / 1 / 8 | Very rare — forests are mostly clear |
+| Military | 25 / 12 / 120 | Half vanilla |
+| All others (police, medic, etc.) | 20 / 10 / 50 | Reduced |
 
 ### Loot Economy
 
 | Setting | Default | What it does |
 |---|---|---|
-| `zombieMaxCount` | 1000 | Max zombies alive server-wide |
+| `zombieMaxCount` | 500 | Max zombies alive server-wide |
 | `animalMaxCount` | 200 | Max animals alive server-wide |
 | `lootDamageMin/Max` | 0.0 / 0.82 | Condition range for spawned loot |
 | `foodDecay` | 1 | Food spoilage (1=on, 0=off) |
@@ -196,6 +199,8 @@ These mods must be installed on both the **server** and **client**.
 | [LMs Planes](https://steamcommunity.com/sharedfiles/filedetails/?id=3639695989) | 3639695989 | Flyable planes — DC-3, Cessna 180, Spitfire, Catalina seaplane, Tigermoth, Stuntplane |
 | [CookZ](https://steamcommunity.com/sharedfiles/filedetails/?id=3302732231) | 3302732231 | Advanced cooking — 30+ recipes for dishes, soups, sausages, marmalades, cheese |
 | [CookZ Realistic Packaging](https://steamcommunity.com/sharedfiles/filedetails/?id=3566508757) | 3566508757 | Realistic textures for CookZ food packaging |
+| [Zen's Sleeping Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3468961047) | 3468961047 | Fatigue/sleep stat — tiredness, sleeping bags, hallucinations, immunity effects |
+| [Sleep Till Morning](https://steamcommunity.com/sharedfiles/filedetails/?id=3578708533) | 3578708533 | Skip to dawn when all players lie down to sleep at night |
 
 ### Mod Installation
 
@@ -220,6 +225,8 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `3639695989` | `@LMsPlanes` |
 | `3302732231` | `@CookZ` |
 | `3566508757` | `@CookZRealisticPackaging` |
+| `3468961047` | `@ZenSleep` |
+| `3578708533` | `@SleepTillMorning` |
 
 ### Zenarchist's Skills — Loot Spawns
 
@@ -295,6 +302,26 @@ CookZ Realistic Packaging replaces the default food textures with realistic-look
 
 CookZ config auto-generates in `config/CookZ/` on first server start. Item definitions are in `custom/types_cookz.xml`.
 
+### Zen's Sleeping Mod
+
+Adds a fatigue stat (moon icon) that drains over time. Players must use the **Lie Down** emote to sleep. Ignoring fatigue causes yawning (gives away position), hallucinations, reduced immunity, and eventually random unconsciousness.
+
+Sleep quality depends on conditions — sleeping at night, near fires, inside buildings, or on sleeping bags recovers fatigue faster and can boost immunity and health.
+
+This server uses a relaxed drain rate (`GlobalDrainMultiplier: 0.4`) — you can play for ~12 real hours before critical fatigue. Fresh spawns start fully rested. Edit the config at `config/Zenarchist/ZenSleepConfig.json`.
+
+Custom items that spawn in the world:
+
+| Item | Count | Locations |
+|---|---|---|
+| Sleeping bags (5 colors) | 10 each (min 8) | Hunting, Military, Town, Village |
+| Anesthetic injector | 5 (min 3) | Medical |
+| Amphetamine injector | 5 (min 3) | Medical |
+
+### Sleep Till Morning
+
+Works with Zen's Sleeping Mod. When **all players** on the server lie down to sleep at night, time fast-forwards to dawn. No more waiting around during nighttime.
+
 ## Launching the Server
 
 1. Double-click `apply_settings.bat` (if you changed any settings)
@@ -324,6 +351,8 @@ DayZServer/
 │   ├── CarePackagesV2/
 │   │   └── config.json          # Care package loot, locations, timing
 │   ├── CookZ/                   # Auto-generated on first start
+│   ├── Zenarchist/
+│   │   └── ZenSleepConfig.json  # Sleep fatigue rates, effects, recovery
 │   └── *.RPT                    # Server crash/debug logs
 ├── @CF/                         # Community Framework mod
 ├── @Trader/                     # Trader mod
@@ -342,6 +371,8 @@ DayZServer/
 ├── @LMsPlanes/                  # Flyable planes
 ├── @CookZ/                      # Advanced cooking recipes
 ├── @CookZRealisticPackaging/    # Realistic food textures
+├── @ZenSleep/                   # Sleep & fatigue system
+├── @SleepTillMorning/           # Skip night when all players sleep
 └── mpmissions/
     └── dayzOffline.chernarusplus/
         ├── cfggameplay.json     # Gameplay settings (patched automatically)
@@ -351,7 +382,8 @@ DayZServer/
         │   ├── types_zentreasure.xml  # Zen's Treasure item spawns
         │   ├── types_nemsis.xml       # Nemsis Craftingpack item spawns
         │   ├── types_lmplanes.xml     # LMs Planes vehicle spawns
-        │   └── types_cookz.xml        # CookZ crafted item definitions
+        │   ├── types_cookz.xml        # CookZ crafted item definitions
+        │   └── types_zensleep.xml     # ZenSleep sleeping bags & items
         └── db/
             ├── events.xml       # Zombie spawns (patched automatically)
             └── globals.xml      # Loot economy (patched automatically)
@@ -371,3 +403,4 @@ mpmissions/dayzOffline.chernarusplus/storage_1/
 - **No loot spawning:** Usually an XML syntax error. Validate your XML files at [codebeautify.org/xmlvalidator](https://codebeautify.org/xmlvalidator).
 - **Zombies not spawning:** Same as above — check `events.xml` for syntax errors.
 - **Settings not applying:** Make sure you ran `apply_settings.bat` after editing `server_settings.json`, then restarted the server.
+- **Adding/removing Zen's Sleep:** Requires a server wipe (`storage_1/`) because the sleep stat is saved to player profiles. Without a wipe, profiles become corrupted.

@@ -1,0 +1,54 @@
+{
+    "GeneralConfig": {
+        "SecondsAsleepUntilFullRestApprox": 600.0,
+        "FreshSpawnFatiguePercent": 100,
+        "MaxFatiguePercentToAllowSleeping": 70,
+        "FatigueLevelToNegativeImpactImmunity": 2,
+        "DisplaySleepMessages": true,
+        "PackedBagLifetime": 14400
+    },
+    "GainConfig": {
+        "GlobalGainMultiplier": 1.0,
+        "GainNightMultiplier": 1.5,
+        "GainBedObjectUsed": 1.3,
+        "GainInsideMultiplier": 1.1,
+        "GainFromHeatBuffMultiplier": 1.1,
+        "MaxRestGain_Illness": 16,
+        "MaxRestGain_Temp_LightBlue": 70,
+        "MaxRestGain_Temp_Yellow": 70,
+        "MaxRestGain_FoodWater_Yellow": 16,
+        "MaxRestGain_FoodWater_Red": 6,
+        "MaxRestGain_Wet": 16,
+        "MaxRestGain_Time_Daylight": 70,
+        "MaxRestGain_Time_Night": 100,
+        "MinSecsAsleepInBedToTriggerImmunityBoost": 120,
+        "MinSecsAsleepToTriggerHealthRecovery": 120,
+        "BedHealthGainPerSec": 0.25
+    },
+    "DrainConfig": {
+        "GlobalDrainMultiplier": 0.4,
+        "DrainHeavyItemMultiplier": 1.0,
+        "DrainWalkingMultiplier": 1.0,
+        "DrainJoggingMultiplier": 1.0,
+        "DrainSprintingMultiplier": 1.0,
+        "DrainWeightMultiplier": 1.0,
+        "DrainNightMultiplier": 1.5,
+        "HealthLossPerSecRedFlashing": 0
+    },
+    "ServerEffectsConfig": {
+        "MinimumSecsBetweenYawnRedFlashing": 30,
+        "MaximumSecsBetweenYawnRedFlashing": 300,
+        "ChanceToYawnRedFlashing": 90,
+        "ChanceToHallucinateRedFlashing": 100,
+        "ChanceToUnconRedFlashing": 50,
+        "CanUnconWhileDriving": true,
+        "CanUnconWhileSwimming": false
+    },
+    "ClientEffectsConfig": {
+        "AmountToBlurWhenRedFlashing": 2,
+        "AmountToVignetteWhenRedFlashing": 50,
+        "AllowClosedEyesEffectSleeping": true,
+        "AllowHallucinationEffectRedFlashing": true,
+        "CharacterMovementSpeedRedFlashing": 1
+    }
+}
