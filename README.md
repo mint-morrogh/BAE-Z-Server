@@ -4,7 +4,8 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 
 ### Features
 
-- **23 mods** — all preconfigured and ready to go
+- **27 mods** — all preconfigured and ready to go
+- **GPS minimap** — on-screen minimap with player position via DayZ Expansion
 - **Companion dogs** — 17 breeds of tameable dogs, equip collars/vests/gas masks, build dog houses
 - **Rideable horses** — 5 horse colours, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
 - **20 driveable vehicles** — Supra, Mustang GT500, Skyline, Porsche 911, Dodge Ram, Monster Truck, MotorHome, and more
@@ -186,6 +187,10 @@ These mods must be installed on both the **server** and **client**.
 | Mod | Workshop ID | Description |
 |---|---|---|
 | [CF (Community Framework)](https://steamcommunity.com/sharedfiles/filedetails/?id=1559212036) | 1559212036 | Required dependency for other mods |
+| [DayZ-Expansion-Core](https://steamcommunity.com/sharedfiles/filedetails/?id=2291785308) | 2291785308 | Core framework for DayZ Expansion |
+| [Dabs Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2545327648) | 2545327648 | Script/GUI framework dependency for Expansion |
+| [DayZ-Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=2116151222) | 2116151222 | Expansion content — items, UI, and world enhancements |
+| [Expansion Minimap Override](https://steamcommunity.com/sharedfiles/filedetails/?id=3626138230) | 3626138230 | GPS minimap overlay with player position |
 | [Trader](https://steamcommunity.com/sharedfiles/filedetails/?id=1590841260) | 1590841260 | NPC traders, safe zones, buy/sell items |
 | [Mass's Many Item Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=1566911166) | 1566911166 | Adds weapons, clothing, crafting recipes |
 | [UnlimitedRun](https://steamcommunity.com/sharedfiles/filedetails/?id=2040872847) | 2040872847 | Unlimited stamina for sprinting |
@@ -216,6 +221,10 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | Workshop Folder | Rename To |
 |---|---|
 | `1559212036` | `@CF` |
+| `2291785308` | `@DayZ-Expansion-Core` |
+| `2545327648` | `@DabsFramework` |
+| `2116151222` | `@DayZ-Expansion` |
+| `3626138230` | `@ExpansionMinimap` |
 | `1590841260` | `@Trader` |
 | `1566911166` | `@Mass'sManyItemOverhaul` |
 | `2040872847` | `@UnlimitedRun` |
@@ -393,6 +402,19 @@ Custom items that spawn in the world:
 
 Works with Zen's Sleeping Mod. When **all players** on the server lie down to sleep at night, time fast-forwards to dawn. No more waiting around during nighttime.
 
+### DayZ Expansion — GPS Minimap
+
+Adds a GPS minimap to the HUD showing your position and surroundings. Requires three dependency mods that also add expanded items, UI enhancements, and framework utilities.
+
+| Mod | Role |
+|---|---|
+| DayZ-Expansion-Core | Core framework (load first) |
+| Dabs Framework | Script/GUI support library |
+| DayZ-Expansion | Main content — items, UI, world enhancements |
+| Expansion Minimap Override | GPS minimap overlay (load last) |
+
+Load order matters — Core and Dabs must load before Expansion, and the Minimap Override must load after Expansion. This is already configured in `start.bat`.
+
 ## Launching the Server
 
 1. Double-click `apply_settings.bat` (if you changed any settings)
@@ -427,6 +449,10 @@ DayZServer/
 │   │   └── ZenSleepConfig.json  # Sleep fatigue rates, effects, recovery
 │   └── *.RPT                    # Server crash/debug logs
 ├── @CF/                         # Community Framework mod
+├── @DayZ-Expansion-Core/        # Expansion core framework
+├── @DabsFramework/              # Script/GUI framework
+├── @DayZ-Expansion/             # Expansion content
+├── @ExpansionMinimap/           # GPS minimap overlay
 ├── @Trader/                     # Trader mod
 ├── @Mass'sManyItemOverhaul/     # Item overhaul mod
 ├── @UnlimitedRun/               # Unlimited stamina mod
