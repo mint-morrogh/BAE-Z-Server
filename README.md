@@ -18,61 +18,142 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 4. Launch DayZ once so Steam downloads the mod files
 5. Copy each mod's Workshop folder into the server directory with the correct `@Name` (see [Mod Installation](#mod-installation))
 6. Copy each mod's `.bikey` file from their `keys/` folder into the server's `keys/` folder
-7. Set your passwords in `serverDZ.cfg` (see [Passwords](#passwords))
-8. Double-click `start.bat` to launch the server
-9. Connect via DayZ > Servers > LAN, or Direct Connect to `127.0.0.1:2302`
+7. Edit `server_settings.json` to customize your server (see [Settings Patcher](#settings-patcher))
+8. Double-click `apply_settings.bat` to apply your settings
+9. Double-click `start.bat` to launch the server
+10. Connect via DayZ > Servers > LAN, or Direct Connect to `127.0.0.1:2302`
+
+## Settings Patcher
+
+Instead of manually editing multiple config files scattered across the server, **all important settings live in one file**: `server_settings.json`.
+
+### How to use
+
+1. Open `server_settings.json` in any text editor
+2. Change whatever you want
+3. Double-click `apply_settings.bat`
+4. Restart your server
+
+That's it. The patcher reads your settings and writes them to the correct config files automatically.
+
+### What you can configure
+
+| Section | What it controls | Config file it patches |
+|---|---|---|
+| `server` | Name, password, admin password, max players | `serverDZ.cfg` |
+| `time` | Day/night speed, start time, persistence | `serverDZ.cfg` |
+| `network` | Voice chat, 3rd person, crosshair | `serverDZ.cfg` |
+| `gameplay` | Stamina, base damage, map features, base building rules | `cfggameplay.json` |
+| `zombies` | Spawn rates per category (city, coastal, military, wilderness, etc.) | `db/events.xml` |
+| `lootEconomy` | Global zombie/animal caps, loot damage, food decay, respawn timers | `db/globals.xml` |
+| `zenSkills` | Skill book and EXP booster spawn rates | `custom/types_zenskills.xml` |
+
+### Example: Common tweaks
+
+**Change your password:**
+```json
+"server": {
+    "password": "mynewpassword",
+    "adminPassword": "myadminpass"
+}
+```
+
+**Make nights shorter (or remove them):**
+```json
+"time": {
+    "acceleration": 6,
+    "nightAcceleration": 12
+}
+```
+Higher `nightAcceleration` = shorter nights. Set `acceleration` to 1 for real-time.
+
+**Disable all zombies in the wilderness:**
+```json
+"zombies": {
+    "wilderness": { "nominal": 0, "min": 0, "max": 0 }
+}
+```
+
+**Double zombies at military bases:**
+```json
+"zombies": {
+    "military":     { "nominal": 100, "min": 50, "max": 500 },
+    "militaryHard": { "nominal": 100, "min": 50, "max": 500 }
+}
+```
+
+**Show your position on the map (easier navigation):**
+```json
+"gameplay": {
+    "showPlayerOnMap": true,
+    "mapWithoutItem": true
+}
+```
+
+**Relaxed base building (place anywhere):**
+```json
+"gameplay": {
+    "relaxedBaseBuilding": true
+}
+```
+
+**More stamina, less punishing weight:**
+```json
+"gameplay": {
+    "staminaMax": 200.0,
+    "staminaWeightThreshold": 12000.0,
+    "sprintStaminaModifier": 0.5
+}
+```
+
+**More EXP boosters on the map:**
+```json
+"zenSkills": {
+    "expBoostInjector": { "nominal": 20, "min": 10 }
+}
+```
 
 ### Passwords
 
-Edit `serverDZ.cfg` and change these two lines to your own passwords:
-
-```
-password = "mintmorrogh";          // Password players enter to join
-passwordAdmin = "mintmorrogh";     // Admin password for in-game commands
-```
+The default password is `mintmorrogh`. Change it in `server_settings.json` under the `server` section, then run `apply_settings.bat`.
 
 To use admin commands in-game, open chat and type `#login <your admin password>`.
 
-## Server Configuration
-
-### General Settings (`serverDZ.cfg`)
-
-| Setting | Value | Description |
-|---|---|---|
-| `hostname` | Mint Mundane Server | Server name shown in browser |
-| `maxPlayers` | 4 | Max concurrent players |
-| `disable3rdPerson` | 0 | Third-person view enabled |
-| `disableCrosshair` | 0 | Crosshair enabled |
-| `verifySignatures` | 2 | Full mod signature verification |
-| `forceSameBuild` | 1 | Clients must match server version |
-| `enableCfgGameplayFile` | 1 | Loads cfggameplay.json settings |
-| `storageAutoFix` | 1 | Auto-repairs corrupted persistence files |
+## Server Configuration Details
 
 ### Time Settings
 
-| Setting | Value | Effect |
+| Setting | Default | Effect |
 |---|---|---|
-| `serverTime` | 2000/07/01/08/00 | Starts at 8:00 AM (summer) |
-| `serverTimeAcceleration` | 6 | Full day/night cycle in ~4 real hours |
-| `serverNightTimeAcceleration` | 4 | Nights pass in ~22 minutes |
-| `serverTimePersistent` | 1 | Time saves between restarts |
+| `startTime` | 2000/07/01/08/00 | Server starts at 8:00 AM in summer |
+| `acceleration` | 6 | Full day/night cycle in ~4 real hours |
+| `nightAcceleration` | 4 | Nights pass in ~22 minutes |
+| `persistent` | true | Time saves between restarts |
 
-### Gameplay Settings (`mpmissions/dayzOffline.chernarusplus/cfggameplay.json`)
-
-The gameplay config is loaded via `enableCfgGameplayFile = 1` in serverDZ.cfg. Edit `cfggameplay.json` to customize stamina, map behavior, base building rules, temperatures, and more.
-
-### Zombie Spawns (`mpmissions/dayzOffline.chernarusplus/db/events.xml`)
+### Zombie Spawns
 
 Zombie spawns have been customized for a small-group experience:
 
-| Zombie Type | Nominal / Min / Max | Notes |
+| Category | Nominal / Min / Max | Notes |
 |---|---|---|
 | City (regular) | 50 / 25 / 250 | Full vanilla density |
 | City (coastal/Tier 1) | 12 / 6 / 60 | 25% of vanilla — lighter starts |
 | Village (coastal/Tier 1) | 12 / 6 / 25 | 25% of vanilla |
-| Solitude (wilderness/forest) | 5 / 2 / 15 | Very rare — forests are mostly clear |
+| Wilderness (forest) | 5 / 2 / 15 | Very rare — forests are mostly clear |
 | Military | 50 / 25 / 250 | Full vanilla density |
-| All others (police, medic, etc.) | Unchanged | Vanilla defaults |
+| All others (police, medic, etc.) | 50 / 25 / 100 | Vanilla defaults |
+
+### Loot Economy
+
+| Setting | Default | What it does |
+|---|---|---|
+| `zombieMaxCount` | 1000 | Max zombies alive server-wide |
+| `animalMaxCount` | 200 | Max animals alive server-wide |
+| `lootDamageMin/Max` | 0.0 / 0.82 | Condition range for spawned loot |
+| `foodDecay` | 1 | Food spoilage (1=on, 0=off) |
+| `respawnLimit` | 20 | Max loot respawn cycles per restart |
+| `flagRefreshFrequency` | 432000 | Territory flag refresh interval (seconds) |
+| `flagRefreshMaxDuration` | 3456000 | Max time a flag stays active (seconds) |
 
 ## Mods
 
@@ -108,9 +189,9 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 
 ### Zenarchist's Skills — Loot Spawns
 
-Skill-related items spawn across the map via `mpmissions/dayzOffline.chernarusplus/custom/types_zenskills.xml`:
+Skill-related items spawn across the map (configurable in `server_settings.json` under `zenSkills`):
 
-| Item | Spawns | Locations |
+| Item | Default Spawns | Locations |
 |---|---|---|
 | EXP Boost Injector | 10 (min 5) | Medical, Military, Police, Towns |
 | Perk Reset Injector | 4 (min 2) | Medical, Military |
@@ -123,22 +204,26 @@ Items respawn automatically when the count drops below the minimum.
 
 ## Launching the Server
 
-1. Double-click `start.bat`
-2. Wait 1-2 minutes for the server to load
-3. **Do not press any keys** in the command prompt — any keypress kills the server
-4. The server auto-restarts every 4 hours
+1. Double-click `apply_settings.bat` (if you changed any settings)
+2. Double-click `start.bat`
+3. Wait 1-2 minutes for the server to load
+4. **Do not press any keys** in the command prompt — any keypress kills the server
+5. The server auto-restarts every 4 hours
 
 ## Connecting
 
-- **LAN:** DayZ > Servers > LAN tab > "Mint Mundane Server"
+- **LAN:** DayZ > Servers > LAN tab
 - **Direct Connect:** `<server IP>:2302`
-- **Password:** Whatever you set in `serverDZ.cfg` (default: `mintmorrogh`)
+- **Password:** Whatever you set in `server_settings.json` (default: `mintmorrogh`)
 
 ## File Structure
 
 ```
 DayZServer/
-├── serverDZ.cfg                 # Main server config
+├── server_settings.json         # <-- EDIT THIS: All server settings in one place
+├── apply_settings.bat           # Double-click to apply settings
+├── apply_settings.ps1           # PowerShell patcher (called by .bat)
+├── serverDZ.cfg                 # Main server config (patched automatically)
 ├── start.bat                    # Launch script with mod list
 ├── whitelist.txt                # Player whitelist (disabled by default)
 ├── keys/                        # Mod signature keys (.bikey)
@@ -153,12 +238,13 @@ DayZServer/
 ├── @ZenSkills/                  # Skill perk tree mod
 └── mpmissions/
     └── dayzOffline.chernarusplus/
-        ├── cfggameplay.json     # Gameplay settings (stamina, map, building)
+        ├── cfggameplay.json     # Gameplay settings (patched automatically)
         ├── cfgeconomycore.xml   # Economy config (references custom types)
         ├── custom/
-        │   └── types_zenskills.xml  # ZenSkills item spawn config
+        │   └── types_zenskills.xml  # ZenSkills item spawns (patched automatically)
         └── db/
-            └── events.xml       # Zombie spawn configuration
+            ├── events.xml       # Zombie spawns (patched automatically)
+            └── globals.xml      # Loot economy (patched automatically)
 ```
 
 ## Wiping the Server
@@ -174,3 +260,4 @@ mpmissions/dayzOffline.chernarusplus/storage_1/
 - **Can't connect:** Make sure your client has the exact same mods enabled. Mod mismatch = connection refused.
 - **No loot spawning:** Usually an XML syntax error. Validate your XML files at [codebeautify.org/xmlvalidator](https://codebeautify.org/xmlvalidator).
 - **Zombies not spawning:** Same as above — check `events.xml` for syntax errors.
+- **Settings not applying:** Make sure you ran `apply_settings.bat` after editing `server_settings.json`, then restarted the server.

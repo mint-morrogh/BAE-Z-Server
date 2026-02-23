@@ -12,6 +12,9 @@
 !README.md
 !serverDZ.cfg
 !start.bat
+!apply_settings.bat
+!apply_settings.ps1
+!server_settings.json
 !whitelist.txt
 !ban.txt
 

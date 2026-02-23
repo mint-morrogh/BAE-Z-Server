@@ -1,0 +1,85 @@
+{
+    "_README": "Edit the values below and run apply_settings.bat to patch all server config files at once.",
+
+    "server": {
+        "name": "Mint Mundane Server",
+        "password": "mintmorrogh",
+        "adminPassword": "mintmorrogh",
+        "maxPlayers": 4
+    },
+
+    "time": {
+        "_help": "acceleration=1 is real time. 6 means a full day passes in ~4 hours. nightAcceleration multiplies ON TOP of acceleration.",
+        "startTime": "2000/07/01/08/00",
+        "acceleration": 6,
+        "nightAcceleration": 4,
+        "persistent": true
+    },
+
+    "network": {
+        "vonEnabled": true,
+        "vonQuality": 20,
+        "thirdPerson": true,
+        "crosshair": true
+    },
+
+    "gameplay": {
+        "_help": "These require enableCfgGameplayFile=1 in serverDZ.cfg (already set).",
+        "disableBaseDamage": false,
+        "disableContainerDamage": false,
+        "staminaMax": 100.0,
+        "staminaMinCap": 5.0,
+        "staminaWeightThreshold": 6000.0,
+        "sprintStaminaModifier": 1.0,
+        "meleeStaminaModifier": 1.0,
+        "showPlayerOnMap": false,
+        "mapWithoutItem": false,
+        "compassWithoutItem": false,
+        "use3DMap": false,
+        "lightingConfig": 0,
+        "relaxedBaseBuilding": false
+    },
+
+    "zombies": {
+        "_help": "nominal=how many spawn near you, min=minimum alive on map, max=hard cap. Set nominal to 0 to disable a category.",
+        "city":           { "nominal": 50, "min": 25, "max": 250 },
+        "cityCoastal":    { "nominal": 12, "min":  6, "max":  60 },
+        "military":       { "nominal": 50, "min": 25, "max": 250 },
+        "militaryHard":   { "nominal": 50, "min": 25, "max": 250 },
+        "village":        { "nominal": 50, "min": 25, "max": 100 },
+        "villageCoastal": { "nominal": 12, "min":  6, "max":  25 },
+        "wilderness":     { "nominal":  5, "min":  2, "max":  15 },
+        "police":         { "nominal": 50, "min": 25, "max": 100 },
+        "policeHard":     { "nominal": 50, "min": 25, "max": 100 },
+        "medic":          { "nominal": 50, "min": 25, "max": 100 },
+        "firefighter":    { "nominal": 50, "min": 25, "max": 100 },
+        "industrial":     { "nominal": 50, "min": 25, "max": 100 },
+        "religious":      { "nominal": 50, "min": 25, "max": 100 },
+        "prisoner":       { "nominal": 50, "min": 25, "max": 100 },
+        "nbc":            { "nominal": 50, "min": 25, "max": 250 }
+    },
+
+    "lootEconomy": {
+        "_help": "Global loot economy from globals.xml. ZombieMaxCount caps total zombies server-wide. AnimalMaxCount caps animals.",
+        "zombieMaxCount": 1000,
+        "animalMaxCount": 200,
+        "lootDamageMin": 0.0,
+        "lootDamageMax": 0.82,
+        "foodDecay": 1,
+        "cleanupLifetimeDeadPlayer": 3600,
+        "cleanupLifetimeRuined": 330,
+        "respawnLimit": 20,
+        "flagRefreshFrequency": 432000,
+        "flagRefreshMaxDuration": 3456000
+    },
+
+    "zenSkills": {
+        "_help": "Spawn rates for Zenarchist's Skills items. nominal=max on map, min=respawn trigger.",
+        "expBoostInjector":  { "nominal": 10, "min": 5 },
+        "perkResetInjector": { "nominal":  4, "min": 2 },
+        "survivalBook":      { "nominal":  6, "min": 3 },
+        "craftingBook":      { "nominal":  6, "min": 3 },
+        "huntingBook":       { "nominal":  6, "min": 3 },
+        "gatheringBook":     { "nominal":  6, "min": 3 }
+    }
+}
