@@ -30,7 +30,7 @@
 	
 	<type name="Zombies_Caracteristics">
         <Zombies_Health_Ratio						Day	= "0.7"	Night = "1.0"/>	<!-- [Decimal 0.0 to infinite] Day: 30% easier kills -->
-        <Zombies_Strength_Ratio						Day	= "1.3"	Night = "1.0"/> <!-- [Decimal 0.0 to infinite] Day: 30% harder hits -->
+        <Zombies_Strength_Ratio						Day	= "0.5"	Night = "0.5"/> <!-- [Decimal 0.0 to infinite] Day: 30% harder hits -->
         <Zombies_Speed_Ratio						Day	= "0.75"	Night = "0.95"/> <!-- [Decimal 0.0 to infinite] Day: mostly walk, rare jog; Night: mostly run, rare sprint -->
 		<Zombies_Clamp_Speed_Mini					Day	= "0.0"	Night = "0.0"/> <!-- [Decimal 1.5=Walk / 2.5=Run / 3.0=Sprint] -->
         <Zombies_Clamp_Speed_Maxi					Day	= "2.5"	Night = "3.0"/> <!-- [Decimal 1.5=Walk / 2.5=Run / 3.0=Sprint] Day: no sprint; Night: allows rare sprint -->
@@ -43,7 +43,7 @@
 	
     <type name="Players_Caracteristics">
         <Maximum_Number_Of_Bleeding_Sources_From_Zombies_Combat			Value = "4"	/>
-        <Shoes_Degradation_When_Hit_By_Crawling_Zombie					Value = "5.0" />			<!-- [Decimal 0.0 to infinite] -->
+        <Shoes_Degradation_When_Hit_By_Crawling_Zombie					Value = "1.0" />			<!-- [Decimal 0.0 to infinite] -->
 		<Fist_Fighting   Bleeding_Chance_If_Fist_Fighting_Without_Gloves 			= "0.025"	/>	<!-- [0.0 to 1.0] -->
 		<Fist_Fighting	 Player_Dammage_If_Fist_Fighting_Without_Gloves				= "0.5"		/>  <!-- [Decimal 0.0 to 100.0] (Max player health is 100.0 hp) -->
 		<Fist_Fighting	 Player_Health_Limite_To_Take_Dammage_From_Fist_Fighting	= "80.0"	/>	<!-- [Decimal 0.0 to 100.0] -->
