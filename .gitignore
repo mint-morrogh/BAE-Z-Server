@@ -10,6 +10,7 @@
 # --- Allow top-level config & launch files ---
 !.gitignore
 !README.md
+!CLAUDE.md
 !serverDZ.cfg
 !start.bat
 !apply_settings.bat
@@ -25,6 +26,13 @@
 @*/addons/
 @*/keys/
 
+# --- Allow custom mod source ---
+!mod_src/
+!mod_src/**
+# Ignore build artifacts in mod_src
+mod_src/*/config.bin
+mod_src/*/*.pyc
+
 # --- Allow server keys folder ---
 !keys/
 !keys/*.bikey
@@ -38,6 +46,9 @@
 mpmissions/dayzOffline.chernarusplus/storage_0/
 mpmissions/dayzOffline.chernarusplus/storage_1/
 mpmissions/dayzOffline.chernarusplus/backups/
+
+# --- Ignore backup/temp files ---
+*.bak
 
 # --- Ignore game binaries & engine files ---
 *.exe

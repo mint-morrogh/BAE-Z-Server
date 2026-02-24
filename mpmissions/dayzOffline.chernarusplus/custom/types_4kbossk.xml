@@ -2,13 +2,13 @@
 <types>
 	<!--
 	4KBOSSKVehicles - Custom spawn config for Blood & Barter
-	~18 vehicles across the map, 1 per model, mixed colors
+	~38 vehicles across the map, tiered: common (3), medium (2), rare (1)
 	Parts included with lifetime only (no world spawns, come attached to vehicles)
 	-->
 
-	<!-- Audi RS6 ABT (Black) -->
+	<!-- Audi RS6 ABT (Black) — MEDIUM -->
 	<type name="Audi_RS6_ABT_Black">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -21,9 +21,9 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- BMW M3 (Blue) -->
+	<!-- BMW M3 (Blue) — MEDIUM -->
 	<type name="BMW_M3_Blue">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -36,12 +36,12 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Chevrolet Napalm Nova (Red) -->
+	<!-- Chevrolet Napalm Nova (Red) — COMMON -->
 	<type name="Chevrolet_NapalmNova_Red">
-		<nominal>1</nominal>
+		<nominal>3</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
-		<min>1</min>
+		<min>2</min>
 		<quantmin>-1</quantmin>
 		<quantmax>-1</quantmax>
 		<cost>100</cost>
@@ -51,9 +51,9 @@
 		<usage name="Farm"/>
 	</type>
 
-	<!-- Dodge Challenger SRT (Orange) -->
+	<!-- Dodge Challenger SRT (Orange) — MEDIUM -->
 	<type name="Dodge_ChallengerSRT_Orange">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -66,9 +66,9 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Dodge Charger Hellcat (black) -->
+	<!-- Dodge Charger Hellcat (black) — MEDIUM -->
 	<type name="dodgechargerhellcat_black">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -81,12 +81,12 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Dodge Ram 3500 (Grey) -->
+	<!-- Dodge Ram 3500 (Grey) — COMMON -->
 	<type name="DodgeRam_3500_Grey">
-		<nominal>1</nominal>
+		<nominal>3</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
-		<min>1</min>
+		<min>2</min>
 		<quantmin>-1</quantmin>
 		<quantmax>-1</quantmax>
 		<cost>100</cost>
@@ -96,9 +96,9 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Dodge Ram BOSS (camogreen) -->
+	<!-- Dodge Ram BOSS (camogreen) — MEDIUM -->
 	<type name="DodgeRam_BOSS_camogreen">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -111,12 +111,12 @@
 		<usage name="Military"/>
 	</type>
 
-	<!-- Ford Bronco (Rust) -->
+	<!-- Ford Bronco (Rust) — COMMON -->
 	<type name="Ford_Bronco_Rust">
-		<nominal>1</nominal>
+		<nominal>3</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
-		<min>1</min>
+		<min>2</min>
 		<quantmin>-1</quantmin>
 		<quantmax>-1</quantmax>
 		<cost>100</cost>
@@ -126,9 +126,9 @@
 		<usage name="Village"/>
 	</type>
 
-	<!-- Ford Mustang Shelby GT500 (Blue) -->
+	<!-- Ford Mustang Shelby GT500 (Blue) — MEDIUM -->
 	<type name="Ford_Mustang_Shelby_GT500_Blue">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -141,7 +141,7 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Ford Raptor Monster Truck (Black) - only spawns at farms/industrial, it's huge -->
+	<!-- Ford Raptor Monster Truck (Black) — RARE -->
 	<type name="Ford_Raptor_MonstarTruck_Black">
 		<nominal>1</nominal>
 		<lifetime>3888000</lifetime>
@@ -156,12 +156,12 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Honda Civic (White) -->
+	<!-- Honda Civic (White) — COMMON -->
 	<type name="Civic_White">
-		<nominal>1</nominal>
+		<nominal>3</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
-		<min>1</min>
+		<min>2</min>
 		<quantmin>-1</quantmin>
 		<quantmax>-1</quantmax>
 		<cost>100</cost>
@@ -171,9 +171,9 @@
 		<usage name="Village"/>
 	</type>
 
-	<!-- Jeep Gladiator F9 (DarkRed) -->
+	<!-- Jeep Gladiator F9 (DarkRed) — MEDIUM -->
 	<type name="Jeep_GladiatorF9_BOSS_DarkRed">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -186,7 +186,7 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Kamaz Typhoon K (CamoGreen) - military truck -->
+	<!-- Kamaz Typhoon K (CamoGreen) — RARE -->
 	<type name="Kamaz_TyphoonK_CamoGreen">
 		<nominal>1</nominal>
 		<lifetime>3888000</lifetime>
@@ -200,12 +200,12 @@
 		<usage name="Military"/>
 	</type>
 
-	<!-- MotorHome (Rust) -->
+	<!-- MotorHome (Rust) — COMMON -->
 	<type name="MotorHome_Rust">
-		<nominal>1</nominal>
+		<nominal>3</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
-		<min>1</min>
+		<min>2</min>
 		<quantmin>-1</quantmin>
 		<quantmax>-1</quantmax>
 		<cost>100</cost>
@@ -215,9 +215,9 @@
 		<usage name="Farm"/>
 	</type>
 
-	<!-- Nissan Skyline (Blue) -->
+	<!-- Nissan Skyline (Blue) — MEDIUM -->
 	<type name="Nissan_Skyline_Blue">
-		<nominal>1</nominal>
+		<nominal>2</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
 		<min>1</min>
@@ -230,7 +230,7 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Nissan GTR Nismo (Red) -->
+	<!-- Nissan GTR Nismo (Red) — RARE -->
 	<type name="NissanGTRNismo_Red">
 		<nominal>1</nominal>
 		<lifetime>3888000</lifetime>
@@ -245,7 +245,7 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Porsche 911 RWB (Green) -->
+	<!-- Porsche 911 RWB (Green) — RARE -->
 	<type name="Porsche_911RWB_Green">
 		<nominal>1</nominal>
 		<lifetime>3888000</lifetime>
@@ -260,7 +260,7 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- Toyota Supra MK IV (Red) -->
+	<!-- Toyota Supra MK IV (Red) — RARE -->
 	<type name="Supra_Red">
 		<nominal>1</nominal>
 		<lifetime>3888000</lifetime>
@@ -275,12 +275,12 @@
 		<usage name="Industrial"/>
 	</type>
 
-	<!-- GMC Suburban / Tahoe (Brown) -->
+	<!-- GMC Suburban / Tahoe (Brown) — COMMON -->
 	<type name="Tahoe_Brown">
-		<nominal>1</nominal>
+		<nominal>3</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
-		<min>1</min>
+		<min>2</min>
 		<quantmin>-1</quantmin>
 		<quantmax>-1</quantmax>
 		<cost>100</cost>
@@ -290,12 +290,12 @@
 		<usage name="Farm"/>
 	</type>
 
-	<!-- Toyota 4Runner (white) -->
+	<!-- Toyota 4Runner (white) — COMMON -->
 	<type name="ToyotaRunner_white">
-		<nominal>1</nominal>
+		<nominal>3</nominal>
 		<lifetime>3888000</lifetime>
 		<restock>0</restock>
-		<min>1</min>
+		<min>2</min>
 		<quantmin>-1</quantmin>
 		<quantmax>-1</quantmax>
 		<cost>100</cost>

@@ -4,11 +4,11 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 
 ### Features
 
-- **29 mods** — all preconfigured and ready to go
+- **30 mods + 2 custom server-side mods** — all preconfigured and ready to go
 - **GPS minimap** — on-screen minimap with player position via DayZ Expansion
 - **Companion dogs** — 17 breeds of tameable dogs, equip collars/vests/gas masks, build dog houses
 - **Rideable horses** — 5 horse colours, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
-- **20 driveable vehicles** — Supra, Mustang GT500, Skyline, Porsche 911, Dodge Ram, Monster Truck, MotorHome, and more
+- **42 driveable vehicles** — tiered rarity: common trucks/SUVs (3 each), mid-tier sports cars (2 each), rare exotics (1 each)
 - **Flyable planes** — DC-3, Spitfire, Cessna 180, Catalina seaplane, Tigermoth, Stuntplane (14 planes across the map)
 - **Care package supply drops** — military, medical, survival, and building supplies parachute in every 60 minutes with zombie guards
 - **700+ crafting recipes** — weapons, armor, ammo, vehicles, bushcraft, NBC gear, and more via Nemsis Craftingpack
@@ -16,12 +16,16 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 - **Skill tree** — earn XP and unlock perks in survival, crafting, hunting, and gathering
 - **Treasure hunting** — find photos, travel to the location, dig up randomized loot stashes
 - **NPC traders** — buy and sell items at safe zones
-- **Day/night zombie system** — daytime walkers are easier to kill and have shorter vision; nighttime zombies are full-strength with rare sprinters
+- **Day/night zombie system** — fewer, weaker zombies by day (halved spawns, shorter vision, easier kills); 33% more zombies at night with full vision, full strength, and rare sprinters
+- **Zombie kill drops** — zombies drop loot when killed: food/bandages from civilians, ammo from military/police, medical supplies from doctors
+- **Campfire health regen** — players near a lit fire slowly regenerate health (+2) and blood (+5) every 10 seconds
+- **Generous loot** — doubled food/drink spawns, magazines spawn 40-90% full, ammo boxes spawn 40-80% full
 - **Sleep & fatigue system** — realistic tiredness mechanic with sleeping bags, hallucinations, and immunity effects
 - **Sleep till morning** — if all players lie down to sleep at night, time skips to dawn
 - **Unlimited stamina** — no stamina drain while sprinting
 - **One-file configuration** — all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** — server automatically restarts every 4 hours
+- **63 modded backpacks** — 13 backpack models in multiple camo/colour variants, found at military, hunting, town, village, and farm locations
 - **Full persistence** — bases, vehicles, and inventory survive restarts
 
 ## Quick Start
@@ -214,17 +218,17 @@ To use admin commands in-game, open chat and type `#login <your admin password>`
 
 ### Zombie Spawns
 
-Zombie spawns have been customized for a small-group experience:
+Zombie spawns are set ~33% above half-vanilla baseline. A custom server-side mod (`@DayZombieManager`) culls ~62% of spawns during daytime, giving roughly half-density during the day and full +33% density at night. The same mod also handles zombie kill drops.
 
 | Category | Nominal / Min / Max | Notes |
 |---|---|---|
-| City (regular) | 25 / 12 / 120 | Half vanilla density |
-| City (coastal/Tier 1) | 6 / 3 / 30 | Light — easier coastal starts |
-| Village | 20 / 10 / 50 | Moderate |
-| Village (coastal/Tier 1) | 6 / 3 / 15 | Light |
-| Wilderness (forest) | 2 / 1 / 8 | Very rare — forests are mostly clear |
-| Military | 25 / 12 / 120 | Half vanilla |
-| All others (police, medic, etc.) | 20 / 10 / 50 | Reduced |
+| City (regular) | 33 / 16 / 120 | ~Half vanilla by day, +33% at night |
+| City (coastal/Tier 1) | 8 / 4 / 30 | Light — easier coastal starts |
+| Village | 27 / 13 / 50 | Moderate |
+| Village (coastal/Tier 1) | 8 / 4 / 15 | Light |
+| Wilderness (forest) | 3 / 1 / 8 | Very rare — forests are mostly clear |
+| Military | 33 / 16 / 120 | Dangerous at night |
+| All others (police, medic, etc.) | 27 / 13 / 50 | Reduced |
 
 ### Loot Economy
 
@@ -274,6 +278,7 @@ These mods must be installed on both the **server** and **client**.
 | [DayZ-Dog](https://steamcommunity.com/sharedfiles/filedetails/?id=2471347750) | 2471347750 | Tameable companion dogs — 17 breeds, collars, vests, gas masks, dog houses |
 | [Survivor Animations](https://steamcommunity.com/sharedfiles/filedetails/?id=2918418331) | 2918418331 | Animation dependency required by DayZ Horse |
 | [DayZ Horse](https://steamcommunity.com/sharedfiles/filedetails/?id=3295021220) | 3295021220 | Rideable horses — 5 colours, saddles, bridles, saddlebags, stables, walk/trot/gallop/jump/swim |
+| [Pack Complete — Backpacks FREE](https://steamcommunity.com/sharedfiles/filedetails/?id=3648464156) | 3648464156 | 13 backpack models with 63 camo/colour variants — tactical, military, medical, and civilian packs |
 
 ### Mod Installation
 
@@ -309,6 +314,29 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `2471347750` | `@DayZDog` |
 | `2918418331` | `@SurvivorAnims` |
 | `3295021220` | `@DayZHorse` |
+| `3648464156` | `@GelyaBackpacks` |
+
+### Gelya Backpacks — Pack Complete
+
+13 backpack models with 63 colour/camo variants spawn across Chernarus alongside vanilla backpacks. Each variant has 2 copies on the map (min 1), except single-variant models and medpacks which spawn slightly more.
+
+| Backpack | Variants | Locations |
+|---|---|---|
+| Backpack 5.11 | 5 (Black, Tan, DPM, Multicam, Flectarn) | Military, Hunting (Tier 2-4) |
+| BEAR Bag | 6 (Black, Tan, Urban Spetsnaz, GreenTortilla, PartizanM, TokioESP) | Military, Hunting (Tier 2-4) |
+| Beta 2 | 8 (Black, Green, Tan, Urban Spetsnaz, GreenTortilla, HexcamArid, RussianEMR, SnowUrban) | Military, Town (Tier 2-4) |
+| Blood Silence | 9 (COD, Flectarn, GreenTortille, HexcamArid, Multicam, RussianEMR, Tan, Tigerstripe, Vegetato) | Military, Hunting (Tier 3-4) |
+| Camel Backpack | 7 (Black, BlueCamo, KuwaitiPolice, Urban Spetsnaz, ERDL, HexcamArid, M90 Night) | Hunting, Town, Farm (Tier 1-3) |
+| F5 Switchblade | 10 (Black, Green, GreenTortilla, M90 Night, MTZ16, Multicam, RussianEMR, Swapol, Tan, Woodland) | Military, Town (Tier 2-4) |
+| Gunslinger | 7 (Black, BLR, Green, GreenTortilla, Tan, USCM, Woodland 90s) | Military, Hunting, Town (Tier 2-4) |
+| Medpack | 2 (Black, EMR) | Medical, Town (Tier 1-3) |
+| Sport Bag | 1 | Town, Village (Tier 1-2) |
+| Stalker Bag | 1 | Hunting, Village, Farm (Tier 2-3) |
+| Wild Bag | 1 | Hunting, Village, Farm (Tier 1-3) |
+| Adventure Bag | 5 (Black, DPM, GorkaE, Jigsaw, Zelt) | Town, Village, Hunting (Tier 1-3) |
+| Assault G3 | 1 | Military (Tier 3-4) |
+
+Backpack spawns are configured in `custom/types_gelyabackpacks.xml`.
 
 ### Zenarchist's Skills — Loot Spawns
 
@@ -378,30 +406,30 @@ Plane spawns are configured in `custom/types_lmplanes.xml`.
 
 ### 4KBOSSKVehicles
 
-20 driveable vehicles spawn across the map at towns, farms, industrial areas, and military bases. One of each model in a random color:
+42 driveable vehicles spawn across the map with tiered rarity — common everyday vehicles are easy to find, rare exotics take effort to locate:
 
-| Vehicle | Location |
-|---|---|
-| Audi RS6 ABT | Town, Industrial |
-| BMW M3 | Town, Industrial |
-| Chevrolet Napalm Nova | Town, Farm |
-| Dodge Challenger SRT | Town, Industrial |
-| Dodge Charger Hellcat | Town, Industrial |
-| Dodge Ram 3500 | Farm, Industrial |
-| Dodge Ram (camo) | Farm, Military |
-| Ford Bronco | Farm, Village |
-| Ford Mustang Shelby GT500 | Town, Industrial |
-| Ford Raptor Monster Truck | Farm, Industrial |
-| Honda Civic | Town, Village |
-| Jeep Gladiator F9 | Farm, Industrial |
-| Kamaz Typhoon K | Military |
-| MotorHome | Town, Farm |
-| Nissan Skyline | Town, Industrial |
-| Nissan GTR Nismo | Town, Industrial |
-| Porsche 911 RWB | Town, Industrial |
-| Toyota Supra MK IV | Town, Industrial |
-| Chevy Tahoe | Town, Farm |
-| Toyota 4Runner | Farm, Village |
+| Vehicle | Count | Tier | Location |
+|---|---|---|---|
+| Honda Civic | 3 | Common | Town, Village |
+| Ford Bronco | 3 | Common | Farm, Village |
+| Toyota 4Runner | 3 | Common | Farm, Village |
+| Dodge Ram 3500 | 3 | Common | Farm, Industrial |
+| Chevy Tahoe | 3 | Common | Town, Farm |
+| MotorHome | 3 | Common | Town, Farm |
+| Chevrolet Napalm Nova | 3 | Common | Town, Farm |
+| Audi RS6 ABT | 2 | Medium | Town, Industrial |
+| BMW M3 | 2 | Medium | Town, Industrial |
+| Dodge Challenger SRT | 2 | Medium | Town, Industrial |
+| Dodge Charger Hellcat | 2 | Medium | Town, Industrial |
+| Nissan Skyline | 2 | Medium | Town, Industrial |
+| Jeep Gladiator F9 | 2 | Medium | Farm, Industrial |
+| Ford Mustang Shelby GT500 | 2 | Medium | Town, Industrial |
+| Dodge Ram (camo) | 2 | Medium | Farm, Military |
+| Porsche 911 RWB | 1 | Rare | Town, Industrial |
+| Toyota Supra MK IV | 1 | Rare | Town, Industrial |
+| Nissan GTR Nismo | 1 | Rare | Town, Industrial |
+| Ford Raptor Monster Truck | 1 | Rare | Farm, Industrial |
+| Kamaz Typhoon K | 1 | Rare | Military |
 
 Vehicle spawns are configured in `custom/types_4kbossk.xml`. The mod includes 163 color variants — change colors by swapping class names in the types file.
 
@@ -446,19 +474,58 @@ Horse tack is configured in `custom/types_dayzhorse.xml`. Requires the **Survivo
 
 ### PvZmoD — Customisable Zombies
 
-Fully configurable zombie behaviour system with independent day and night settings. **Daytime is forgiving** — zombies are slow walkers, easier to kill, and have poor eyesight, letting players explore and loot in relative safety. **Nighttime is dangerous** — zombies return to full strength with rare sprinters, making darkness a real threat.
+Fully configurable zombie behaviour system with independent day and night settings. **Daytime is forgiving** — fewer zombies that are slow, easier to kill, and have poor eyesight, letting players explore and loot in relative safety. **Nighttime is dangerous** — 33% more zombies with full vanilla vision, full strength, and rare sprinters, making darkness a real threat.
 
 | Setting | Day | Night | Effect |
 |---|---|---|---|
+| Spawn count | ~62% culled (half density) | +33% more than baseline | Custom server mod thins the herd by day |
 | Speed | Walk/jog only | Walk/jog + rare sprinters | Day capped at run (2.5), night allows sprint (3.0) |
 | Speed ratio | 0.75x | 0.95x | Further scales down — most zombies walk by day |
 | Health | 0.7x (30% easier kills) | 1.0x (vanilla) | Daytime zombies go down fast |
 | Damage | 1.3x (30% harder hits) | 1.0x (vanilla) | Daytime zombies hit harder to compensate |
-| Vision | 0.65x (35% shorter) | 0.8x (vanilla night) | Easier sneaking during the day |
+| Vision | 0.65x (35% shorter) | 1.0x (vanilla) | Easier sneaking during day, full sight at night |
+| Size | Normal (disabled) | Normal (disabled) | No random size scaling — all zombies player-sized |
 
 All zombie settings are configurable in `server_settings.json` under `zombieBehavior` and applied automatically by the settings patcher. Changes can also be applied in-game without a restart by pressing **Numpad 4**.
 
 Config files are auto-generated at `config/PvZmoD_CustomisableZombies_Profile/` on first server start.
+
+#### Zombie Health Rebalance
+
+The toughest common zombies (police, military, soldiers) have been rebalanced so they're still noticeably tougher than civilians but not tedious melee sponges. Boss types and walkers are unchanged.
+
+| Zombie | Old HP | New HP | Day knife hits (0.7x) |
+|---|---|---|---|
+| Civilians / NBC Yellow / Paramedics | 33-100 | No change | 2-6 |
+| Gamedev (Dean Hall) | 150 | 120 | 5-6 |
+| NBC Grey, Police | 200 | 140 | 6-7 |
+| Spec Force, Negan, Soldiers | 250 | 160 | 7-8 |
+| Heavy Soldiers, Officer Convoy | 300 | 180 | 8-9 |
+| Boss types (Santa, Priest, etc.) | 400-1000 | No change | By design |
+
+### Zombie Kill Drops
+
+Built into the `@DayZombieManager` server mod. Zombies have a chance to drop loot when killed, with different loot tables based on zombie type:
+
+| Zombie Type | Drop Chance | Loot |
+|---|---|---|
+| Civilian (default) | 25% | Food (apple, pear, plum, canned food), bandages, batteries, matches |
+| Military (soldiers) | 30% | Ammo boxes (5.56, 7.62, 9mm, 5.45), AK magazines, compass |
+| Police | 30% | Pistol ammo (9mm, .45), pistol magazines, handcuffs, flashlight |
+| Medical (doctor/nurse/paramedic) | 35% | Bandages, morphine, antibiotics, saline, vitamins, disinfectant |
+
+Loot spawns on the ground at the zombie's death location. Source code in `mod_src/DayZombieManager/`.
+
+### Campfire Health Regen
+
+Custom server-side mod (`@CampfireRegen`). Players within 5 metres of a burning fire slowly regenerate health and blood:
+
+- **+2 Health** per 10 seconds (max 100)
+- **+5 Blood** per 10 seconds (max 5000)
+
+Sitting by a campfire for 5 minutes heals ~60 health and ~150 blood. Not a replacement for medical items, but a quality-of-life reward for the campfire moment. Pairs well with Zen's Sleep (sleeping near fires already recovers fatigue faster).
+
+Source code in `mod_src/CampfireRegen/`.
 
 ### Zen's Sleeping Mod
 
@@ -559,6 +626,18 @@ DayZServer/
 ├── @DayZDog/                    # Companion dogs (17 breeds)
 ├── @SurvivorAnims/              # Animation dependency for horse mod
 ├── @DayZHorse/                  # Rideable horses (5 colours)
+├── @GelyaBackpacks/             # 13 backpack models (63 variants)
+├── @DayZombieManager/           # Custom server-side mod — zombie culling + kill drops
+│   └── addons/
+│       └── DayZombieManager.pbo # Daytime culling + loot drops on kill
+├── @CampfireRegen/              # Custom server-side mod — campfire healing
+│   └── addons/
+│       └── CampfireRegen.pbo    # Health/blood regen near lit fires
+├── mod_src/                     # Source code for custom mods
+│   ├── DayZombieManager/        # Zombie manager source (culling + kill drops)
+│   ├── CampfireRegen/           # Campfire regen source
+│   ├── pack_pbo.py              # PBO packer tool
+│   └── rapify.py                # config.cpp to config.bin converter
 └── mpmissions/
     └── dayzOffline.chernarusplus/
         ├── cfggameplay.json     # Gameplay settings (patched automatically)
@@ -572,7 +651,8 @@ DayZServer/
         │   ├── types_zensleep.xml     # ZenSleep sleeping bags & items
         │   ├── types_4kbossk.xml      # 4KBOSSKVehicles spawn config
         │   ├── types_dayzdog.xml     # Dog accessory spawns
-        │   └── types_dayzhorse.xml   # Horse tack spawns
+        │   ├── types_dayzhorse.xml   # Horse tack spawns
+        │   └── types_gelyabackpacks.xml  # Gelya Backpacks spawn config
         ├── env/
         │   ├── dog_territories.xml   # Wild dog spawn zones
         │   └── wild_horse_territories.xml  # Horse grazing zones

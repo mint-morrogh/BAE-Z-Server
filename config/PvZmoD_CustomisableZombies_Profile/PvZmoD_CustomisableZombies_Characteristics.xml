@@ -34,7 +34,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -67,7 +67,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -100,7 +100,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -135,7 +135,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.02" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.02" HeavyAttack_Blocked="0.01" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -168,7 +168,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.02" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.02" HeavyAttack_Blocked="0.01" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>		<!-- Integer [0 to infinite] (0: Zombie can't break doors, 2: zombie need two hit to break a door...) -->
@@ -203,7 +203,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -236,7 +236,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -269,7 +269,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -302,7 +302,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -335,7 +335,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -368,7 +368,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -401,7 +401,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -434,7 +434,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -467,7 +467,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -500,7 +500,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -533,7 +533,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -566,7 +566,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -599,7 +599,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -632,7 +632,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -665,7 +665,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -700,7 +700,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -733,7 +733,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -766,7 +766,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -799,7 +799,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"		Night="10"/>
@@ -834,7 +834,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -867,7 +867,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -902,7 +902,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="1"		Night="1"/>	<!-- Resist to contaminated areas (always activated for NBC zombies even if you set the value to 0) -->
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -935,7 +935,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="1"		Night="1"/>	<!-- Resist to contaminated areas (always activated for NBC zombies even if you set the value to 0) -->
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -943,8 +943,8 @@
  		<Size_Maxi 					Day="1.0"	Night="1.0"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_NBC_Grey">						
-        <Health_Points				Day="200" 	Night="200"/>	<!-- Strong Lvl 2-->
+	<type name="ZmbM_NBC_Grey">
+        <Health_Points				Day="140" 	Night="140"/>	<!-- Strong Lvl 2 (rebalanced from 200) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -968,7 +968,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="1"		Night="1"/>	<!-- Resist to contaminated areas (always activated for NBC zombies even if you set the value to 0) -->
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -1003,7 +1003,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1036,7 +1036,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1071,7 +1071,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1104,7 +1104,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1139,7 +1139,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1172,7 +1172,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1205,7 +1205,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1213,8 +1213,8 @@
  		<Size_Maxi 					Day="1.0"	Night="1.0"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_MotobikerFat_Base">	<!-- Negan -->						
-        <Health_Points				Day="250" 	Night="250"/>	<!-- Strong Lvl Negan -->
+	<type name="ZmbM_MotobikerFat_Base">	<!-- Negan -->
+        <Health_Points				Day="160" 	Night="160"/>	<!-- Strong Lvl 3 (rebalanced from 250) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1238,7 +1238,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="0"		Night="0"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="2"		Night="2"/>
@@ -1246,8 +1246,8 @@
  		<Size_Maxi 					Day="1.2"	Night="1.3"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_Gamedev_Base">			<!-- Dean Hall -->						
-        <Health_Points				Day="150" 	Night="150"/>	<!-- Strong Lvl 1.5 -->
+	<type name="ZmbM_Gamedev_Base">			<!-- Dean Hall -->
+        <Health_Points				Day="120" 	Night="120"/>	<!-- Strong Lvl 1.5 (rebalanced from 150) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1271,7 +1271,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="10"	Night="10"/>
@@ -1306,7 +1306,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.25" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.25" HeavyAttack_Blocked="0.1" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="50" LightAttack_Blocked="25" HeavyAttack_NotBlocked="50" HeavyAttack_Blocked="25" NightRatio="2.0"/> <!-- Drain Stamina -->
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1339,7 +1339,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.25" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.25" HeavyAttack_Blocked="0.1" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="50" LightAttack_Blocked="25" HeavyAttack_NotBlocked="50" HeavyAttack_Blocked="25" NightRatio="2.0"/> <!-- Drain Stamina -->
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1349,8 +1349,8 @@
 	</type>
 	
 	<!-- Police -->
-	<type name="ZmbM_PolicemanFat_Base">						
-        <Health_Points				Day="200" 	Night="200"/> 	<!-- Strong Lvl 2 -->
+	<type name="ZmbM_PolicemanFat_Base">
+        <Health_Points				Day="140" 	Night="140"/> 	<!-- Strong Lvl 2 (rebalanced from 200) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1374,7 +1374,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.15" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.15" HeavyAttack_Blocked="0.1" NightRatio="1.0"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1382,8 +1382,8 @@
  		<Size_Maxi 					Day="1.0"	Night="1.0"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbF_PoliceWomanNormal_Base">					
-        <Health_Points				Day="200" 	Night="200"/> 	<!-- Strong Lvl 2 -->
+	<type name="ZmbF_PoliceWomanNormal_Base">
+        <Health_Points				Day="140" 	Night="140"/> 	<!-- Strong Lvl 2 (rebalanced from 200) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1407,7 +1407,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.15" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.15" HeavyAttack_Blocked="0.1" NightRatio="1.0"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1415,8 +1415,8 @@
  		<Size_Maxi 					Day="1.0"	Night="1.0"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_PolicemanSpecForce_Heavy">					
-        <Health_Points				Day="250" 	Night="250"/> 	<!-- Strong Lvl 3 -->
+	<type name="ZmbM_PolicemanSpecForce_Heavy">
+        <Health_Points				Day="160" 	Night="160"/> 	<!-- Strong Lvl 3 (rebalanced from 250) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1440,7 +1440,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.2" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.2" HeavyAttack_Blocked="0.1" NightRatio="1.0"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -1448,8 +1448,8 @@
  		<Size_Maxi 					Day="1.0"	Night="1.0"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_PolicemanSpecForce_Base">					
-        <Health_Points				Day="250" 	Night="250"/> 	<!-- Strong Lvl 3 -->
+	<type name="ZmbM_PolicemanSpecForce_Base">
+        <Health_Points				Day="160" 	Night="160"/> 	<!-- Strong Lvl 3 (rebalanced from 250) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1473,7 +1473,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.2" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.2" HeavyAttack_Blocked="0.1" NightRatio="1.0"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -1483,8 +1483,8 @@
     </type>
 	
 	<!-- Military -->
-	<type name="ZmbM_usSoldier_Heavy_Woodland">						
-        <Health_Points				Day="300" 	Night="300"/> 	<!-- Strong Lvl 4 -->
+	<type name="ZmbM_usSoldier_Heavy_Woodland">
+        <Health_Points				Day="180" 	Night="180"/> 	<!-- Strong Lvl 4 (rebalanced from 300) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1508,7 +1508,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.15" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.15" HeavyAttack_Blocked="0.05" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1516,8 +1516,8 @@
  		<Size_Maxi 					Day="1.0"	Night="1.0"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>	
-	<type name="ZmbM_usSoldier_Officer_Convoy">						
-        <Health_Points				Day="300" 	Night="300"/> 	<!-- Strong Lvl 4 -->
+	<type name="ZmbM_usSoldier_Officer_Convoy">
+        <Health_Points				Day="180" 	Night="180"/> 	<!-- Strong Lvl 4 (rebalanced from 300) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1541,7 +1541,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.15" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.15" HeavyAttack_Blocked="0.05" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -1549,8 +1549,8 @@
  		<Size_Maxi 					Day="1.2"	Night="1.2"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>	
-	<type name="ZmbM_usSoldier_Officer_Desert">						
-        <Health_Points				Day="300" 	Night="300"/> 	<!-- Strong Lvl 4 -->
+	<type name="ZmbM_usSoldier_Officer_Desert">
+        <Health_Points				Day="180" 	Night="180"/> 	<!-- Strong Lvl 4 (rebalanced from 300) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1574,7 +1574,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.15" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.15" HeavyAttack_Blocked="0.05" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -1582,8 +1582,8 @@
  		<Size_Maxi 					Day="1.2"	Night="1.2"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>	
-	<type name="ZmbM_usSoldier_normal_Base">					
-        <Health_Points				Day="250" 	Night="250"/> 	<!-- Strong Lvl 3 -->
+	<type name="ZmbM_usSoldier_normal_Base">
+        <Health_Points				Day="160" 	Night="160"/> 	<!-- Strong Lvl 3 (rebalanced from 250) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1607,7 +1607,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1640,7 +1640,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1675,7 +1675,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/> 
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/> 
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/> 
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -1741,7 +1741,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="1.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="1.0" HeavyAttack_Blocked="0.0" NightRatio="1.0"/> <!-- Bleed if not blocked -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -1774,7 +1774,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.0" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -1783,7 +1783,7 @@
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
 	<type name="ZmbM_DoctorFat_Base">
-        <Health_Points				Day="250" 	Night="250"/> 	<!-- Strong Lvl 3 -->
+        <Health_Points				Day="160" 	Night="160"/> 	<!-- Strong Lvl 3 (rebalanced from 250) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 
@@ -1807,7 +1807,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.2" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.2" HeavyAttack_Blocked="0.0" NightRatio="1.0"/>  <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="50" LightAttack_Blocked="50" HeavyAttack_NotBlocked="50" HeavyAttack_Blocked="50" NightRatio="1.0"/> <!-- Drain Blood -->
 		<Damage_Stamina				LightAttack_NotBlocked="100" LightAttack_Blocked="50" HeavyAttack_NotBlocked="100" HeavyAttack_Blocked="50" NightRatio="1.0"/> <!-- Drain Stamina -->
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="0"		Night="0"/>	<!-- Can't be backstab -->
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="3"		Night="3"/>
@@ -1873,7 +1873,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.2" LightAttack_Blocked="0.05" HeavyAttack_NotBlocked="0.2" HeavyAttack_Blocked="0.1" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="100" LightAttack_Blocked="50" HeavyAttack_NotBlocked="100" HeavyAttack_Blocked="50" NightRatio="1.5"/> <!-- Drain Blood -->
 		<Damage_Stamina				LightAttack_NotBlocked="50" LightAttack_Blocked="25" HeavyAttack_NotBlocked="50" HeavyAttack_Blocked="25" NightRatio="2.0"/> <!-- Drain Stamina -->
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="0"		Night="0"/>	<!-- Can't be backstab -->
  		<Resist_Contaminated_Effect	Day="1"		Night="1"/>	<!-- Resist to contaminated areas -->
  		<Numb_Of_Hit_To_Break_Doors	Day="1"		Night="1"/>
@@ -1915,8 +1915,8 @@
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
 	
-	<type name="ZmbM_SoldierNormal_Base">			<!-- At the end of vanilla list to not conflict with "HumanZombies" -->			
-        <Health_Points				Day="300" 	Night="300"/> 	<!-- Strong Lvl 4 -->
+	<type name="ZmbM_SoldierNormal_Base">			<!-- At the end of vanilla list to not conflict with "HumanZombies" -->
+        <Health_Points				Day="160" 	Night="160"/> 	<!-- Strong Lvl 3 (rebalanced from 300) -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
@@ -1940,7 +1940,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.15" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.15" HeavyAttack_Blocked="0.05" NightRatio="1.5"/> <!-- More Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -2251,7 +2251,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -2285,7 +2285,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -2319,7 +2319,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.05" NightRatio="1.0"/> <!-- Bleeding chance -->
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="0"		Night="0"/>
@@ -2355,7 +2355,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.1" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -2389,7 +2389,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.1" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>
@@ -2423,7 +2423,7 @@
 		<Bleeding_Chance			LightAttack_NotBlocked="0.1" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.1" HeavyAttack_Blocked="0.1" NightRatio="1.0"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
 		<Damage_Stamina				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Vision_Distance_Ratio		Day="0.65" Night="0.8" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
+		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
  		<Numb_Of_Hit_To_Break_Doors	Day="5"		Night="5"/>

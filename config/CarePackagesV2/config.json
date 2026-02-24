@@ -290,7 +290,7 @@
     "LocationHistoryCheckRange": 3,
     "LockPackages": true,
     "Title": "Care Package",
-    "DroppedMessage": "The care package has landed at ",
+    "DroppedMessage": "Care Package has been deployed",
     "StartMessage": "A care package is on its way to ",
     "MinutesAwayPrefix": "The care package is ",
     "MinutesAwaySuffix": " minutes away from "

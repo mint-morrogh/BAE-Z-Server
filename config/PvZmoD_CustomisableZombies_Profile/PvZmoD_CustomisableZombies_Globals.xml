@@ -24,7 +24,7 @@
 		<Zombies_Breaking_Doors_Activated					Day = "1"	Night = "1"/>	<!-- [0 or 1]  -->
 		<Zombies_Breaking_LockedDoors_Activated				Day = "0"	Night = "0"/>	<!-- [0 or 1]  -->
 		<Zombies_Aggressive_Doors_Detection_Activated		Day = "1"	Night = "1"/>	<!-- [0 or 1]  -->
-		<Zombies_Size_Activated								Day = "1"	Night = "1"/>	<!-- [0 or 1]  -->
+		<Zombies_Size_Activated								Day = "0"	Night = "0"/>	<!-- [0 or 1]  -->
 		<Zombies_Stun_By_Bullet_Resistance_Activated		Day = "1"	Night = "1"/>	<!-- [0 or 1]  -->
 	</type>
 	

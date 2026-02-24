@@ -1,116 +1,106 @@
 {
-    "ConfigVersion":  "Updated 27th July 2025",
-    "GeneralConfig":  {
-                          "SecondsAsleepUntilFullRestApprox":  600.0,
-                          "FreshSpawnFatiguePercent":  100.0,
-                          "MaxFatiguePercentToAllowSleeping":  70.0,
-                          "FatigueLevelToNegativeImpactImmunity":  2,
-                          "DisplaySleepMessages":  1
-                      },
-    "GainConfig":  {
-                       "GlobalGainMultiplier":  1.0,
-                       "GainNightMultiplier":  1.5,
-                       "GainBedObjectUsed":  1.2999999523162842,
-                       "GainInsideMultiplier":  1.100000023841858,
-                       "GainFromHeatBuffMultiplier":  1.100000023841858,
-                       "MaxRestGain_Illness":  16.0,
-                       "MaxRestGain_Temp_DarkBlueFlashing":  0.0,
-                       "MaxRestGain_Temp_DarkBlue":  0.0,
-                       "MaxRestGain_Temp_LightBlue":  70.0,
-                       "MaxRestGain_Temp_Yellow":  70.0,
-                       "MaxRestGain_Temp_Red":  0.0,
-                       "MaxRestGain_Temp_RedFlashing":  0.0,
-                       "MaxRestGain_FoodWater_Yellow":  16.0,
-                       "MaxRestGain_FoodWater_Red":  6.0,
-                       "MaxRestGain_FoodWater_RedFlashing":  0.0,
-                       "MaxRestGain_Wet":  16.0,
-                       "MaxRestGain_Time_Daylight":  70.0,
-                       "MaxRestGain_Time_Night":  100.0,
-                       "PercentGainedUponUncon":  1.0,
-                       "BedHeatBuffMaxGain":  10.0,
-                       "BedHealthMaxGain":  100.0,
-                       "BedHealthGainPerSec":  0.25,
-                       "MinSecsAsleepInBedToTriggerImmunityBoost":  120.0,
-                       "MinSecsAsleepToTriggerHealthRecovery":  120.0
-                   },
-    "DrainConfig":  {
-                        "GlobalDrainMultiplier":  0.4,
-                        "DrainHeavyItemMultiplier":  1.0,
-                        "DrainWalkingMultiplier":  1.0,
-                        "DrainJoggingMultiplier":  1.0,
-                        "DrainSprintingMultiplier":  1.0,
-                        "DrainWeightMultiplier":  1.0,
-                        "DrainNightMultiplier":  1.5,
-                        "HealthLossPerSecRedFlashing":  0.0
-                    },
-    "ModifiersConfig":  {
-                            "ModifierDeactivatedPercent":  {
-
-                                                           },
-                            "ModifierActivatedPercent":  {
-
-                                                         },
-                            "ModifierPausesSeconds":  {
-
-                                                      },
-                            "StaminaRecoveryModifiers":  {
-                                                             "Yellow":  0.800000011920929,
-                                                             "RedFlashing":  0.4000000059604645,
-                                                             "Red":  0.6000000238418579
-                                                         }
-                        },
-    "ServerEffectsConfig":  {
-                                "MinimumSecsBetweenYawnRedFlashing":  30.0,
-                                "MaximumSecsBetweenYawnRedFlashing":  300.0,
-                                "MinimumSecsBetweenYawnRed":  180.0,
-                                "MaximumSecsBetweenYawnRed":  300.0,
-                                "MinimumSecsBetweenSnore":  10.0,
-                                "MaximumSecsBetweenSnore":  20.0,
-                                "MinimumSecsBetweenUnconRedFlashing":  180.0,
-                                "MaximumSecsBetweenUnconRedFlashing":  360.0,
-                                "MinimumSecsBetweenUnconRed":  600.0,
-                                "MaximumSecsBetweenUnconRed":  900.0,
-                                "MaximumSecsBuzzedByCombat":  0.0,
-                                "ChanceToSnoreSleeping":  90.0,
-                                "ChanceToYawnRedFlashing":  90.0,
-                                "ChanceToYawnRed":  25.0,
-                                "ChanceToHallucinateRedFlashing":  100.0,
-                                "ChanceToHallucinateRed":  75.0,
-                                "ChanceToUnconRedFlashing":  50.0,
-                                "ChanceToUnconRed":  1.0,
-                                "CanUnconWhileDriving":  1,
-                                "CanUnconWhileSwimming":  0
-                            },
-    "ClientEffectsConfig":  {
-                                "AmountToBlurWhenRedFlashing":  2.0,
-                                "AmountToBlurWhenRed":  1.0,
-                                "AmountToVignetteWhenRedFlashing":  50.0,
-                                "AmountToVignetteWhenRed":  25.0,
-                                "DelaySecsUntilAudioAttenuation":  60.0,
-                                "AllowInventoryWhileSleeping":  1,
-                                "AllowClosedEyesEffectSleeping":  1,
-                                "AllowHallucinationEffectRedFlashing":  1,
-                                "AllowHallucinationEffectRed":  1,
-                                "CharacterMovementSpeedRedFlashing":  1,
-                                "CharacterMovementSpeedRed":  0,
-                                "BedObjects":  [
-
-                                               ]
-                            },
-    "Messages":  {
-                     "CantSleep":  "#STR_ZenSleepMsg_CantSleep,",
-                     "TooBuzzed":  "#STR_ZenSleepMsg_TooBuzzed.",
-                     "TooAwake":  "#STR_ZenSleepMsg_TooAwake.",
-                     "TooSunny":  "#STR_ZenSleepMsg_TooSunny.",
-                     "TooSick":  "#STR_ZenSleepMsg_TooSick.",
-                     "TooWet":  "#STR_ZenSleepMsg_TooWet.",
-                     "TooCold":  "#STR_ZenSleepMsg_TooCold.",
-                     "TooHot":  "#STR_ZenSleepMsg_TooHot.",
-                     "TooUncomfortable":  "#STR_ZenSleepMsg_TooUncomfortable.",
-                     "TooHungryThirsty":  "#STR_ZenSleepMsg_TooHungryThirsty."
-                 },
-    "AdminIDs":  [
-
-                 ],
-    "DebugMode":  0
+    "ConfigVersion": "Updated 27th July 2025",
+    "GeneralConfig": {
+        "SecondsAsleepUntilFullRestApprox": 600.0,
+        "FreshSpawnFatiguePercent": 100.0,
+        "MaxFatiguePercentToAllowSleeping": 70.0,
+        "FatigueLevelToNegativeImpactImmunity": 2,
+        "DisplaySleepMessages": 1
+    },
+    "GainConfig": {
+        "GlobalGainMultiplier": 1.0,
+        "GainNightMultiplier": 1.5,
+        "GainBedObjectUsed": 1.2999999523162842,
+        "GainInsideMultiplier": 1.100000023841858,
+        "GainFromHeatBuffMultiplier": 1.100000023841858,
+        "MaxRestGain_Illness": 16.0,
+        "MaxRestGain_Temp_DarkBlueFlashing": 0.0,
+        "MaxRestGain_Temp_DarkBlue": 0.0,
+        "MaxRestGain_Temp_LightBlue": 70.0,
+        "MaxRestGain_Temp_Yellow": 70.0,
+        "MaxRestGain_Temp_Red": 0.0,
+        "MaxRestGain_Temp_RedFlashing": 0.0,
+        "MaxRestGain_FoodWater_Yellow": 16.0,
+        "MaxRestGain_FoodWater_Red": 6.0,
+        "MaxRestGain_FoodWater_RedFlashing": 0.0,
+        "MaxRestGain_Wet": 16.0,
+        "MaxRestGain_Time_Daylight": 70.0,
+        "MaxRestGain_Time_Night": 100.0,
+        "PercentGainedUponUncon": 1.0,
+        "BedHeatBuffMaxGain": 10.0,
+        "BedHealthMaxGain": 100.0,
+        "BedHealthGainPerSec": 0.25,
+        "MinSecsAsleepInBedToTriggerImmunityBoost": 120.0,
+        "MinSecsAsleepToTriggerHealthRecovery": 120.0
+    },
+    "DrainConfig": {
+        "GlobalDrainMultiplier": 0.4000000059604645,
+        "DrainHeavyItemMultiplier": 1.0,
+        "DrainWalkingMultiplier": 1.0,
+        "DrainJoggingMultiplier": 1.0,
+        "DrainSprintingMultiplier": 1.0,
+        "DrainWeightMultiplier": 1.0,
+        "DrainNightMultiplier": 1.5,
+        "HealthLossPerSecRedFlashing": 0.0
+    },
+    "ModifiersConfig": {
+        "ModifierDeactivatedPercent": {},
+        "ModifierActivatedPercent": {},
+        "ModifierPausesSeconds": {},
+        "StaminaRecoveryModifiers": {
+            "Yellow": 0.800000011920929,
+            "RedFlashing": 0.4000000059604645,
+            "Red": 0.6000000238418579
+        }
+    },
+    "ServerEffectsConfig": {
+        "MinimumSecsBetweenYawnRedFlashing": 30.0,
+        "MaximumSecsBetweenYawnRedFlashing": 300.0,
+        "MinimumSecsBetweenYawnRed": 180.0,
+        "MaximumSecsBetweenYawnRed": 300.0,
+        "MinimumSecsBetweenSnore": 10.0,
+        "MaximumSecsBetweenSnore": 20.0,
+        "MinimumSecsBetweenUnconRedFlashing": 180.0,
+        "MaximumSecsBetweenUnconRedFlashing": 360.0,
+        "MinimumSecsBetweenUnconRed": 600.0,
+        "MaximumSecsBetweenUnconRed": 900.0,
+        "MaximumSecsBuzzedByCombat": 0.0,
+        "ChanceToSnoreSleeping": 90.0,
+        "ChanceToYawnRedFlashing": 90.0,
+        "ChanceToYawnRed": 25.0,
+        "ChanceToHallucinateRedFlashing": 100.0,
+        "ChanceToHallucinateRed": 75.0,
+        "ChanceToUnconRedFlashing": 50.0,
+        "ChanceToUnconRed": 1.0,
+        "CanUnconWhileDriving": 1,
+        "CanUnconWhileSwimming": 0
+    },
+    "ClientEffectsConfig": {
+        "AmountToBlurWhenRedFlashing": 2.0,
+        "AmountToBlurWhenRed": 1.0,
+        "AmountToVignetteWhenRedFlashing": 50.0,
+        "AmountToVignetteWhenRed": 25.0,
+        "DelaySecsUntilAudioAttenuation": 60.0,
+        "AllowInventoryWhileSleeping": 1,
+        "AllowClosedEyesEffectSleeping": 1,
+        "AllowHallucinationEffectRedFlashing": 1,
+        "AllowHallucinationEffectRed": 1,
+        "CharacterMovementSpeedRedFlashing": 1,
+        "CharacterMovementSpeedRed": 0,
+        "BedObjects": []
+    },
+    "Messages": {
+        "CantSleep": "#STR_ZenSleepMsg_CantSleep,",
+        "TooBuzzed": "#STR_ZenSleepMsg_TooBuzzed.",
+        "TooAwake": "#STR_ZenSleepMsg_TooAwake.",
+        "TooSunny": "#STR_ZenSleepMsg_TooSunny.",
+        "TooSick": "#STR_ZenSleepMsg_TooSick.",
+        "TooWet": "#STR_ZenSleepMsg_TooWet.",
+        "TooCold": "#STR_ZenSleepMsg_TooCold.",
+        "TooHot": "#STR_ZenSleepMsg_TooHot.",
+        "TooUncomfortable": "#STR_ZenSleepMsg_TooUncomfortable.",
+        "TooHungryThirsty": "#STR_ZenSleepMsg_TooHungryThirsty."
+    },
+    "AdminIDs": [],
+    "DebugMode": 0
 }
