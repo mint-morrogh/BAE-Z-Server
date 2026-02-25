@@ -16,12 +16,18 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 - **Skill tree** — earn XP and unlock perks in survival, crafting, hunting, and gathering
 - **Treasure hunting** — find photos, travel to the location, dig up randomized loot stashes
 - **NPC traders** — buy and sell items at safe zones
-- **Day/night zombie system** — fewer, weaker zombies by day (halved spawns, shorter vision, easier kills); 33% more zombies at night with full vision, full strength, and rare sprinters
+- **Day/night zombie system** — ~85% of zombies culled during daytime (6am-8pm), full spawns at night with rare sprinters
+- **Half-damage zombies** — zombie strength set to 0.5x vanilla day and night, gear lasts much longer
 - **Zombie kill drops** — zombies drop loot when killed: food/bandages from civilians, ammo from military/police, medical supplies from doctors
 - **Campfire health regen** — players near a lit fire slowly regenerate health (+2) and blood (+5) every 10 seconds
-- **Generous loot** — doubled food/drink spawns, magazines spawn 40-90% full, ammo boxes spawn 40-80% full
-- **Sleep & fatigue system** — realistic tiredness mechanic with sleeping bags, hallucinations, and immunity effects
-- **Sleep till morning** — if all players lie down to sleep at night, time skips to dawn
+- **Abundant wildlife** — 80 deer, 100 roe deer, 50 goats, 40 each of cow/pig/sheep, 20 wild boar, plus boosted foxes, hares, and hens
+- **Generous loot** — doubled canned food/drinks, 1.5x snacks and candy, tripled cooking pots, enabled crab cans
+- **Boosted foraging** — doubled mushroom spawns under trees, boosted fruit drops from apple/pear/plum trees
+- **Pristine loot** — items spawn Pristine to Worn only (no more Damaged/Badly Damaged spawns)
+- **45-day item persistence** — dropped items last 45 real days on the ground, survive server restarts
+- **Indestructible bases** — base structures and storage containers cannot be damaged
+- **Reduced shoe damage** — crawler zombie boot damage reduced from 5.0 to 1.0
+- **Sleep till morning** — if all players lie down to sleep at night, time skips to dawn (fatigue drain disabled)
 - **Unlimited stamina** — no stamina drain while sprinting
 - **One-file configuration** — all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** — server automatically restarts every 4 hours
@@ -218,7 +224,7 @@ To use admin commands in-game, open chat and type `#login <your admin password>`
 
 ### Zombie Spawns
 
-Zombie spawns are set ~33% above half-vanilla baseline. A custom server-side mod (`@DayZombieManager`) culls ~62% of spawns during daytime, giving roughly half-density during the day and full +33% density at night. The same mod also handles zombie kill drops.
+Zombie spawns are set ~33% above half-vanilla baseline. A custom server-side mod (`@DayZombieManager`) culls ~85% of spawns during daytime (6am-8pm), leaving only ~15% of zombies during the day. Full +33% density at night. The same mod also handles zombie kill drops.
 
 | Category | Nominal / Min / Max | Notes |
 |---|---|---|
@@ -236,7 +242,7 @@ Zombie spawns are set ~33% above half-vanilla baseline. A custom server-side mod
 |---|---|---|
 | `zombieMaxCount` | 500 | Max zombies alive server-wide |
 | `animalMaxCount` | 200 | Max animals alive server-wide |
-| `lootDamageMin/Max` | 0.0 / 0.82 | Condition range for spawned loot |
+| `lootDamageMin/Max` | 0.0 / 0.2 | Loot spawns Pristine to Worn only |
 | `foodDecay` | 1 | Food spoilage (1=on, 0=off) |
 | `respawnLimit` | 20 | Max loot respawn cycles per restart |
 | `flagRefreshFrequency` | 432000 | Territory flag refresh interval (seconds) |
@@ -388,7 +394,7 @@ Item spawns are configured in `custom/types_nemsis.xml`.
 
 ### LMs Planes
 
-Flyable planes spawn across the map at towns, industrial areas, and farms. Find spare wheels at industrial locations to repair them.
+Flyable planes spawn across the map at industrial areas and farms (removed town/village spawns to avoid clipping into buildings). Find spare wheels at industrial locations to repair them.
 
 | Plane | Count | Notes |
 |---|---|---|
@@ -478,11 +484,11 @@ Fully configurable zombie behaviour system with independent day and night settin
 
 | Setting | Day | Night | Effect |
 |---|---|---|---|
-| Spawn count | ~62% culled (half density) | +33% more than baseline | Custom server mod thins the herd by day |
+| Spawn count | ~85% culled (~15% survive) | +33% more than baseline | Custom server mod thins the herd by day |
 | Speed | Walk/jog only | Walk/jog + rare sprinters | Day capped at run (2.5), night allows sprint (3.0) |
 | Speed ratio | 0.75x | 0.95x | Further scales down — most zombies walk by day |
 | Health | 0.7x (30% easier kills) | 1.0x (vanilla) | Daytime zombies go down fast |
-| Damage | 1.3x (30% harder hits) | 1.0x (vanilla) | Daytime zombies hit harder to compensate |
+| Damage | 0.5x (half vanilla) | 0.5x (half vanilla) | Gear lasts much longer from zombie fights |
 | Vision | 0.65x (35% shorter) | 1.0x (vanilla) | Easier sneaking during day, full sight at night |
 | Size | Normal (disabled) | Normal (disabled) | No random size scaling — all zombies player-sized |
 
@@ -529,11 +535,9 @@ Source code in `mod_src/CampfireRegen/`.
 
 ### Zen's Sleeping Mod
 
-Adds a fatigue stat (moon icon) that drains over time. Players must use the **Lie Down** emote to sleep. Ignoring fatigue causes yawning (gives away position), hallucinations, reduced immunity, and eventually random unconsciousness.
+Adds a fatigue/sleep system with sleeping bags and bed objects. **Fatigue drain is disabled on this server** (`GlobalDrainMultiplier: 0.0`) — the moon icon won't decrease and you'll never get tired, yawn, or pass out from exhaustion. The mod is kept active because sleeping in beds/sleeping bags still provides immunity and health recovery bonuses, and the Sleep Till Morning feature depends on it.
 
-Sleep quality depends on conditions — sleeping at night, near fires, inside buildings, or on sleeping bags recovers fatigue faster and can boost immunity and health.
-
-This server uses a relaxed drain rate (`GlobalDrainMultiplier: 0.4`) — you can play for ~12 real hours before critical fatigue. Fresh spawns start fully rested. Edit the config at `config/Zenarchist/ZenSleepConfig.json`.
+Edit the config at `config/Zenarchist/ZenSleepConfig.json`. Set `GlobalDrainMultiplier` above 0 to re-enable fatigue.
 
 Custom items that spawn in the world:
 
