@@ -4,7 +4,7 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 
 ### Features
 
-- **30 mods + 2 custom server-side mods** — all preconfigured and ready to go
+- **31 mods + 2 custom server-side mods** — all preconfigured and ready to go
 - **GPS minimap** — on-screen minimap with player position via DayZ Expansion
 - **Companion dogs** — 17 breeds of tameable dogs, equip collars/vests/gas masks, build dog houses
 - **Rideable horses** — 5 horse colours, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
@@ -24,6 +24,7 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 - **Abundant wildlife** — 80 deer, 100 roe deer, 50 goats, 40 each of cow/pig/sheep, 20 wild boar, plus boosted foxes, hares, and hens
 - **Generous loot** — doubled canned food/drinks, 1.5x snacks and candy, tripled cooking pots, enabled crab cans
 - **Boosted foraging** — doubled mushroom spawns under trees, boosted fruit drops from apple/pear/plum trees
+- **Shake fruit trees** — hold action on fruit trees to shake loose 2-4 apples/pears/plums (75% drop chance, 30-min cooldown per tree)
 - **Pristine loot** — items spawn Pristine to Worn only (no more Damaged/Badly Damaged spawns)
 - **45-day item persistence** — dropped items last 45 real days on the ground, survive server restarts
 - **Indestructible bases** — base structures and storage containers cannot be damaged
@@ -277,6 +278,7 @@ These mods must be installed on both the **server** and **client**.
 | [Survivor Animations](https://steamcommunity.com/sharedfiles/filedetails/?id=2918418331) | 2918418331 | Animation dependency required by DayZ Horse |
 | [DayZ Horse](https://steamcommunity.com/sharedfiles/filedetails/?id=3295021220) | 3295021220 | Rideable horses — 5 colours, saddles, bridles, saddlebags, stables, walk/trot/gallop/jump/swim |
 | [MWGSM Roaming Trader](https://steamcommunity.com/sharedfiles/filedetails/?id=3636799682) | 3636799682 | Helicopter-based roaming trader that lands near players with weapons, ammo, medical, and attachments |
+| [Saga Shake Tree](https://steamcommunity.com/sharedfiles/filedetails/?id=3545040196) | 3545040196 | Shake fruit trees to drop apples, pears, and plums — configurable drop rates and cooldowns |
 | [Pack Complete — Backpacks FREE](https://steamcommunity.com/sharedfiles/filedetails/?id=3648464156) | 3648464156 | 13 backpack models with 63 camo/colour variants — tactical, military, medical, and civilian packs |
 
 ### Mod Installation
@@ -313,6 +315,7 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `2918418331` | `@SurvivorAnims` |
 | `3295021220` | `@DayZHorse` |
 | `3636799682` | `@MWGSM_Trader` |
+| `3545040196` | `@SagaShakeTree` |
 | `3648464156` | `@GelyaBackpacks` |
 
 ### Gelya Backpacks — Pack Complete
@@ -622,6 +625,7 @@ DayZServer/
 ├── @SurvivorAnims/              # Animation dependency for horse mod
 ├── @DayZHorse/                  # Rideable horses (5 colours)
 ├── @MWGSM_Trader/               # Roaming military helicopter trader
+├── @SagaShakeTree/              # Shake fruit trees for apples/pears/plums
 ├── @GelyaBackpacks/             # 13 backpack models (63 variants)
 ├── @DayZombieManager/           # Custom server-side mod — zombie culling + kill drops
 │   └── addons/
