@@ -596,6 +596,10 @@ DayZServer/
 │   │   ├── PvZmoD_CustomisableZombies_Globals.xml           # Speed/health/damage ratios (patched)
 │   │   ├── PvZmoD_CustomisableZombies_Characteristics.xml   # Per-zombie-type vision/speed/HP
 │   │   └── PvZmoD_CustomisableZombies_HELP.txt              # Full docs for all settings
+│   ├── MWGSM_RoamingTrader/
+│   │   └── MWGSM_RoamingTraderConfig.json  # Roaming trader currency, prices, stock, timing
+│   ├── SagaShakeTree/
+│   │   └── settings.json        # Fruit drop chances, shake duration, tree cooldowns
 │   └── *.RPT                    # Server crash/debug logs
 ├── @CF/                         # Community Framework mod
 ├── @DayZ-Expansion-Core/        # Expansion core framework
@@ -656,7 +660,8 @@ DayZServer/
         │   ├── dog_territories.xml   # Wild dog spawn zones
         │   └── wild_horse_territories.xml  # Horse grazing zones
         └── db/
-            ├── events.xml       # Zombie spawns (patched automatically)
+            ├── types.xml        # Item spawn rules (food, gear, tools — heavily customized)
+            ├── events.xml       # Zombie/animal spawns (patched automatically)
             └── globals.xml      # Loot economy (patched automatically)
 ```
 
