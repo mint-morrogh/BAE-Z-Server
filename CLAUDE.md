@@ -268,7 +268,7 @@ Config files in `config/PvZmoD_CustomisableZombies_Profile/`:
 
 ## Server Config Notes
 
-- `start.bat` line 19: `-mod=` for client+server mods, `-serverMod=` for server-only mods.
+- `start_server.bat` line 19: `-mod=` for client+server mods, `-serverMod=` for server-only mods.
 - `serverDZ.cfg` — main server configuration.
 - `verifySignatures = 0` — disabled for LAN; custom server mods are unsigned.
   Set to 2 only if all PBOs have matching .bisign/.bikey files.
@@ -308,7 +308,7 @@ Config files in `config/PvZmoD_CustomisableZombies_Profile/`:
   Keybinds (`*.core.xml`) and video settings (`DayZ.cfg`) are safe
   to keep — they do not contain character data.
 
-- Server auto-restarts every 4 hours (timeout 14390 in start.bat).
+- Server auto-restarts every 4 hours (timeout 14390 in start_server.bat).
 - `config/DataCache/` — compiled script cache. Delete `cache.ch` and
   `cache_lock` after crashes to force clean recompilation.
 

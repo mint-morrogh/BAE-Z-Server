@@ -12,8 +12,9 @@
 !README.md
 !CLAUDE.md
 !serverDZ.cfg
-!start.bat
+!start_server.bat
 !sync_client_mods.bat
+!launch_dayz.bat
 !apply_settings.bat
 !apply_settings.ps1
 !server_settings.json

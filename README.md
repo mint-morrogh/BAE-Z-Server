@@ -53,12 +53,11 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 4. Launch DayZ once so Steam downloads the mod files
 5. Copy each mod's Workshop folder into the server directory with the correct `@Name` (see [Mod Installation](#mod-installation))
 6. Copy each mod's `.bikey` file from their `keys/` folder into the server's `keys/` folder
-7. Double-click `sync_client_mods.bat` to copy custom mods to your DayZ client (must be done once and after any custom mod updates)
-8. Add `@MinimapTweak` to your DayZ client mod list in the launcher
-9. Edit `server_settings.json` to customize your server (see [Settings Patcher](#settings-patcher))
-10. Double-click `apply_settings.bat` to apply your settings
-11. Double-click `start.bat` to launch the server
-12. Connect via DayZ > Servers > LAN, or Direct Connect to `127.0.0.1:2302`
+7. Edit `server_settings.json` to customize your server (see [Settings Patcher](#settings-patcher))
+8. Double-click `apply_settings.bat` to apply your settings
+9. Double-click `start_server.bat` to launch the server
+10. Double-click `launch_dayz.bat` to sync custom mods and start DayZ with the right mod list
+11. Connect via DayZ > Servers > LAN, or Direct Connect to `127.0.0.1:2302`
 
 ## Settings Patcher
 
@@ -563,7 +562,7 @@ Custom client+server mod (`@MinimapTweak`). Adjusts the Expansion GPS minimap:
 - **Hides coordinate/stats overlay** — removes the large numbers from the minimap (still visible on the full map)
 - **Fixes player arrow after Tab** — the player position arrow no longer disappears when opening/closing inventory
 
-This mod loads after `@ExpansionMinimap` and requires it as a dependency. Since it's a client+server mod, players must install it — run `sync_client_mods.bat` to copy it to your DayZ client.
+This mod loads after `@ExpansionMinimap` and requires it as a dependency. Since it's a client+server mod, players must use `launch_dayz.bat` to start DayZ — it syncs custom mods and loads them automatically.
 
 Source code in `mod_src/MinimapTweak/`.
 
@@ -584,12 +583,13 @@ Adds a GPS minimap to the HUD showing your position and surroundings. Requires t
 | Expansion Minimap Override | GPS minimap overlay |
 | MinimapTweak | Custom — moves to top-right, hides coords, fixes arrow bug |
 
-Load order matters — Core and Dabs must load before Expansion, Navigation must load after Expansion, Minimap Override after Navigation, and MinimapTweak last. This is already configured in `start.bat`. MinimapTweak is a custom mod — run `sync_client_mods.bat` to install it on your client.
+Load order matters — Core and Dabs must load before Expansion, Navigation must load after Expansion, Minimap Override after Navigation, and MinimapTweak last. This is already configured in `start_server.bat`. MinimapTweak is a custom mod loaded automatically by `launch_dayz.bat`.
 
 ## Launching the Server
 
 1. Double-click `apply_settings.bat` (if you changed any settings)
-2. Double-click `start.bat`
+2. Double-click `start_server.bat`
+3. Double-click `launch_dayz.bat` to start DayZ with custom mods and connect
 3. Wait 1-2 minutes for the server to load
 4. **Do not press any keys** in the command prompt — any keypress kills the server
 5. The server auto-restarts every 4 hours
@@ -607,9 +607,10 @@ DayZServer/
 ├── server_settings.json         # <-- EDIT THIS: All server settings in one place
 ├── apply_settings.bat           # Double-click to apply settings
 ├── apply_settings.ps1           # PowerShell patcher (called by .bat)
-├── sync_client_mods.bat         # Double-click to copy custom mods to DayZ client
+├── launch_dayz.bat              # Double-click to sync mods & launch DayZ client
+├── sync_client_mods.bat         # Copies custom mods to DayZ client (called by launch_dayz)
 ├── serverDZ.cfg                 # Main server config (patched automatically)
-├── start.bat                    # Launch script with mod list
+├── start_server.bat             # Launch script with mod list
 ├── whitelist.txt                # Player whitelist (disabled by default)
 ├── keys/                        # Mod signature keys (.bikey)
 ├── config/                      # Server profiles dir (-profiles=config)
@@ -715,7 +716,7 @@ config/DataCache/cache_lock
 
 ## Troubleshooting
 
-- **Server crashes on launch:** Check the latest `.RPT` log in the `config/` folder. Usually a mod incompatibility — remove mods from the `-mod=` line in `start.bat` one at a time to isolate.
+- **Server crashes on launch:** Check the latest `.RPT` log in the `config/` folder. Usually a mod incompatibility — remove mods from the `-mod=` line in `start_server.bat` one at a time to isolate.
 - **Can't connect:** Make sure your client has the exact same mods enabled. Mod mismatch = connection refused.
 - **No loot spawning:** Usually an XML syntax error. Validate your XML files at [codebeautify.org/xmlvalidator](https://codebeautify.org/xmlvalidator).
 - **Zombies not spawning:** Same as above — check `events.xml` for syntax errors.
