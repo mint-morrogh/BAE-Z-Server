@@ -587,12 +587,18 @@ Load order matters — Core and Dabs must load before Expansion, Navigation must
 
 ## Launching the Server
 
+**Host (runs the server):**
+
 1. Double-click `apply_settings.bat` (if you changed any settings)
 2. Double-click `start_server.bat`
-3. Double-click `launch_dayz.bat` to start DayZ with custom mods and connect
 3. Wait 1-2 minutes for the server to load
 4. **Do not press any keys** in the command prompt — any keypress kills the server
 5. The server auto-restarts every 4 hours
+
+**Players (including the host):**
+
+1. Double-click `launch_dayz.bat` — syncs custom mods and launches DayZ
+2. Connect via DayZ > Servers > LAN, or Direct Connect to `127.0.0.1:2302`
 
 ## Connecting
 
