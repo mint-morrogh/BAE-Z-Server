@@ -36,11 +36,18 @@ echo.
 :: ============================================================
 :: Step 1: Pull latest config changes from GitHub
 :: ============================================================
-echo --- Pulling latest server updates ---
+echo --- Checking for updates ---
 where git >nul 2>&1
 if errorlevel 1 (
-    echo   [SKIP] git not found - skipping update check
-    echo          Install git to enable auto-updates
+    :: No git — download updates from GitHub via PowerShell
+    call :update_from_github
+    if !errorlevel! equ 99 (
+        echo.
+        echo   Launcher was updated - restarting...
+        echo.
+        start "" cmd /c "%~f0"
+        exit /b 0
+    )
 ) else (
     git pull --ff-only 2>&1
     if errorlevel 1 (
@@ -133,3 +140,25 @@ if not exist "@%MOD_NAME%" (
 xcopy /E /I /D /Y "@%MOD_NAME%" "%DAYZ_CLIENT%\@%MOD_NAME%" >nul 2>&1
 echo   [SYNC] @%MOD_NAME% -^> %DAYZ_CLIENT%\@%MOD_NAME%
 exit /b 0
+
+:: ============================================================
+:update_from_github
+:: Downloads latest scripts from GitHub when git is not installed.
+:: Uses bb_update.ps1 from the repo. Exit code 99 = restart needed.
+:: ============================================================
+set "RAW=https://raw.githubusercontent.com/mint-morrogh/DayZServer/main"
+set "UPD_PS=%TEMP%\bb_update.ps1"
+
+:: Download the updater script itself first
+powershell -NoProfile -ExecutionPolicy Bypass -Command ^
+    "try { Invoke-WebRequest '%RAW%/bb_update.ps1' -OutFile '%UPD_PS%' -UseBasicParsing } catch { exit 1 }" 2>nul
+if errorlevel 1 (
+    echo   [SKIP] Cannot reach GitHub - continuing offline
+    exit /b 0
+)
+
+:: Run the updater
+powershell -NoProfile -ExecutionPolicy Bypass -File "!UPD_PS!" "%~dp0"
+set "UPD_EXIT=!errorlevel!"
+del "!UPD_PS!" >nul 2>&1
+exit /b !UPD_EXIT!

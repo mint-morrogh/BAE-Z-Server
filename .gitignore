@@ -19,6 +19,7 @@
 !apply_settings.bat
 !update.bat
 !apply_settings.ps1
+!bb_update.ps1
 !server_settings.json
 !whitelist.txt
 !ban.txt
