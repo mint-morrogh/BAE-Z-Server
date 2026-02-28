@@ -19,8 +19,8 @@ del /q "config\DataCache\cache_lock" >nul 2>&1
 echo (%time%) %serverName% started.
 ::Launch parameters (edit end: -config=|-port=|-profiles=|-doLogs|-adminLog|-netLog|-freezeCheck|-filePatching|-BEpath=|-cpuCount=)
 start "DayZ Server" /min "DayZServer_x64.exe" -config=%serverConfig% -port=%serverPort% "-profiles=config" "-mod=@CF;@DayZ-Expansion-Core;@DabsFramework;@DayZ-Expansion;@DayZ-Expansion-Navigation;@ExpansionMinimap;@MinimapTweak;@Trader;@Mass'sManyItemOverhaul;@UnlimitedRun;@VanillaPlusPlusMap;@GoreZ;@Inventory-Move-Sounds;@PvZmoD;@ZenSkills;@CZOptics;@PercentageHUD;@ZenTreasure;@CarePackages;@NemsisCraftingpack;@LMsPlanes;@CookZ;@CookZRealisticPackaging;@SleepTillMorning;@4KBOSSKVehicles;@DayZDog;@SurvivorAnims;@DayZHorse;@GelyaBackpacks;@MWGSM_Trader;@SagaShakeTree" "-serverMod=@DayZombieManager;@CampfireRegen;@SitRest" -cpuCount=%serverCPU% -dologs -adminlog -netlog -freezecheck
-::Time in seconds before kill server process (14400 = 4 hours)
-timeout 14390
+::Time in seconds before kill server process (43200 = 12 hours)
+timeout 43190
 taskkill /im DayZServer_x64.exe /F
 ::Time in seconds to wait before..
 timeout 10
