@@ -71,7 +71,26 @@ if errorlevel 2 (
 )
 
 :: ============================================================
-:: Step 3: Sync custom client mods to DayZ folder
+:: Step 3: Fix known Workshop mod issues
+:: ============================================================
+:: Nemsis Craftingpack: the Airbrushing PBO references Mass_ACR_Base
+:: which doesn't exist, causing a script compile error on launch.
+:: The mod author removed it in an update but Steam sometimes serves
+:: the old version from cache. Delete it if present.
+echo --- Fixing known Workshop mod issues ---
+set "WORKSHOP=%~dp0..\..\workshop\content\221100"
+set "NEMSIS_DIR=%WORKSHOP%\3606014796\addons"
+if exist "%NEMSIS_DIR%\nm_Crafting_Part_Airbrushing.pbo" (
+    del /q "%NEMSIS_DIR%\nm_Crafting_Part_Airbrushing.pbo" >nul 2>&1
+    del /q "%NEMSIS_DIR%\nm_Crafting_Part_Airbrushing.pbo.n3msi.bisign" >nul 2>&1
+    echo   [FIX]  Removed Nemsis Airbrushing PBO (Mass_ACR_Base compile error^)
+) else (
+    echo   [OK]   No known issues found
+)
+echo.
+
+:: ============================================================
+:: Step 4: Sync custom client mods to DayZ folder
 :: ============================================================
 echo --- Syncing custom client mods ---
 echo   Server: %~dp0
@@ -86,7 +105,7 @@ echo   [OK]   Client script cache cleared
 echo.
 
 :: ============================================================
-:: Step 4: Launch DayZ
+:: Step 5: Launch DayZ
 :: ============================================================
 echo ============================================
 echo  Launching DayZ with mods: %CUSTOM_MODS%
