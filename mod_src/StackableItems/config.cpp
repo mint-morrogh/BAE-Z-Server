@@ -12,170 +12,114 @@ class CfgVehicles
 {
     class Paper
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class MoneyRuble1
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class MoneyRuble5
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class MoneyRuble10
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class MoneyRuble25
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class MoneyRuble50
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class MoneyRuble100
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class Nail
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
-        varQuantityDestroyOnMin = 0;
-    };
-    class Rag
-    {
-        varStackMax = 999;
-        varQuantityInit = 1;
-        varQuantityMin = 0;
-        varQuantityMax = 999;
-        varQuantityDestroyOnMin = 0;
-    };
-    class BandageDressing
-    {
-        varStackMax = 999;
-        varQuantityInit = 1;
-        varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class SmallStone
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class Bone
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class Bark_Oak
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class Bark_Birch
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class Hook
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
     class Worm
     {
-        varStackMax = 999;
+        varStackMax = 100;
         varQuantityInit = 1;
         varQuantityMin = 0;
-        varQuantityMax = 999;
-        varQuantityDestroyOnMin = 0;
-    };
-    class Netting
-    {
-        varStackMax = 999;
-        varQuantityInit = 1;
-        varQuantityMin = 0;
-        varQuantityMax = 999;
-        varQuantityDestroyOnMin = 0;
-    };
-    class SewingKit
-    {
-        varStackMax = 999;
-        varQuantityInit = 1;
-        varQuantityMin = 0;
-        varQuantityMax = 999;
-        varQuantityDestroyOnMin = 0;
-    };
-    class LeatherSewingKit
-    {
-        varStackMax = 999;
-        varQuantityInit = 1;
-        varQuantityMin = 0;
-        varQuantityMax = 999;
-        varQuantityDestroyOnMin = 0;
-    };
-    class EpoxyPutty
-    {
-        varStackMax = 999;
-        varQuantityInit = 1;
-        varQuantityMin = 0;
-        varQuantityMax = 999;
-        varQuantityDestroyOnMin = 0;
-    };
-    class SharpeningStone
-    {
-        varStackMax = 999;
-        varQuantityInit = 1;
-        varQuantityMin = 0;
-        varQuantityMax = 999;
+        varQuantityMax = 100;
         varQuantityDestroyOnMin = 0;
     };
 };

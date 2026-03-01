@@ -4,10 +4,12 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 
 ### Features
 
-- **33 mods + 3 custom server-side mods + 1 custom client mod** — all preconfigured and ready to go
+- **33 mods + 3 custom server-side mods + 3 custom client mods** — all preconfigured and ready to go
 - **GPS minimap** — on-screen minimap in top-right corner with player arrow, no GPS item required (toggle with N key)
+- **HUD clock** — in-game world time displayed top-right, shifts below minimap when it's open
 - **Party system** — create a group with your co-op partner to see each other on the map
-- **Companion dogs** — 17 breeds of tameable dogs, equip collars/vests/gas masks, build dog houses
+- **Companion dogs** — 35 breeds of tameable dogs, one of every breed always on the map, equip collars/vests/gas masks, build dog houses
+- **Stackable items** — roubles, nails, rags, bandages, stones, bones, bark, hooks, worms, and repair kits stack up to 999
 - **Rideable horses** — 5 horse colours, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
 - **20 driveable vehicles** — 1 of each model spread across the map, from trucks and SUVs to sports cars and exotics
 - **Flyable planes** — DC-3, Spitfire, Cessna 180, Catalina seaplane, Tigermoth, Stuntplane (8 planes, 1 of each type)
@@ -34,7 +36,7 @@ A private DayZ co-op server configured for small groups (2-4 players) on Chernar
 - **Sleep till morning** — if all players lie down to sleep at night, time skips to dawn
 - **Unlimited stamina** — no stamina drain while sprinting
 - **One-file configuration** — all server settings in `server_settings.json`, applied with a single click
-- **Auto-restart** — server automatically restarts every 4 hours
+- **Auto-restart** — server automatically restarts every 12 hours
 - **63 modded backpacks** — 13 backpack models in multiple camo/colour variants, found at military, hunting, town, village, and farm locations
 - **Full persistence** — bases, vehicles, and inventory survive restarts
 
@@ -547,17 +549,18 @@ CookZ config auto-generates in `config/CookZ/` on first server start. Item defin
 
 ### DayZ-Dog — Companion Dogs
 
-17 breeds of tameable wild dogs roam Chernarus. Tame them by feeding raw meat or bones, then command them to follow, stay, or attack. Once tamed, dogs can be equipped with collars, K9 vests, and even gas masks.
+35 breeds of tameable wild dogs roam Chernarus — one of every breed is always on the map. Tame them by feeding raw meat or bones, then command them to follow, stay, or attack. Once tamed, dogs can be equipped with collars, K9 vests, and even gas masks.
 
 Build a dog house from kits found at farms and villages to give your companion a home. Dog houses persist through restarts.
 
 | Item | Count | Locations |
 |---|---|---|
+| Wild dogs | 35 (min 30) | Across the map (1 of each breed) |
 | Collars (7 colours) | 3 each (min 1) | Towns, Villages |
 | K9 Vests (6 types) | 3 each (min 1) | Police stations |
 | Gas Mask | 3 (min 1) | Military (Tier 3-4) |
-| Dog House Kit (small) | 3 (min 1) | Villages, Towns, Farms |
-| Dog House Kit (large) | 3 (min 1) | Villages, Towns, Farms |
+| Dog House Kit (small) | 8 (min 4) | Villages, Towns, Farms |
+| Dog House Kit (large) | 8 (min 4) | Villages, Towns, Farms |
 
 Dog accessories are configured in `custom/types_dayzdog.xml`. The mod generates a server config at `config/Dayz-Dog/` on first start where you can adjust dog health and behaviour.
 
@@ -569,10 +572,10 @@ Attach saddlebags for mobile storage. Build a stable from kits found at farms to
 
 | Item | Count | Locations |
 |---|---|---|
-| Saddle | 5 (min 3) | Farms, Villages |
-| Bridle | 5 (min 3) | Farms, Villages |
-| Horse Bags (saddlebags) | 4 (min 2) | Farms, Villages |
-| Stable Kit | 3 (min 1) | Farms, Villages |
+| Saddle | 15 (min 8) | Farms, Villages |
+| Bridle | 15 (min 8) | Farms, Villages |
+| Horse Bags (saddlebags) | 10 (min 5) | Farms, Villages |
+| Stable Kit | 5 (min 3) | Farms, Villages |
 
 Horse tack is configured in `custom/types_dayzhorse.xml`. Requires the **Survivor Animations** mod as a dependency (included and loaded automatically).
 
@@ -651,6 +654,24 @@ This mod loads after `@ExpansionMinimap` and requires it as a dependency. Since 
 
 Source code in `mod_src/MinimapTweak/`.
 
+### HUDClock — In-Game Time Display
+
+Custom client+server mod (`@HUDClock`). Displays the current in-game world time as `HH:MM` in the top-right corner of the HUD. When the Expansion minimap is open, the clock shifts below it so they don't overlap. Hides automatically when menus (inventory, pause) are open.
+
+Depends on `@ExpansionMinimap` for minimap-aware positioning. Source code in `mod_src/HUDClock/`.
+
+### StackableItems — Increased Stack Sizes
+
+Custom client+server mod (`@StackableItems`). Increases the stack limit to 999 for commonly hoarded items that vanilla caps at low numbers:
+
+- **Currency:** All Rouble denominations (1, 5, 10, 25, 50, 100)
+- **Crafting:** Nails, paper, rags, netting, bones, bark (oak/birch), small stones
+- **Medical:** Bandage dressings
+- **Repair:** Sewing kits, leather sewing kits, epoxy putty, sharpening stones
+- **Fishing:** Hooks, worms
+
+Source code in `mod_src/StackableItems/`.
+
 ### Sleep Till Morning
 
 When **all players** on the server lie down to sleep at night, time fast-forwards to dawn. No more waiting around during nighttime. Uses the vanilla "Lie Down" emote — no fatigue system required.
@@ -669,8 +690,9 @@ Adds a GPS minimap to the HUD showing your position and surroundings. Requires t
 | DayZ-Expansion-Groups | Party system — see group members on the map |
 | Expansion Minimap Override | GPS minimap overlay |
 | MinimapTweak | Custom — moves to top-right, hides coords, fixes arrow bug |
+| HUDClock | Custom — displays in-game time, positions below minimap |
 
-Load order matters — Core and Dabs must load before Expansion, Book and Groups after Navigation, Minimap Override after Groups, and MinimapTweak last. This is already configured in `start_server.bat`. MinimapTweak is a custom mod loaded automatically by `launch_dayz.bat`.
+Load order matters — Core and Dabs must load before Expansion, Book and Groups after Navigation, Minimap Override after Groups, then MinimapTweak and HUDClock. This is already configured in `start_server.bat`. Custom mods are loaded automatically by `launch_dayz.bat`.
 
 ## Launching the Server
 
@@ -765,11 +787,19 @@ DayZServer/
 ├── @MinimapTweak/               # Custom client+server mod — minimap adjustments
 │   └── addons/
 │       └── MinimapTweak.pbo     # Top-right position, hide coords, fix arrow
+├── @HUDClock/                   # Custom client+server mod — in-game time display
+│   └── addons/
+│       └── HUDClock.pbo         # HH:MM clock, shifts below minimap when open
+├── @StackableItems/             # Custom client+server mod — increased stack sizes
+│   └── addons/
+│       └── StackableItems.pbo   # Roubles, nails, rags, etc. stack to 999
 ├── mod_src/                     # Source code for custom mods
 │   ├── DayZombieManager/        # Zombie manager source (culling + kill drops)
 │   ├── CampfireRegen/           # Campfire regen source
 │   ├── SitRest/                 # Sit rest source (hunger/thirst freeze)
 │   ├── MinimapTweak/            # Minimap tweak source (position + UI fixes)
+│   ├── HUDClock/                # HUD clock source (time display)
+│   ├── StackableItems/          # Stackable items source (stack overrides)
 │   ├── pack_pbo.py              # PBO packer tool
 │   └── rapify.py                # config.cpp to config.bin converter
 └── mpmissions/

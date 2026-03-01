@@ -2,7 +2,7 @@
  * HUDClock - Blood & Barter
  *
  * Displays the in-game world time (HH:MM) in the top-right corner.
- * When the Expansion minimap is visible, repositions below it.
+ * Fixed position — stays put whether minimap is open or closed.
  */
 
 modded class IngameHud
@@ -55,23 +55,5 @@ modded class IngameHud
 			timeStr += "0";
 		timeStr += minute.ToString();
 		m_ClockWidget.SetText(timeStr);
-
-		// Default: top-right corner of screen
-		float posX = 0.87;
-		float posY = 0.01;
-
-		// Shift below minimap when it's visible
-		if (m_GPSPanel && m_GPSPanel.IsVisible())
-		{
-			float gpX, gpY, gpW, gpH;
-			m_GPSPanel.GetScreenPos(gpX, gpY);
-			m_GPSPanel.GetScreenSize(gpW, gpH);
-
-			// Right-align with minimap, position just below it
-			posX = gpX + gpW - 0.12;
-			posY = gpY + gpH + 0.005;
-		}
-
-		m_ClockWidget.SetPos(posX, posY);
 	}
 }
