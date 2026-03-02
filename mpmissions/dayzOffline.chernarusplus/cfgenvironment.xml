@@ -47,8 +47,8 @@
 		<territory type="Herd" name="Bear" behavior="BlissBearGroupBeh">
 			<file usable="bear_territories"/>
 		</territory>
-		<!-- WILD DOG (DayZ Dog mod) — Herd type with max=1 for lone dogs -->
-		<territory type="Herd" name="WildDog" behavior="DZDeerGroupBeh">
+		<!-- WILD DOG (DayZ Dog mod) — Herd type, wolf behavior (canine AI) -->
+		<territory type="Herd" name="WildDog" behavior="DZWolfGroupBeh">
 			<file usable="dog_territories" />
 		</territory>
 		<territory type="Herd" name="WildHorse" behavior="DZDeerGroupBeh">
