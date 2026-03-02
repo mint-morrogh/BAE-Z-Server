@@ -284,6 +284,43 @@
 		nm_Sketchboard,			*,		20,		10
 		nm_Notebook,			*,		15,		8
 
+	<Category> Building Kits
+		// ---- Modded Building Kits ----
+		Stable_dayz_kit,				1,		2500,	1000
+		dog_shed_small_kit,				1,		1500,	600
+		dog_shed_big_kit,				1,		2000,	800
+		nm_RaftConstruction_Kit,		1,		3000,	1200
+		nm_BuggyConstruction_Kit,		1,		3000,	1200
+		// ---- Vanilla Building Kits ----
+		FenceKit,						1,		2000,	800
+		WatchtowerKit,					1,		3000,	1200
+		ShelterKit,						1,		1500,	600
+		TerritoryFlagKit,				1,		1000,	400
+
+	<Category> Horse Tack
+		Saddle,							1,		1200,	500
+		Bridle,							1,		1000,	400
+		HorseBags,						1,		1500,	600
+
+	<Category> Dog Gear
+		// ---- Collars (7 colors) ----
+		dog_collar,						1,		800,	300
+		dog_collar_blue,				1,		800,	300
+		dog_collar_red,					1,		800,	300
+		dog_collar_green,				1,		800,	300
+		dog_collar_white,				1,		800,	300
+		dog_collar_yellow,				1,		800,	300
+		dog_collar_grey,				1,		800,	300
+		// ---- Gas Mask ----
+		dog_gasmask,					1,		1500,	600
+		// ---- Vests (6 types) ----
+		dog_vest_sheriff,				1,		1200,	500
+		dog_vest_black,					1,		1200,	500
+		dog_vest_black_k9,				1,		1200,	500
+		dog_vest_blackgreen,			1,		1200,	500
+		dog_vest_blackmedic,			1,		1200,	500
+		dog_vest_blackgreenz,			1,		1200,	500
+
 
 <Trader> Weapon Trader
 	<Category> Melee	
@@ -1360,7 +1397,38 @@
         Truck_01_Door_2_1_Orange,			*,		500,	180
         Truck_01_Wheel,						*,		600,	120
         Truck_01_WheelDouble,				*,		1000,	200
-		
+		// ---- 4KBOSSK Modded Vehicle Wheels ----
+		Audi_RS6_ABT_Wheel,				*,		750,	350
+		BMW_M3_Wheel,					*,		750,	350
+		Chevrolet_NapalmNova_Wheel,		*,		750,	350
+		Dodge_Challenger_WheelSRT,		*,		750,	350
+		dodgecharger_wheel,				*,		750,	350
+		DodgeRam_3500_Wheel,			*,		750,	350
+		DodgeRam_Wheel,					*,		750,	350
+		bronco_wheel,					*,		750,	350
+		FordShelbyGT500_Wheel,			*,		750,	350
+		Wheel_Main,						*,		500,	250
+		JeepGladiator_Wheel,			*,		750,	350
+		Kamaz_TyphoonK_Wheel,			*,		1000,	500
+		MotorHome_Wheel,				*,		750,	350
+		Skyline_Wheel,					*,		750,	350
+		NissanGTRNismo_Wheel,			*,		750,	350
+		Porsche_911RWB_Front_Wheel,		*,		750,	350
+		Supra_Wheel,					*,		750,	350
+		Tahoe_wheel,					*,		750,	350
+		Runner_Wheel,					*,		750,	350
+		// ---- LM Planes Wheels ----
+		LM_DC_3_Wheel_Front,			*,		1200,	600
+		LM_DC_3_Wheel_Back,			*,		1200,	600
+		LM_Stuntplane_Wheel_Front,		*,		1000,	500
+		LM_Stuntplane_Wheel_Back,		*,		1000,	500
+		LM_Tigermoth_Wheel_Front,		*,		1000,	500
+		LM_Tigermoth_Wheel_Back,		*,		1000,	500
+		LM_Spitfire_Wheel_Front,		*,		1200,	600
+		LM_Spitfire_Wheel_Back,			*,		1200,	600
+		LM_Cessna180_Wheel_Front,		*,		1000,	500
+		LM_Cessna180_Wheel_Back,		*,		1000,	500
+
 	<Category> Keys
 		VehicleKeyDuplicate,	K,		2000,	-1 		// The choosen Classname here only gets displayed in the UI (Name/Description); Make Sure SellValue is set to -1
 		VehicleKeyLost,    		KL,    	5000,   -1		// The choosen Classname here only gets displayed in the UI (Name/Description); Make Sure SellValue is set to -1
