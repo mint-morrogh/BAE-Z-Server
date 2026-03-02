@@ -55,7 +55,7 @@
     </children>
   </event>
   <event name="AnimalBear">
-    <nominal>4</nominal>
+    <nominal>5</nominal>
     <min>2</min>
     <max>2</max>
     <lifetime>180</lifetime>
@@ -72,8 +72,8 @@
     </children>
   </event>
   <event name="AnimalCow">
-    <nominal>28</nominal>
-    <min>10</min>
+    <nominal>18</nominal>
+    <min>7</min>
     <max>20</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
@@ -94,8 +94,8 @@
     </children>
   </event>
   <event name="AnimalDeer">
-    <nominal>56</nominal>
-    <min>21</min>
+    <nominal>67</nominal>
+    <min>25</min>
     <max>40</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
@@ -112,8 +112,8 @@
     </children>
   </event>
   <event name="AnimalGoat">
-    <nominal>35</nominal>
-    <min>14</min>
+    <nominal>30</nominal>
+    <min>12</min>
     <max>25</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
@@ -132,8 +132,8 @@
     </children>
   </event>
   <event name="AnimalPig">
-    <nominal>28</nominal>
-    <min>10</min>
+    <nominal>33</nominal>
+    <min>12</min>
     <max>20</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
@@ -149,8 +149,8 @@
     </children>
   </event>
   <event name="AnimalRoeDeer">
-    <nominal>70</nominal>
-    <min>28</min>
+    <nominal>67</nominal>
+    <min>25</min>
     <max>50</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
@@ -167,8 +167,8 @@
     </children>
   </event>
   <event name="AnimalSheep">
-    <nominal>28</nominal>
-    <min>10</min>
+    <nominal>18</nominal>
+    <min>6</min>
     <max>20</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
@@ -202,8 +202,8 @@
     </children>
   </event>
   <event name="AnimalWolf">
-    <nominal>6</nominal>
-    <min>3</min>
+    <nominal>8</nominal>
+    <min>4</min>
     <max>6</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
@@ -219,17 +219,17 @@
       <child lootmax="0" lootmin="0" max="4" min="0" type="Animal_CanisLupus_White" />
     </children>
   </event>
-  <!-- Use mod author's max=5 (small packs); nominal=35 for more dogs across map -->
+  <!-- nominal=8 ≈ 100 dogs (CE creates ~13 entities per nominal for herd events) -->
   <event name="AnimalWildDog">
-    <nominal>35</nominal>
-    <min>15</min>
+    <nominal>8</nominal>
+    <min>3</min>
     <max>5</max>
     <lifetime>180</lifetime>
     <restock>0</restock>
     <saferadius>350</saferadius>
     <distanceradius>0</distanceradius>
     <cleanupradius>0</cleanupradius>
-    <flags deletable="0" init_random="0" remove_damaged="0" />
+    <flags deletable="0" init_random="0" remove_damaged="1" />
     <position>fixed</position>
     <limit>mixed</limit>
     <active>1</active>
@@ -272,8 +272,8 @@
     </children>
   </event>
   <event name="AnimalWildHorse">
-    <nominal>35</nominal>
-    <min>15</min>
+    <nominal>13</nominal>
+    <min>6</min>
     <max>5</max>
     <lifetime>180</lifetime>
     <restock>0</restock>

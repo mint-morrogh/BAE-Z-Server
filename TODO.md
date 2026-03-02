@@ -63,63 +63,20 @@ Do the same for all 20+ models.
 - Add cfgspawnabletypes.xml entries for any new models (matching wheel types)
 - **Requires server restart** (events.xml is loaded at startup)
 
-### SitRest: Add SurvivorAnims "SitNew" emote support
-- **Issue:** Sit crossed (vanilla SitA) freezes hunger/thirst, but "sit straight" does not
-- **Root cause:** The "sit straight" emote comes from `@SurvivorAnims` mod, not vanilla SitB. It uses emote ID `5501` (`EMOTE_SASitNew`) instead of vanilla `EmoteConstants.ID_EMOTE_SITB` (15)
-- **Found in:** `@SurvivorAnims/addons/SurvivorAnims.pbo` → `Scripts/3_Game/constants.c` (defines `EMOTE_SASitNew = 5501`)
-- **Fix ready:** `mod_src/SitRest/Scripts/4_World/SitRest.c` already updated to check `id == 5501`
-- **To deploy:** Stop server, rebuild PBO, restart:
-  ```bash
-  cd mod_src/SitRest
-  pbo -b -H "prefix=SitRest" ../../@SitRest/addons/SitRest.pbo config.cpp Scripts/4_World/SitRest.c
-  ```
-
-### Trader: Add modded vehicle & plane parts for sale — DONE
-### Trader: Add "Building Kits" category to Misc Trader — DONE
-### Trader: Add "Horse Tack" category to Misc Trader — DONE
-### Trader: Add "Dog Gear" category to Misc Trader — DONE
-### Stable_dayz_kit and M79 nominal=0 — DONE
 
 ---
 
 ## Pending (no server stop needed)
 
-### Roaming Trader: Still showing "Nails" as currency instead of Rubles
-- **Issue:** The MWGSM Roaming Trader UI shows "Nails" as currency despite server config being set to MoneyRuble. This has persisted through 3 fix attempts because we were only editing the server-side config.
-- **Root cause:** Client/server config split. The mod loads its config independently on both sides using `$profile:` which resolves to different directories:
-  - **Server:** `$profile:` = `config/` (from `-profiles=config` in start_server.bat) → reads `config/MWGSM_RoamingTrader/MWGSM_RoamingTraderConfig.json` → has `MoneyRuble1` (correct)
-  - **Client:** `$profile:` = `C:\Users\Harrison\Documents\DayZ\` → file doesn't exist there → mod constructor calls `SetDefaults()` which hardcodes `CurrencyItem = "Nail"`
-- **Found in:** `@MWGSM_Trader/addons/MWGSM_RoamingTrader.pbo` → `scripts/3_Game/MWGSM_RoamingTrader/MWGSM_Config.c` line 155: `CurrencyItem = "Nail"` (hardcoded default)
-- **Why previous fixes didn't work:** We kept editing the server config at `config/MWGSM_RoamingTrader/MWGSM_RoamingTraderConfig.json`, but the client never reads that file. The actual transactions use rubles server-side (that part works), but the client UI displays "Nails" because it uses its own local defaulted config.
-- **Additional bug:** `AlternateCurrencies` is empty `[]` in the config, meaning only `MoneyRuble1` (1-ruble notes) are accepted as payment. Higher denominations (5, 10, 25, 50, 100) are ignored even though their exchange rates are defined.
-
-#### Fixes needed (3 things):
-
-**1. Copy config to client profile directory:**
-```bash
-mkdir -p "C:/Users/Harrison/Documents/DayZ/MWGSM_RoamingTrader/"
-cp config/MWGSM_RoamingTrader/MWGSM_RoamingTraderConfig.json "C:/Users/Harrison/Documents/DayZ/MWGSM_RoamingTrader/"
-```
-
-**2. Add higher ruble denominations to AlternateCurrencies in the config:**
-Change in BOTH server and client copies:
-```json
-"AlternateCurrencies": ["MoneyRuble5", "MoneyRuble10", "MoneyRuble25", "MoneyRuble50", "MoneyRuble100"],
-```
-
-**3. Automate the client sync in `launch_dayz.bat`:**
-Add a step to copy the config to the client profile dir on every launch, so future edits propagate automatically.
-
 ---
 
 ## Completed
 
-### Dogs & Horses not spawning — FIXED (multi-stage)
-- **Root causes:** Missing `cfgeventspawns.xml` entries for both AnimalWildDog and AnimalWildHorse, plus broken event children config (min=1 on 35 breeds = impossible constraint)
-- **Ambient approach failed:** Dog territory zones have `dmax=0` (designed for Herd only), so Ambient territory produced zero spawns
-- **Final fix:** Reverted to Herd type with `DZWolfGroupBeh` (matching mod author's reference exactly), max=5, nominal=35, children min=0/max=1. DayzDog.log confirmed dogs were working with this structure on Feb 23-24.
-- **Horses:** Set children min=1 to guarantee non-empty herds, nominal=35 for ~7 herds across map
-- **Bears:** Enabled with nominal=4
+### Dogs & Horses not spawning — FIXED
+- `AnimalMaxCount` set to 1200 (was 200). Vanilla herds consumed all entity slots. Dogs, horses, wolves, sheep now all spawning. Confirmed in-game Mar 2.
+
+### Roaming Trader: "Nails" currency + missing denominations — FIXED
+- Client reads config from `Documents\DayZ\` not server `config/`. Copied config to client profile dir, added ruble denominations, automated sync in `launch_dayz.bat`.
 
 ### Trader additions — ALL DONE
 - Vehicle wheels: 19 4KBOSSK + 10 LM Planes wheels added to Vehicle Parts
@@ -127,6 +84,18 @@ Add a step to copy the config to the client profile dir on every launch, so futu
 - Horse Tack: saddle, bridle, horse bags added to Misc Trader
 - Dog Gear: 7 collars, gas mask, 6 vests added to Misc Trader
 - M79 + 40mm ammo added to Weapon Trader Grenades category
+
+### Zombie health nerf (PvZmoD) — DONE
+- 10 bullet-sponge zombie types reduced to 180 HP / 0.4 headshot resist, matching military zombies. Jacket, Skirt, Priest, Mummy, Santa, Patrol, DoorHouse masters, NightWalker all nerfed. Vehicle/explosion immunity removed from boss types.
+
+### Dog health & damage buff — DONE
+- HealthBoost config.cpp: dog HP doubled (800→1600), blood doubled (5000→10000). Bite damage doubled (80→160 Health, 200→400 Blood, 22→44 Shock). `requiredAddons` updated to include `dayz_dog`.
+
+### Zombie daytime spawn rate increase — DONE
+- DayZombieManager `DAY_DESPAWN_CHANCE` reduced from 0.85 to 0.65 (35% survive during day, up from 15%). Compensates for zombies being less tanky after PvZmoD nerf.
+
+### Vanilla animal nominals reduced — DONE
+- Reduced vanilla herd nominals in events.xml to leave more room under AnimalMaxCount=1200 cap. Dog nominal reduced from 35→8 (~100 entities). Vanilla animals rebalanced to lower counts.
 
 ### CE overtime fixes — DONE
 - `Stable_dayz_kit` nominal=0 in types_dayzhorse.xml

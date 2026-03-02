@@ -134,7 +134,25 @@ if exist "%NEMSIS_DIR%\nm_Crafting_Part_Airbrushing.pbo" (
 echo.
 
 :: ============================================================
-:: Step 4: Sync custom client mods to DayZ folder
+:: Step 4: Sync Roaming Trader config to client profile
+:: ============================================================
+:: The MWGSM Roaming Trader reads config from $profile: which on
+:: the client resolves to Documents\DayZ\. Without this copy the
+:: client defaults to "Nails" as currency instead of Rubles.
+echo --- Syncing Roaming Trader config to client ---
+set "RT_SRC=%~dp0config\MWGSM_RoamingTrader\MWGSM_RoamingTraderConfig.json"
+set "RT_DST=%USERPROFILE%\Documents\DayZ\MWGSM_RoamingTrader"
+if exist "%RT_SRC%" (
+    if not exist "%RT_DST%" mkdir "%RT_DST%"
+    copy /Y "%RT_SRC%" "%RT_DST%\" >nul 2>&1
+    echo   [SYNC] Roaming Trader config -^> %RT_DST%
+) else (
+    echo   [SKIP] Roaming Trader config not found on server
+)
+echo.
+
+:: ============================================================
+:: Step 5: Sync custom client mods to DayZ folder
 :: ============================================================
 echo --- Syncing custom client mods ---
 echo   Server: %~dp0
@@ -151,7 +169,7 @@ echo   [OK]   Client script cache cleared
 echo.
 
 :: ============================================================
-:: Step 5: Launch DayZ
+:: Step 6: Launch DayZ
 :: ============================================================
 echo ============================================
 echo  Launching DayZ with mods: %CUSTOM_MODS%

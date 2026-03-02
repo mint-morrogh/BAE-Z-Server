@@ -1282,30 +1282,30 @@
 	
 	<!-- Walkers (have to be head shot) -->
 	<type name="ZmbM_Jacket_Base">								
-        <Health_Points				Day="10000"	Night="10000"/> <!-- Health increased -->
-        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
-        <Resistance_to_Melees		Day="0.1" 	Night="0.1"/> 	<!-- Melee resistance increased to avoid one shot with fists -->
-        <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
-        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/> 	<!-- With the same value here they are more Vehicles resistant than other zombies because they have more health points -->	
-        <Resistance_to_Explosions	Day="0.0001 " Night="0.0001 "/>	<!-- Explosion resistance decrease to make possible to kill walkers with grenade -->
-		<Resistance_to_Stun_Bullets	Day="0.1" 	Night="0.1"/>
-        <Resistance_to_HeadShots	Day="0.001" Night="0.001"/>	<!-- Headshot resistance decrease -->
+        <Health_Points				Day="180"	Night="180"/> <!-- Matched to military -->
+        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
+		<Resistance_to_Stun_Bullets	Day="0.6" 	Night="0.6"/>
+        <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
-		<Special_HeadShot_Weapons	Day="0"		Night="0"/>
-		<Move_Speed_Min				Day="0.0" 	Night="0.0"/>	
-		<Move_Speed_Max				Day="1.5" 	Night="1.5"/>	<!-- Max speed decreased to walk -->
+		<Special_HeadShot_Weapons	Day="1"		Night="1"/>
+		<Move_Speed_Min				Day="0.0" 	Night="0.0"/>
+		<Move_Speed_Max				Day="1.5" 	Night="1.5"/>
 		<Move_Speed_Adjust_Max		Day="0.2" 	Night="0.2"/>
 		<Animation_Type				Day="1" 	Night="-9"/>
-        <Chance_To_Spawn_Crawling	Day="-1.0" 	Night="-1.0"/>	<!-- Never crawl -->
+        <Chance_To_Spawn_Crawling	Day="-1.0" 	Night="-1.0"/>
 		<Can_Dodge					Day="0" 	Night="0"/>
  		<Hit_Players_On_Obstacles 	Day="1"		Night="1"/>
  		<Immune_To_MultiHit 		Day="0"		Night="0"/>
- 		<Attack_Speed 				Day="0.5"	Night="0.5"/>	<!-- Low Attack Speed -->
+ 		<Attack_Speed 				Day="0.5"	Night="0.5"/>
 		<Ratio_Damage_Health		LightAttack_NotBlocked="1.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="1.0" HeavyAttack_Blocked="0.5" NightRatio="1.0"/>
 		<Ratio_Damage_Shock			LightAttack_NotBlocked="1.0" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="1.0" HeavyAttack_Blocked="0.5" NightRatio="1.0"/>
-		<Bleeding_Chance			LightAttack_NotBlocked="0.25" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.25" HeavyAttack_Blocked="0.1" NightRatio="1.5"/> <!-- More Bleeding chance -->
+		<Bleeding_Chance			LightAttack_NotBlocked="0.25" LightAttack_Blocked="0.0" HeavyAttack_NotBlocked="0.25" HeavyAttack_Blocked="0.1" NightRatio="1.5"/>
 		<Damage_Blood				LightAttack_NotBlocked="0" LightAttack_Blocked="0" HeavyAttack_NotBlocked="0" HeavyAttack_Blocked="0" NightRatio="1.0"/>
-		<Damage_Stamina				LightAttack_NotBlocked="50" LightAttack_Blocked="25" HeavyAttack_NotBlocked="50" HeavyAttack_Blocked="25" NightRatio="2.0"/> <!-- Drain Stamina -->
+		<Damage_Stamina				LightAttack_NotBlocked="50" LightAttack_Blocked="25" HeavyAttack_NotBlocked="50" HeavyAttack_Blocked="25" NightRatio="2.0"/>
 		<Vision_Distance_Ratio		Day="0.65" Night="1.0" WithBloodyHands="0.5" WithSpecialMask="0.25" MinimumRatioDistance="0.1"/>
  		<Can_Be_Backstabbed 		Day="1"		Night="1"/>
  		<Resist_Contaminated_Effect	Day="0"		Night="0"/>
@@ -1314,17 +1314,17 @@
  		<Size_Maxi 					Day="1.0"	Night="1.0"/>
  		<Can_Throw_Stones			Day="0"		Night="0"/>
     </type>
-	<type name="ZmbF_ShortSkirt_Base">							
-        <Health_Points				Day="10000"	Night="10000"/> <!-- Health increased -->
-        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
-        <Resistance_to_Melees		Day="0.1" 	Night="0.1"/> 	<!-- Melee resistance increased to avoid one shot with fists -->
-        <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
-        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/> 	<!-- With the same value here they are more Vehicles resistant than other zombies because they have more health points -->	
-        <Resistance_to_Explosions	Day="0.0001 " Night="0.0001 "/>	<!-- Explosion resistance decrease to make possible to kill walkers with grenade -->
-		<Resistance_to_Stun_Bullets	Day="0.1" 	Night="0.1"/>
-        <Resistance_to_HeadShots	Day="0.001" Night="0.001"/>	<!-- Head shot resistance decrease -->
+	<type name="ZmbF_ShortSkirt_Base">
+        <Health_Points				Day="180"	Night="180"/> <!-- Matched to military -->
+        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
+		<Resistance_to_Stun_Bullets	Day="0.6" 	Night="0.6"/>
+        <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
-		<Special_HeadShot_Weapons	Day="0"		Night="0"/>
+		<Special_HeadShot_Weapons	Day="1"		Night="1"/>
         <Move_Speed_Min				Day="0.0" 	Night="0.0"/>	
 		<Move_Speed_Max				Day="1.5" 	Night="1.5"/>	<!-- Max speed decreased to walk -->
 		<Move_Speed_Adjust_Max		Day="0.2" 	Night="0.2"/>
@@ -1616,12 +1616,12 @@
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
 	<type name="ZmbM_PatrolNormal_Base">						
-        <Health_Points				Day="250" 	Night="250"/> 	<!-- Strong Lvl 3 -->
-        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
+        <Health_Points				Day="180" 	Night="180"/> 	<!-- Matched to military -->
+        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
-        <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/> 	
-        <Resistance_to_Vehicles		Day="100" 	Night="100"/>	<!-- Vehicles Resistant -->
-        <Resistance_to_Explosions	Day="10" 	Night="10"/>	<!-- Explosions Resistant -->
+        <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
 		<Resistance_to_Stun_Bullets	Day="0.6" 	Night="0.6"/>
         <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
@@ -1815,13 +1815,13 @@
  		<Size_Maxi 					Day="1.2"	Night="1.3"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_Santa">	 					<!-- ! More Dangerous at NIGHT ! -->
-        <Health_Points				Day="500" 	Night="500"/> 	<!--  Very Strong Lvl BadSanta  -->
+	<type name="ZmbM_Santa">	 					<!-- Matched to military -->
+        <Health_Points				Day="180" 	Night="180"/>
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
-        <Resistance_to_Vehicles		Day="10000" Night="10000"/>	<!-- Vehicles Immune -->
-        <Resistance_to_Explosions	Day="100" 	Night="100"/> 	<!-- Explosions Immune -->
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
 		<Resistance_to_Stun_Bullets	Day="0.9" 	Night="0.9"/>
         <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
@@ -1848,13 +1848,13 @@
  		<Size_Maxi 					Day="1.4"	Night="1.6"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_priestPopSkinny_Base">	 		<!-- ! More Dangerous at NIGHT ! -->
-        <Health_Points				Day="1000" 	Night="1000"/> 	<!--  Very Very Strong Lvl BOSS  -->
+	<type name="ZmbM_priestPopSkinny_Base">	 		<!-- Matched to military -->
+        <Health_Points				Day="180" 	Night="180"/>
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
-        <Resistance_to_Vehicles		Day="10000" Night="10000"/>	<!-- Vehicles Immune -->
-        <Resistance_to_Explosions	Day="100" 	Night="100"/> 	<!-- Explosions Immune -->
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
 		<Resistance_to_Stun_Bullets	Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
@@ -1881,13 +1881,13 @@
  		<Size_Maxi 					Day="1.3"	Night="1.5"/>
  		<Can_Throw_Stones			Day="1"		Night="1"/>
     </type>
-	<type name="ZmbM_Mummy">	 					<!-- ! More Dangerous at NIGHT ! -->
-        <Health_Points				Day="1000" 	Night="1000"/> 	<!--  Very Very Strong Lvl BOSS  -->
+	<type name="ZmbM_Mummy">	 					<!-- Matched to military -->
+        <Health_Points				Day="180" 	Night="180"/>
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
-        <Resistance_to_Vehicles		Day="10000" Night="10000"/>	<!-- Vehicles Immune -->
-        <Resistance_to_Explosions	Day="100" 	Night="100"/> 	<!-- Explosions Immune -->
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
 		<Resistance_to_Stun_Bullets	Day="0.8" 	Night="0.8"/>
         <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
@@ -1955,12 +1955,12 @@
 	<!--____ WARNING : IF YOU USE WINTER CHERNARUS MAP (and maybe other winter maps) WITH THE DARK HORDE MOD ____-->
 	<!-- Keep ZmbM_JournalistSkinny_Base ZmbF_PatientOld_Base ZmbM_CitizenASkinny_Base After the Dark Horde Creatures -->
 	<type name="ZmbM_DH_Master_Day">
-        <Health_Points				Day="400" 	Night="400"/> 	<!--  Strong Lvl 5  -->
+        <Health_Points				Day="180" 	Night="180"/> 	<!-- Matched to military -->
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
-        <Resistance_to_Vehicles		Day="10000" Night="10000"/>	<!-- Vehicles Immune -->
-        <Resistance_to_Explosions	Day="100" 	Night="100"/> 	<!-- Explosions Immune -->
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
 		<Resistance_to_Stun_Bullets	Day="1.5" 	Night="1.5"/>
         <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
@@ -1987,13 +1987,13 @@
  		<Size_Maxi 					Day="1.6"	Night="1.6"/>
  		<Can_Throw_Stones			Day="2"		Night="2"/>
     </type>
-	<type name="ZmbM_DH_Master_Night">							<!--  This class is use if go through walls option of Dark Horde mod is Activated  -->
-        <Health_Points				Day="400" 	Night="400"/> 	<!--  Strong Lvl 5  -->
+	<type name="ZmbM_DH_Master_Night">							<!-- Matched to military -->
+        <Health_Points				Day="180" 	Night="180"/>
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
-        <Resistance_to_Vehicles		Day="10000" Night="10000"/>	<!-- Vehicles Immune -->
-        <Resistance_to_Explosions	Day="100" 	Night="100"/> 	<!-- Explosions Immune -->
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
 		<Resistance_to_Stun_Bullets	Day="1.5" 	Night="1.5"/>
         <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
@@ -2021,13 +2021,13 @@
  		<Can_Throw_Stones			Day="2"		Night="2"/>
     </type>
 	
-	<type name="ZmbM_DH_Master_Night_NotThroughWalls">			<!--  This class is use if go through walls option of Dark Horde mod is Deactivated  -->
-        <Health_Points				Day="400" 	Night="400"/> 	<!--  Strong Lvl 5  -->
+	<type name="ZmbM_DH_Master_Night_NotThroughWalls">			<!-- Matched to military -->
+        <Health_Points				Day="180" 	Night="180"/>
         <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
         <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
-        <Resistance_to_Vehicles		Day="10000" Night="10000"/>	<!-- Vehicles Immune -->
-        <Resistance_to_Explosions	Day="100" 	Night="100"/> 	<!-- Explosions Immune -->
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
 		<Resistance_to_Stun_Bullets	Day="1.5" 	Night="1.5"/>
         <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
@@ -2158,14 +2158,14 @@
     </type>
 	
 	<type name="ZmbM_DH_NightWalker_Base">
-        <Health_Points				Day="10000"	Night="10000"/> 	<!-- Health increased -->
-        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/> 	
-        <Resistance_to_Melees		Day="10.0" 	Night="10.0"/> 	<!-- Melee resistance increased to avoid one shot with fists -->
+        <Health_Points				Day="180"	Night="180"/> 	<!-- Matched to military -->
+        <Resistance_to_Bullets		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Melees		Day="1.0" 	Night="1.0"/>
         <Resistance_to_HeavyAttack	Day="0.5" 	Night="0.5"/>
-        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/> 	
-        <Resistance_to_Explosions	Day="0.01" 	Night="0.01"/>	
-		<Resistance_to_Stun_Bullets	Day="0.9" 	Night="0.9"/>
-        <Resistance_to_HeadShots	Day="0.001" Night="0.001"/>	<!-- Head shot resistance decrease -->
+        <Resistance_to_Vehicles		Day="1.0" 	Night="1.0"/>
+        <Resistance_to_Explosions	Day="1.0" 	Night="1.0"/>
+		<Resistance_to_Stun_Bullets	Day="0.6" 	Night="0.6"/>
+        <Resistance_to_HeadShots	Day="0.4" 	Night="0.4"/>
 		<Resist_to_Melee_HeadShots	Day="0.6" 	Night="0.6"/>
 		<Special_HeadShot_Weapons	Day="1"		Night="1"/>
         <Move_Speed_Min				Day="0.0" 	Night="0.0"/>	

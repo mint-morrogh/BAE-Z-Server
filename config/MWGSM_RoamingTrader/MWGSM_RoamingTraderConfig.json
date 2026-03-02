@@ -33,7 +33,7 @@
     "PreferRoads": 0,
     "PreferFields": 1,
     "CurrencyItem": "MoneyRuble1",
-    "AlternateCurrencies": [],
+    "AlternateCurrencies": ["MoneyRuble5", "MoneyRuble10", "MoneyRuble25", "MoneyRuble50", "MoneyRuble100"],
     "CurrencyExchangeRates": {
         "MoneyRuble1": 1.0,
         "MoneyRuble5": 5.0,
