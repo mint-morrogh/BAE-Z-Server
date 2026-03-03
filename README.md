@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="BAEZ_logo.png" alt="BAE-Z Logo" width="400" />
+</p>
+
 # Blood & Barter — DayZ Private Server
 
 A private DayZ co-op server configured for small groups (2-4 players) on Chernarus. Designed for a relaxed survival experience with quality-of-life mods, faster day/night cycles, and customized zombie spawns.
