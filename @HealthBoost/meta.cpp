@@ -1,6 +1,6 @@
 class HealthBoost
 {
 	name = "HealthBoost";
-	author = "Blood & Barter";
+	author = "BAE-Z";
 	version = "1.0";
 };

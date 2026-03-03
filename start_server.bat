@@ -1,7 +1,7 @@
 @echo off
 :start
 ::Server name (This is just for the bat file)
-set serverName=Blood & Barter
+set serverName=BAE-Z
 ::Server files location
 set serverLocation="%~dp0"
 ::Server Port

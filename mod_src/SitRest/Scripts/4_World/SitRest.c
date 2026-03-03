@@ -1,5 +1,5 @@
 /**
- * SitRest - Blood & Barter
+ * SitRest - BAE-Z
  *
  * Freezes hunger (energy) and thirst (water) drain while the player
  * is using a sit emote (SitA, SitB, or SurvivorAnims SitNew). Eating/drinking while seated

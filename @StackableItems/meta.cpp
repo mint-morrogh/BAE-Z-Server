@@ -1,6 +1,6 @@
 class StackableItems
 {
     name = "StackableItems";
-    author = "Blood and Barter";
+    author = "BAE-Z";
     version = "1.0";
 };

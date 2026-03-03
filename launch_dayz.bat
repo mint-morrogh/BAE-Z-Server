@@ -1,6 +1,6 @@
 @echo off
 :: ============================================================
-:: Blood ^& Barter - Launch DayZ Client
+:: BAE-Z - Launch DayZ Client
 :: ============================================================
 :: All-in-one launcher: pulls latest config changes, installs
 :: or updates Workshop mods, syncs custom client mods, then
@@ -29,7 +29,7 @@ set "DAYZ_CLIENT=%CD%"
 popd
 
 echo ============================================
-echo  Blood ^& Barter - Launch DayZ
+echo  BAE-Z - Launch DayZ
 echo ============================================
 echo.
 
@@ -68,7 +68,7 @@ git rev-parse --git-dir >nul 2>&1
 if errorlevel 1 (
     echo   [SETUP] Not a git repo - setting up...
     git init >nul 2>&1
-    git remote add origin https://github.com/mint-morrogh/DayZServer.git >nul 2>&1
+    git remote add origin https://github.com/mint-morrogh/BAE-Z-Server.git >nul 2>&1
     git fetch --quiet 2>nul
     git checkout -f main 2>nul
     echo   [OK]    Repository initialized

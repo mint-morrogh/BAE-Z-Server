@@ -1,5 +1,5 @@
 /**
- * DurableGear - Blood & Barter
+ * DurableGear - BAE-Z
  *
  * Items self-repair to full health every 2 minutes.
  * Tools, weapons, cooking gear — everything stays pristine.

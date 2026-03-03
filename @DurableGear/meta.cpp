@@ -1,6 +1,6 @@
 class DurableGear
 {
 	name = "DurableGear";
-	author = "Blood & Barter";
+	author = "BAE-Z";
 	version = "1.0";
 };

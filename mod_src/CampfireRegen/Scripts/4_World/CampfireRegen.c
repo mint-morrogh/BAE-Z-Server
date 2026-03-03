@@ -1,5 +1,5 @@
 /**
- * CampfireRegen - Blood & Barter
+ * CampfireRegen - BAE-Z
  *
  * Players near a lit fire slowly regenerate health and blood.
  * +2 health and +5 blood every 10 seconds within 5m of a burning fire.

@@ -1,6 +1,6 @@
 class DayZombieManager
 {
 	name = "DayZombieManager";
-	author = "Blood & Barter";
+	author = "BAE-Z";
 	version = "1.0";
 };

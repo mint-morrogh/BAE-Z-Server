@@ -11,7 +11,7 @@
         {
             "Enable": 1,
             "DelayMs": 8000,
-            "Title": "Welcome to Blood & Barter",
+            "Title": "Welcome to BAE-Z",
             "Text": "Good luck out there, {PLAYER}. Stay sharp.",
             "Color": "#FFFFFF"
         }

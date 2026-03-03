@@ -1,6 +1,6 @@
 class SitRest
 {
 	name = "SitRest";
-	author = "Blood & Barter";
+	author = "BAE-Z";
 	version = "1.0";
 };

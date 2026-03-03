@@ -2,7 +2,7 @@
     "_README": "Edit the values below and run apply_settings.bat to patch all server config files at once.",
 
     "server": {
-        "name": "Blood & Barter",
+        "name": "BAE-Z",
         "password": "mintmorrogh",
         "adminPassword": "mintmorrogh",
         "maxPlayers": 4

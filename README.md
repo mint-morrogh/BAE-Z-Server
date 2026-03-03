@@ -2,7 +2,7 @@
   <img src="BAEZ_logo.png" alt="BAE-Z Logo" width="400" />
 </p>
 
-# Blood & Barter — DayZ Private Server
+# BAE-Z — DayZ Private Server
 
 A private DayZ co-op server configured for small groups (2-4 players) on Chernarus. Designed for a relaxed survival experience with quality-of-life mods, faster day/night cycles, and customized zombie spawns.
 
@@ -84,7 +84,7 @@ Open DayZ from Steam at least once so it finishes downloading all subscribed mod
 
 ```bash
 cd "C:\Program Files (x86)\Steam\steamapps\common"
-git clone https://github.com/mint-morrogh/DayZServer.git DayZServer
+git clone https://github.com/mint-morrogh/BAE-Z-Server.git DayZServer
 ```
 If the folder already exists from installing DayZ Server, clone into a temp folder and copy the files over, or delete the folder first and clone fresh.
 
@@ -131,7 +131,7 @@ Open DayZ from Steam once so it downloads all mod files. Close after reaching th
 
 ```bash
 cd "C:\Program Files (x86)\Steam\steamapps\common"
-git clone https://github.com/mint-morrogh/DayZServer.git DayZServer
+git clone https://github.com/mint-morrogh/BAE-Z-Server.git DayZServer
 ```
 
 **5. Launch and connect**

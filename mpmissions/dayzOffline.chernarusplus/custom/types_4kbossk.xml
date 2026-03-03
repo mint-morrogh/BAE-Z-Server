@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <types>
 	<!--
-	4KBOSSKVehicles - Custom spawn config for Blood & Barter
+	4KBOSSKVehicles - Custom spawn config for BAE-Z
 	Vehicles spawn via events.xml (Vehicle4KBOSSK) with custom positions.
 	nominal=0 here so types.xml doesn't also spawn them.
 	-->

@@ -1,5 +1,5 @@
 /**
- * VehicleHealth - Blood & Barter (HealthBoost)
+ * VehicleHealth - BAE-Z (HealthBoost)
  *
  * Every 60 seconds, vehicle global health and all damage zones
  * (hood, bumpers, doors, wheels, engine, etc.) are repaired to max.

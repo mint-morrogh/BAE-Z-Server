@@ -1,6 +1,6 @@
 class CampfireRegen
 {
 	name = "CampfireRegen";
-	author = "Blood & Barter";
+	author = "BAE-Z";
 	version = "1.0";
 };

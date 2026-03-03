@@ -1,5 +1,5 @@
 /**
- * MinimapTweak - Blood & Barter
+ * MinimapTweak - BAE-Z
  *
  * - Moves minimap to top-right corner
  * - Hides coordinate/stats overlay on the minimap HUD

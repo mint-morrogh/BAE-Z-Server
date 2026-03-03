@@ -1,5 +1,5 @@
 /**
- * HUDClock - Blood & Barter
+ * HUDClock - BAE-Z
  *
  * Displays the in-game world time (HH:MM) in the top-right corner.
  * Fixed position — stays put whether minimap is open or closed.

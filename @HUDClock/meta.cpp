@@ -1,6 +1,6 @@
 class HUDClock
 {
 	name = "HUDClock";
-	author = "Blood & Barter";
+	author = "BAE-Z";
 	version = "1.0";
 };

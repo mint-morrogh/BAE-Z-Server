@@ -73,8 +73,8 @@ class CfgMods
         hideName = 1;
         hidePicture = 1;
         name = "HealthBoost";
-        credits = "Blood and Barter";
-        author = "Blood and Barter";
+        credits = "BAE-Z";
+        author = "BAE-Z";
         version = "1.0";
         extra = 0;
         type = "mod";

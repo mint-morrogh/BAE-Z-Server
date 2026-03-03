@@ -1,5 +1,5 @@
 /**
- * CompanionRegen - Blood & Barter (HealthBoost)
+ * CompanionRegen - BAE-Z (HealthBoost)
  *
  * Dogs and horses passively regenerate 5% of max health every 30 seconds.
  * Near-death to full health in ~10 minutes. Only affects entities with

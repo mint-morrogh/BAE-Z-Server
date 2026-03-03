@@ -1,5 +1,5 @@
 /**
- * DayZombieManager - Blood & Barter
+ * DayZombieManager - BAE-Z
  *
  * Reduces zombie population during daytime by despawning a percentage
  * of zombies as they spawn. At night, all zombies spawn normally.
