@@ -13,7 +13,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 **Companions & Animals**
 - **Companion dogs** - 35 breeds of tameable dogs roaming the map in wild packs, equip collars/K9 vests/gas masks, build dog houses, command follow/stay/attack
 - **Rideable horses** - 5 horse colours in wild herds, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
-- **Tougher companions** - dogs have 4x HP (3200) and doubled bite damage
+- **Tougher companions** - dogs have 4x HP (3200) and doubled bite damage, horses have a massive health pool (3200 HP, 20000 blood)
 - **Companion health regen** - dogs regenerate 10% max health every 15 seconds (~2.5 min to full), horses regenerate 5% every 30 seconds (~10 min to full)
 - **Rebalanced wildlife** - deer, roe deer, cows, goats, pigs, sheep, wild boar, wolves, bears, foxes, hares, and hens all tuned for a populated but performant world
 
@@ -683,7 +683,7 @@ Custom server-side mod (`@HealthBoost`). Three features in one mod:
 
 **Dogs** - passive health regen of 10% of max health every 15 seconds. Near-death to full health in ~2.5 minutes. Dogs also have 4x base HP (3200) and doubled bite damage.
 
-**Horses** - passive health regen of 5% of max health every 30 seconds. Near-death to full health in ~10 minutes.
+**Horses** - massive health pool (3200 HP, 20000 blood, 400 shock) and passive health regen of 5% of max health every 30 seconds. Near-death to full health in ~10 minutes.
 
 Only affects entities with "Doggo" or "Horse" in their class name - wolves, deer, and other wildlife are unaffected.
 
