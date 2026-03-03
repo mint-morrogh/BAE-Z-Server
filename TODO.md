@@ -90,7 +90,7 @@ Do the same for all 20+ models.
 - 10 bullet-sponge zombie types reduced to 180 HP / 0.4 headshot resist, matching military zombies. Jacket, Skirt, Priest, Mummy, Santa, Patrol, DoorHouse masters, NightWalker all nerfed. Vehicle/explosion immunity removed from boss types.
 
 ### Dog health & damage buff — DONE
-- HealthBoost config.cpp: dog HP doubled (800→1600), blood doubled (5000→10000). Bite damage doubled (80→160 Health, 200→400 Blood, 22→44 Shock). `requiredAddons` updated to include `dayz_dog`.
+- HealthBoost config.cpp: dog HP 4x (800→3200), blood 4x (5000→20000), shock doubled (200→400). Bite damage doubled (80→160 Health, 200→400 Blood, 22→44 Shock). Dog regen 10% every 15s (~2.5 min full heal), horses stay at 5% every 30s.
 
 ### Zombie daytime spawn rate increase — DONE
 - DayZombieManager `DAY_DESPAWN_CHANCE` reduced from 0.85 to 0.65 (35% survive during day, up from 15%). Compensates for zombies being less tanky after PvZmoD nerf.

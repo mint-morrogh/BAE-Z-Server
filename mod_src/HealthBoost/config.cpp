@@ -37,7 +37,7 @@ class CfgAmmo
         hitAnimation = 1;
     };
 };
-// Double dog health (800→1600 HP, 5000→10000 Blood)
+// 4x dog health (800→3200 HP, 5000→20000 Blood)
 class CfgVehicles
 {
     class AnimalBase;
@@ -49,15 +49,15 @@ class CfgVehicles
             {
                 class Health
                 {
-                    hitpoints = 1600;
+                    hitpoints = 3200;
                 };
                 class Blood
                 {
-                    hitpoints = 10000;
+                    hitpoints = 20000;
                 };
                 class Shock
                 {
-                    hitpoints = 200;
+                    hitpoints = 400;
                 };
             };
         };

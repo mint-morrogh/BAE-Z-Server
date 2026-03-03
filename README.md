@@ -13,8 +13,8 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 **Companions & Animals**
 - **Companion dogs** - 35 breeds of tameable dogs roaming the map in wild packs, equip collars/K9 vests/gas masks, build dog houses, command follow/stay/attack
 - **Rideable horses** - 5 horse colours in wild herds, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
-- **Tougher companions** - dogs have doubled HP (1600) and doubled bite damage
-- **Companion health regen** - dogs and horses passively regenerate 5% max health every 30 seconds (~10 min from near-death to full)
+- **Tougher companions** - dogs have 4x HP (3200) and doubled bite damage
+- **Companion health regen** - dogs regenerate 10% max health every 15 seconds (~2.5 min to full), horses regenerate 5% every 30 seconds (~10 min to full)
 - **Rebalanced wildlife** - deer, roe deer, cows, goats, pigs, sheep, wild boar, wolves, bears, foxes, hares, and hens all tuned for a populated but performant world
 
 **Vehicles & Transport**
@@ -681,7 +681,11 @@ Custom server-side mod (`@HealthBoost`). Three features in one mod:
 
 **Vehicles** - global chassis health and all individual damage zones (hood, doors, bumpers, wheels, engine, etc.) are repaired to max health every 60 seconds. Ruined parts (0 HP) are left alone and still need replacing, but anything damaged heals back to pristine. Fluids and gas still need managing.
 
-**Dogs & Horses** - passive health regen of 5% of max health every 30 seconds. Near-death to full health in ~10 minutes. Only affects entities with "Doggo" or "Horse" in their class name - wolves, deer, and other wildlife are unaffected.
+**Dogs** - passive health regen of 10% of max health every 15 seconds. Near-death to full health in ~2.5 minutes. Dogs also have 4x base HP (3200) and doubled bite damage.
+
+**Horses** - passive health regen of 5% of max health every 30 seconds. Near-death to full health in ~10 minutes.
+
+Only affects entities with "Doggo" or "Horse" in their class name - wolves, deer, and other wildlife are unaffected.
 
 **Crops** - planted crops last 3x longer after reaching full maturity before spoiling (12 hours instead of the default 4 hours). Gives you plenty of time to harvest without babysitting your garden.
 
