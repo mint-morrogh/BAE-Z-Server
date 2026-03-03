@@ -7,9 +7,9 @@
 
 modded class PlantBase
 {
-	override void Init(SeedBase seed, float fertility, float harvesting_quantity, float water)
+	override void EEInit()
 	{
-		super.Init(seed, fertility, harvesting_quantity, water);
+		super.EEInit();
 
 		if (!GetGame().IsServer())
 			return;
