@@ -41,7 +41,7 @@ set UPDATED=0
 set MISSING=0
 
 :: ============================================================
-:: Workshop ID -> @ModName mapping (33 mods)
+:: Workshop ID -> @ModName mapping (37 mods)
 :: ============================================================
 call :install_mod 1559212036 CF
 call :install_mod 2291785308 DayZ-Expansion-Core
@@ -75,6 +75,10 @@ call :install_mod 3295021220 DayZHorse
 call :install_mod 3636799682 MWGSM_Trader
 call :install_mod 3545040196 SagaShakeTree
 call :install_mod 3648464156 GelyaBackpacks
+call :install_mod 3459215297 SFE_NoVehicleDamage
+call :install_mod 3664943616 VVN_Greenhouse
+call :install_mod 3592127439 VVN_Old_refrigerator
+call :install_mod 3659550946 SobrMods_Signal_Overnight_Stay
 
 echo.
 if %INSTALLED% GTR 0 echo   %INSTALLED% mods newly installed

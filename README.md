@@ -61,13 +61,14 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Long-lasting crops** - planted crops stay alive 3x longer after full maturity before spoiling (12 hours instead of 4)
 - **Boosted foraging** - doubled mushroom spawns under trees, boosted fruit drops from apple/pear/plum trees
 - **Pristine loot** - items spawn Pristine to Worn only (no more Damaged/Badly Damaged spawns)
+- **Placeable refrigerator** - buy a fridge kit from the trader, place it in your base, and store food inside to slow decay - also available as a portable mini fridge
 - **45-day item persistence** - dropped items last 45 real days on the ground, survive server restarts
 - **Indestructible bases** - base structures and storage containers cannot be damaged
 - **Fewer contaminated zones** - dynamic NBC zones reduced to 1 (down from 2-4)
 - **Reduced shoe damage** - crawler zombie boot damage reduced from 5.0 to 1.0
 
 **Server & Configuration**
-- **36 Workshop mods + 5 custom server-side mods + 3 custom client mods** - all preconfigured and ready to go
+- **37 Workshop mods + 5 custom server-side mods + 3 custom client mods** - all preconfigured and ready to go
 - **One-file configuration** - all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** - server automatically restarts every 12 hours
 - **Full persistence** - bases, vehicles, and inventory survive restarts
@@ -399,6 +400,7 @@ These mods must be installed on both the **server** and **client**.
 | [MWGSM Roaming Trader](https://steamcommunity.com/sharedfiles/filedetails/?id=3636799682) | 3636799682 | Helicopter-based roaming trader that lands near players with weapons, ammo, medical, and attachments |
 | [Saga Shake Tree](https://steamcommunity.com/sharedfiles/filedetails/?id=3545040196) | 3545040196 | Shake fruit trees to drop apples, pears, and plums - configurable drop rates and cooldowns |
 | [Pack Complete - Backpacks FREE](https://steamcommunity.com/sharedfiles/filedetails/?id=3648464156) | 3648464156 | 13 backpack models with 63 camo/colour variants - tactical, military, medical, and civilian packs |
+| [VVN Old Refrigerator](https://steamcommunity.com/sharedfiles/filedetails/?id=3592127439) | 3592127439 | Placeable refrigerator that slows food decay, plus a portable mini fridge |
 
 ### Mod Installation
 
@@ -438,6 +440,7 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `3636799682` | `@MWGSM_Trader` |
 | `3545040196` | `@SagaShakeTree` |
 | `3648464156` | `@GelyaBackpacks` |
+| `3592127439` | `@VVN_Old_refrigerator` |
 | `3659550946` | `@SobrMods_Signal_Overnight_Stay` |
 
 ### Gelya Backpacks - Pack Complete
