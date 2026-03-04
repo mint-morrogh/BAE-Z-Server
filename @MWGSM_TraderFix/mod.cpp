@@ -1,0 +1,3 @@
+class MWGSM_TraderFix
+{
+};
