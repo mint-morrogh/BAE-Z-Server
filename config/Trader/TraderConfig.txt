@@ -1726,8 +1726,7 @@
 		LM_Cessna180_Wheel_Front,		*,		1000,	500
 		LM_Cessna180_Wheel_Back,		*,		1000,	500
 
-	<Category> 4KBOSSK Parts (Audi - Dodge)
-		// ---- Audi RS6 ABT Parts ----
+	<Category> Audi RS6 ABT Parts
 		Audi_RS6_ABT_Hood,                       *,		400,	140
 		Audi_RS6_ABT_Hood_Black,                 *,		400,	140
 		Audi_RS6_ABT_Hood_Blue,                  *,		400,	140
@@ -1782,7 +1781,8 @@
 		Audi_RS6_ABT_Cargo2_Red,                 *,		500,	180
 		Audi_RS6_ABT_Cargo2_Teal,                *,		500,	180
 		Audi_RS6_ABT_Cargo2_Yellow,              *,		500,	180
-		// ---- BMW M3 Parts ----
+
+	<Category> BMW M3 Parts
 		BMW_M3_Hood,                             *,		400,	140
 		BMW_M3_Hood_Black,                       *,		400,	140
 		BMW_M3_Hood_Blue,                        *,		400,	140
@@ -1811,7 +1811,8 @@
 		BMW_M3_DriverDoor_MidNightBlue,          *,		500,	180
 		BMW_M3_DriverDoor_Orange,                *,		500,	180
 		BMW_M3_DriverDoor_Red,                   *,		500,	180
-		// ---- Chevrolet Napalm Nova Parts ----
+
+	<Category> Chevy Napalm Nova Parts
 		Chevrolet_NapalmNova_Hood,               *,		400,	140
 		Chevrolet_NapalmNova_Hood_CamoGreen,     *,		400,	140
 		Chevrolet_NapalmNova_Hood_CamoRed,       *,		400,	140
@@ -1868,7 +1869,8 @@
 		Chevrolet_NapalmNova_Driverdoor_Topo,    *,		500,	180
 		Chevrolet_NapalmNova_Driverdoor_White,   *,		500,	180
 		Chevrolet_NapalmNova_Driverdoor_Yellow,  *,		500,	180
-		// ---- Dodge Challenger Parts ----
+
+	<Category> Dodge Challenger Parts
 		Dodge_Challenger_Hood,                   *,		400,	140
 		Dodge_Challenger_Hood_Black,             *,		400,	140
 		Dodge_Challenger_Hood_Blue,              *,		400,	140
@@ -1897,7 +1899,8 @@
 		Dodge_Challenger_Driver_Green,           *,		500,	180
 		Dodge_Challenger_Driver_Orange,          *,		500,	180
 		Dodge_Challenger_Driver_Red,             *,		500,	180
-		// ---- Dodge Charger Parts ----
+
+	<Category> Dodge Charger Parts
 		dodgecharger_hood,                       *,		400,	140
 		dodgecharger_hood_blue,                  *,		400,	140
 		dodgecharger_hood_green,                 *,		400,	140
@@ -1940,7 +1943,8 @@
 		dodgecharger_cargo2_pink,                *,		500,	180
 		dodgecharger_cargo2_red,                 *,		500,	180
 		dodgecharger_cargo2_white,               *,		500,	180
-		// ---- Dodge Ram Parts ----
+
+	<Category> Dodge Ram Parts
 		DodgeRam_Hood,                           *,		400,	140
 		DodgeRam_Hood_Black,                     *,		400,	140
 		DodgeRam_Hood_Blue,                      *,		400,	140
@@ -2128,8 +2132,7 @@
 		DodgeRam_Cargo2_camored,                 *,		500,	180
 		DodgeRam_Cargo2_camowhite,               *,		500,	180
 
-	<Category> 4KBOSSK Parts (Ford - Kamaz)
-		// ---- Ford Bronco Parts ----
+	<Category> Ford Bronco Parts
 		Bronco_Hood,                             *,		400,	140
 		Bronco_Hood_Black,                       *,		400,	140
 		Bronco_Hood_Blue,                        *,		400,	140
@@ -2150,7 +2153,8 @@
 		Bronco_Driverdoor_Blue,                  *,		500,	180
 		Bronco_Driverdoor_Hunter,                *,		500,	180
 		Bronco_Driverdoor_Rust,                  *,		500,	180
-		// ---- Ford Raptor Monster Parts ----
+
+	<Category> Ford Raptor Monster Parts
 		fordraptormonster_hood,                  *,		400,	140
 		fordraptormonster_hood_Baja,             *,		400,	140
 		fordraptormonster_hood_Halo,             *,		400,	140
@@ -2175,7 +2179,8 @@
 		fordraptormonster_driverdoor_Raptor,     *,		500,	180
 		fordraptormonster_driverdoor_Roush,      *,		500,	180
 		fordraptormonster_driverdoor_WideOpen,   *,		500,	180
-		// ---- Ford Shelby GT500 Parts ----
+
+	<Category> Ford Shelby GT500 Parts
 		FordShelbyGT500_Hood,                    *,		400,	140
 		FordShelbyGT500_Hood_Black,              *,		400,	140
 		FordShelbyGT500_Hood_Blue,               *,		400,	140
@@ -2208,7 +2213,8 @@
 		FordShelbyGT500_Driverdoor_Orange,       *,		500,	180
 		FordShelbyGT500_Driverdoor_Pink,         *,		500,	180
 		FordShelbyGT500_Driverdoor_Red,          *,		500,	180
-		// ---- GMC Parts ----
+
+	<Category> GMC Parts
 		GMC_Hood,                                *,		400,	140
 		GMC_Hood_Black,                          *,		400,	140
 		GMC_Hood_Blue,                           *,		400,	140
@@ -2239,7 +2245,8 @@
 		GMC_Cargo2_Blue,                         *,		500,	180
 		GMC_Cargo2_Police,                       *,		500,	180
 		GMC_Cargo2_White,                        *,		500,	180
-		// ---- Honda Civic Parts ----
+
+	<Category> Honda Civic Parts
 		Honda_Civic_Hood,                        *,		400,	140
 		Honda_Civic_Hood_Black,                  *,		400,	140
 		Honda_Civic_Hood_Blue,                   *,		400,	140
@@ -2268,7 +2275,8 @@
 		Honda_Civic_DriverDoor_Red,              *,		500,	180
 		Honda_Civic_DriverDoor_RedCustom,        *,		500,	180
 		Honda_Civic_DriverDoor_Yellow,           *,		500,	180
-		// ---- Jeep Gladiator Parts ----
+
+	<Category> Jeep Gladiator Parts
 		Jeep_GladiatorF9_Hood,                   *,		400,	140
 		Jeep_GladiatorF9_Hood_Black,             *,		400,	140
 		Jeep_GladiatorF9_Hood_Brown,             *,		400,	140
@@ -2419,7 +2427,8 @@
 		Jeep_GladiatorF9_Cargo_Door2_camo_skulls, *,		500,	180
 		Jeep_GladiatorF9_Cargo_Door2_camo_topotrip, *,		500,	180
 		Jeep_GladiatorF9_Cargo_Door2_camo_vanished, *,		500,	180
-		// ---- Kamaz Typhoon Parts ----
+
+	<Category> Kamaz Typhoon Parts
 		Kamaz_TyphoonK_Trunk,                    *,		450,	150
 		Kamaz_TyphoonK_Trunk_Black,              *,		450,	150
 		Kamaz_TyphoonK_Trunk_CamoGreen,          *,		450,	150
@@ -2509,8 +2518,7 @@
 		Kamaz_TyphoonK_Cargo8_Rusty,             *,		500,	180
 		Kamaz_TyphoonK_Cargo8_White,             *,		500,	180
 
-	<Category> 4KBOSSK Parts (Mitsubishi - Toyota)
-		// ---- Mitsubishi EVO Parts ----
+	<Category> Mitsubishi EVO Parts
 		Mitsubishi_LancerEvolutionIX_Hood,       *,		400,	140
 		Mitsubishi_LancerEvolutionIX_Hood_bee,   *,		400,	140
 		Mitsubishi_LancerEvolutionIX_Hood_black, *,		400,	140
@@ -2583,7 +2591,8 @@
 		Mitsubishi_LancerEvolutionIX_Cargo2_red, *,		500,	180
 		Mitsubishi_LancerEvolutionIX_Cargo2_white, *,		500,	180
 		Mitsubishi_LancerEvolutionIX_Cargo2_yellow, *,		500,	180
-		// ---- Motor Home Parts ----
+
+	<Category> Motor Home Parts
 		MotorHome_Hood,                          *,		400,	140
 		MotorHome_Hood2,                         *,		400,	140
 		MotorHome_Hood2Apo,                      *,		400,	140
@@ -2596,7 +2605,8 @@
 		MotorHome_DriverDoor2,                   *,		500,	180
 		MotorHome_DriverDoorGreenCamo,           *,		500,	180
 		MotorHome_DriverRust,                    *,		500,	180
-		// ---- Nissan GTR Parts ----
+
+	<Category> Nissan GTR Parts
 		NissanGTRCustom_Hood_Black,              *,		400,	140
 		NissanGTRCustom_Hood_Blood,              *,		400,	140
 		NissanGTRCustom_Hood_LB,                 *,		400,	140
@@ -2649,7 +2659,8 @@
 		NissanGTR_Driverdoor_Pink,               *,		500,	180
 		NissanGTR_Driverdoor_Red,                *,		500,	180
 		NissanGTR_Driverdoor_White,              *,		500,	180
-		// ---- Nissan Skyline Parts ----
+
+	<Category> Nissan Skyline Parts
 		Skyline_Hood,                            *,		400,	140
 		Skyline_Hood_Black,                      *,		400,	140
 		Skyline_Hood_Blue,                       *,		400,	140
@@ -2674,7 +2685,8 @@
 		Skyline_driverdoor_Orange,               *,		500,	180
 		Skyline_driverdoor_Pink,                 *,		500,	180
 		Skyline_driverdoor_Red,                  *,		500,	180
-		// ---- Porsche 911 RWB Parts ----
+
+	<Category> Porsche 911 RWB Parts
 		Porsche_911RWB_Hood,                     *,		400,	140
 		Porsche_911RWB_Hood_Black,               *,		400,	140
 		Porsche_911RWB_Hood_Blue,                *,		400,	140
@@ -2703,7 +2715,8 @@
 		Porsche_911RWB_Driver_Door_Orange,       *,		500,	180
 		Porsche_911RWB_Driver_Door_Pink,         *,		500,	180
 		Porsche_911RWB_Driver_Door_Red,          *,		500,	180
-		// ---- Toyota Runner Parts ----
+
+	<Category> Toyota Runner Parts
 		Runner_Hood,                             *,		400,	140
 		Runner_Hood_BOSS,                        *,		400,	140
 		Runner_Hood_blue,                        *,		400,	140
@@ -2787,7 +2800,8 @@
 		Runner_Cargo2_red,                       *,		500,	180
 		Runner_Cargo2_white,                     *,		500,	180
 		Runner_Cargo2_yellow,                    *,		500,	180
-		// ---- Toyota Supra Parts ----
+
+	<Category> Toyota Supra Parts
 		Supra_Hood,                              *,		400,	140
 		Supra_Hood_Black,                        *,		400,	140
 		Supra_Hood_Blue,                         *,		400,	140
@@ -2820,7 +2834,8 @@
 		Supra_DriverDoor_Red,                    *,		500,	180
 		Supra_DriverDoor_Sponge,                 *,		500,	180
 		Supra_DriverDoor_White,                  *,		500,	180
-		// ---- Toyota Tahoe Parts ----
+
+	<Category> Tahoe Parts
 		Tahoe_hood,                              *,		400,	140
 		Tahoe_hood_Black,                        *,		400,	140
 		Tahoe_hood_Blue,                         *,		400,	140
