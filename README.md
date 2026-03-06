@@ -15,7 +15,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 **Companions & Animals**
 - **Companion dogs** - 35 breeds of tameable dogs roaming the map in wild packs, equip collars/K9 vests/gas masks, build dog houses, command follow/stay/attack
 - **Rideable horses** - 5 horse colours in wild herds, saddles, bridles, saddlebags, buildable stables, walk/trot/gallop/jump/swim
-- **Tougher companions** - dogs have 4x HP (3200) and doubled bite damage, horses have a massive health pool (3200 HP, 20000 blood)
+- **Tougher companions** - dogs have 12.5x HP (10000) and doubled bite damage, horses have a massive health pool (10000 HP, 20000 blood)
 - **Companion health regen** - dogs regenerate 10% max health every 15 seconds (~2.5 min to full), horses regenerate 5% every 30 seconds (~10 min to full)
 - **Rebalanced wildlife** - deer, roe deer, cows, goats, pigs, sheep, wild boar, wolves, bears, foxes, hares, and hens all tuned for a populated but performant world
 
@@ -77,7 +77,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Reduced shoe damage** - crawler zombie boot damage reduced from 5.0 to 1.0
 
 **Server & Configuration**
-- **38 Workshop mods + 7 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
+- **39 Workshop mods + 7 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
 - **One-file configuration** - all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** - server automatically restarts every 12 hours
 - **Full persistence** - bases, vehicles, and inventory survive restarts
@@ -105,7 +105,7 @@ These two folders must be siblings under `steamapps\common\` - the launch script
 
 **2. Subscribe to all Workshop mods**
 
-Open each link in the [Mods](#mods) section below and click **Subscribe** in the Steam Workshop. There are 32 mods - all must be subscribed.
+Open each link in the [Mods](#mods) section below and click **Subscribe** in the Steam Workshop, or subscribe to the [Steam Workshop Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3679580119) to get them all in one click.
 
 **3. Launch DayZ once**
 
@@ -133,7 +133,7 @@ Double-click: launch_dayz.bat
 ```
 This script automatically:
 - Pulls the latest config changes from GitHub (`git pull`)
-- Installs/updates all 30 Workshop mods into the server directory (copies addons + bikeys)
+- Installs/updates all Workshop mods into the server directory (copies addons + bikeys)
 - Syncs custom client mods to your DayZ game folder
 - Launches DayZ with the correct mod list
 
@@ -152,7 +152,7 @@ Connect via DayZ > Servers > LAN, or Direct Connect to `127.0.0.1:2302`.
 
 **2. Subscribe to all Workshop mods**
 
-Open each link in the [Mods](#mods) section and click **Subscribe**. There are 30 mods.
+Open each link in the [Mods](#mods) section and click **Subscribe**, or use the [Steam Workshop Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3679580119).
 
 **3. Launch DayZ once**
 
