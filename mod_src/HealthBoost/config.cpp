@@ -37,8 +37,8 @@ class CfgAmmo
         hitAnimation = 1;
     };
 };
-// 4x dog health (800→3200 HP, 5000→20000 Blood)
-// Huge horse health pool (3200 HP, 20000 Blood, 400 Shock)
+// 12.5x dog health (800→10000 HP, 5000→20000 Blood)
+// Huge horse health pool (10000 HP, 20000 Blood, 400 Shock)
 class CfgVehicles
 {
     class AnimalBase;
@@ -50,7 +50,7 @@ class CfgVehicles
             {
                 class Health
                 {
-                    hitpoints = 3200;
+                    hitpoints = 10000;
                 };
                 class Blood
                 {
@@ -71,7 +71,7 @@ class CfgVehicles
             {
                 class Health
                 {
-                    hitpoints = 3200;
+                    hitpoints = 10000;
                 };
                 class Blood
                 {
