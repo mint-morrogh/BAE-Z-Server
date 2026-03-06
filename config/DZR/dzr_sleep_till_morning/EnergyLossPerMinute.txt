@@ -1,4 +1,4 @@
-0.5
+1
 
 How much energy a player loses per minute of sleeping. Players have max 5000 energy. Will not go below the critical 300. Uses the environment date and time, not server real system time. 
 

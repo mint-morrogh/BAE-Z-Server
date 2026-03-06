@@ -65,23 +65,11 @@ Do the same for all 20+ models.
 
 
 
-### Vehicle Damage: Tune SFE No Vehicle Damage speed threshold
-- **Issue:** Minor collisions at ~10mph instantly ruin radiators and tires.
-- **Solution:** Installed SFE: No Vehicle Damage (Workshop 3459215297) — server-side only mod that blocks collision damage below a configurable speed threshold.
-- **Status:** Mod added to `-serverMod=` in `start_server.bat`. First server start will generate config at `config/SFE_TransportDamageControl/SFE_TransportDamageConfig.json`.
-- **TODO:** Tune `MinCrashDamageSpeed` after first run (default 80 km/h — consider lowering to ~40-50 for more protection at moderate speeds).
+### ~~Vehicle Damage: Tune SFE No Vehicle Damage speed threshold~~ — DONE
+- SFE: No Vehicle Damage installed and working. Minor collisions no longer ruin parts.
 
-### SitRest: "Sit B" (straight) emote not freezing hunger/thirst
-- **Issue:** Sit crossed-legs works, sit-straight does not freeze hunger/thirst — even with empty hands and the animation playing.
-- **Note:** Vanilla SitB requires empty hands + crouching to trigger, but user confirms the emote IS playing — SitRest just isn't detecting it.
-- **Likely cause:** `m_CurrentGestureID` may not be set (or gets cleared) on the server side for SitB. SitRest reads this field every 1 second to detect sitting.
-- **Debug step:** A Print statement has been added to `SitRest_IsSitEmoteActive()` in `mod_src/SitRest/Scripts/4_World/SitRest.c` that logs the gesture ID. PBO needs rebuilding (server must be stopped first — PBO is locked while running).
-- **To deploy:** Stop server, then run:
-  ```
-  cd mod_src/SitRest
-  pbo -b -H "prefix=SitRest" ../../@SitRest/addons/SitRest.pbo config.cpp Scripts/4_World/SitRest.c
-  ```
-  Start server, do both sit emotes, then check the latest `.RPT` in `config/` for `[SitRest] GestureID=` lines. This will show what ID sit-straight actually reports on the server and whether it matches `EmoteConstants.ID_EMOTE_SITB` (15).
+### ~~SitRest: "Sit B" (straight) emote not freezing hunger/thirst~~ — FIXED
+- SitB confirmed working. SitRest expanded to cover all rest emotes: SitA, SitB, Campfire Sit, Lying Down, SurvivorAnims SitNew.
 
 ### ~~Trader: Split Vehicle Parts into multiple tabs~~ — DONE
 - Split single 1300-line Vehicle Parts tab into 6 categories: Engine & Fluids, Vanilla Vehicle Parts, Modded Wheels, 4KBOSSK Parts (Audi-Dodge), 4KBOSSK Parts (Ford-Kamaz), 4KBOSSK Parts (Mitsubishi-Toyota).

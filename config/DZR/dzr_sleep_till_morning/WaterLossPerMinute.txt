@@ -1,4 +1,4 @@
-0.5
+1
 
 How much water a player loses per minute of sleeping (morning thirst). Players have max 5000 water. Will not go below the critical 300. Uses the environment date and time, not server real system time. 
 
