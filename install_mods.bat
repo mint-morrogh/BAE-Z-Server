@@ -41,7 +41,7 @@ set UPDATED=0
 set MISSING=0
 
 :: ============================================================
-:: Workshop ID -> @ModName mapping (37 mods)
+:: Workshop ID -> @ModName mapping (38 mods)
 :: ============================================================
 call :install_mod 1559212036 CF
 call :install_mod 2291785308 DayZ-Expansion-Core
@@ -50,7 +50,10 @@ call :install_mod 2116151222 DayZ-Expansion
 call :install_mod 2792984722 DayZ-Expansion-Navigation
 call :install_mod 2572324799 DayZ-Expansion-Book
 call :install_mod 2792983364 DayZ-Expansion-Groups
+call :install_mod 2804241648 DayZ-Expansion-Spawn-Selection
 call :install_mod 3626138230 ExpansionMinimap
+call :install_mod 2792982069 DayZ-Expansion-AI
+call :install_mod 2828486817 DayZ-Expansion-Quests
 call :install_mod 1590841260 Trader
 call :install_mod 1566911166 "Mass'sManyItemOverhaul"
 call :install_mod 2040872847 UnlimitedRun

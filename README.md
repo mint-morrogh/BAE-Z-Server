@@ -38,6 +38,10 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 **Weapons & Gear**
 - **AJ's Weapons** - 79 firearms (pistols, SMGs, rifles, assault rifles, snipers, LMGs), 209 attachments, 58 magazines, 22 optics, 24 suppressors - all purchasable at the Weapon Trader and rare world spawns
 
+**AI & Quests**
+- **AI survivors** - configurable AI patrols, guards, and ambient NPCs powered by DayZ Expansion AI - can be friendly, hostile, or faction-based
+- **Quest system** - MMO-style quests from NPC quest givers with objectives (collect, deliver, kill, travel, treasure hunt) and item/reputation rewards
+
 **Crafting, Cooking & Skills**
 - **700+ crafting recipes** - weapons, armor, ammo, vehicles (including a craftable dune buggy), bushcraft, NBC gear, and more via Nemsis Craftingpack
 - **Advanced cooking** - 30+ recipes you can discover via CookZ
@@ -54,6 +58,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Doubled ammo stacks** - all loose ammo types stack to 2x their vanilla max
 
 **Quality of Life**
+- **Spawn selection** - choose where to respawn on the map when you die instead of a random spawn point
 - **GPS minimap** - on-screen minimap in top-right corner with player arrow, no GPS item required (toggle with N key)
 - **HUD clock** - in-game world time displayed in the top-right corner
 - **Percentage HUD** - health, blood, hunger, thirst, and stamina shown as percentages
@@ -77,7 +82,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Reduced shoe damage** - crawler zombie boot damage reduced from 5.0 to 1.0
 
 **Server & Configuration**
-- **39 Workshop mods + 7 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
+- **42 Workshop mods + 8 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
 - **One-file configuration** - all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** - server automatically restarts every 12 hours
 - **Full persistence** - bases, vehicles, and inventory survive restarts
@@ -419,6 +424,14 @@ These mods must be installed on both the **server** and **client**.
 | [FLIP CAR](https://steamcommunity.com/sharedfiles/filedetails/?id=3623001011) | 3623001011 | Flip overturned vehicles back upright |
 | [AJ's Weapons](https://steamcommunity.com/sharedfiles/filedetails/?id=3571685323) | 3571685323 | 79 firearms, 209 attachments, 58 magazines, 22 optics, 24 suppressors - M4A1, HK416, SCAR, MCX, SVD, AWM, PKM, and more |
 
+**Added 2026-03-06:**
+
+| Mod | Workshop ID | Description |
+|---|---|---|
+| [DayZ-Expansion-Spawn-Selection](https://steamcommunity.com/sharedfiles/filedetails/?id=2804241648) | 2804241648 | Spawn selection screen on death - choose where to respawn on the map |
+| [DayZ-Expansion-AI](https://steamcommunity.com/sharedfiles/filedetails/?id=2792982069) | 2792982069 | AI framework for Expansion quests and events |
+| [DayZ-Expansion-Quests](https://steamcommunity.com/sharedfiles/filedetails/?id=2828486817) | 2828486817 | Quest system with objectives, rewards, and NPC quest givers |
+
 ### Server-Only Mods
 
 These mods run on the server only - **players do not need to subscribe**.
@@ -477,6 +490,14 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `3571685323` | `@AJsWeapons` |
 | `3459215297` | `@SFE_NoVehicleDamage` |
 | `3659550946` | `@SobrMods_Signal_Overnight_Stay` |
+
+**Added 2026-03-06:**
+
+| Workshop Folder | Rename To |
+|---|---|
+| `2804241648` | `@DayZ-Expansion-Spawn-Selection` |
+| `2792982069` | `@DayZ-Expansion-AI` |
+| `2828486817` | `@DayZ-Expansion-Quests` |
 
 ### Gelya Backpacks - Pack Complete
 
