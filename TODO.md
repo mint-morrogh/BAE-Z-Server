@@ -74,6 +74,17 @@ Do the same for all 20+ models.
 ### ~~Trader: Split Vehicle Parts into multiple tabs~~ — DONE
 - Split single 1300-line Vehicle Parts tab into 6 categories: Engine & Fluids, Vanilla Vehicle Parts, Modded Wheels, 4KBOSSK Parts (Audi-Dodge), 4KBOSSK Parts (Ford-Kamaz), 4KBOSSK Parts (Mitsubishi-Toyota).
 
+### Trader: Weapon Trader OOM crash when searching "smoke"
+- **Issue:** Game crashes with out of memory error when using the search bar in the Weapon Trader and typing "smoke". Weapon Supplies (236 items) does NOT crash on the same search — only Weapon Trader (172 items).
+- **Root cause:** The Trader mod's `SearchForItems()` scans all items in the trader, auto-selects the first match, and calls `updateItemPreview()` which spawns a real 3D entity via `GetGame().CreateObject()`. Searching "smoke" matches 11 items (M18 smoke grenades × 5 colors, RDG2 × 2, Ammo_40mm_Smoke × 4). As the user types each character ("s", "sm", "smo"...), a new search fires and creates a new preview object. Old previews are deferred-deleted, so rapid creation piles up 3D weapon models in memory. Weapon Trader items have larger models than Weapon Supplies ammo/attachments, causing the OOM.
+- **All classnames are valid** — every smoke item exists in vanilla types.xml. This is NOT a bad reference, it's a preview memory pileup.
+- **Diagnosis:** Check client RPT log (`%LOCALAPPDATA%/DayZ/`) after crash for the last classname passed to `CreateObject()`.
+- **Fix options:**
+  1. Reduce smoke item count in Grenades category (remove duplicate colors, keep Red/Green/White only)
+  2. Split Grenades into sub-categories so fewer items match per search
+  3. Move 40mm ammo to Weapon Supplies (keeps them searchable but away from the heavy weapon models)
+- **Config:** `config/Trader/TraderConfig.txt` lines 513-531 (Grenades category)
+
 ---
 
 ## Pending (no server stop needed)
