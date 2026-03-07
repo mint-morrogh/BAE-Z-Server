@@ -6,7 +6,7 @@
 :: directory. Uses /D flag to only copy newer files, so repeat
 :: runs are fast when nothing has changed.
 ::
-:: Can be run standalone or called by launch_dayz.bat.
+:: Can be run standalone or called by LAUNCH_DAYZ.bat.
 ::
 :: Set QUIET=1 before calling to suppress the pause at the end.
 :: ============================================================
@@ -41,7 +41,7 @@ set UPDATED=0
 set MISSING=0
 
 :: ============================================================
-:: Workshop ID -> @ModName mapping (38 mods)
+:: Workshop ID -> @ModName mapping (43 mods)
 :: ============================================================
 call :install_mod 1559212036 CF
 call :install_mod 2291785308 DayZ-Expansion-Core
@@ -54,6 +54,9 @@ call :install_mod 2804241648 DayZ-Expansion-Spawn-Selection
 call :install_mod 3626138230 ExpansionMinimap
 call :install_mod 2792982069 DayZ-Expansion-AI
 call :install_mod 2828486817 DayZ-Expansion-Quests
+call :install_mod 2792985069 DayZ-Expansion-Weapons
+call :install_mod 2793893086 DayZ-Expansion-Animations
+call :install_mod 2116157322 DayZ-Expansion-Licensed
 call :install_mod 1590841260 Trader
 call :install_mod 1566911166 "Mass'sManyItemOverhaul"
 call :install_mod 2040872847 UnlimitedRun
@@ -85,6 +88,24 @@ call :install_mod 3659550946 SobrMods_Signal_Overnight_Stay
 call :install_mod 3594596641 EnableInventoryInVehicle
 call :install_mod 3623001011 FlipCar
 call :install_mod 3571685323 AJsWeapons
+call :install_mod 3671771423 JosiesLilBuggyZ
+call :install_mod 2291785437 DayZ-Expansion-Vehicles
+call :install_mod 3665840738 MBM_HarleyDavidsonFatBoy
+
+:: ============================================================
+:: Post-install: Re-apply SurvivorAnims PBO patch
+:: The Workshop PBO has a compile-order bug (actions/ subdirectory)
+:: and a client crash (GetHealth01 on AI proxies).
+:: Our patched PBO flattens the directory and adds a client guard.
+:: If SurvivorAnims updates on Workshop, re-run the patch script
+:: in mod_src/SurvivorAnimsPatch/ to rebuild the patched PBO.
+:: ============================================================
+if exist "%~dp0mod_src\SurvivorAnimsPatch\SurvivorAnims.pbo.patched" (
+    echo.
+    echo --- Re-applying SurvivorAnims PBO patch ---
+    copy /Y "%~dp0mod_src\SurvivorAnimsPatch\SurvivorAnims.pbo.patched" "%~dp0@SurvivorAnims\Addons\SurvivorAnims.pbo" >nul
+    echo   [PATCH] SurvivorAnims PBO patched (compile-order fix + client guard^)
+)
 
 echo.
 if %INSTALLED% GTR 0 echo   %INSTALLED% mods newly installed

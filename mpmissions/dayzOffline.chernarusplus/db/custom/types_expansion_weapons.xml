@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- DayZ Expansion Weapons - world spawns (rare) -->
+<types>
+	<!-- === PISTOLS === -->
+	<type name="Expansion_M9">
+		<nominal>4</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_Taser_Yellow">
+		<nominal>2</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Police"/>
+	</type>
+	<type name="Expansion_Taser_Black">
+		<nominal>2</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Police"/>
+	</type>
+
+	<!-- === SHOTGUNS === -->
+	<type name="Expansion_DT11">
+		<nominal>4</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Town"/>
+		<usage name="Hunting"/>
+	</type>
+	<type name="Expansion_BenelliM4">
+		<nominal>3</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+
+	<!-- === SUBMACHINE GUNS === -->
+	<type name="Expansion_MP5SD">
+		<nominal>2</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_MPX">
+		<nominal>3</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_MP7">
+		<nominal>2</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_Kedr">
+		<nominal>4</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+		<usage name="Police"/>
+	</type>
+	<type name="Expansion_VityazSN">
+		<nominal>3</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+
+	<!-- === RIFLES === -->
+	<type name="Expansion_G36">
+		<nominal>2</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_M1A">
+		<nominal>2</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_M1A_Black">
+		<nominal>1</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_M1A_Green">
+		<nominal>1</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_M1A_Tan">
+		<nominal>1</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+
+	<!-- === LAUNCHERS (very rare) === -->
+	<type name="ExpansionRPG7">
+		<nominal>1</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>0</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+	<type name="ExpansionLAW">
+		<nominal>1</nominal>
+		<lifetime>14400</lifetime>
+		<restock>0</restock>
+		<min>0</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+	</type>
+
+	<!-- === MAGAZINES === -->
+	<type name="Mag_Expansion_M9_15Rnd">
+		<nominal>6</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>3</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_G36_30Rnd">
+		<nominal>4</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_M14_10Rnd">
+		<nominal>4</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_M14_20Rnd">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_MPX_50Rnd">
+		<nominal>2</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_MP7_40Rnd">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_Kedr_20Rnd">
+		<nominal>5</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+		<usage name="Police"/>
+	</type>
+	<type name="Mag_Expansion_Vityaz_30Rnd">
+		<nominal>4</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_AWM_5rnd">
+		<nominal>2</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>10</quantmin>
+		<quantmax>80</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Mag_Expansion_Taser">
+		<nominal>4</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Police"/>
+	</type>
+
+	<!-- === OPTICS === -->
+	<type name="ExpansionDeltapointOptic">
+		<nominal>4</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+	<type name="ExpansionEXPS3HoloOptic">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+	<type name="ExpansionHAMROptic">
+		<nominal>2</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+	<type name="ExpansionReflexMRSOptic">
+		<nominal>4</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_PMII25Optic">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+
+	<!-- === ATTACHMENTS === -->
+	<type name="Expansion_ANPEQ15_Green">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_ANPEQ15_Red">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_Kar98_Bayonet">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="attachments"/>
+		<usage name="Military"/>
+	</type>
+
+	<!-- === AMMO === -->
+	<type name="Ammo_Expansion_46x30">
+		<nominal>6</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>3</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Ammo_Expansion_338">
+		<nominal>4</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>2</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_Ammo_8mm">
+		<nominal>6</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>3</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="Expansion_AmmoBox_8mm_15rnd">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="ExpansionAmmoRPG">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>0</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+	<type name="ExpansionAmmoLAW">
+		<nominal>1</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>0</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="magazines"/>
+		<usage name="Military"/>
+	</type>
+
+	<!-- === THROWABLES === -->
+	<type name="Expansion_M18SmokeGrenade_Teargas">
+		<nominal>3</nominal>
+		<lifetime>7200</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="weapons"/>
+		<usage name="Military"/>
+		<usage name="Police"/>
+	</type>
+</types>

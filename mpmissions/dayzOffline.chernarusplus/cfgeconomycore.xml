@@ -46,5 +46,6 @@ Do not forget to add attribute act="car", if root class represents moveable vehi
 		<file name="types_dayzhorse.xml" type="types" />
 		<file name="types_gelyabackpacks.xml" type="types" />
 		<file name="types_ajsweapons.xml" type="types" />
+		<file name="types_expansion_weapons.xml" type="types" />
 	</ce>
 </economycore>

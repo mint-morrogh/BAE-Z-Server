@@ -4,7 +4,7 @@
 
 # BAE-Z - DayZ Private Server
 
-> **[Subscribe to the BAE-Z Steam Workshop Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3679580119)** — all 42 required mods in one click.
+> **[Subscribe to the BAE-Z Steam Workshop Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3679580119)** — all 43 required mods in one click.
 
 What started as a small DayZ server so I could play co-op with my wife quickly got out of hand. One mod turned into dozens, one custom script turned into a full modding pipeline, and before I knew it we had a fully centralized, heavily customized PVE survival experience with companion dogs, rideable horses, flyable planes, roaming traders, and way too many crafting recipes. This is the result - a fleshed-out, relaxed, and genuinely fun co-op DayZ server built from the ground up for 2-4 player LAN play on Chernarus.
 
@@ -37,6 +37,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 
 **Weapons & Gear**
 - **AJ's Weapons** - 79 firearms (pistols, SMGs, rifles, assault rifles, snipers, LMGs), 209 attachments, 58 magazines, 22 optics, 24 suppressors - all purchasable at the Weapon Trader and rare world spawns
+- **Expansion Weapons** - M9, G36, MP7, MPX, MP5SD, Kedr, Benelli M4, DT11, M1A, Crossbow, RPG-7, LAW, Taser, plus optics (HAMR, EXPS3, PMII 25x), ANPEQ-15 lasers, and new ammo types
 
 **AI & Quests**
 - **AI survivors** - configurable AI patrols, guards, and ambient NPCs powered by DayZ Expansion AI - can be friendly, hostile, or faction-based
@@ -82,11 +83,11 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Reduced shoe damage** - crawler zombie boot damage reduced from 5.0 to 1.0
 
 **Server & Configuration**
-- **42 Workshop mods + 8 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
+- **43 Workshop mods + 8 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
 - **One-file configuration** - all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** - server automatically restarts every 12 hours
 - **Full persistence** - bases, vehicles, and inventory survive restarts
-- **Auto-update** - `launch_dayz.bat` pulls latest changes, syncs mods, and launches in one click
+- **Auto-update** - `LAUNCH_DAYZ.bat` pulls latest changes, syncs mods, and launches in one click
 
 ## Quick Start
 
@@ -128,13 +129,13 @@ If the folder already exists from installing DayZ Server, clone into a temp fold
 
 ```
 Double-click: apply_settings.bat     ← applies settings (first time, or after changes)
-Double-click: start_server.bat       ← starts the server (wait 1-2 min to load)
+Double-click: START_SERVER.bat       ← starts the server (wait 1-2 min to load)
 ```
 
 **6. Launch DayZ and connect**
 
 ```
-Double-click: launch_dayz.bat
+Double-click: LAUNCH_DAYZ.bat
 ```
 This script automatically:
 - Pulls the latest config changes from GitHub (`git pull`)
@@ -173,7 +174,7 @@ git clone https://github.com/mint-morrogh/BAE-Z-Server.git DayZServer
 **5. Launch and connect**
 
 ```
-Double-click: launch_dayz.bat
+Double-click: LAUNCH_DAYZ.bat
 ```
 That's it. The script handles everything else - installs Workshop mods, syncs custom mods, and launches DayZ. Connect to `<host's IP>:2302`. Password: `mintmorrogh` (or whatever the host set).
 
@@ -181,7 +182,7 @@ That's it. The script handles everything else - installs Workshop mods, syncs cu
 
 ### Staying Up to Date
 
-You don't need to do anything special. Every time you double-click `launch_dayz.bat`, it automatically:
+You don't need to do anything special. Every time you double-click `LAUNCH_DAYZ.bat`, it automatically:
 1. Pulls the latest config/balance changes from GitHub
 2. Updates any Workshop mods that Steam has refreshed
 3. Syncs custom client mods
@@ -431,6 +432,7 @@ These mods must be installed on both the **server** and **client**.
 | [DayZ-Expansion-Spawn-Selection](https://steamcommunity.com/sharedfiles/filedetails/?id=2804241648) | 2804241648 | Spawn selection screen on death - choose where to respawn on the map |
 | [DayZ-Expansion-AI](https://steamcommunity.com/sharedfiles/filedetails/?id=2792982069) | 2792982069 | AI framework for Expansion quests and events |
 | [DayZ-Expansion-Quests](https://steamcommunity.com/sharedfiles/filedetails/?id=2828486817) | 2828486817 | Quest system with objectives, rewards, and NPC quest givers |
+| [DayZ-Expansion-Weapons](https://steamcommunity.com/sharedfiles/filedetails/?id=2792985069) | 2792985069 | M9, G36, MP7, MPX, MP5SD, Kedr, Benelli M4, DT11, M1A, Crossbow, RPG-7, LAW, Taser, plus optics and lasers |
 
 ### Server-Only Mods
 
@@ -498,6 +500,7 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `2804241648` | `@DayZ-Expansion-Spawn-Selection` |
 | `2792982069` | `@DayZ-Expansion-AI` |
 | `2828486817` | `@DayZ-Expansion-Quests` |
+| `2792985069` | `@DayZ-Expansion-Weapons` |
 
 ### Gelya Backpacks - Pack Complete
 
@@ -796,7 +799,7 @@ Custom client+server mod (`@MinimapTweak`). Adjusts the Expansion GPS minimap:
 - **Hides coordinate/stats overlay** - removes the large numbers from the minimap (still visible on the full map)
 - **Fixes player arrow after Tab** - the player position arrow no longer disappears when opening/closing inventory
 
-This mod loads after `@ExpansionMinimap` and requires it as a dependency. Since it's a client+server mod, players must use `launch_dayz.bat` to start DayZ - it syncs custom mods and loads them automatically.
+This mod loads after `@ExpansionMinimap` and requires it as a dependency. Since it's a client+server mod, players must use `LAUNCH_DAYZ.bat` to start DayZ - it syncs custom mods and loads them automatically.
 
 Source code in `mod_src/MinimapTweak/`.
 
@@ -856,21 +859,21 @@ Adds a GPS minimap to the HUD showing your position and surroundings. Requires t
 | MinimapTweak | Custom - moves to top-right, hides coords, fixes arrow bug |
 | HUDClock | Custom - displays in-game time, positions below minimap |
 
-Load order matters - Core and Dabs must load before Expansion, Book and Groups after Navigation, Minimap Override after Groups, then MinimapTweak and HUDClock. This is already configured in `start_server.bat`. Custom mods are loaded automatically by `launch_dayz.bat`.
+Load order matters - Core and Dabs must load before Expansion, Book and Groups after Navigation, Minimap Override after Groups, then MinimapTweak and HUDClock. This is already configured in `START_SERVER.bat`. Custom mods are loaded automatically by `LAUNCH_DAYZ.bat`.
 
 ## Launching the Server
 
 **Host (runs the server):**
 
 1. Double-click `apply_settings.bat` (if you changed any settings)
-2. Double-click `start_server.bat`
+2. Double-click `START_SERVER.bat`
 3. Wait 1-2 minutes for the server to load
 4. **Do not press any keys** in the command prompt - any keypress kills the server
 5. The server auto-restarts every 12 hours
 
 **Players (including the host):**
 
-1. Double-click `launch_dayz.bat` - pulls updates, installs/updates mods, syncs custom mods, launches DayZ
+1. Double-click `LAUNCH_DAYZ.bat` - pulls updates, installs/updates mods, syncs custom mods, launches DayZ
 2. Connect via DayZ > Servers > LAN, or Direct Connect to `127.0.0.1:2302`
 
 ## Connecting
@@ -886,11 +889,11 @@ DayZServer/
 ├── server_settings.json         # <-- EDIT THIS: All server settings in one place
 ├── apply_settings.bat           # Double-click to apply settings
 ├── apply_settings.ps1           # PowerShell patcher (called by .bat)
-├── launch_dayz.bat              # All-in-one: pull updates, install mods, sync, launch DayZ
+├── LAUNCH_DAYZ.bat              # All-in-one: pull updates, install mods, sync, launch DayZ
 ├── install_mods.bat             # Copies Workshop mods + bikeys into server dir (called by launch_dayz)
 ├── sync_client_mods.bat         # Copies custom mods to DayZ client (legacy, now built into launch_dayz)
 ├── serverDZ.cfg                 # Main server config (patched automatically)
-├── start_server.bat             # Launch script with mod list
+├── START_SERVER.bat             # Launch script with mod list
 ├── whitelist.txt                # Player whitelist (disabled by default)
 ├── keys/                        # Mod signature keys (.bikey)
 ├── config/                      # Server profiles dir (-profiles=config)
@@ -1040,7 +1043,7 @@ config/DataCache/cache_lock
 
 ## Troubleshooting
 
-- **Server crashes on launch:** Check the latest `.RPT` log in the `config/` folder. Usually a mod incompatibility - remove mods from the `-mod=` line in `start_server.bat` one at a time to isolate.
+- **Server crashes on launch:** Check the latest `.RPT` log in the `config/` folder. Usually a mod incompatibility - remove mods from the `-mod=` line in `START_SERVER.bat` one at a time to isolate.
 - **Can't connect:** Make sure your client has the exact same mods enabled. Mod mismatch = connection refused.
 - **No loot spawning:** Usually an XML syntax error. Validate your XML files at [codebeautify.org/xmlvalidator](https://codebeautify.org/xmlvalidator).
 - **Zombies not spawning:** Same as above - check `events.xml` for syntax errors.

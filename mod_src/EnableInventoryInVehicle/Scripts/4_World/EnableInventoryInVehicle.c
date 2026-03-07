@@ -31,4 +31,16 @@ modded class PlayerBase
             return true;
         return super.CanReceiveItemIntoHands(item_to_hands);
     }
+
+    // Fix for SurvivorAnims crash: its ModCommandHandlerAfter calls
+    // AnimSetInt with a bad handle on the intro scene mannequin.
+    // Block the dangerous path (MOVE command on non-player entities),
+    // let super (SurvivorAnims) run normally for the actual player.
+    override bool ModCommandHandlerAfter(float pDt, int pCurrentCommandID, bool pCurrentCommandFinished)
+    {
+        if (pCurrentCommandID == DayZPlayerConstants.COMMANDID_MOVE && GetGame().GetPlayer() != this)
+            return true;
+
+        return super.ModCommandHandlerAfter(pDt, pCurrentCommandID, pCurrentCommandFinished);
+    }
 }

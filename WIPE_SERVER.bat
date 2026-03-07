@@ -84,7 +84,7 @@ echo   [OK] Client character data cleared
 echo.
 echo ============================================
 echo  Wipe complete! Fresh world ready.
-echo  Start the server with start_server.bat
+echo  Start the server with START_SERVER.bat
 echo ============================================
 echo.
 popd

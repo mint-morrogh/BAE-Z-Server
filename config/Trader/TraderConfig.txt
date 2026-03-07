@@ -378,6 +378,11 @@
 		AJW_Deagle_FDE,                           W,		600,	300
 		AJW_Deagle_AOR2,                          W,		750,	375
 		AJW_Deagle_MARPAT,                        W,		750,	375
+		Expansion_M9,                             W,		300,	150
+		Expansion_Taser_Yellow,                   W,		200,	100
+		Expansion_Taser_Black,                    W,		200,	100
+		ExpansionFlaregun,                        W,		80,	40
+		Expansion_Longhorn,                       W,		250,	125
 
 	<Category> Shotguns
 		Izh18Shotgun,                             W,		300,	150
@@ -403,6 +408,8 @@
 		Mass_SPAS12,                              W,		1800,	900
 		AJW_M1897Trench,                          W,		400,	200
 		AJW_M1897_Bayonet,                        W,		250,	125
+		Expansion_DT11,                           W,		400,	200
+		Expansion_BenelliM4,                      W,		1200,	600
 
 	<Category> Submachine Guns
 		CZ61,                                     W,		700,	300
@@ -424,6 +431,12 @@
 		AJW_EVO3_Grey,                            W,		550,	275
 		AJW_EVO3_FDE,                             W,		550,	275
 		AJW_PPSH_Classic,                         W,		600,	300
+		Expansion_MP5,                            W,		1000,	500
+		Expansion_MP5SD,                          W,		1200,	600
+		Expansion_MPX,                            W,		1100,	550
+		Expansion_MP7,                            W,		1200,	600
+		Expansion_Kedr,                           W,		700,	350
+		Expansion_VityazSN,                       W,		900,	450
 
 	<Category> Rifles
 		Izh18,                                    W,		350,	175
@@ -470,6 +483,12 @@
 		AJW_MK12_Black,                           W,		800,	400
 		AJW_MK12_FDE,                             W,		800,	400
 		AJW_Car15_BD,                             W,		900,	450
+		Expansion_M14,                            W,		1200,	600
+		Expansion_M16,                            W,		1200,	600
+		Expansion_G36,                            W,		1200,	600
+		Expansion_Kar98,                          W,		500,	250
+		Expansion_W1873,                          W,		380,	190
+		Expansion_Crossbow,                       W,		400,	200
 
 	<Category> Assault Rifles
 		FAMAS,                                    W,		1000,	500
@@ -525,6 +544,10 @@
 		AJW_HK416_10_FDE,                         W,		1800,	900
 		AJW_SCARL_TAN,                            W,		2000,	1000
 		AJW_SCARL_Black,                          W,		2000,	1000
+		Expansion_M1A,                            W,		1500,	750
+		Expansion_M1A_Black,                      W,		1550,	775
+		Expansion_M1A_Green,                      W,		1550,	775
+		Expansion_M1A_Tan,                        W,		1550,	775
 
 	<Category> Snipers & DMRs
 		VSS,                                      W,		1600,	960
@@ -563,6 +586,9 @@
 		AJW__AWM_Green,                           W,		3200,	1600
 		AJW__AWM_Gold,                            W,		3500,	1750
 		AJW_GOL_Magnum_Green,                     W,		3000,	1500
+		Expansion_AWM,                            W,		3000,	1500
+		Expansion_AWM_Black,                      W,		3000,	1500
+		Expansion_AWM_Green,                      W,		3200,	1600
 
 	<Category> Light Machine Guns
 		Mass_RPK74,                               W,		1800,	900
@@ -589,6 +615,18 @@
 		Ammo_40mm_Smoke_Green,                    1,		200,	80
 		Ammo_40mm_Smoke_Red,                      1,		200,	80
 		Ammo_40mm_Smoke_White,                    1,		200,	80
+		ExpansionRPG7,                            W,		5000,	2500
+		ExpansionAmmoRPG,                         1,		1000,	500
+		ExpansionLAW,                             W,		4000,	2000
+		ExpansionAmmoLAW,                         1,		800,	400
+		Expansion_M203_HE,                        1,		500,	200
+		Expansion_M18SmokeGrenade_Teargas,        1,		300,	100
+		Expansion_M203_Smoke_White,               1,		200,	80
+		Expansion_M203_Smoke_Red,                 1,		200,	80
+		Expansion_M203_Smoke_Green,               1,		200,	80
+		Expansion_M203_Smoke_Yellow,              1,		200,	80
+		Expansion_M203_Smoke_Purple,              1,		200,	80
+		Expansion_M203_Smoke_Teargas,             1,		300,	100
 
 <Trader> Weapon Supplies
 	<Category> Ammunition
@@ -645,6 +683,13 @@
 		AJW_Ammo_8mm,                             1,		4,	2
 		AJW__Ammo_338,                            1,		15,	8
 		AJW__AmmoBox_338mm_10Rnd,                 *,		120,	60
+		Expansion_338,                            1,		15,	8
+		Expansion_338_15rnd,                      *,		180,	90
+		Expansion_46x30,                          1,		5,	3
+		Expansion_46x30_25rnd,                    *,		100,	50
+		Expansion_8mm,                            1,		5,	3
+		Expansion_AmmoBox_8mm_15rnd,              *,		60,	30
+		Expansion_Ammo_ArrowBolt,                 1,		8,	4
 
 	<Category> Magazines
 		Mag_IJ70_8Rnd,                            M,		30,	15
@@ -773,6 +818,15 @@
 		AJW_Mag_PKM_200Rnd,                       M,		500,	250
 		AJW_Mag_PKM_200Rnd_Worn,                  M,		450,	225
 		AJW_Mag_PKM_200Rnd_WLPainted,             M,		550,	275
+		Mag_Expansion_M9_15Rnd,                   M,		40,	20
+		Mag_Expansion_G36_30Rnd,                  M,		220,	110
+		Mag_Expansion_M14_10Rnd,                  M,		120,	60
+		Mag_Expansion_M14_20Rnd,                  M,		200,	100
+		Mag_Expansion_MPX_50Rnd,                  M,		350,	175
+		Mag_Expansion_MP7_40Rnd,                  M,		250,	125
+		Mag_Expansion_Kedr_20Rnd,                 M,		100,	50
+		Mag_Expansion_AWM_5rnd,                   M,		250,	125
+		Mag_Expansion_Vityaz_30Rnd,               M,		150,	75
 
 	<Category> Optics
 		M4_CarryHandleOptic,                      *,		150,	60
@@ -837,6 +891,12 @@
 		AJW_Optic_LRHS,                           *,		1400,	700
 		AJW_Optic_LRHS_FDE,                       *,		1400,	700
 		AJW_Optic_Leupold_M3A,                    *,		1800,	900
+		ExpansionDeltapointOptic,                 *,		300,	150
+		ExpansionEXPS3HoloOptic,                  *,		500,	250
+		ExpansionHAMROptic,                       *,		600,	300
+		ExpansionReflexMRSOptic,                  *,		250,	125
+		Expansion_PMII25Optic,                    *,		1800,	900
+		ExpansionKar98ScopeOptic,                 *,		400,	200
 
 	<Category> Handguards
 		MP5_PlasticHndgrd,                        *,		100,	50
@@ -1094,12 +1154,16 @@
 		M9A1_Bayonet,                             *,		150,	75
 		AK_Bayonet,                               *,		150,	75
 		SKS_Bayonet,                              *,		100,	60
+		Expansion_Kar98_Bayonet,                  *,		100,	60
 
 	<Category> Flashlights & Lasers
 		TLRLight,                                 *,		100,	50
 		Universallight,                           *,		120,	60
 		AJW_Surefire_Gunlight_Black,              *,		150,	75
 		AJW_Surefire_Gunlight_FDE,                *,		150,	75
+		Expansion_ANPEQ15_Green,                  *,		300,	150
+		Expansion_ANPEQ15_Red,                    *,		300,	150
+		Expansion_ANPEQ15_IR,                     *,		300,	150
 
 	<Category> Misc Attachments
 		Mass357M1911Mag,                          M,		50,	25
@@ -1127,6 +1191,11 @@
 		AJW_SVD_SAGChassis_Black,                 *,		400,	200
 		AJW_SVD_SAGChassis_Rattle,                *,		450,	225
 		AJW_Bipod_Harris,                         *,		300,	150
+		Expansion_Stanag60RND,                    M,		480,	220
+		Expansion_M1AScopeRail,                   *,		200,	100
+		Expansion_M1A_RailAtt,                    *,		200,	100
+		Expansion_MP5ScopeRail,                   *,		150,	75
+		Expansion_MP5_RailAtt,                    *,		150,	75
 
 <Trader> Clothing Trader
 	<Category> Glasses

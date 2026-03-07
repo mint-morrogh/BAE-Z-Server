@@ -97,13 +97,13 @@ Do the same for all 20+ models.
 - Custom client+server mod (`-mod=`) replaces removed Workshop mod (3594596641).
 - Unlocks inventory in vehicles with dog-menu guard (skips re-lock if scripted menu is open).
 - Also overrides `CanManipulateInventory()` to allow inventory during sit emotes (SitA, SitB, SurvivorAnims SitNew).
-- Added to `-mod=` in `start_server.bat`, `CUSTOM_MODS` + sync in `launch_dayz.bat`.
+- Added to `-mod=` in `START_SERVER.bat`, `CUSTOM_MODS` + sync in `LAUNCH_DAYZ.bat`.
 
 ### Dogs & Horses not spawning — FIXED
 - `AnimalMaxCount` set to 1200 (was 200). Vanilla herds consumed all entity slots. Dogs, horses, wolves, sheep now all spawning. Confirmed in-game Mar 2.
 
 ### Roaming Trader: "Nails" currency + missing denominations — FIXED
-- Client reads config from `Documents\DayZ\` not server `config/`. Copied config to client profile dir, added ruble denominations, automated sync in `launch_dayz.bat`.
+- Client reads config from `Documents\DayZ\` not server `config/`. Copied config to client profile dir, added ruble denominations, automated sync in `LAUNCH_DAYZ.bat`.
 
 ### Trader additions — ALL DONE
 - Vehicle wheels: 19 4KBOSSK + 10 LM Planes wheels added to Vehicle Parts

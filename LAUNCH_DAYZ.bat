@@ -54,7 +54,7 @@ if errorlevel 1 (
     echo     3. Run the installer - click Next on every screen
     echo        (all the defaults are fine^)
     echo     4. When it finishes, CLOSE this window and
-    echo        double-click launch_dayz.bat again
+    echo        double-click LAUNCH_DAYZ.bat again
     echo.
     echo   =====================================================
     echo.
@@ -82,7 +82,7 @@ if errorlevel 1 (
 :: If so, pull and restart so the new version runs cleanly.
 git fetch --quiet 2>nul
 set "SELF_UPDATE=0"
-for /f %%f in ('git diff HEAD..origin/main --name-only -- launch_dayz.bat 2^>nul') do set "SELF_UPDATE=1"
+for /f %%f in ('git diff HEAD..origin/main --name-only -- LAUNCH_DAYZ.bat 2^>nul') do set "SELF_UPDATE=1"
 git pull --ff-only 2>&1
 if errorlevel 1 (
     echo   [WARN] git pull failed - you may have local changes
