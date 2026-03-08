@@ -123,14 +123,35 @@ if errorlevel 2 (
 :: the old version from cache. Delete it if present.
 echo --- Fixing known Workshop mod issues ---
 set "WORKSHOP=%~dp0..\..\workshop\content\221100"
+set "FIXES_APPLIED=0"
+
+:: Fix 1: Nemsis Craftingpack Airbrushing PBO (references missing Mass_ACR_Base)
 set "NEMSIS_DIR=%WORKSHOP%\3606014796\addons"
 if exist "%NEMSIS_DIR%\nm_Crafting_Part_Airbrushing.pbo" (
     del /q "%NEMSIS_DIR%\nm_Crafting_Part_Airbrushing.pbo" >nul 2>&1
     del /q "%NEMSIS_DIR%\nm_Crafting_Part_Airbrushing.pbo.n3msi.bisign" >nul 2>&1
     echo   [FIX]  Removed Nemsis Airbrushing PBO (Mass_ACR_Base compile error^)
-) else (
-    echo   [OK]   No known issues found
+    set "FIXES_APPLIED=1"
 )
+
+:: Fix 2: SurvivorAnims PBO (compile-order bug + GetHealth01 client crash)
+:: The Workshop PBO has a subdirectory structure that causes script compile
+:: errors and a client crash on the main menu mannequin. Our patched PBO
+:: flattens the directory and adds a client guard.
+set "SA_WORKSHOP=%WORKSHOP%\2918418331\Addons"
+set "SA_PATCH=%~dp0mod_src\SurvivorAnimsPatch\SurvivorAnims.pbo.patched"
+if exist "%SA_PATCH%" (
+    if exist "%SA_WORKSHOP%" (
+        fc /b "%SA_PATCH%" "%SA_WORKSHOP%\SurvivorAnims.pbo" >nul 2>&1
+        if errorlevel 1 (
+            copy /Y "%SA_PATCH%" "%SA_WORKSHOP%\SurvivorAnims.pbo" >nul
+            echo   [FIX]  Patched SurvivorAnims PBO in Workshop (mannequin crash fix^)
+            set "FIXES_APPLIED=1"
+        )
+    )
+)
+
+if "!FIXES_APPLIED!"=="0" echo   [OK]   No known issues found
 echo.
 
 :: ============================================================
