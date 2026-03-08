@@ -83,6 +83,9 @@ if errorlevel 1 (
 git fetch --quiet 2>nul
 set "SELF_UPDATE=0"
 for /f %%f in ('git diff HEAD..origin/main --name-only -- LAUNCH_DAYZ.bat 2^>nul') do set "SELF_UPDATE=1"
+:: Reset any locally modified tracked files so pull never conflicts.
+:: This is safe — players should always match the remote repo.
+git checkout -- . >nul 2>&1
 git pull --ff-only 2>&1
 if errorlevel 1 (
     echo   [WARN] git pull failed - you may have local changes
