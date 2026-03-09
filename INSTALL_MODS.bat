@@ -41,7 +41,7 @@ set UPDATED=0
 set MISSING=0
 
 :: ============================================================
-:: Workshop ID -> @ModName mapping (44 mods)
+:: Workshop ID -> @ModName mapping (43 mods)
 :: ============================================================
 call :install_mod 1559212036 CF
 call :install_mod 2291785308 DayZ-Expansion-Core
@@ -76,7 +76,6 @@ call :install_mod 3566508757 CookZRealisticPackaging
 call :install_mod 3578708533 SleepTillMorning
 call :install_mod 3369325490 4KBOSSKVehicles
 call :install_mod 2471347750 DayZDog
-call :install_mod 2793893086 DayZ-Expansion-Animations
 call :install_mod 2918418331 SurvivorAnims
 call :install_mod 3295021220 DayZHorse
 call :install_mod 3636799682 MWGSM_Trader

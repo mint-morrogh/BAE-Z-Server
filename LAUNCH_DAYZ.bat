@@ -10,8 +10,12 @@
 ::        through Steam. Run every time you play to stay synced.
 :: ============================================================
 
-setlocal
+setlocal enabledelayedexpansion
 pushd "%~dp0"
+
+:: Custom client mods that aren't on the Workshop.
+:: Add new custom mods here as semicolon-separated entries.
+set "CUSTOM_MODS=@MinimapTweak;@HUDClock;@StackableItems;@MWGSM_TraderFix;@BAEZLoadingScreen;@EnableInventoryInVehicle"
 
 :: Resolve the DayZ client path (sibling of DayZServer under steamapps\common\)
 pushd "%~dp0..\DayZ" 2>nul
@@ -23,10 +27,6 @@ if errorlevel 1 (
 )
 set "DAYZ_CLIENT=%CD%"
 popd
-
-:: Build the full mod list now that DAYZ_CLIENT is known.
-:: NOTE: delayed expansion is OFF so !Workshop paths stay literal.
-call :build_modlist
 
 echo ============================================
 echo  BAE-Z - Launch DayZ
@@ -90,7 +90,7 @@ git pull --ff-only 2>&1
 if errorlevel 1 (
     echo   [WARN] git pull failed - you may have local changes
     echo          Continuing with current files...
-) else if "%SELF_UPDATE%"=="1" (
+) else if "!SELF_UPDATE!"=="1" (
     echo   [UPD]  Launcher updated - restarting...
     start "" cmd /c "%~f0"
     exit /b 0
@@ -154,7 +154,15 @@ if exist "%SA_PATCH%" (
     )
 )
 
-:: Fix 3: Expansion Quests GUI — wider quest tracker HUD
+
+:: Fix 3: Expansion Animations — REMOVED
+:: The stripped PBO (missing .anm clips) caused native crashes in both
+:: CreateCharacterPerson (client mannequin) and CreateObjectExSafe (server
+:: quest NPCs). Using the full unmodified Workshop PBO instead.
+:: If SurvivorAnims sit/fire conflicts resurface, investigate which specific
+:: .anm files conflict rather than stripping all of them.
+
+:: Fix 4: Expansion Quests GUI — wider quest tracker HUD
 :: Default tracker is 18% screen width, causing text to wrap and get clipped.
 :: Our patched PBO widens it to 24% so objective text fits without cutoff.
 set "QG_WORKSHOP=%WORKSHOP%\2828486817\addons"
@@ -170,7 +178,7 @@ if exist "%QG_PATCH%" (
     )
 )
 
-:: Fix 4: VanillaPlusPlusMap — null-pointer crash on game exit
+:: Fix 5: VanillaPlusPlusMap — null-pointer crash on game exit
 :: VPP3DMarker destructor calls GetGame().GetCallQueue() during teardown
 :: when GetGame() is already NULL, causing 9x NULL pointer errors and
 :: contributing to ACCESS_VIOLATION crash on exit.
@@ -187,7 +195,7 @@ if exist "%VPP_PATCH%" (
     )
 )
 
-:: Fix 5: DayZ-Dog — IntroSceneCharacter startup crash (null m_CharacterDta)
+:: Fix 6: DayZ-Dog — IntroSceneCharacter startup crash (null m_CharacterDta)
 :: DayZ-Dog overrides CharacterLoad but crashes when m_CharacterDta is NULL
 :: during heavy mod loading (Access violation at 0x8). Our patched PBO adds
 :: null guards around CreateCharacterPerson.
@@ -204,7 +212,7 @@ if exist "%DD_PATCH%" (
     )
 )
 
-if "%FIXES_APPLIED%"=="0" echo   [OK]   No known issues found
+if "!FIXES_APPLIED!"=="0" echo   [OK]   No known issues found
 echo.
 
 :: ============================================================
@@ -246,119 +254,20 @@ echo   [OK]   Client script cache cleared
 echo.
 
 :: ============================================================
-:: Step 6: Clear DayZ Launcher preset
-:: ============================================================
-:: The DayZ Launcher prepends its own mod list from its preset,
-:: doubling every mod and ignoring our load order. Clear it so
-:: ONLY our -mod= parameter controls which mods load and in what order.
-set "PRESET_DIR=%LOCALAPPDATA%\DayZ Launcher\Presets"
-if exist "%PRESET_DIR%\dayz.defaultpreset2" (
-    > "%PRESET_DIR%\dayz.defaultpreset2" (
-        echo ^<?xml version="1.0" encoding="utf-8"?^>
-        echo ^<addons-presets^>
-        echo   ^<last-update^>2026-01-01T00:00:00.0000000-05:00^</last-update^>
-        echo   ^<published-ids /^>
-        echo ^</addons-presets^>
-    )
-    echo   [OK]   DayZ Launcher preset cleared (mod order controlled by BAE-Z^)
-    echo.
-)
-
-:: ============================================================
-:: Step 7: Launch DayZ
+:: Step 6: Launch DayZ
 :: ============================================================
 echo ============================================
-echo  Launching DayZ with full mod list
+echo  Launching DayZ with mods: %CUSTOM_MODS%
 echo ============================================
 echo.
 
-:: Launch DayZ through Steam with the complete mod list.
-:: Launcher preset is cleared so only our -mod= controls load order.
-start "" "steam://run/221100//-mod=%MODLIST%/"
+:: Launch DayZ through Steam with custom mod args
+:: Steam URI launches the game via Steam so overlay and auth work
+start "" "steam://run/221100//-mod=%CUSTOM_MODS%/"
 
 echo DayZ is starting. You can close this window.
 popd
 timeout /t 5
-exit /b 0
-
-:: ============================================================
-:build_modlist
-:: Builds the full mod list with correct load order.
-:: Workshop mods use !Workshop symlinks. Custom mods use @Name.
-:: ORDER MATTERS: last mod wins for animation/script overrides.
-::
-:: NOTE: delayed expansion is OFF, so !Workshop is literal text
-:: and %MODLIST% expands correctly on each line (flat subroutine).
-:: ============================================================
-set "W=%DAYZ_CLIENT%\!Workshop"
-set "MODLIST="
-
-:: --- Frameworks (must load first) ---
-set "MODLIST=%W%\@CF;"
-set "MODLIST=%MODLIST%%W%\@Dabs Framework;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Core;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Licensed;"
-
-:: --- Standalone mods (order flexible) ---
-set "MODLIST=%MODLIST%%W%\@UnlimitedRun;"
-set "MODLIST=%MODLIST%%W%\@GoreZ;"
-set "MODLIST=%MODLIST%%W%\@Inventory Move Sounds;"
-set "MODLIST=%MODLIST%%W%\@Trader;"
-set "MODLIST=%MODLIST%%W%\@CZ Optics;"
-set "MODLIST=%MODLIST%%W%\@CookZ;"
-set "MODLIST=%MODLIST%%W%\@CookZ Realistic Packaging;"
-set "MODLIST=%MODLIST%%W%\@LMs Planes;"
-set "MODLIST=%MODLIST%%W%\@Care Packages V2;"
-set "MODLIST=%MODLIST%%W%\@Zens Treasure;"
-set "MODLIST=%MODLIST%%W%\@PercentageHUD;"
-set "MODLIST=%MODLIST%%W%\@4KBOSSKVehicles;"
-set "MODLIST=%MODLIST%%W%\@dzr_sleep_till_morning EXPERIMENTAL;"
-set "MODLIST=%MODLIST%%W%\@ExpansionMinimap_Override;"
-set "MODLIST=%MODLIST%%W%\@Pack complete - Backpacks FREE;"
-set "MODLIST=%MODLIST%%W%\@MWGSM_Trader;"
-set "MODLIST=%MODLIST%%W%\@Tree Shake;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Book;"
-set "MODLIST=%MODLIST%%W%\@Enable Inventory In Vehicle;"
-set "MODLIST=%MODLIST%%W%\@FLIP CAR;"
-set "MODLIST=%MODLIST%%W%\@SFE- No Vehicle Damage Customizable Crash Protection;"
-set "MODLIST=%MODLIST%%W%\@VVN_Greenhouse;"
-set "MODLIST=%MODLIST%%W%\@VVN_Old_refrigerator;"
-set "MODLIST=%MODLIST%%W%\@AJs Weapons;"
-set "MODLIST=%MODLIST%%W%\@MBM_HarleyDavidsonFatBoy;"
-set "MODLIST=%MODLIST%%W%\@JosiesLilBuggyZ;"
-set "MODLIST=%MODLIST%%W%\@LMs Helicopter Flight Systems;"
-set "MODLIST=%MODLIST%%W%\@Mass'sManyItemOverhaul;"
-set "MODLIST=%MODLIST%%W%\@VanillaPlusPlusMap;"
-set "MODLIST=%MODLIST%%W%\@Zens Skill Perk Tree;"
-set "MODLIST=%MODLIST%%W%\@Nemsis Craftingpack All in One;"
-set "MODLIST=%MODLIST%%W%\@DayZ Horse;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Dog;"
-set "MODLIST=%MODLIST%%W%\@PvZmoD_CustomisableZombies;"
-set "MODLIST=%MODLIST%%W%\@[SobrMods] Signal Overnight Stay;"
-
-:: --- Expansion feature mods ---
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Navigation;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Groups;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Spawn-Selection;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Quests;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-AI;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Weapons;"
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Vehicles;"
-
-:: --- Animation mods (order critical — last wins) ---
-:: Expansion Animations FIRST, then SurvivorAnims overrides it
-set "MODLIST=%MODLIST%%W%\@DayZ-Expansion-Animations;"
-set "MODLIST=%MODLIST%%W%\@Survivor Animations;"
-
-:: --- Custom mods (not on Workshop, synced from server) ---
-set "MODLIST=%MODLIST%@MinimapTweak;"
-set "MODLIST=%MODLIST%@HUDClock;"
-set "MODLIST=%MODLIST%@StackableItems;"
-set "MODLIST=%MODLIST%@MWGSM_TraderFix;"
-set "MODLIST=%MODLIST%@BAEZLoadingScreen;"
-set "MODLIST=%MODLIST%@EnableInventoryInVehicle"
-
 exit /b 0
 
 :: ============================================================
