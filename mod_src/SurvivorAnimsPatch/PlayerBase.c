@@ -76,8 +76,13 @@ modded class PlayerBase
 
 		if (pCurrentCommandID == DayZPlayerConstants.COMMANDID_MOVE)
 		{
-			// BAE-Z patch: null-guard animation interface to prevent crash
-			// if engine state is corrupted by accumulated GetHealth01 errors
+			// BAE-Z patch: skip AnimSetInt on multiplayer client entirely.
+			// GetHealth01 error flood from Expansion AI corrupts engine
+			// memory globally — even the local player's AnimSetInt crashes
+			// on corrupted heap data. Facial animation is purely cosmetic.
+			if (GetGame().IsMultiplayer() && !GetGame().IsServer())
+				return true;
+
 			HumanAnimInterface hai = GetAnimInterface();
 			if (hai)
 			{
