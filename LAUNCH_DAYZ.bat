@@ -172,6 +172,22 @@ if exist "%EA_PATCH%" (
     )
 )
 
+:: Fix 4: Expansion Quests GUI — wider quest tracker HUD
+:: Default tracker is 18% screen width, causing text to wrap and get clipped.
+:: Our patched PBO widens it to 24% so objective text fits without cutoff.
+set "QG_WORKSHOP=%WORKSHOP%\2828486817\addons"
+set "QG_PATCH=%~dp0mod_src\ExpansionQuestsGUIPatch\quests_gui.pbo.patched"
+if exist "%QG_PATCH%" (
+    if exist "%QG_WORKSHOP%" (
+        fc /b "%QG_PATCH%" "%QG_WORKSHOP%\quests_gui.pbo" >nul 2>&1
+        if errorlevel 1 (
+            copy /Y "%QG_PATCH%" "%QG_WORKSHOP%\quests_gui.pbo" >nul
+            echo   [FIX]  Patched Expansion Quests GUI in Workshop (wider quest tracker^)
+            set "FIXES_APPLIED=1"
+        )
+    )
+)
+
 if "!FIXES_APPLIED!"=="0" echo   [OK]   No known issues found
 echo.
 

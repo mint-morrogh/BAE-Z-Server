@@ -89,6 +89,19 @@ Do the same for all 20+ models.
 
 ## Pending (no server stop needed)
 
+### Freeze Mods: Lock all mod versions to prevent Workshop updates from breaking the server
+- **Goal:** Snapshot all current working mod versions so Steam Workshop updates can't break anything.
+- **How it works:**
+  1. Create `FREEZE_MODS.bat` that copies ALL Workshop mod folders (`steamapps/workshop/content/221100/<id>/`) to a local `@Frozen/<ModName>/` directory
+  2. Update `LAUNCH_DAYZ.bat` to load client mods from `@Frozen/` paths instead of `!Workshop` symlinks
+  3. Update `START_SERVER.bat` `-mod=` and `-serverMod=` to also point at `@Frozen/` copies
+  4. Stop running `INSTALL_MODS.bat` after freezing (it would overwrite frozen copies with new Workshop versions)
+- **To update a specific mod later:** Re-run `INSTALL_MODS.bat` for just that mod, test it, then copy the updated version into `@Frozen/`
+- **To update everything:** Re-run `INSTALL_MODS.bat` for all mods, test, then re-run `FREEZE_MODS.bat` to snapshot the new working set
+- **Rollback:** Keep a `@Frozen_backup/` copy before updating so you can restore if something breaks
+- **Note:** Our custom patches (SurvivorAnims, etc.) must be re-applied after any mod update — `INSTALL_MODS.bat` already handles this
+- **When:** After all current fixes are stable and tested
+
 ---
 
 ## Completed

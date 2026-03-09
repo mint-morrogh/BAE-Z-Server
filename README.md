@@ -82,7 +82,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Boosted foraging** - doubled mushroom spawns under trees, boosted fruit drops from apple/pear/plum trees
 - **Pristine loot** - items spawn Pristine to Worn only (no more Damaged/Badly Damaged spawns)
 - **Placeable refrigerator** - buy a fridge kit from the trader, place it in your base, and store food inside to slow decay - also available as a portable mini fridge
-- **45-day item persistence** - dropped items last 45 real days on the ground, survive server restarts
+- **5-day item persistence** - dropped items last 5 real days on the ground, survive server restarts (use storage containers for long-term storage)
 - **Indestructible bases** - base structures and storage containers cannot be damaged
 - **Fewer contaminated zones** - dynamic NBC zones reduced to 1 (down from 2-4)
 - **Reduced shoe damage** - crawler zombie boot damage reduced from 5.0 to 1.0
