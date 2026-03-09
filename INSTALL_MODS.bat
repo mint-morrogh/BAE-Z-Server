@@ -55,6 +55,7 @@ call :install_mod 3626138230 ExpansionMinimap
 call :install_mod 2792982069 DayZ-Expansion-AI
 call :install_mod 2828486817 DayZ-Expansion-Quests
 call :install_mod 2792985069 DayZ-Expansion-Weapons
+call :install_mod 2793893086 DayZ-Expansion-Animations
 call :install_mod 2116157322 DayZ-Expansion-Licensed
 call :install_mod 1590841260 Trader
 call :install_mod 1566911166 "Mass'sManyItemOverhaul"
