@@ -90,32 +90,40 @@ modded class PlayerBase
 	
 	override void OnParticleEvent(string pEventType, string pUserString, int pUserInt)
 	{
+		// BAE-Z patch: guard against bone/health access on AI proxies
+		if (GetGame().IsMultiplayer() && !GetGame().IsServer())
+		{
+			if (GetGame().GetPlayer() != this)
+			{
+				super.OnParticleEvent(pEventType, pUserString, pUserInt);
+				return;
+			}
+		}
+
 		super.OnParticleEvent(pEventType ,pUserString, pUserInt);
-		
+
 		if (!GetGame().IsDedicatedServer())
 		{
 			if (pUserInt == 85501)
 			{
 				PlayerBase player = PlayerBase.Cast(this);
 				int boneIdx = player.GetBoneIndexByName("RightWristExtra");
-				
+
 				if (boneIdx != -1)
 				{
 					EffectParticle eff;
-				
+
 					eff = new EffMoneyRain();
-					
+
 					vector wp = player.GetBonePositionWS(boneIdx);
-					
+
 					eff.SetDecalOwner(player);
 					eff.SetAutodestroy(true);
 					SEffectManager.PlayInWorld(eff, wp);
-					//Particle p = eff.GetParticle();
-					//player.AddChild(p, boneIdx);
 				}
-				
+
 			}
-		
+
 		}
 	}
 	
