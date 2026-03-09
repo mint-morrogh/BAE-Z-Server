@@ -155,7 +155,23 @@ if exist "%SA_PATCH%" (
 )
 
 
-:: Fix 3: Expansion Quests GUI — wider quest tracker HUD
+:: Fix 3: Expansion Animations — strip to AI-only (no SurvivorAnims conflict)
+:: Removes .anm clips and .asi weapon instances, keeps only animation graphs
+:: with CMD_eAI_Turn/StopTurn commands needed by Expansion AI patrols.
+set "EA_WORKSHOP=%WORKSHOP%\2793893086\Addons"
+set "EA_PATCH=%~dp0mod_src\ExpansionAnimationsPatch\animations_player.pbo.patched"
+if exist "%EA_PATCH%" (
+    if exist "%EA_WORKSHOP%" (
+        fc /b "%EA_PATCH%" "%EA_WORKSHOP%\animations_player.pbo" >nul 2>&1
+        if errorlevel 1 (
+            copy /Y "%EA_PATCH%" "%EA_WORKSHOP%\animations_player.pbo" >nul
+            echo   [FIX]  Patched Expansion Animations PBO in Workshop (AI-only, no anim conflicts^)
+            set "FIXES_APPLIED=1"
+        )
+    )
+)
+
+:: Fix 4: Expansion Quests GUI — wider quest tracker HUD
 :: Default tracker is 18% screen width, causing text to wrap and get clipped.
 :: Our patched PBO widens it to 24% so objective text fits without cutoff.
 set "QG_WORKSHOP=%WORKSHOP%\2828486817\addons"
@@ -166,6 +182,23 @@ if exist "%QG_PATCH%" (
         if errorlevel 1 (
             copy /Y "%QG_PATCH%" "%QG_WORKSHOP%\quests_gui.pbo" >nul
             echo   [FIX]  Patched Expansion Quests GUI in Workshop (wider quest tracker^)
+            set "FIXES_APPLIED=1"
+        )
+    )
+)
+
+:: Fix 4: VanillaPlusPlusMap — null-pointer crash on game exit
+:: VPP3DMarker destructor calls GetGame().GetCallQueue() during teardown
+:: when GetGame() is already NULL, causing 9x NULL pointer errors and
+:: contributing to ACCESS_VIOLATION crash on exit.
+set "VPP_WORKSHOP=%WORKSHOP%\1623711988\Addons"
+set "VPP_PATCH=%~dp0mod_src\VanillaPPMapPatch\VanillaPPMap.pbo.patched"
+if exist "%VPP_PATCH%" (
+    if exist "%VPP_WORKSHOP%" (
+        fc /b "%VPP_PATCH%" "%VPP_WORKSHOP%\VanillaPPMap.pbo" >nul 2>&1
+        if errorlevel 1 (
+            copy /Y "%VPP_PATCH%" "%VPP_WORKSHOP%\VanillaPPMap.pbo" >nul
+            echo   [FIX]  Patched VanillaPPMap in Workshop (exit crash null-pointer fix^)
             set "FIXES_APPLIED=1"
         )
     )

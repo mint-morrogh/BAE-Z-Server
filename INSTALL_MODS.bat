@@ -108,6 +108,32 @@ if exist "%~dp0mod_src\SurvivorAnimsPatch\SurvivorAnims.pbo.patched" (
     echo   [PATCH] SurvivorAnims PBO patched (compile-order fix + client guard^)
 )
 
+:: ============================================================
+:: Post-install: Re-apply Expansion Animations PBO patch
+:: Strips animation clips (.anm) and weapon instances (.asi) that
+:: conflict with SurvivorAnims. Keeps only the animation graph files
+:: (.agr, .aw, .ast) which register CMD_eAI_Turn/StopTurn commands
+:: needed by Expansion AI patrols.
+:: ============================================================
+if exist "%~dp0mod_src\ExpansionAnimationsPatch\animations_player.pbo.patched" (
+    echo.
+    echo --- Re-applying Expansion Animations PBO patch ---
+    copy /Y "%~dp0mod_src\ExpansionAnimationsPatch\animations_player.pbo.patched" "%~dp0@DayZ-Expansion-Animations\Addons\animations_player.pbo" >nul
+    echo   [PATCH] Expansion Animations PBO patched (AI-only, no anim conflicts^)
+)
+
+:: ============================================================
+:: Post-install: Re-apply VanillaPPMap PBO patch
+:: VPP3DMarker destructor crashes on exit (GetGame() is NULL
+:: during teardown). Our patched PBO adds null guards.
+:: ============================================================
+if exist "%~dp0mod_src\VanillaPPMapPatch\VanillaPPMap.pbo.patched" (
+    echo.
+    echo --- Re-applying VanillaPPMap PBO patch ---
+    copy /Y "%~dp0mod_src\VanillaPPMapPatch\VanillaPPMap.pbo.patched" "%~dp0@VanillaPlusPlusMap\Addons\VanillaPPMap.pbo" >nul
+    echo   [PATCH] VanillaPPMap PBO patched (exit crash null-pointer fix^)
+)
+
 
 echo.
 if %INSTALLED% GTR 0 echo   %INSTALLED% mods newly installed
