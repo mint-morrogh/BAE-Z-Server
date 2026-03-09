@@ -1,5 +1,74 @@
 # BAE-Z - TODO
 
+## Critical — Must test before playing (Mar 9, 2026)
+
+### Expansion Animations: Stripped PBO caused all startup crashes — REVERTED TO FULL
+
+**What happened:**
+We previously stripped `animations_player.pbo` (Expansion Animations mod) to remove player animation sub-graphs that conflicted with SurvivorAnims sit/fire animations. The stripped PBO kept all 7 `.agr` animation graph files but removed all `.anm` animation clips and `.asi` weapon instances (6.2MB → 719KB).
+
+**Why it crashed:**
+The `.agr` files define animation state machines that *reference* `.anm` clips. When `CreateCharacterPerson()` (client main menu mannequin) or `CreateObjectExSafe()` (server Quest NPC spawning) creates a player entity, the animation system initializes and tries to play clips from the graph. Missing `.anm` files → null pointer → `Access violation. Illegal write at 0x8`.
+
+**Crash evidence:**
+- Client: `IntroSceneCharacter::CharacterLoad` → `CreateCharacterPerson` → crash at 0x8
+- Server: `ExpansionQuestNPCData::SpawnNPC` → `CreateObjectExSafe` → crash at 0x8
+- Same root cause: missing animation clips in stripped PBO
+
+**What was tried (all failed):**
+1. Null guards around `CreateCharacterPerson` — crash is inside the native C++ engine function, script guards can't prevent it
+2. `CallLater` deferred creation (150ms delay) — same crash, not a timing issue
+3. Renaming `chars.DayZProfile` — not the cause, crash happens even with fresh character data
+4. Skip character creation entirely — avoids crash but breaks main menu (no mannequin, no stats, no dog)
+
+**Current state (REVERTED):**
+- Stripped PBO has been `git rm`'d from the repo
+- Both `LAUNCH_DAYZ.bat` and `install_mods.bat` updated — Expansion Animations patch steps removed (comments explain why)
+- Workshop has the full original 6.2MB PBO (re-downloaded via unsubscribe/resubscribe)
+- **Server still has old stripped PBO** (file was locked by running server) — needs server restart for `install_mods.bat` to copy the fresh Workshop version
+
+**Remaining question:**
+Does the full unmodified Expansion Animations PBO break SurvivorAnims sit/fire-lighting animations? Both the stripped and full PBO have the same 7 `.agr` sub-graphs (the graph files that define state machines), so the conflict MAY still exist in both. We removed `.anm` clips (the actual motion data) which wouldn't affect state machine conflicts. **Needs testing** — if sit/fire anims work with the full PBO, the strip was never needed.
+
+**If SurvivorAnims conflicts resurface:**
+Don't strip the entire PBO again. Instead, identify which specific `.anm` files conflict and remove only those. The `.agr` graph files and most `.anm` clips must stay.
+
+---
+
+### DayZ-Dog: IntroSceneCharacter startup crash — PATCHED (needs testing)
+
+**Problem:** DayZ-Dog overrides `IntroSceneCharacter::CharacterLoad` to spawn a dog on the main menu. When `m_CharacterDta` is null during heavy mod loading, `CreateCharacterPerson()` crashes with `Access violation at 0x8`.
+
+**Fix:** Patched PBO reimplements `CharacterLoad` with null guards around `m_CharacterDta` and `m_CharacterObj` instead of calling `super` (which crashes). Source: `mod_src/DayZDogPatch/scripts/4_world/overrides/IntroSceneCharacter.c`.
+
+**Deployment:**
+- Built PBO cached at `mod_src/DayZDogPatch/dayz_dog.pbo.patched` (691MB — NOT committed to git, too large)
+- `LAUNCH_DAYZ.bat` Fix 6 auto-patches Workshop folder on client launch
+- `install_mods.bat` post-install step auto-patches server `@DayZDog/addons/`
+- Source script tracked in git at `mod_src/DayZDogPatch/scripts/`
+
+**Status:** Patched PBO is deployed to Workshop and server. Needs testing — start client, verify mannequin + dog appear on main menu without crashing.
+
+**If PBO needs rebuilding** (e.g. DayZ-Dog Workshop update):
+1. Extract fresh DayZ-Dog PBO contents to `mod_src/DayZDogPatch/`
+2. Replace scripts with our patched version from `mod_src/DayZDogPatch/scripts/`
+3. Move `dayz_dog.pbo.patched` OUT of the directory (prevent PBO-inside-PBO)
+4. Build: `cd mod_src/DayZDogPatch && pbo -b -H "prefix=Dayz_Dog" -P "**/*" ../../dayz_dog.pbo.patched .`
+5. Move `dayz_dog.pbo.patched` back into `mod_src/DayZDogPatch/`
+
+---
+
+### HealthBoost PBO — needs deployment on server restart
+- Built PBO cached at `mod_src/HealthBoost/HealthBoost.pbo.built`
+- `START_SERVER.bat` auto-deploys on restart
+- Contains: vehicle exit death fix, dog health buff, crop spoil timer
+
+### Raider spawn increase — needs server restart
+- Config updated: Expansion AI raider spawn chance 25% → 50%
+- Takes effect on server restart
+
+---
+
 ## Pending (server must be stopped)
 
 ### Vehicles: Random colors + all models for 4KBOSSK spawns

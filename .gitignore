@@ -38,6 +38,18 @@ mod_src/*/config.bin
 mod_src/*/*.pyc
 mod_src/*/list
 
+# DayZDogPatch: only track script source, not extracted Workshop assets or built PBO
+mod_src/DayZDogPatch/*.pbo*
+mod_src/DayZDogPatch/anims/
+mod_src/DayZDogPatch/Data/
+mod_src/DayZDogPatch/dog_ai/
+mod_src/DayZDogPatch/GUI/
+mod_src/DayZDogPatch/languagecore/
+mod_src/DayZDogPatch/logo/
+mod_src/DayZDogPatch/models/
+mod_src/DayZDogPatch/sounds/
+mod_src/DayZDogPatch/texHeaders.bin
+
 # --- Allow server keys folder ---
 !keys/
 !keys/*.bikey

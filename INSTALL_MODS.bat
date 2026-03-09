@@ -109,17 +109,21 @@ if exist "%~dp0mod_src\SurvivorAnimsPatch\SurvivorAnims.pbo.patched" (
 )
 
 :: ============================================================
-:: Post-install: Re-apply Expansion Animations PBO patch
-:: Strips animation clips (.anm) and weapon instances (.asi) that
-:: conflict with SurvivorAnims. Keeps only the animation graph files
-:: (.agr, .aw, .ast) which register CMD_eAI_Turn/StopTurn commands
-:: needed by Expansion AI patrols.
+:: Post-install: Expansion Animations PBO patch — REMOVED
+:: The stripped PBO caused native crashes. Using full Workshop PBO.
 :: ============================================================
-if exist "%~dp0mod_src\ExpansionAnimationsPatch\animations_player.pbo.patched" (
+
+:: ============================================================
+:: Post-install: Re-apply DayZ-Dog PBO patch
+:: DayZ-Dog overrides CharacterLoad but crashes when
+:: m_CharacterDta is NULL during heavy mod loading.
+:: Our patched PBO adds null guards around CreateCharacterPerson.
+:: ============================================================
+if exist "%~dp0mod_src\DayZDogPatch\dayz_dog.pbo.patched" (
     echo.
-    echo --- Re-applying Expansion Animations PBO patch ---
-    copy /Y "%~dp0mod_src\ExpansionAnimationsPatch\animations_player.pbo.patched" "%~dp0@DayZ-Expansion-Animations\Addons\animations_player.pbo" >nul
-    echo   [PATCH] Expansion Animations PBO patched (AI-only, no anim conflicts^)
+    echo --- Re-applying DayZ-Dog PBO patch ---
+    copy /Y "%~dp0mod_src\DayZDogPatch\dayz_dog.pbo.patched" "%~dp0@DayZDog\addons\dayz_dog.pbo" >nul
+    echo   [PATCH] DayZ-Dog PBO patched (startup crash null-pointer fix^)
 )
 
 :: ============================================================

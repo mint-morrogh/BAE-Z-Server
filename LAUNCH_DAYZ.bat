@@ -155,21 +155,12 @@ if exist "%SA_PATCH%" (
 )
 
 
-:: Fix 3: Expansion Animations — strip to AI-only (no SurvivorAnims conflict)
-:: Removes .anm clips and .asi weapon instances, keeps only animation graphs
-:: with CMD_eAI_Turn/StopTurn commands needed by Expansion AI patrols.
-set "EA_WORKSHOP=%WORKSHOP%\2793893086\Addons"
-set "EA_PATCH=%~dp0mod_src\ExpansionAnimationsPatch\animations_player.pbo.patched"
-if exist "%EA_PATCH%" (
-    if exist "%EA_WORKSHOP%" (
-        fc /b "%EA_PATCH%" "%EA_WORKSHOP%\animations_player.pbo" >nul 2>&1
-        if errorlevel 1 (
-            copy /Y "%EA_PATCH%" "%EA_WORKSHOP%\animations_player.pbo" >nul
-            echo   [FIX]  Patched Expansion Animations PBO in Workshop (AI-only, no anim conflicts^)
-            set "FIXES_APPLIED=1"
-        )
-    )
-)
+:: Fix 3: Expansion Animations — REMOVED
+:: The stripped PBO (missing .anm clips) caused native crashes in both
+:: CreateCharacterPerson (client mannequin) and CreateObjectExSafe (server
+:: quest NPCs). Using the full unmodified Workshop PBO instead.
+:: If SurvivorAnims sit/fire conflicts resurface, investigate which specific
+:: .anm files conflict rather than stripping all of them.
 
 :: Fix 4: Expansion Quests GUI — wider quest tracker HUD
 :: Default tracker is 18% screen width, causing text to wrap and get clipped.
@@ -187,7 +178,7 @@ if exist "%QG_PATCH%" (
     )
 )
 
-:: Fix 4: VanillaPlusPlusMap — null-pointer crash on game exit
+:: Fix 5: VanillaPlusPlusMap — null-pointer crash on game exit
 :: VPP3DMarker destructor calls GetGame().GetCallQueue() during teardown
 :: when GetGame() is already NULL, causing 9x NULL pointer errors and
 :: contributing to ACCESS_VIOLATION crash on exit.
@@ -199,6 +190,23 @@ if exist "%VPP_PATCH%" (
         if errorlevel 1 (
             copy /Y "%VPP_PATCH%" "%VPP_WORKSHOP%\VanillaPPMap.pbo" >nul
             echo   [FIX]  Patched VanillaPPMap in Workshop (exit crash null-pointer fix^)
+            set "FIXES_APPLIED=1"
+        )
+    )
+)
+
+:: Fix 6: DayZ-Dog — IntroSceneCharacter startup crash (null m_CharacterDta)
+:: DayZ-Dog overrides CharacterLoad but crashes when m_CharacterDta is NULL
+:: during heavy mod loading (Access violation at 0x8). Our patched PBO adds
+:: null guards around CreateCharacterPerson.
+set "DD_WORKSHOP=%WORKSHOP%\2471347750\Addons"
+set "DD_PATCH=%~dp0mod_src\DayZDogPatch\dayz_dog.pbo.patched"
+if exist "%DD_PATCH%" (
+    if exist "%DD_WORKSHOP%" (
+        fc /b "%DD_PATCH%" "%DD_WORKSHOP%\dayz_dog.pbo" >nul 2>&1
+        if errorlevel 1 (
+            copy /Y "%DD_PATCH%" "%DD_WORKSHOP%\dayz_dog.pbo" >nul
+            echo   [FIX]  Patched DayZ-Dog PBO in Workshop (startup crash null-pointer fix^)
             set "FIXES_APPLIED=1"
         )
     )
