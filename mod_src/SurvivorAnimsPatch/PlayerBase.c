@@ -57,17 +57,22 @@ modded class PlayerBase
 	
 	override bool ModCommandHandlerAfter (float pDt, int pCurrentCommandID, bool pCurrentCommandFinished)
 	{
-		//! MUST BE HERE TO NOT DISABLE OTHER MODS
-		if (super.ModCommandHandlerAfter(pDt, pCurrentCommandID, pCurrentCommandFinished))
-		{
-			return true;
-		}
-
-		// BAE-Z patch: guard against GetHealth01 crash on Expansion AI proxies
+		// BAE-Z patch: block ALL ModCommandHandlerAfter processing on
+		// non-local entities on client. Expansion AI proxies trigger
+		// engine-level "GetHealth01 cannot be called on client" errors
+		// that accumulate and destabilize the engine, eventually causing
+		// access violation crashes (e.g. WeaponManager::GetCurrentModeName).
+		// Guard MUST be before super to prevent the entire chain.
 		if (GetGame().IsMultiplayer() && !GetGame().IsServer())
 		{
 			if (GetGame().GetPlayer() != this)
 				return false;
+		}
+
+		//! MUST BE HERE TO NOT DISABLE OTHER MODS
+		if (super.ModCommandHandlerAfter(pDt, pCurrentCommandID, pCurrentCommandFinished))
+		{
+			return true;
 		}
 
 		if (pCurrentCommandID == DayZPlayerConstants.COMMANDID_MOVE)
