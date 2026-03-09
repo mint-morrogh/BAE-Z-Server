@@ -154,16 +154,6 @@ if exist "%SA_PATCH%" (
     )
 )
 
-:: Fix 3: Expansion Animations player PBO conflicts with SurvivorAnims
-:: The animations_player.pbo overrides SurvivorAnims' player animations
-:: (sit, fire lighting, etc). AI and vehicle animations are unaffected.
-set "EA_DIR=%WORKSHOP%\2793893086\Addons"
-if exist "%EA_DIR%\animations_player.pbo" (
-    del /q "%EA_DIR%\animations_player.pbo" >nul 2>&1
-    del /q "%EA_DIR%\animations_player.pbo.expansion.bisign" >nul 2>&1
-    echo   [FIX]  Removed Expansion animations_player.pbo (SurvivorAnims conflict^)
-    set "FIXES_APPLIED=1"
-)
 
 if "!FIXES_APPLIED!"=="0" echo   [OK]   No known issues found
 echo.
