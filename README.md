@@ -33,7 +33,6 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Day/night zombie system** - ~65% of zombies culled during daytime (6am-8pm), full spawns at night with rare sprinters, zombies auto-despawn in trader safe zones
 - **Half-damage zombies** - zombie strength set to 0.5x vanilla day and night, gear lasts much longer
 - **Rebalanced zombie health** - bullet-sponge zombie types (police, military, soldiers) nerfed to reasonable HP so fights are challenging but not tedious
-- **Zombie kill drops** - zombies have a chance to drop loot when killed: food/bandages from civilians, ammo from military/police, medical supplies from doctors
 - **Nightly overnight camps** - once per night a tactical camp spawns at a random location with a tent, campfire, 10 zombies, and a loot crate containing guns, ammo, food, and medical supplies - camp lasts all night and despawns at dawn
 
 **Weapons & Gear**
@@ -57,9 +56,9 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 **Economy & Trading**
 - **NPC traders** - buy and sell items at safe zones using Roubles
 - **Roaming military trader** - a helicopter trader lands every 60 minutes near players, stays 30 minutes, trades weapons/ammo/medical/attachments for Roubles (all denominations accepted)
-- **Treasure hunting** - find photos, travel to the location, dig up randomized loot stashes
+- **Treasure hunting** - kill zombies for a chance to find treasure photos that show real locations on the map with lore clues hinting at what's buried, travel to the spot, and dig up randomized loot stashes containing weapons, ammo, medical supplies, base-building materials, or even another photo leading to the next treasure
 - **Care package supply drops** - military, medical, survival, and building supplies parachute in every 120 minutes, heavily guarded by 12 zombies
-- **Stackable items** - roubles, nails, rags, bandages, stones, bones, bark, hooks, worms, and repair kits stack up to 100
+- **Stackable items** - roubles, nails, paper, stones, bones, bark, hooks, and worms stack up to 100
 - **Doubled bandage uses** - bandages last twice as many uses before being consumed
 - **Doubled ammo stacks** - all loose ammo types stack to 2x their vanilla max
 
@@ -74,6 +73,8 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Sleep till morning** - if all players lie down to sleep at night, time skips to dawn
 - **Unlimited stamina** - no stamina drain while sprinting, but certain gear can still slow you down
 - **Durable gear** - all items self-repair to full health every 2 minutes, but ruined gear still needs to be replaced
+- **Quest tracker** - on-screen quest objective tracker with widened display to prevent text clipping
+- **Longer-lasting batteries** - 9V batteries have 2.5x energy capacity for flashlights, optics, and NVGs
 - **63 modded backpacks** - 13 backpack models in multiple camo/colour variants across the map
 
 **World & Loot**
@@ -88,7 +89,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Reduced shoe damage** - crawler zombie boot damage reduced from 5.0 to 1.0
 
 **Server & Configuration**
-- **49 Workshop mods + 8 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
+- **48 Workshop mods + 8 custom server-side mods + 6 custom client mods** - all preconfigured and ready to go
 - **One-file configuration** - all server settings in `server_settings.json`, applied with a single click
 - **Auto-restart** - server automatically restarts every 12 hours
 - **Full persistence** - bases, vehicles, and inventory survive restarts
@@ -407,7 +408,7 @@ These mods must be installed on both the **server** and **client**.
 | [Zenarchist's Skills](https://steamcommunity.com/sharedfiles/filedetails/?id=3601119520) | 3601119520 | Skill perk tree - survival, crafting, hunting, gathering |
 | [CZ Optics](https://steamcommunity.com/sharedfiles/filedetails/?id=3571068454) | 3571068454 | Additional optics and scopes |
 | [PercentageHUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3443562573) | 3443562573 | Shows health, blood, hunger, thirst, and stamina as percentages on the HUD |
-| [Zen's Treasure](https://steamcommunity.com/sharedfiles/filedetails/?id=3426979799) | 3426979799 | Photo-based treasure hunting - find photos, travel to the location, dig up randomized loot stashes |
+| [Zen's Treasure](https://steamcommunity.com/sharedfiles/filedetails/?id=3426979799) | 3426979799 | Photo-based treasure hunting - zombies drop photos of real map locations with lore clues, navigate by landmarks, dig up themed loot stashes |
 | [Care Packages V2](https://steamcommunity.com/sharedfiles/filedetails/?id=2691041685) | 2691041685 | Randomized care package drops with notifications, locked containers, and custom loot |
 | [Nemsis Craftingpack All-in-One](https://steamcommunity.com/sharedfiles/filedetails/?id=3606014796) | 3606014796 | 500+ items, 700+ crafting recipes - weapons, armor, vehicles, bushcraft, ammo crafting, and more |
 | [LMs Planes](https://steamcommunity.com/sharedfiles/filedetails/?id=3639695989) | 3639695989 | Flyable planes - Cessna 180, Spitfire, Catalina seaplane, Tigermoth, Stuntplane |
@@ -594,6 +595,35 @@ Randomized supply drops land across the map every 120 minutes. Players are notif
 | Tools & Building | Black | 8-14 items - nails, pliers, hacksaw, rope, duct tape, code lock, planks + axes |
 
 17 drop locations spread across Chernarus. 12 zombies guard each drop. Edit loot, locations, and timing in `config/CarePackagesV2/config.json`.
+
+### Zen's Treasure - Photo-Based Treasure Hunting
+
+Treasure hunting is a multi-step loot loop that rewards exploration and map knowledge.
+
+**Step 1: Find a treasure photo.** Zombies have a ~1% chance to drop a treasure photo when killed. Photos can also appear as world loot. Each photo is an actual in-game screenshot of a real location somewhere on the Chernarus map.
+
+**Step 2: Read the clues.** The photo includes a description hinting at what kind of stash is buried — "hunting", "military", "high-grade military", "medical", "basebuilding", or just "valuable". This tells you whether the trip is worth the risk and what gear to bring.
+
+**Step 3: Travel to the location.** Study the photo for landmarks — buildings, terrain, roads, tree lines — and figure out where it was taken. There are no map markers or GPS coordinates. You navigate by recognizing the landscape, just like real orienteering.
+
+**Step 4: Dig up the stash.** When you arrive at the correct location, use a shovel to dig up the buried container. Stashes spawn as either a **wooden crate** (smaller hauls) or a **sea chest** (larger hauls) depending on the treasure type.
+
+**What you'll find:**
+
+| Treasure Type | Container | Notable Loot |
+|---|---|---|
+| Hunting | Wooden Crate | Winchester or Mosin with optics, .308 and 7.62x54 ammo, whetstones, cleaning kits |
+| Basebuilding | Wooden Crate | Nail boxes, hand saws, hatchets, pliers, whetstones, metal wire |
+| Military | Wooden Crate | SVD, M14, AKM, M110, AN-94 with optics and suppressors, ammo boxes |
+| High-Grade Military | Sea Chest | SVD, M14, Kivaari, PPSH-41, plastic explosives, grenades, land mines, ammo crates |
+| Medical | Sea Chest | Full NBC suit (gray or white), gas mask + filter, vitamins, morphine, epinephrine, saline, bandages |
+| Valuable | Crate or Chest | Randomized general loot |
+
+**Chain hunting:** Every stash has a 10% chance to contain another random treasure photo inside it, so one successful dig can lead directly to the next hunt.
+
+**Persistence:** Dug-up stashes remain in the world for 1 hour before despawning, so grab what you need quickly.
+
+Config at `config/Zenarchist/ZenTreasureConfig.json`. Loot tables, container types, zombie drop chance, and predefined weapon loadouts are all editable.
 
 ### Signal Overnight Stay
 

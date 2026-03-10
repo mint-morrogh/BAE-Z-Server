@@ -17,32 +17,37 @@ modded class PlayerBase
 	{
 		return m_SAEmoteID;
 	}
-	/*
-	override void CommandHandler(float pDt, int pCurrentCommandID, bool pCurrentCommandFinished)	
+
+	override void CommandHandler(float pDt, int pCurrentCommandID, bool pCurrentCommandFinished)
 	{
-		super.CommandHandler(pDt,pCurrentCommandID,pCurrentCommandFinished);
-		
-		EmoteManager em = GetEmoteManager();
-		if (em && em.IsEmotePlaying() ) //&& em.GetGesture() && em.GetGesture() == EMOTE_SAHandsOnWall) 
+		// BAE-Z patch: skip the ENTIRE CommandHandler chain for non-local
+		// player entities on client (AI proxies and remote players).
+		//
+		// On a multiplayer client the engine calls CommandHandler on ALL
+		// player entities (including Expansion AI proxies) every frame.
+		// The full vanilla chain (DayZPlayerImplement -> PlayerBase) calls
+		// HandleInventory, HandleWeapons, InjuryHandler.Update,
+		// ShockHandler.Update, etc. — all of which internally touch
+		// Object::GetHealth01 on the entity. AI proxy entities do NOT have
+		// health data synced to the client, so each GetHealth01 call
+		// triggers the native engine error "Object::GetHealth01 cannot be
+		// called on client." With dozens of AI entities, this produces 76+
+		// errors per session that corrupt the engine's internal memory,
+		// leading to access violations in unrelated systems like
+		// WeaponManager::GetCurrentModeName.
+		//
+		// For remote players / AI proxies, the engine replicates animations
+		// and movement via the network — CommandHandler is not needed for
+		// visual correctness. The eAIBase.CommandHandler on the server side
+		// continues to work because this guard only fires on client.
+		if (GetGame().IsMultiplayer() && !GetGame().IsServer())
 		{
-			//GetGame().GetMission().OnEvent(ChatMessageEventTypeID, new ChatMessageEventParams(CCDirect, "", "Playing EMOTE", ""));
-			if (em.m_Callback && em.m_Callback.m_callbackID == EmoteSurAnmHandsOnWall.CMD_GESTUREFB_HandsOnWall)
-			{
-				//GetGame().GetMission().OnEvent(ChatMessageEventTypeID, new ChatMessageEventParams(CCDirect, "", "Callback EMOTE " + em.m_Callback.m_callbackID, ""));
-				m_SAEmoteID = em.m_Callback.m_callbackID;
-			} else
-			{
-				m_SAEmoteID = 0;
-			}
-		}
-		else
-		{
-			m_SAEmoteID = 0;
-			//GetGame().GetMission().OnEvent(ChatMessageEventTypeID, new ChatMessageEventParams(CCDirect, "", "NO EMOTE", ""));
+			if (GetGame().GetPlayer() != this)
+				return;
 		}
 
+		super.CommandHandler(pDt, pCurrentCommandID, pCurrentCommandFinished);
 	}
-	*/
 	
 	int GetFacialState()
 	{
@@ -76,13 +81,6 @@ modded class PlayerBase
 
 		if (pCurrentCommandID == DayZPlayerConstants.COMMANDID_MOVE)
 		{
-			// BAE-Z patch: skip AnimSetInt on multiplayer client entirely.
-			// GetHealth01 error flood from Expansion AI corrupts engine
-			// memory globally — even the local player's AnimSetInt crashes
-			// on corrupted heap data. Facial animation is purely cosmetic.
-			if (GetGame().IsMultiplayer() && !GetGame().IsServer())
-				return true;
-
 			HumanAnimInterface hai = GetAnimInterface();
 			if (hai)
 			{
