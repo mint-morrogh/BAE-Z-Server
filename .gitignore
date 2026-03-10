@@ -105,6 +105,8 @@ config/*
 !config/ExpansionMod/Settings/**
 !config/ExpansionMod/AI/
 !config/ExpansionMod/AI/**
+!config/ExpansionMod/Loadouts/
+!config/ExpansionMod/Loadouts/**
 !config/ExpansionMod/Quests/
 !config/ExpansionMod/Quests/**
 !config/Trader/

@@ -1573,4 +1573,139 @@
 		<pos x="5230.89" z="7500.00" a="90.00" />
 		<pos x="7743.19" z="14860.37" a="15.95" />
 	</event>
+
+	<!-- LMs Helicopters — helipads, airfields, military compounds -->
+	<event name="VehicleHelicopters">
+		<!-- NWAF helipads -->
+		<pos x="4523.40" z="10437.20" a="145.00" />
+		<pos x="4703.90" z="10130.50" a="330.00" />
+		<!-- NEAF -->
+		<pos x="12185.30" z="12680.40" a="170.00" />
+		<!-- Balota -->
+		<pos x="4958.70" z="2428.30" a="40.00" />
+		<!-- Tisy military -->
+		<pos x="1530.80" z="14220.60" a="90.00" />
+		<!-- Zeleno military -->
+		<pos x="2810.50" z="5270.30" a="210.00" />
+		<!-- Open field near Stary -->
+		<pos x="6150.20" z="7820.50" a="0.00" />
+		<!-- Open field near Gorka -->
+		<pos x="9480.60" z="8950.30" a="270.00" />
+	</event>
+
+	<!-- Josie's Buggy — roads, farms, fields -->
+	<event name="VehicleBuggy">
+		<!-- Road near Novy Sobor -->
+		<pos x="7050.30" z="7650.80" a="85.00" />
+		<!-- Road near Stary Sobor -->
+		<pos x="6250.40" z="7780.20" a="270.00" />
+		<!-- Near Gorka -->
+		<pos x="9700.50" z="8820.10" a="180.00" />
+		<!-- Road south of Vybor -->
+		<pos x="3650.20" z="8700.40" a="45.00" />
+		<!-- Near Kamyshovo -->
+		<pos x="12050.80" z="3480.60" a="310.00" />
+		<!-- Near Zelenogorsk -->
+		<pos x="2580.90" z="5150.30" a="190.00" />
+	</event>
+
+	<!-- Harley Davidson — roads, gas stations, towns -->
+	<event name="VehicleHarley">
+		<!-- Road near Berezino -->
+		<pos x="12650.40" z="9850.20" a="175.00" />
+		<!-- Road near Elektro -->
+		<pos x="10320.70" z="2250.40" a="60.00" />
+		<!-- Road near Cherno -->
+		<pos x="6500.30" z="2650.80" a="280.00" />
+		<!-- Near Novy Sobor -->
+		<pos x="7200.50" z="7600.30" a="90.00" />
+		<!-- Road near Severograd -->
+		<pos x="7950.40" z="12450.60" a="0.00" />
+		<!-- Near Svetlo -->
+		<pos x="14300.20" z="13100.80" a="220.00" />
+		<!-- Near Pavlovo -->
+		<pos x="1780.60" z="3850.40" a="130.00" />
+		<!-- Road near Black Forest -->
+		<pos x="950.30" z="9200.50" a="350.00" />
+	</event>
+
+	<!-- Expansion Ground Vehicles — roads, military, towns -->
+	<event name="VehicleExpansionGround">
+		<!-- NWAF area -->
+		<pos x="4400.50" z="10350.20" a="150.00" />
+		<!-- Tisy road -->
+		<pos x="1650.30" z="13900.40" a="90.00" />
+		<!-- Near Stary -->
+		<pos x="6080.20" z="7700.60" a="270.00" />
+		<!-- Berezino -->
+		<pos x="12500.80" z="10100.30" a="180.00" />
+		<!-- Elektro -->
+		<pos x="10500.40" z="2150.50" a="45.00" />
+		<!-- Cherno -->
+		<pos x="6700.60" z="2500.80" a="300.00" />
+		<!-- Kamyshovo road -->
+		<pos x="12200.30" z="3600.20" a="90.00" />
+		<!-- Gorka -->
+		<pos x="9550.50" z="8800.40" a="180.00" />
+		<!-- Zelenogorsk -->
+		<pos x="2700.80" z="5400.60" a="200.00" />
+		<!-- Vybor -->
+		<pos x="3750.20" z="8850.30" a="30.00" />
+		<!-- Near Kumyrna -->
+		<pos x="8400.40" z="5900.50" a="160.00" />
+		<!-- Severograd -->
+		<pos x="8100.60" z="12700.80" a="0.00" />
+		<!-- Solnichniy -->
+		<pos x="13200.30" z="6200.20" a="85.00" />
+		<!-- Polana -->
+		<pos x="10650.50" z="8100.40" a="270.00" />
+		<!-- Near Novaya Petrovka -->
+		<pos x="3400.80" z="12800.60" a="120.00" />
+		<!-- Balota road -->
+		<pos x="4600.20" z="2350.30" a="40.00" />
+		<!-- Road near Mogilevka -->
+		<pos x="7600.40" z="5200.50" a="90.00" />
+		<!-- Dolina -->
+		<pos x="11400.60" z="6800.80" a="310.00" />
+		<!-- Near Krasnostav -->
+		<pos x="11900.30" z="12400.20" a="170.00" />
+		<!-- South coast road -->
+		<pos x="8800.50" z="2800.40" a="60.00" />
+	</event>
+
+	<!-- Expansion Aircraft — airfields, open fields -->
+	<event name="VehicleExpansionAir">
+		<!-- NWAF -->
+		<pos x="4600.30" z="10300.50" a="330.00" />
+		<pos x="4780.20" z="10050.80" a="150.00" />
+		<!-- NEAF -->
+		<pos x="12130.40" z="12500.60" a="350.00" />
+		<!-- Balota -->
+		<pos x="4880.50" z="2500.30" a="40.00" />
+		<!-- Open field near Vybor -->
+		<pos x="3900.80" z="9100.20" a="180.00" />
+		<!-- Open field central -->
+		<pos x="5350.60" z="9800.40" a="0.00" />
+	</event>
+
+	<!-- Expansion Boats — coast, harbors, docks -->
+	<event name="VehicleExpansionBoat">
+		<!-- Berezino dock -->
+		<pos x="12900.40" z="10050.30" a="90.00" />
+		<!-- Solnichniy harbor -->
+		<pos x="13450.50" z="6350.20" a="180.00" />
+		<!-- Kamyshovo dock -->
+		<pos x="12150.80" z="3350.40" a="270.00" />
+		<!-- Elektro harbor -->
+		<pos x="10550.30" z="1950.60" a="180.00" />
+		<!-- Cherno harbor -->
+		<pos x="6650.20" z="2280.80" a="200.00" />
+		<!-- Balota coast -->
+		<pos x="4450.40" z="2050.30" a="220.00" />
+		<!-- Skalisty island area -->
+		<pos x="13800.50" z="3100.20" a="0.00" />
+		<!-- Rify coast (NE) -->
+		<pos x="13950.80" z="13500.40" a="90.00" />
+	</event>
+
 </eventposdef>
