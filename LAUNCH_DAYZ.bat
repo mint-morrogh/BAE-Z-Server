@@ -145,7 +145,7 @@ set "SA_WORKSHOP=%WORKSHOP%\2918418331\Addons"
 set "SA_PATCH=%~dp0mod_src\SurvivorAnimsPatch\SurvivorAnims.pbo.patched"
 if exist "%SA_PATCH%" (
     if exist "%SA_WORKSHOP%" (
-        fc /b "%SA_PATCH%" "%SA_WORKSHOP%\SurvivorAnims.pbo" >nul 2>&1
+        call :needs_patch "%SA_PATCH%" "%SA_WORKSHOP%\SurvivorAnims.pbo"
         if errorlevel 1 (
             copy /Y "%SA_PATCH%" "%SA_WORKSHOP%\SurvivorAnims.pbo" >nul
             echo   [FIX]  Patched SurvivorAnims PBO in Workshop (mannequin crash fix^)
@@ -169,7 +169,7 @@ set "QG_WORKSHOP=%WORKSHOP%\2828486817\addons"
 set "QG_PATCH=%~dp0mod_src\ExpansionQuestsGUIPatch\quests_gui.pbo.patched"
 if exist "%QG_PATCH%" (
     if exist "%QG_WORKSHOP%" (
-        fc /b "%QG_PATCH%" "%QG_WORKSHOP%\quests_gui.pbo" >nul 2>&1
+        call :needs_patch "%QG_PATCH%" "%QG_WORKSHOP%\quests_gui.pbo"
         if errorlevel 1 (
             copy /Y "%QG_PATCH%" "%QG_WORKSHOP%\quests_gui.pbo" >nul
             echo   [FIX]  Patched Expansion Quests GUI in Workshop (wider quest tracker^)
@@ -186,7 +186,7 @@ set "VPP_WORKSHOP=%WORKSHOP%\1623711988\Addons"
 set "VPP_PATCH=%~dp0mod_src\VanillaPPMapPatch\VanillaPPMap.pbo.patched"
 if exist "%VPP_PATCH%" (
     if exist "%VPP_WORKSHOP%" (
-        fc /b "%VPP_PATCH%" "%VPP_WORKSHOP%\VanillaPPMap.pbo" >nul 2>&1
+        call :needs_patch "%VPP_PATCH%" "%VPP_WORKSHOP%\VanillaPPMap.pbo"
         if errorlevel 1 (
             copy /Y "%VPP_PATCH%" "%VPP_WORKSHOP%\VanillaPPMap.pbo" >nul
             echo   [FIX]  Patched VanillaPPMap in Workshop (exit crash null-pointer fix^)
@@ -203,7 +203,7 @@ set "DD_WORKSHOP=%WORKSHOP%\2471347750\Addons"
 set "DD_PATCH=%~dp0mod_src\DayZDogPatch\dayz_dog.pbo.patched"
 if exist "%DD_PATCH%" (
     if exist "%DD_WORKSHOP%" (
-        fc /b "%DD_PATCH%" "%DD_WORKSHOP%\dayz_dog.pbo" >nul 2>&1
+        call :needs_patch "%DD_PATCH%" "%DD_WORKSHOP%\dayz_dog.pbo"
         if errorlevel 1 (
             copy /Y "%DD_PATCH%" "%DD_WORKSHOP%\dayz_dog.pbo" >nul
             echo   [FIX]  Patched DayZ-Dog PBO in Workshop (startup crash null-pointer fix^)
@@ -268,6 +268,18 @@ start "" "steam://run/221100//-mod=%CUSTOM_MODS%/"
 echo DayZ is starting. You can close this window.
 popd
 timeout /t 5
+exit /b 0
+
+:: ============================================================
+:needs_patch
+:: Compares patch file (%~1) to target (%~2) by size.
+:: Returns errorlevel 1 if patch is needed, 0 if already applied.
+:: Uses file size instead of fc /b to avoid hanging on large PBOs.
+:: ============================================================
+if not exist "%~2" exit /b 1
+for %%A in ("%~1") do set "PATCH_SIZE=%%~zA"
+for %%B in ("%~2") do set "TARGET_SIZE=%%~zB"
+if not "%PATCH_SIZE%"=="%TARGET_SIZE%" exit /b 1
 exit /b 0
 
 :: ============================================================
