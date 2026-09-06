@@ -20,7 +20,6 @@ echo   - Player characters and inventory
 echo   - World state (bases, stashes, dropped items)
 echo   - Dog and horse ownership data
 echo   - Skill tree progress
-echo   - Expansion mod settings (regenerate on next boot)
 echo   - Script caches (server + client)
 echo.
 echo Server configs, mods, and balance settings are NOT affected.
@@ -69,11 +68,8 @@ if exist "config\ExpansionMod\Quests\PlayerData" rd /s /q "config\ExpansionMod\Q
 if exist "config\ExpansionMod\Quests\GroupData" rd /s /q "config\ExpansionMod\Quests\GroupData" 2>nul
 del /q "config\ExpansionMod\Quests\PersistentServerData.json" 2>nul
 echo   [OK] Quest progress wiped
-if exist "config\ExpansionMod\Settings" (
-    rd /s /q "config\ExpansionMod\Settings" 2>nul
-    mkdir "config\ExpansionMod\Settings"
-    echo   [OK] Expansion settings wiped (will regenerate)
-)
+:: NOTE: config\ExpansionMod\Settings is tracked in git (customised AI factions etc.)
+:: and is NOT wiped. Quest runtime data above is enough for a fresh start.
 
 :: Script cache
 del /q "config\DataCache\cache.ch" 2>nul
