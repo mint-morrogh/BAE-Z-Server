@@ -182,5 +182,7 @@ config/CarePackageV2/
 !@BandageBoost/addons/BandageBoost.pbo
 !@AmmoStacks/addons/
 !@AmmoStacks/addons/AmmoStacks.pbo
+!@TraderBuyFix/addons/
+!@TraderBuyFix/addons/TraderBuyFix.pbo
 !@BatteryBoost/addons/
 !@BatteryBoost/addons/BatteryBoost.pbo

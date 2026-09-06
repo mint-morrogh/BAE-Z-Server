@@ -913,6 +913,14 @@ Custom server-side mod (`@AmmoStacks`). Doubles the max stack size for all loose
 
 Source code in `mod_src/AmmoStacks/`.
 
+### TraderBuyFix - Bought Items Actually Arrive (DayZ 1.29)
+
+Custom server-side mod (`@TraderBuyFix`). DayZ 1.29 broke item delivery in Dr Jones Trader 1.9: the vanilla `HumanInventory.CreateInInventory()` now creates flipped cargo entries and silently falls back to spawning in hands, so purchases were paid for but never showed up in the inventory or the vicinity (jackets, belts, ammo boxes; canteens happened to work). Selling and rouble deduction were unaffected.
+
+The mod overrides the Trader's `CreateItemInInventory()` on the server: the item is created at the player's feet, its quantity/ammo count applied, then moved into the inventory through the normal synced server-side take path (`ServerTakeEntityToInventory`, which handles 1.29 item rotation). If it does not fit anywhere it stays on the ground next to the player, as before. Trader's stack-merging logic is kept unchanged. Clients do not need this mod.
+
+Source code in `mod_src/TraderBuyFix/`.
+
 ### MinimapTweak - Minimap Customization
 
 Custom client+server mod (`@MinimapTweak`). Adjusts the Expansion GPS minimap:
@@ -1089,6 +1097,9 @@ DayZServer/
 ├── @AmmoStacks/                 # Custom server-side mod - doubled ammo stacks
 │   └── addons/
 │       └── AmmoStacks.pbo       # All loose ammo stacks to 2x vanilla max
+├── @TraderBuyFix/               # Custom server-side mod - Trader 1.29 buy fix
+│   └── addons/
+│       └── TraderBuyFix.pbo     # Bought items delivered via server take path
 ├── @EnableInventoryInVehicle/   # Custom client+server mod - inventory in vehicles
 │   └── addons/
 │       └── EnableInventoryInVehicle.pbo  # Unlock inventory in vehicles
@@ -1122,6 +1133,7 @@ DayZServer/
 │   ├── StackableItems/          # Stackable items source (stack overrides)
 │   ├── BandageBoost/            # BandageBoost source (doubled bandage uses)
 │   ├── AmmoStacks/              # AmmoStacks source (doubled ammo stack sizes)
+│   ├── TraderBuyFix/            # TraderBuyFix source (Trader 1.29 bought-item delivery)
 │   ├── EnableInventoryInVehicle/ # EnableInventoryInVehicle source (vehicle inventory access)
 │   ├── BAEZLoadingScreen/       # BAEZLoadingScreen source (custom loading screen)
 │   ├── MWGSM_TraderFix/         # MWGSM_TraderFix source (trader currency label fix)
