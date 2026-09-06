@@ -20,8 +20,8 @@
 - `INSTALL_MODS.bat` only ever added/updated files, so PBOs that a Workshop update renamed or removed stayed behind in the server `@Mod\addons` folder. After the long break this left duplicates (old `Dodge_ChallengerSRTSuperStock_BOSS*.pbo` + new `DodgeChallengerDemon_BOSS*.pbo`, old `Porsche_911RWB_1972_BOSS.pbo`, `cz_optics.pbo`, `0_ZenSkills_Preload.pbo`) -> "Multiple declaration of class" on the client and an ACCESS_VIOLATION crash on the server during startup.
 - Stale files deleted; `:install_mod` now removes any `.pbo`/`.bisign` in the server addons folder that the Workshop copy no longer ships (`[STALE]` lines in its output).
 
-### CZ Optics Workshop mod changed contents - CHECK IN GAME
-- Workshop 3571068454 now only ships `BC_ServerPack.pbo`; the old `cz_optics.pbo` is gone. Verify CZ optic items still exist / the Weapon Supplies trader optics tab has no missing items. If they are gone, drop them from `TraderConfig.txt` and `types.xml`.
+### CZ Optics Workshop mod changed contents - VERIFIED OK (2026-09-05)
+- Workshop 3571068454 now only ships `BC_ServerPack.pbo` (text config.cpp); the stale `cz_optics.pbo` was an old leftover. All 8 `BC_*_Optic` classes the Weapon Supplies trader sells are defined in the new PBO; nothing references the old file.
 
 ### 4KBOSSK update renamed models - HANDLED
 - Porsche 911 RWB replaced by Porsche 911 GT3 (`GT3_*`), Challenger moved into `DodgeChallengerDemon_BOSS` (class names unchanged), new models Audi R8, BMW M5 G90, Ford Crown Victoria, Ford Mustang SVT, Shelby Super Snake, Skyline rust variants, lifted Bronco variants. Event/spawnabletypes/types regenerated (29 models, 291 colour variants); trader "Porsche 911 RWB Parts" -> "Porsche 911 GT3 Parts".
