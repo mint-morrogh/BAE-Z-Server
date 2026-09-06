@@ -1,22 +1,25 @@
 /**
  * TraderBuyFix - BAE-Z
  *
- * DayZ 1.29 broke item delivery in Dr Jones Trader 1.9: the vanilla
- * HumanInventory.CreateInInventory() now creates flipped cargo entries and
- * silently falls back to CreateInHands(), so bought items get paid for but
- * never show up in the inventory or the vicinity.
+ * Dr Jones Trader 1.9 on DayZ 1.29: purchases are charged but new items never
+ * show up for the player (neither in the inventory nor on the ground). Only
+ * top-ups of an existing stack (rose hips, bandages, roubles) work, because
+ * those never create a new entity.
  *
- * This overrides the Trader's CreateItemInInventory() (server side). The
- * stacking/merge logic is kept as-is; only the spawn step changes:
- *   1. create the item server-local (ECE_LOCAL) at the player's feet
- *   2. move it into cargo/attachment (rotated fit included), else empty hands,
- *      else leave it on the ground next to the player
- *   3. SetSynchDirty() + RemoteObjectCreate() so the client actually gets it
- *   4. apply the configured quantity / ammo count and sync again
- * Technique taken from Workshop 3704049029 "Trader_FIX" (GloryStar). That mod
- * cannot be loaded here as-is: it also mods ItemBase and Ammunition_Base, which
- * DurableGear / AmmoStacks (both -serverMod) already mod, and two server mods
- * on one class deadlock the script compiler.
+ * v1 (networked CreateObjectEx + ServerTakeEntityToInventory) and
+ * v2 (ECE_LOCAL + LocationSyncMoveEntity + RemoteObjectCreate, the Trader_FIX
+ * 3704049029 technique) both failed in-game.
+ *
+ * v3 uses the path DayZ 1.29 itself uses when it spawns an item into a player
+ * (PlayerBase.CreateInInventory -> SpawnItemOnLocation): find a free location
+ * for the class name, then GameInventory.LocationCreateEntity() so the engine
+ * creates the entity networked, directly at that location. Fallbacks: empty
+ * hands, then the ground at the player's feet.
+ *
+ * Every step is logged with a [TraderBuyFix] prefix to the server script log,
+ * and the item is re-checked 3 s later (still exists? where? network id?) so a
+ * failed test tells us whether the item vanished server-side or never reached
+ * the client.
  */
 modded class DayZPlayerImplement
 {
@@ -32,6 +35,8 @@ modded class DayZPlayerImplement
 		Ammunition_Base ammoItem;
 		bool hasSomeQuant = (TR_Helper.ItemHasCount(itemType) || TR_Helper.ItemHasQuantity(itemType)) && !TR_Helper.HasQuantityBar(itemType) && amount >= 0;
 		int itemHasSpawnedOrStacked = 0;
+
+		TraderBuyFix_Log("buy " + itemType + " amount=" + amount + " hasSomeQuant=" + hasSomeQuant + " inventoryItems=" + itemsArray.Count());
 
 		// autostacking into existing stacks (unchanged from Trader 1.9)
 		if (hasSomeQuant)
@@ -55,6 +60,7 @@ modded class DayZPlayerImplement
 						item.SetSynchDirty();
 						itemDisplayNameClient = item.GetDisplayName();
 						itemHasSpawnedOrStacked++;
+						TraderBuyFix_Log("stacked into existing " + itemType + ", leftover=" + currentAmount);
 					}
 				}
 
@@ -71,6 +77,7 @@ modded class DayZPlayerImplement
 						ammoItem.SetSynchDirty();
 						itemDisplayNameClient = ammoItem.GetDisplayName();
 						itemHasSpawnedOrStacked++;
+						TraderBuyFix_Log("stacked into existing ammo pile " + itemType + ", leftover=" + currentAmount);
 					}
 				}
 			}
@@ -90,6 +97,7 @@ modded class DayZPlayerImplement
 			EntityAI newItem = TraderBuyFix_SpawnForPlayer(itemType, amount, currentAmount, hasSomeQuant, foundLocType);
 			if (!newItem)
 			{
+				TraderBuyFix_Log("FAILED to spawn " + itemType + " anywhere");
 				Error("[TraderBuyFix] Failed to spawn entity " + itemType + " ! Make sure the classname exists and item can be spawned");
 				return false;
 			}
@@ -107,45 +115,56 @@ modded class DayZPlayerImplement
 	EntityAI TraderBuyFix_SpawnForPlayer(string itemType, int amount, int currentAmount, bool hasSomeQuant, out InventoryLocationType locType)
 	{
 		locType = InventoryLocationType.UNKNOWN;
+		EntityAI newItem;
+		string how = "";
+		InventoryLocation loc = new InventoryLocation();
 
-		// Server-local object first. On 1.29 an item that is created networked and then
-		// moved into the inventory never shows up on the client. Creating it ECE_LOCAL,
-		// moving it, and only then calling RemoteObjectCreate() is what makes it visible
-		// (same approach as Workshop 3704049029 "Trader_FIX").
-		EntityAI newItem = EntityAI.Cast(GetGame().CreateObjectEx(itemType, GetPosition(), ECE_LOCAL));
+		// 1. cargo / attachment slot: the engine picks the location for this class name and
+		//    creates the item networked, directly there (vanilla 1.29 PlayerBase.CreateInInventory path)
+		if (GetInventory().FindFirstFreeLocationForNewEntity(itemType, FindInventoryLocationType.CARGO | FindInventoryLocationType.ATTACHMENT, loc))
+		{
+			TraderBuyFix_Log("free location for " + itemType + ": " + InventoryLocation.DumpToStringNullSafe(loc));
+			newItem = GameInventory.LocationCreateEntity(loc, itemType, ECE_IN_INVENTORY, RF_DEFAULT);
+			how = "LocationCreateEntity(cargo/attachment)";
+			if (!newItem)
+				TraderBuyFix_Log("LocationCreateEntity returned null for " + itemType);
+		}
+		else
+		{
+			TraderBuyFix_Log("no free cargo/attachment location for " + itemType);
+		}
+
+		// 2. empty hands
+		if (!newItem && !GetHumanInventory().GetEntityInHands())
+		{
+			loc = new InventoryLocation();
+			if (GetInventory().FindFirstFreeLocationForNewEntity(itemType, FindInventoryLocationType.HANDS, loc))
+			{
+				newItem = GameInventory.LocationCreateEntity(loc, itemType, ECE_IN_INVENTORY, RF_DEFAULT);
+				how = "LocationCreateEntity(hands)";
+				if (!newItem)
+					TraderBuyFix_Log("LocationCreateEntity(hands) returned null for " + itemType);
+			}
+		}
+
+		// 3. ground at the player's feet
+		if (!newItem)
+		{
+			vector pos = GetPosition() + GetDirection() * 0.5;
+			newItem = EntityAI.Cast(GetGame().CreateObjectEx(itemType, pos, ECE_PLACE_ON_SURFACE));
+			how = "CreateObjectEx(ground)";
+		}
+
 		if (!newItem)
 			return null;
 
-		InventoryLocation src = new InventoryLocation();
-		InventoryLocation dst = new InventoryLocation();
-		if (!newItem.GetInventory().GetCurrentInventoryLocation(src))
-		{
-			GetGame().ObjectDelete(newItem);
-			return null;
-		}
-
-		// 1. cargo / attachment slot (FindFreeLocationFor also tries the rotated fit)
-		if (GetInventory().FindFreeLocationFor(newItem, FindInventoryLocationType.CARGO | FindInventoryLocationType.ATTACHMENT, dst))
-		{
-			if (GameInventory.LocationSyncMoveEntity(src, dst))
-				locType = dst.GetType();
-		}
-		// 2. empty hands
-		else if (!GetHumanInventory().GetEntityInHands() && GetHumanInventory().CanAddEntityInHands(newItem))
-		{
-			dst.SetHands(this, newItem);
-			if (GameInventory.LocationSyncMoveEntity(src, dst))
-				locType = InventoryLocationType.HANDS;
-		}
-		// 3. stays on the ground at the player's feet
-		if (locType == InventoryLocationType.UNKNOWN)
+		InventoryLocation cur = new InventoryLocation();
+		if (newItem.GetInventory().GetCurrentInventoryLocation(cur))
+			locType = cur.GetType();
+		else
 			locType = InventoryLocationType.GROUND;
 
-		newItem.SetSynchDirty();
-		SetSynchDirty();
-		GetGame().RemoteObjectCreate(newItem);
-
-		// quantity / ammo after the item is networked, then force a sync
+		// quantity / ammo
 		Magazine newMagItem = Magazine.Cast(newItem);
 		Ammunition_Base newAmmoItem = Ammunition_Base.Cast(newItem);
 		if (newMagItem && !newAmmoItem)
@@ -167,6 +186,66 @@ modded class DayZPlayerImplement
 		}
 		newItem.SetSynchDirty();
 
+		TraderBuyFix_Log("spawned " + itemType + " via " + how + " -> " + TraderBuyFix_Describe(newItem));
+		GetGame().GetCallQueue(CALL_CATEGORY_SYSTEM).CallLater(TraderBuyFix_Recheck, 3000, false, newItem, itemType);
+
 		return newItem;
+	}
+
+	// 3 s after the purchase: does the item still exist server-side, where is it, is it networked,
+	// and how many of that type does the player's inventory tree hold now.
+	void TraderBuyFix_Recheck(EntityAI newItem, string itemType)
+	{
+		if (!newItem)
+		{
+			TraderBuyFix_Log("RECHECK " + itemType + ": item is GONE (deleted server-side within 3 s)");
+			return;
+		}
+
+		array<EntityAI> itemsArray = new array<EntityAI>;
+		GetInventory().EnumerateInventory(InventoryTraversalType.PREORDER, itemsArray);
+		int count = 0;
+		string lower = itemType;
+		lower.ToLower();
+		for (int i = 0; i < itemsArray.Count(); i++)
+		{
+			string t = itemsArray.Get(i).GetType();
+			t.ToLower();
+			if (t == lower)
+				count++;
+		}
+
+		TraderBuyFix_Log("RECHECK " + itemType + ": " + TraderBuyFix_Describe(newItem) + " countInPlayerTree=" + count);
+	}
+
+	string TraderBuyFix_Describe(EntityAI e)
+	{
+		if (!e)
+			return "null";
+
+		int lo, hi;
+		e.GetNetworkID(lo, hi);
+
+		string parent = "none";
+		EntityAI p = e.GetHierarchyParent();
+		if (p)
+			parent = p.GetType();
+
+		string root = "none";
+		EntityAI r = e.GetHierarchyRoot();
+		if (r)
+			root = r.GetType();
+
+		InventoryLocation cur = new InventoryLocation();
+		string locStr = "?";
+		if (e.GetInventory() && e.GetInventory().GetCurrentInventoryLocation(cur))
+			locStr = InventoryLocation.DumpToStringNullSafe(cur);
+
+		return "type=" + e.GetType() + " netID=" + lo + ":" + hi + " parent=" + parent + " root=" + root + " pendingDelete=" + e.IsPendingDeletion() + " pos=" + e.GetPosition().ToString() + " loc=" + locStr;
+	}
+
+	void TraderBuyFix_Log(string msg)
+	{
+		Print("[TraderBuyFix] " + msg);
 	}
 }
