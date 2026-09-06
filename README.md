@@ -1177,7 +1177,6 @@ mpmissions/dayzOffline.chernarusplus/storage_1/
 config/Dayz-Dog/players/
 config/Zenarchist/Skills/PlayerDB/
 config/Zenarchist/Skills/DB/
-config/ExpansionMod/Settings/          (regenerates; restore from git to keep tweaks)
 config/ExpansionMod/Quests/PlayerData/
 config/ExpansionMod/Quests/GroupData/
 config/ExpansionMod/Quests/PersistentServerData.json
@@ -1186,6 +1185,8 @@ config/DataCache/cache_lock
 ```
 
 **Note:** The top-level `storage_0/` and `storage_1/` directories are NOT used - persistence lives inside the mission folder.
+
+**Do NOT delete `config/ExpansionMod/Settings/`** (or anything else tracked in git). Those JSONs hold server customizations (AI factions, etc.); if they are missing at boot Expansion regenerates stock defaults and the tweaks are lost. `WIPE_SERVER.bat` skips them and restores any tracked file that goes missing via `git checkout` before you start the server.
 
 ## Troubleshooting
 

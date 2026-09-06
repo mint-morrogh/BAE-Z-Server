@@ -76,6 +76,14 @@ del /q "config\DataCache\cache.ch" 2>nul
 del /q "config\DataCache\cache_lock" 2>nul
 echo   [OK] Server script cache cleared
 
+:: Safety net: restore any git-tracked file the wipe removed (Expansion Settings etc.)
+git ls-files --deleted >nul 2>&1 && (
+    for /f "delims=" %%f in ('git ls-files --deleted') do (
+        git checkout -- "%%f"
+        echo   [RESTORED] %%f
+    )
+)
+
 echo.
 echo --- Wiping client character data ---
 
