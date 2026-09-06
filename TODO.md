@@ -65,6 +65,10 @@
 
 ## Completed
 
+### Trader: bought items never arrive on DayZ 1.29 - DONE (2026-09-06)
+- Non-stackables (cans, jackets, holsters, belts) were charged but never spawned. Cause: Trader's `TR_Helper.GetItemMaxQuantity()` is `bool` but returns `-1` for classes without `count`/`varQuantityMax`; 1.29 reads that as `true`, so the item was treated as an amount-0 stack and the spawn skipped.
+- Fixed by custom `@TraderBuyFix` (`-serverMod`, source `mod_src/TraderBuyFix/`): int max-quantity + vanilla `LocationCreateEntity` spawn, hands/ground fallback, `[TraderBuyFix]` log lines in `config/script_*.log`. Verified in-game: bacon, holster, belt, jacket all arrived.
+
 ### 4KBOSSK: random colours + all models - DONE (2026-09-05)
 - `Vehicle4KBOSSK` now lists every colour variant of every model (221 children, `max=1 min=1`) so CE spawns one of each model in a random colour. Added NissanGTR, NissanGTRCustom, GMC_BOSS and Mitsubishi Lancer Evo IX (24 models + 3 buggies = nominal 27, 37 positions).
 - Fixed pre-existing bugs found while doing it: `Ford_Raptor_MonsterTruck` base class is not spawnable (scope 0) - replaced with its 6 real variants; Civic spawned with `Wheel_Main` (Jeep wheel) instead of `Honda_Civic_Wheel`; MotorHome referenced non-existent `MotorHome_Wheel` (real class `MotorHomeRV_Wheel`). Wheel counts now match each model's slot count (Kamaz 6, Ram 2021 10, etc.).

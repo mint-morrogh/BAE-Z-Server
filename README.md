@@ -915,11 +915,13 @@ Source code in `mod_src/AmmoStacks/`.
 
 ### TraderBuyFix - Bought Items Actually Arrive (DayZ 1.29)
 
-Custom server-side mod (`@TraderBuyFix`). DayZ 1.29 broke item delivery in Dr Jones Trader 1.9 (abandoned at v1.9, Oct 2024): purchases were paid for and logged as bought, but the item never showed up in the inventory, and the "placed on ground" fallback was invisible too. On 1.29 an item that is created networked and then moved into a player's inventory never reaches the client. Selling and rouble deduction were unaffected.
+Custom server-side mod (`@TraderBuyFix`). On DayZ 1.29, Dr Jones Trader 1.9 (abandoned at v1.9, Oct 2024) charged for purchases and logged them as bought, but non-stackable items (cans, jackets, holsters, belts, glasses) never appeared. Stackables (roubles, bandages) and quantity-bar items (bananas, berries) still worked. Selling was unaffected.
 
-The mod overrides the Trader's `CreateItemInInventory()` on the server using the technique from Workshop "Trader_FIX" (3704049029, GloryStar): the item is created server-local (`ECE_LOCAL`), moved into a cargo/attachment slot (rotated fit included), else into empty hands, else left on the ground at the player's feet, then `SetSynchDirty()` + `RemoteObjectCreate()` networks it to the client. Quantity/ammo count is applied afterwards with another sync. Trader's stack-merging logic is kept and topped-up stacks are synced. Clients do not need this mod.
+Root cause: `*` quantities in `TraderConfig.txt` resolve to 0 for items without `count`/`varQuantityMax`, and Trader's `TR_Helper.GetItemMaxQuantity()` is declared `bool` but returns `-1` for those classes. 1.29 evaluates that as `true`, so every non-stackable item was treated as "stackable with amount 0": nothing to top up, and the spawn was skipped after the money was taken.
 
-Trader_FIX itself is not loaded: it also mods `ItemBase` and `Ammunition_Base`, which `@DurableGear` and `@AmmoStacks` (both `-serverMod`) already mod, and two server mods on one class deadlock the script compiler. Its buy logic lives in this mod instead, so the Workshop collection and client launcher are untouched.
+The mod overrides Trader's `CreateItemInInventory()` on the server: it resolves the max quantity as a real integer, keeps Trader's stack-merging for real stackables, and spawns one item for everything else using the vanilla 1.29 path (`FindFirstFreeLocationForNewEntity` + `GameInventory.LocationCreateEntity`), falling back to empty hands, then the ground at the player's feet. Every buy is logged with a `[TraderBuyFix]` prefix to `config/script_*.log` and re-checked 3 s later. Clients do not need this mod. Verified in-game 2026-09-06.
+
+Workshop "Trader_FIX" (3704049029) targets the same symptom but also mods `ItemBase` and `Ammunition_Base`, which `@DurableGear` and `@AmmoStacks` (both `-serverMod`) already mod; two server mods on one class deadlock the script compiler, so it is not used.
 
 Source code in `mod_src/TraderBuyFix/`.
 
