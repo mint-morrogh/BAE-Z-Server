@@ -10,6 +10,13 @@
  * v2 (ECE_LOCAL + LocationSyncMoveEntity + RemoteObjectCreate, the Trader_FIX
  * 3704049029 technique) both failed in-game.
  *
+ * v4 (the actual root cause): Trader's TR_Helper.GetItemMaxQuantity is a `bool`
+ * function returning -1 for classes without count/varQuantityMax. 1.29 evaluates
+ * that as true, so every non-stackable item became "stackable with amount 0" and
+ * CreateItemInInventory skipped the spawn after charging the player. We resolve
+ * the max quantity as an int ourselves and spawn one item when there is nothing
+ * to stack.
+ *
  * v3 uses the path DayZ 1.29 itself uses when it spawns an item into a player
  * (PlayerBase.CreateInInventory -> SpawnItemOnLocation): find a free location
  * for the class name, then GameInventory.LocationCreateEntity() so the engine
@@ -33,10 +40,16 @@ modded class DayZPlayerImplement
 		int currentAmount = amount;
 		ItemBase item;
 		Ammunition_Base ammoItem;
-		bool hasSomeQuant = (TR_Helper.ItemHasCount(itemType) || TR_Helper.ItemHasQuantity(itemType)) && !TR_Helper.HasQuantityBar(itemType) && amount >= 0;
+		// Trader 1.9 bug exposed by DayZ 1.29: TR_Helper.GetItemMaxQuantity is declared
+		// `bool` but returns -1 when the class has no count/varQuantityMax. 1.29 turns that
+		// -1 into `true`, so clothing, cans, etc. are treated as stackables with amount 0
+		// (the `*` in TraderConfig resolves to 0 for them) and nothing is ever spawned.
+		// Resolve the max quantity as a real int and only stack when there is something to stack.
+		int maxQuant = TraderBuyFix_MaxQuantity(itemType);
+		bool hasSomeQuant = maxQuant > 0 && !TR_Helper.HasQuantityBar(itemType) && amount > 0;
 		int itemHasSpawnedOrStacked = 0;
 
-		TraderBuyFix_Log("buy " + itemType + " amount=" + amount + " hasSomeQuant=" + hasSomeQuant + " inventoryItems=" + itemsArray.Count());
+		TraderBuyFix_Log("buy " + itemType + " amount=" + amount + " maxQuant=" + maxQuant + " quantityBar=" + TR_Helper.HasQuantityBar(itemType) + " hasSomeQuant=" + hasSomeQuant + " inventoryItems=" + itemsArray.Count());
 
 		// autostacking into existing stacks (unchanged from Trader 1.9)
 		if (hasSomeQuant)
@@ -110,6 +123,18 @@ modded class DayZPlayerImplement
 
 		UpdateInventoryMenu();
 		return true;
+	}
+
+	// CfgMagazines <class> count, else CfgVehicles <class> varQuantityMax, else 0
+	int TraderBuyFix_MaxQuantity(string itemType)
+	{
+		string path = CFG_MAGAZINESPATH + " " + itemType + " count";
+		if (GetGame().ConfigIsExisting(path))
+			return GetGame().ConfigGetInt(path);
+		path = CFG_VEHICLESPATH + " " + itemType + " varQuantityMax";
+		if (GetGame().ConfigIsExisting(path))
+			return GetGame().ConfigGetInt(path);
+		return 0;
 	}
 
 	EntityAI TraderBuyFix_SpawnForPlayer(string itemType, int amount, int currentAmount, bool hasSomeQuant, out InventoryLocationType locType)
