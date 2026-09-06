@@ -1,0 +1,19 @@
+{
+    "MaxHeightASL": 1100.0,
+    "CanAutoland": 1,
+    "CanHover": 1,
+    "Harrier": {
+        "CannonSoundSet": "Harrier_Cannon_Shot_SoundSet",
+        "CannonDamageAmmo": "Bullet_762x51",
+        "CannonDamageMult": 5.0,
+        "MissileSoundSet": "Harrier_Missile_Shot_SoundSet",
+        "MissileImpactSoundSet": "Plastic_Explosion_SoundSet",
+        "MissileDamageAmmo": "Bullet_Llama_EXP",
+        "MissileCooldown": 5.0
+    },
+    "Wasp": {
+        "CannonSoundSet": "Harrier_Cannon_Shot_SoundSet",
+        "CannonDamageAmmo": "Bullet_762x51",
+        "CannonDamageMult": 5.0
+    }
+}

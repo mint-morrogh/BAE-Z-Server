@@ -1,0 +1,10 @@
+{
+    "DisableAllCrashDamage": 0,
+    "MinCrashDamageSpeed": 80.0,
+    "SendCrashLogsToDiscord": 1,
+    "CrashWebhookURL": "",
+    "IgnoreVehicles": [
+        "Expansion_UH1H",
+        "My_Car"
+    ]
+}

@@ -611,7 +611,7 @@ Randomized supply drops land across the map every 120 minutes. Players are notif
 | Survival | Green | 10-18 food/drink items - canned food, sodas, water, rice + hunting knife or shotgun |
 | Tools & Building | Black | 8-14 items - nails, pliers, hacksaw, rope, duct tape, code lock, planks + axes |
 
-17 drop locations spread across Chernarus. 12 zombies guard each drop. Edit loot, locations, and timing in `config/CarePackagesV2/config.json`.
+17 drop locations spread across Chernarus. 12 zombies guard each drop. Edit loot, locations, and timing in `config/CarePackageV2/config.json`.
 
 ### Zen's Treasure - Photo-Based Treasure Hunting
 
@@ -1032,7 +1032,7 @@ DayZServer/
 ├── whitelist.txt                # Player whitelist (disabled by default)
 ├── keys/                        # Mod signature keys (.bikey)
 ├── config/                      # Server profiles dir (-profiles=config)
-│   ├── CarePackagesV2/
+│   ├── CarePackageV2/
 │   │   └── config.json          # Care package loot, locations, timing
 │   ├── CookZ/                   # Auto-generated on first start
 │   ├── Dayz-Dog/                # Auto-generated - dog health & behaviour config
@@ -1042,7 +1042,7 @@ DayZServer/
 │   │   └── PvZmoD_CustomisableZombies_HELP.txt              # Full docs for all settings
 │   ├── MWGSM_RoamingTrader/
 │   │   └── MWGSM_RoamingTraderConfig.json  # Roaming trader currency, prices, stock, timing
-│   ├── SagaShakeTree/
+│   ├── SagaTreeShake/
 │   │   └── settings.json        # Fruit drop chances, shake duration, tree cooldowns
 │   ├── SobrMods_Signal_Overnight_Stay/
 │   │   └── Signal_Overnight_Stay_Settings.json  # Night camp event timing, loot, zombie config

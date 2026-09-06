@@ -1,0 +1,614 @@
+{
+    "Enabled": 1,
+    "CheckPeriodSec": 60.0,
+    "MinIntervalSec": 3600.0,
+    "LifeTimeSec": 1800.0,
+    "ZedCount": 10,
+    "SiteRadius": 30.0,
+    "MaxActiveSites": 1,
+    "LootDelaySec": 45.0,
+    "LootItemChances": [
+        {
+            "ClassName": "BandageDressing",
+            "Chance": 100.0
+        },
+        {
+            "ClassName": "Chemlight_White",
+            "Chance": 100.0
+        },
+        {
+            "ClassName": "Roadflare",
+            "Chance": 75.0
+        },
+        {
+            "ClassName": "Battery9V",
+            "Chance": 65.0
+        },
+        {
+            "ClassName": "TacticalBaconCan",
+            "Chance": 75.0
+        },
+        {
+            "ClassName": "PeachesCan",
+            "Chance": 70.0
+        },
+        {
+            "ClassName": "TunaCan",
+            "Chance": 65.0
+        },
+        {
+            "ClassName": "SardinesCan",
+            "Chance": 65.0
+        },
+        {
+            "ClassName": "Rice",
+            "Chance": 35.0
+        },
+        {
+            "ClassName": "Honey",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "Marmalade",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "WaterBottle",
+            "Chance": 80.0
+        },
+        {
+            "ClassName": "Canteen",
+            "Chance": 45.0
+        },
+        {
+            "ClassName": "CanOpener",
+            "Chance": 45.0
+        },
+        {
+            "ClassName": "Matchbox",
+            "Chance": 40.0
+        },
+        {
+            "ClassName": "TetracyclineAntibiotics",
+            "Chance": 35.0
+        },
+        {
+            "ClassName": "VitaminBottle",
+            "Chance": 35.0
+        },
+        {
+            "ClassName": "CharcoalTablets",
+            "Chance": 25.0
+        },
+        {
+            "ClassName": "PurificationTablets",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "Morphine",
+            "Chance": 20.0
+        },
+        {
+            "ClassName": "Epinephrine",
+            "Chance": 20.0
+        },
+        {
+            "ClassName": "SalineBagIV",
+            "Chance": 15.0
+        },
+        {
+            "ClassName": "StartKitIV",
+            "Chance": 15.0
+        },
+        {
+            "ClassName": "Compass",
+            "Chance": 45.0
+        },
+        {
+            "ClassName": "Binoculars",
+            "Chance": 25.0
+        },
+        {
+            "ClassName": "GPSReceiver",
+            "Chance": 10.0
+        },
+        {
+            "ClassName": "Rangefinder",
+            "Chance": 8.0
+        },
+        {
+            "ClassName": "HuntingKnife",
+            "Chance": 25.0
+        },
+        {
+            "ClassName": "CombatKnife",
+            "Chance": 18.0
+        },
+        {
+            "ClassName": "Lockpick",
+            "Chance": 15.0
+        },
+        {
+            "ClassName": "DuctTape",
+            "Chance": 45.0
+        },
+        {
+            "ClassName": "SewingKit",
+            "Chance": 35.0
+        },
+        {
+            "ClassName": "LeatherSewingKit",
+            "Chance": 25.0
+        },
+        {
+            "ClassName": "Whetstone",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "WeaponCleaningKit",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "AmmoBox_308Win_20Rnd",
+            "Chance": 35.0
+        },
+        {
+            "ClassName": "AmmoBox_556x45_20Rnd",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "AmmoBox_762x39_20Rnd",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "AmmoBox_545x39_20Rnd",
+            "Chance": 30.0
+        },
+        {
+            "ClassName": "Mag_CZ527_5rnd",
+            "Chance": 22.0
+        },
+        {
+            "ClassName": "Mag_AKM_30Rnd",
+            "Chance": 16.0
+        },
+        {
+            "ClassName": "Mag_STANAG_30Rnd",
+            "Chance": 16.0
+        },
+        {
+            "ClassName": "Mag_CMAG_30Rnd",
+            "Chance": 16.0
+        },
+        {
+            "ClassName": "Mag_SVD_10Rnd",
+            "Chance": 6.0
+        },
+        {
+            "ClassName": "Mag_VSS_10Rnd",
+            "Chance": 8.0
+        },
+        {
+            "ClassName": "Mosin9130",
+            "Chance": 8.0
+        },
+        {
+            "ClassName": "AK74",
+            "Chance": 6.0
+        },
+        {
+            "ClassName": "VSS",
+            "Chance": 3.0
+        },
+        {
+            "ClassName": "SVD",
+            "Chance": 2.0
+        },
+        {
+            "ClassName": "Colt1911",
+            "Chance": 10.0
+        },
+        {
+            "ClassName": "Deagle",
+            "Chance": 6.0
+        },
+        {
+            "ClassName": "M67Grenade",
+            "Chance": 8.0
+        },
+        {
+            "ClassName": "Plastic_Explosive",
+            "Chance": 2.0
+        }
+    ],
+    "InfectedClasses": [
+        "ZmbM_CitizenASkinny_Brown",
+        "ZmbF_BlueCollarFat_Green",
+        "ZmbM_PrisonerSkinny"
+    ],
+    "MinPlayersOnline": 1,
+    "NightStartHour": 19,
+    "NightEndHour": 6,
+    "UseSpawnCoordinates": 0,
+    "SpawnCoordinates": [
+        {
+            "Name": "Chernarus_NWAF",
+            "Enabled": 1,
+            "X": 4600.0,
+            "Y": 0.0,
+            "Z": 10300.0,
+            "Radius": 350.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Tisy_Military",
+            "Enabled": 1,
+            "X": 1700.0,
+            "Y": 0.0,
+            "Z": 14200.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Kamensk_Military",
+            "Enabled": 1,
+            "X": 7850.0,
+            "Y": 0.0,
+            "Z": 14600.0,
+            "Radius": 200.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Severograd",
+            "Enabled": 1,
+            "X": 8000.0,
+            "Y": 0.0,
+            "Z": 12600.0,
+            "Radius": 300.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Novaya_Petrovka",
+            "Enabled": 1,
+            "X": 3500.0,
+            "Y": 0.0,
+            "Z": 13000.0,
+            "Radius": 300.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Stary_Yar",
+            "Enabled": 1,
+            "X": 5000.0,
+            "Y": 0.0,
+            "Z": 15000.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Vavilovo",
+            "Enabled": 1,
+            "X": 2200.0,
+            "Y": 0.0,
+            "Z": 12000.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Lopatino",
+            "Enabled": 1,
+            "X": 2750.0,
+            "Y": 0.0,
+            "Z": 10000.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Vybor",
+            "Enabled": 1,
+            "X": 3800.0,
+            "Y": 0.0,
+            "Z": 8900.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Grishino",
+            "Enabled": 1,
+            "X": 6000.0,
+            "Y": 0.0,
+            "Z": 10300.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Devils_Castle",
+            "Enabled": 1,
+            "X": 6900.0,
+            "Y": 0.0,
+            "Z": 11300.0,
+            "Radius": 180.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Stary_Sobor",
+            "Enabled": 1,
+            "X": 6100.0,
+            "Y": 0.0,
+            "Z": 7800.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Novy_Sobor",
+            "Enabled": 1,
+            "X": 7100.0,
+            "Y": 0.0,
+            "Z": 7700.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Mogilevka",
+            "Enabled": 1,
+            "X": 7500.0,
+            "Y": 0.0,
+            "Z": 5200.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Vyshnoye",
+            "Enabled": 1,
+            "X": 6500.0,
+            "Y": 0.0,
+            "Z": 6100.0,
+            "Radius": 220.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Gorka",
+            "Enabled": 1,
+            "X": 9600.0,
+            "Y": 0.0,
+            "Z": 8800.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Polana",
+            "Enabled": 1,
+            "X": 10700.0,
+            "Y": 0.0,
+            "Z": 8100.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Dolina",
+            "Enabled": 1,
+            "X": 11300.0,
+            "Y": 0.0,
+            "Z": 6700.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Orlovets",
+            "Enabled": 1,
+            "X": 12100.0,
+            "Y": 0.0,
+            "Z": 7200.0,
+            "Radius": 220.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Staroye",
+            "Enabled": 1,
+            "X": 10100.0,
+            "Y": 0.0,
+            "Z": 5500.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Msta",
+            "Enabled": 1,
+            "X": 11300.0,
+            "Y": 0.0,
+            "Z": 5500.0,
+            "Radius": 220.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Krasnostav",
+            "Enabled": 1,
+            "X": 11100.0,
+            "Y": 0.0,
+            "Z": 12300.0,
+            "Radius": 300.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_NEAF",
+            "Enabled": 1,
+            "X": 12100.0,
+            "Y": 0.0,
+            "Z": 12600.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Black_Mountain",
+            "Enabled": 1,
+            "X": 10200.0,
+            "Y": 0.0,
+            "Z": 12000.0,
+            "Radius": 200.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Dubrovka",
+            "Enabled": 1,
+            "X": 10300.0,
+            "Y": 0.0,
+            "Z": 9900.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Berezino_North",
+            "Enabled": 1,
+            "X": 12200.0,
+            "Y": 0.0,
+            "Z": 9500.0,
+            "Radius": 300.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Zelenogorsk",
+            "Enabled": 1,
+            "X": 2750.0,
+            "Y": 0.0,
+            "Z": 5300.0,
+            "Radius": 300.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Pavlovo",
+            "Enabled": 1,
+            "X": 1700.0,
+            "Y": 0.0,
+            "Z": 3800.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Myshkino",
+            "Enabled": 1,
+            "X": 2000.0,
+            "Y": 0.0,
+            "Z": 7200.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Pustoshka",
+            "Enabled": 1,
+            "X": 3100.0,
+            "Y": 0.0,
+            "Z": 7900.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Rogovo",
+            "Enabled": 1,
+            "X": 4800.0,
+            "Y": 0.0,
+            "Z": 6800.0,
+            "Radius": 220.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Green_Mountain",
+            "Enabled": 1,
+            "X": 3700.0,
+            "Y": 0.0,
+            "Z": 6000.0,
+            "Radius": 200.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Nadezhdino",
+            "Enabled": 1,
+            "X": 5800.0,
+            "Y": 0.0,
+            "Z": 4700.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Kozlovka",
+            "Enabled": 1,
+            "X": 4500.0,
+            "Y": 0.0,
+            "Z": 4600.0,
+            "Radius": 220.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Chernogorsk_North",
+            "Enabled": 1,
+            "X": 6500.0,
+            "Y": 0.0,
+            "Z": 2700.0,
+            "Radius": 300.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Elektrozavodsk_North",
+            "Enabled": 1,
+            "X": 10500.0,
+            "Y": 0.0,
+            "Z": 2600.0,
+            "Radius": 300.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Balota_Airfield",
+            "Enabled": 1,
+            "X": 4700.0,
+            "Y": 0.0,
+            "Z": 2500.0,
+            "Radius": 250.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Komarovo",
+            "Enabled": 1,
+            "X": 3600.0,
+            "Y": 0.0,
+            "Z": 2400.0,
+            "Radius": 220.0,
+            "UseSurfaceY": 1
+        },
+        {
+            "Name": "Chernarus_Kamenka",
+            "Enabled": 1,
+            "X": 1900.0,
+            "Y": 0.0,
+            "Z": 2200.0,
+            "Radius": 220.0,
+            "UseSurfaceY": 1
+        }
+    ],
+    "Notify": {
+        "Enabled": 1,
+        "ShowTime": 6.0,
+        "Icon": "",
+        "TitleStart": "Report: {COUNT} camp(s) found",
+        "DetailStart": "Personnel lost. {COUNT} tent(s) and bones by the fire",
+        "TitleLoot": "Access to the cache",
+        "DetailLoot": "Assets evacuated to the container. Take it and move out",
+        "TitleEnd": "Sector cleared",
+        "DetailEnd": "Event closed. Camp declared lost",
+        "ToAllPlayers": 1,
+        "Radius": 400.0,
+        "ShowCoords": 1,
+        "CoordDecimals": 0
+    },
+    "Discord": {
+        "Enabled": 0,
+        "WebhookUrl": "",
+        "Username": "Signal Overnight Stay",
+        "AvatarUrl": "",
+        "SendStart": 1,
+        "SendLoot": 1,
+        "SendEnd": 1,
+        "IncludeCoords": 1,
+        "StartMessage": "Signal Overnight Stay: {COUNT} camp(s) spawned",
+        "LootMessage": "Signal Overnight Stay: loot is ready. Loot: {LOOT}",
+        "EndMessage": "Signal Overnight Stay: event ended"
+    }
+}

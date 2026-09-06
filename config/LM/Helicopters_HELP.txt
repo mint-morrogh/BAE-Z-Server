@@ -1,0 +1,15 @@
+LM_Helicopters config  ->  edit Helicopters.json then restart the server.
+Bad or missing values revert to default automatically.
+
+MaxHeightASL  (number)  Max metres above sea level the heli can climb. Default 1100. Range 50-10000.
+CanAutoland   (0 or 1)  1 = autoland enabled, 0 = disabled. Default 1.
+CanHover      (0 or 1)  1 = auto-hover toggle enabled, 0 = disabled. Default 1.
+
+Harrier / Wasp = built-in guns (these work even without the weapon mod):
+  CannonSoundSet    (text)    Soundset played when the cannon fires.
+  CannonDamageAmmo  (text)    CfgAmmo class that supplies the cannon's damage.
+  CannonDamageMult  (number)  Multiplies the cannon damage. Default 5.
+  MissileSoundSet   (text)    Harrier only - soundset when a missile launches.
+  MissileImpactSoundSet (text) Harrier only - soundset at missile detonation.
+  MissileDamageAmmo (text)    Harrier only - CfgAmmo class for the missile blast.
+  MissileCooldown   (number)  Harrier only - seconds between missiles. Default 5.

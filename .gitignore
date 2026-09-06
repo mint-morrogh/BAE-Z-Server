@@ -93,8 +93,8 @@ server_manager/
 # --- Allow config folder (mod configs only, not logs/runtime) ---
 !config/
 config/*
-!config/CarePackagesV2/
-!config/CarePackagesV2/**
+!config/CarePackageV2/
+!config/CarePackageV2/**
 !config/Zenarchist/
 !config/Zenarchist/**
 !config/Dayz-Dog/
@@ -126,8 +126,17 @@ config/*
 !config/PvZmoD_Information_Panel/**
 !config/MWGSM_RoamingTrader/
 !config/MWGSM_RoamingTrader/**
-!config/SagaShakeTree/
-!config/SagaShakeTree/**
+!config/SagaTreeShake/
+!config/SagaTreeShake/**
+config/SagaTreeShake/cooldowns.json
+!config/ImmersivePlacing/
+!config/ImmersivePlacing/**
+!config/LM/
+!config/LM/**
+!config/SFE_TransportDamageControl/
+!config/SFE_TransportDamageControl/**
+!config/SobrMods_Signal_Overnight_Stay/
+!config/SobrMods_Signal_Overnight_Stay/**
 !config/VPPMapConfig.json
 
 # Ignore player-specific runtime data inside Zenarchist
@@ -152,7 +161,6 @@ config/Users/
 config/CW_Gamelabs/
 config/@GameLabsStorage/
 config/@CREATE_GAMELABS_CFG_HERE/
-config/CarePackageV2/
 
 # --- Allow custom-built mod PBOs (not from Workshop) ---
 # These must come last to override the global *.pbo and addons/ rules

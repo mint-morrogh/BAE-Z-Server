@@ -65,6 +65,10 @@
 
 ## Completed
 
+### Git tracking audit: settings in, save data out - DONE (2026-09-06)
+- Found two config folders tracked under the WRONG name so the mods never read them: Saga Shake Tree reads `config/SagaTreeShake/` (we had `SagaShakeTree/`), Care Packages reads `config/CarePackageV2/` (we had `CarePackagesV2/`, and the real folder was gitignored). Both mods were running on stock defaults. Customised files moved into the real folders, wrong folders removed.
+- Now also tracked: `config/ImmersivePlacing/`, `config/LM/` (planes + helis), `config/SFE_TransportDamageControl/`, `config/SobrMods_Signal_Overnight_Stay/`. Runtime data (storage, PlayerDB, logs, Expansion Groups/PlayerData, Saga cooldowns) stays ignored.
+
 ### Trader: bought items never arrive on DayZ 1.29 - DONE (2026-09-06)
 - Non-stackables (cans, jackets, holsters, belts) were charged but never spawned. Cause: Trader's `TR_Helper.GetItemMaxQuantity()` is `bool` but returns `-1` for classes without `count`/`varQuantityMax`; 1.29 reads that as `true`, so the item was treated as an amount-0 stack and the spawn skipped.
 - Fixed by custom `@TraderBuyFix` (`-serverMod`, source `mod_src/TraderBuyFix/`): int max-quantity + vanilla `LocationCreateEntity` spawn, hands/ground fallback, `[TraderBuyFix]` log lines in `config/script_*.log`. Verified in-game: bacon, holster, belt, jacket all arrived.
