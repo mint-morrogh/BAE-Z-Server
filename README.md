@@ -919,7 +919,7 @@ Custom server-side mod (`@TraderBuyFix`). On DayZ 1.29, Dr Jones Trader 1.9 (aba
 
 Root cause: `*` quantities in `TraderConfig.txt` resolve to 0 for items without `count`/`varQuantityMax`, and Trader's `TR_Helper.GetItemMaxQuantity()` is declared `bool` but returns `-1` for those classes. 1.29 evaluates that as `true`, so every non-stackable item was treated as "stackable with amount 0": nothing to top up, and the spawn was skipped after the money was taken.
 
-The mod overrides Trader's `CreateItemInInventory()` on the server: it resolves the max quantity as a real integer, keeps Trader's stack-merging for real stackables, and spawns one item for everything else using the vanilla 1.29 path (`FindFirstFreeLocationForNewEntity` + `GameInventory.LocationCreateEntity`), falling back to empty hands, then the ground at the player's feet. Every buy is logged with a `[TraderBuyFix]` prefix to `config/script_*.log` and re-checked 3 s later. Clients do not need this mod. Verified in-game 2026-09-06.
+The mod overrides Trader's `CreateItemInInventory()` on the server: it resolves the max quantity as a real integer, keeps Trader's stack-merging for real stackables, and spawns one item for everything else using the vanilla 1.29 path (`FindFirstFreeLocationForNewEntity` + `GameInventory.LocationCreateEntity`), falling back to empty hands, then the ground at the player's feet. Clients do not need this mod. Verified in-game 2026-09-06.
 
 Workshop "Trader_FIX" (3704049029) targets the same symptom but also mods `ItemBase` and `Ammunition_Base`, which `@DurableGear` and `@AmmoStacks` (both `-serverMod`) already mod; two server mods on one class deadlock the script compiler, so it is not used.
 
