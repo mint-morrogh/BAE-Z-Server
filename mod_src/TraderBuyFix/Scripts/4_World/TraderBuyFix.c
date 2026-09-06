@@ -8,11 +8,15 @@
  *
  * This overrides the Trader's CreateItemInInventory() (server side). The
  * stacking/merge logic is kept as-is; only the spawn step changes:
- *   1. create the item at the player's feet
- *   2. apply the configured quantity / ammo count
- *   3. move it into the inventory via ServerTakeEntityToInventory(), the
- *      normal synced server-side take path (handles rotation in 1.29)
- *   4. if it does not fit anywhere, it stays on the ground next to the player
+ *   1. create the item server-local (ECE_LOCAL) at the player's feet
+ *   2. move it into cargo/attachment (rotated fit included), else empty hands,
+ *      else leave it on the ground next to the player
+ *   3. SetSynchDirty() + RemoteObjectCreate() so the client actually gets it
+ *   4. apply the configured quantity / ammo count and sync again
+ * Technique taken from Workshop 3704049029 "Trader_FIX" (GloryStar). That mod
+ * cannot be loaded here as-is: it also mods ItemBase and Ammunition_Base, which
+ * DurableGear / AmmoStacks (both -serverMod) already mod, and two server mods
+ * on one class deadlock the script compiler.
  */
 modded class DayZPlayerImplement
 {
@@ -48,6 +52,7 @@ modded class DayZPlayerImplement
 					if (itemLower == itemPlayerClassname && !item.IsFullQuantity() && !item.IsMagazine())
 					{
 						currentAmount = item.AddQuantityTR(currentAmount);
+						item.SetSynchDirty();
 						itemDisplayNameClient = item.GetDisplayName();
 						itemHasSpawnedOrStacked++;
 					}
@@ -63,6 +68,7 @@ modded class DayZPlayerImplement
 					if (itemLower == itemPlayerClassname && ammoItem.IsAmmoPile())
 					{
 						currentAmount = ammoItem.AddQuantityTR(currentAmount);
+						ammoItem.SetSynchDirty();
 						itemDisplayNameClient = ammoItem.GetDisplayName();
 						itemHasSpawnedOrStacked++;
 					}
@@ -102,11 +108,44 @@ modded class DayZPlayerImplement
 	{
 		locType = InventoryLocationType.UNKNOWN;
 
-		EntityAI newItem = EntityAI.Cast(GetGame().CreateObjectEx(itemType, GetPosition(), ECE_PLACE_ON_SURFACE));
+		// Server-local object first. On 1.29 an item that is created networked and then
+		// moved into the inventory never shows up on the client. Creating it ECE_LOCAL,
+		// moving it, and only then calling RemoteObjectCreate() is what makes it visible
+		// (same approach as Workshop 3704049029 "Trader_FIX").
+		EntityAI newItem = EntityAI.Cast(GetGame().CreateObjectEx(itemType, GetPosition(), ECE_LOCAL));
 		if (!newItem)
 			return null;
 
-		// quantity first so the inventory move never has to split a stack
+		InventoryLocation src = new InventoryLocation();
+		InventoryLocation dst = new InventoryLocation();
+		if (!newItem.GetInventory().GetCurrentInventoryLocation(src))
+		{
+			GetGame().ObjectDelete(newItem);
+			return null;
+		}
+
+		// 1. cargo / attachment slot (FindFreeLocationFor also tries the rotated fit)
+		if (GetInventory().FindFreeLocationFor(newItem, FindInventoryLocationType.CARGO | FindInventoryLocationType.ATTACHMENT, dst))
+		{
+			if (GameInventory.LocationSyncMoveEntity(src, dst))
+				locType = dst.GetType();
+		}
+		// 2. empty hands
+		else if (!GetHumanInventory().GetEntityInHands() && GetHumanInventory().CanAddEntityInHands(newItem))
+		{
+			dst.SetHands(this, newItem);
+			if (GameInventory.LocationSyncMoveEntity(src, dst))
+				locType = InventoryLocationType.HANDS;
+		}
+		// 3. stays on the ground at the player's feet
+		if (locType == InventoryLocationType.UNKNOWN)
+			locType = InventoryLocationType.GROUND;
+
+		newItem.SetSynchDirty();
+		SetSynchDirty();
+		GetGame().RemoteObjectCreate(newItem);
+
+		// quantity / ammo after the item is networked, then force a sync
 		Magazine newMagItem = Magazine.Cast(newItem);
 		Ammunition_Base newAmmoItem = Ammunition_Base.Cast(newItem);
 		if (newMagItem && !newAmmoItem)
@@ -126,18 +165,8 @@ modded class DayZPlayerImplement
 					newItemBase.SetQuantityTR(currentAmount);
 			}
 		}
+		newItem.SetSynchDirty();
 
-		if (ServerTakeEntityToInventory(FindInventoryLocationType.CARGO | FindInventoryLocationType.ATTACHMENT, newItem))
-		{
-			InventoryLocation il = new InventoryLocation();
-			if (newItem.GetInventory().GetCurrentInventoryLocation(il))
-				locType = il.GetType();
-			else
-				locType = InventoryLocationType.CARGO;
-			return newItem;
-		}
-
-		locType = InventoryLocationType.GROUND;
 		return newItem;
 	}
 }

@@ -915,9 +915,11 @@ Source code in `mod_src/AmmoStacks/`.
 
 ### TraderBuyFix - Bought Items Actually Arrive (DayZ 1.29)
 
-Custom server-side mod (`@TraderBuyFix`). DayZ 1.29 broke item delivery in Dr Jones Trader 1.9: the vanilla `HumanInventory.CreateInInventory()` now creates flipped cargo entries and silently falls back to spawning in hands, so purchases were paid for but never showed up in the inventory or the vicinity (jackets, belts, ammo boxes; canteens happened to work). Selling and rouble deduction were unaffected.
+Custom server-side mod (`@TraderBuyFix`). DayZ 1.29 broke item delivery in Dr Jones Trader 1.9 (abandoned at v1.9, Oct 2024): purchases were paid for and logged as bought, but the item never showed up in the inventory, and the "placed on ground" fallback was invisible too. On 1.29 an item that is created networked and then moved into a player's inventory never reaches the client. Selling and rouble deduction were unaffected.
 
-The mod overrides the Trader's `CreateItemInInventory()` on the server: the item is created at the player's feet, its quantity/ammo count applied, then moved into the inventory through the normal synced server-side take path (`ServerTakeEntityToInventory`, which handles 1.29 item rotation). If it does not fit anywhere it stays on the ground next to the player, as before. Trader's stack-merging logic is kept unchanged. Clients do not need this mod.
+The mod overrides the Trader's `CreateItemInInventory()` on the server using the technique from Workshop "Trader_FIX" (3704049029, GloryStar): the item is created server-local (`ECE_LOCAL`), moved into a cargo/attachment slot (rotated fit included), else into empty hands, else left on the ground at the player's feet, then `SetSynchDirty()` + `RemoteObjectCreate()` networks it to the client. Quantity/ammo count is applied afterwards with another sync. Trader's stack-merging logic is kept and topped-up stacks are synced. Clients do not need this mod.
+
+Trader_FIX itself is not loaded: it also mods `ItemBase` and `Ammunition_Base`, which `@DurableGear` and `@AmmoStacks` (both `-serverMod`) already mod, and two server mods on one class deadlock the script compiler. Its buy logic lives in this mod instead, so the Workshop collection and client launcher are untouched.
 
 Source code in `mod_src/TraderBuyFix/`.
 
@@ -1099,7 +1101,7 @@ DayZServer/
 │       └── AmmoStacks.pbo       # All loose ammo stacks to 2x vanilla max
 ├── @TraderBuyFix/               # Custom server-side mod - Trader 1.29 buy fix
 │   └── addons/
-│       └── TraderBuyFix.pbo     # Bought items delivered via server take path
+│       └── TraderBuyFix.pbo     # ECE_LOCAL create + RemoteObjectCreate delivery
 ├── @EnableInventoryInVehicle/   # Custom client+server mod - inventory in vehicles
 │   └── addons/
 │       └── EnableInventoryInVehicle.pbo  # Unlock inventory in vehicles
