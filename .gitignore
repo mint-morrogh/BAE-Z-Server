@@ -186,3 +186,6 @@ config/CarePackageV2/
 !@TraderBuyFix/addons/TraderBuyFix.pbo
 !@BatteryBoost/addons/
 !@BatteryBoost/addons/BatteryBoost.pbo
+
+# Local-only debugging scratch notes
+ACTIVE_DEBUGGING.md
