@@ -1708,4 +1708,24 @@
 		<pos x="13950.80" z="13500.40" a="90.00" />
 	</event>
 
+	<!-- TP Apoc vehicles - military bases, airfields, industrial -->
+	<event name="VehicleTPApoc">
+		<!-- NWAF south hangars -->
+		<pos x="4640.00" z="10180.00" a="90.00" />
+		<!-- Balota airfield hangars -->
+		<pos x="4900.00" z="2440.00" a="270.00" />
+		<!-- Pavlovo military base -->
+		<pos x="2160.00" z="3300.00" a="0.00" />
+		<!-- Myshkino military tents -->
+		<pos x="1950.00" z="7280.00" a="180.00" />
+		<!-- Green Mountain -->
+		<pos x="3720.00" z="5990.00" a="45.00" />
+		<!-- Novodmitrovsk -->
+		<pos x="11650.00" z="14350.00" a="200.00" />
+		<!-- Stary Sobor military tents -->
+		<pos x="6060.00" z="7740.00" a="90.00" />
+		<!-- Solnichniy factory -->
+		<pos x="13350.00" z="6150.00" a="300.00" />
+	</event>
+
 </eventposdef>

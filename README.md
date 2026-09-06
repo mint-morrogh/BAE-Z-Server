@@ -20,7 +20,8 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Rebalanced wildlife** - deer, roe deer, cows, goats, pigs, sheep, wild boar, wolves, bears, foxes, hares, and hens all tuned for a populated but performant world
 
 **Vehicles & Transport**
-- **47+ driveable vehicles** - 20 custom models (muscle cars, trucks, SUVs, sports cars, monster truck, motorhome), 3 Harley Davidson motorcycles, 3 craftable dune buggies at curated map positions, plus ~18 vanilla vehicles - some spawn road-ready, others may require you to find or trade for parts
+- **50+ driveable vehicles** - 24 custom 4KBOSSK models (muscle cars, trucks, SUVs, sports cars, monster truck, motorhome) each spawning once in a random colour, 3 Harley Davidson motorcycles, 3 craftable dune buggies at curated map positions, plus ~18 vanilla vehicles - some spawn road-ready, others may require you to find or trade for parts
+- **Apocalypse vehicles** - TP Apoc armed M1025 Humvee (working 7.62 turret), armoured Pickup and SUV - one of each spawns at military bases, airfields and industrial sites
 - **Flyable planes** - Spitfire, Cessna 180, Catalina seaplane, Tigermoth (3 variants), Stuntplane (7 planes at 14 airfield positions)
 - **Helicopters & ultralight** - MH6 Little Bird helicopter (2) and Ultralight aircraft (2) with full flight physics via LMs Helicopter Flight Systems
 - **Unbreakable vehicles** - global health and all individual parts (hood, doors, bumpers, wheels, engine) auto-repair every 60 seconds - ruined parts still need replacing, but damaged parts heal themselves
@@ -63,6 +64,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **Doubled ammo stacks** - all loose ammo types stack to 2x their vanilla max
 
 **Quality of Life**
+- **Immersive placing** - place items exactly where you want them with free rotation and height adjustment, quick-drop and quick-place actions (Immersive Placing Update)
 - **Spawn selection** - choose where to respawn on the map when you die instead of a random spawn point
 - **GPS minimap** - on-screen minimap in top-right corner with player arrow, no GPS item required (toggle with N key)
 - **HUD clock** - in-game world time displayed in the top-right corner
@@ -405,6 +407,7 @@ These mods must be installed on both the **server** and **client**.
 | [GoreZ](https://steamcommunity.com/sharedfiles/filedetails/?id=1648967877) | 1648967877 | Enhanced blood and gore effects |
 | [Inventory Move Sounds](https://steamcommunity.com/sharedfiles/filedetails/?id=2444247391) | 2444247391 | Adds sounds when moving items in inventory |
 | [PvZmoD Customisable Zombies](https://steamcommunity.com/sharedfiles/filedetails/?id=2051775667) | 2051775667 | Configurable zombie speed, health, damage, vision - day/night variants |
+| [Zens Core Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3702420204) | 3702420204 | Shared core library now required by Zens Skill Perk Tree and Zens Treasure (added 2026-09-05 after the Zen mods updated) |
 | [Zenarchist's Skills](https://steamcommunity.com/sharedfiles/filedetails/?id=3601119520) | 3601119520 | Skill perk tree - survival, crafting, hunting, gathering |
 | [CZ Optics](https://steamcommunity.com/sharedfiles/filedetails/?id=3571068454) | 3571068454 | Additional optics and scopes |
 | [PercentageHUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3443562573) | 3443562573 | Shows health, blood, hunger, thirst, and stamina as percentages on the HUD |
@@ -446,6 +449,10 @@ These mods must be installed on both the **server** and **client**.
 | [Josie's LilBuggyZ](https://steamcommunity.com/sharedfiles/filedetails/?id=3671771423) | 3671771423 | Craftable/spawnable dune buggies |
 | [MBM Harley Davidson Fat Boy](https://steamcommunity.com/sharedfiles/filedetails/?id=3665840738) | 3665840738 | 3 rideable Harley Davidson motorcycles (Black, Red, Rust) |
 | [LMs Helicopter Flight Systems](https://steamcommunity.com/sharedfiles/filedetails/?id=3624740747) | 3624740747 | MH6 Little Bird helicopter and Ultralight aircraft with full flight physics |
+| [TP Apoc M1025](https://steamcommunity.com/sharedfiles/filedetails/?id=3737385977) | 3737385977 | Apocalypse M1025 Humvee with working 7.62 turret gun (4 colours, gun/no-gun/static-gun variants) |
+| [TP Apoc Pickup](https://steamcommunity.com/sharedfiles/filedetails/?id=3738834788) | 3738834788 | Armoured apocalypse pickup truck (9 colours, auto/manual) |
+| [TP Apoc SUV](https://steamcommunity.com/sharedfiles/filedetails/?id=3738839427) | 3738839427 | Armoured apocalypse SUV with roof rack, tent, shovel and axe slots (8 colours, auto/manual) |
+| [Immersive Placing Update](https://steamcommunity.com/sharedfiles/filedetails/?id=3753472356) | 3753472356 | Precise item placement with rotation/elevation, quick drop and quick place actions |
 
 ### Server-Only Mods
 
@@ -458,7 +465,7 @@ These mods run on the server only - **players do not need to subscribe**.
 
 ### Mod Installation
 
-Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each folder into the server directory and rename:
+Workshop mods download to `Steam\steamapps\workshop\content\221100\`. `INSTALL_MODS.bat` (also run by `LAUNCH_DAYZ.bat`) copies each one into the server directory under the names below, copies the `.bikey`, and deletes any PBO the Workshop version no longer ships so renamed/removed addons cannot linger and cause "Multiple declaration" errors. Manual equivalent: copy each folder and rename:
 
 | Workshop Folder | Rename To |
 |---|---|
@@ -520,6 +527,16 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. Copy each 
 | `3671771423` | `@JosiesLilBuggyZ` |
 | `3665840738` | `@MBM_HarleyDavidsonFatBoy` |
 | `3624740747` | `@LMsHelicopters` |
+
+**Added 2026-09-05:**
+
+| Workshop Folder | Rename To |
+|---|---|
+| `3702420204` | `@ZenModCore` |
+| `3737385977` | `@TP_Apoc_M1025` |
+| `3738834788` | `@TP_Apoc_Pickup` |
+| `3738839427` | `@TP_Apoc_SUV` |
+| `3753472356` | `@ImmersivePlacing` |
 
 ### Gelya Backpacks - Pack Complete
 
@@ -685,33 +702,58 @@ Helicopter spawns are configured in `custom/types_lmhelicopters.xml`.
 
 ### 4KBOSSKVehicles
 
-23 driveable vehicles spawn across the map — 20 custom car models plus 3 Nemsis dune buggies, spread across towns, farms, industrial areas, and military bases:
+32 modded ground vehicles spawn across the map via the `Vehicle4KBOSSK` event - one of each of the 29 4KBOSSK models plus 3 Nemsis dune buggies, spread over 37 curated positions at towns, farms, industrial areas and military bases. Every colour variant of a model is listed in the event with `max=1 min=1`, so exactly one of each model exists and its colour is picked at random each time it spawns (291 variants in the pool).
 
-| Vehicle | Count | Location |
+| Vehicle | Colours | Location |
 |---|---|---|
-| Honda Civic | 1 | Town, Village |
-| Ford Bronco | 1 | Farm, Village |
-| Toyota 4Runner | 1 | Farm, Village |
-| Dodge Ram 3500 | 1 | Farm, Industrial |
-| Chevy Tahoe | 1 | Town, Farm |
-| MotorHome | 1 | Town, Farm |
-| Chevrolet Napalm Nova | 1 | Town, Farm |
-| Audi RS6 ABT | 1 | Town, Industrial |
-| BMW M3 | 1 | Town, Industrial |
-| Dodge Challenger SRT | 1 | Town, Industrial |
-| Dodge Charger Hellcat | 1 | Town, Industrial |
-| Nissan Skyline | 1 | Town, Industrial |
-| Jeep Gladiator F9 | 1 | Farm, Industrial |
-| Ford Mustang Shelby GT500 | 1 | Town, Industrial |
-| Dodge Ram (camo) | 1 | Farm, Military |
-| Porsche 911 RWB | 1 | Town, Industrial |
-| Toyota Supra MK IV | 1 | Town, Industrial |
-| Nissan GTR Nismo | 1 | Town, Industrial |
-| Ford Raptor Monster Truck | 1 | Farm, Industrial |
-| Kamaz Typhoon K | 1 | Military |
-| Nemsis Dune Buggy | 3 | Town |
+| Audi R8 V10 | 10 | Town, Industrial |
+| Audi RS6 ABT | 9 | Town, Industrial |
+| BMW M3 | 7 | Town, Industrial |
+| BMW M5 G90 | 9 | Town, Industrial |
+| Chevrolet Napalm Nova | 15 | Town, Farm |
+| Honda Civic | 7 | Town, Village |
+| Dodge Challenger SRT Demon | 9 | Town, Industrial |
+| Dodge Charger Hellcat | 8 | Town, Industrial |
+| Dodge Ram 2021 | 22 | Farm, Military |
+| Dodge Ram 3500 | 16 | Farm, Industrial |
+| Ford Bronco | 5 | Farm, Village |
+| Ford Crown Victoria | 13 | Town, Village |
+| Ford Mustang SVT | 15 | Town, Industrial |
+| Ford Mustang Shelby GT500 | 8 | Town, Industrial |
+| Ford Raptor Monster Truck | 6 | Farm, Industrial |
+| GMC | 5 | Farm, Village |
+| Jeep Gladiator F9 | 25 | Farm, Industrial |
+| Kamaz Typhoon K | 8 | Military |
+| Chevy Tahoe (lifted) | 9 | Town, Farm |
+| Mitsubishi Lancer Evo IX | 12 | Town, Industrial |
+| MotorHome | 4 | Town, Farm |
+| Nissan GTR Nismo | 4 | Town, Industrial |
+| Nissan GTR | 6 | Town, Industrial |
+| Nissan GTR Custom | 4 | Town, Industrial |
+| Nissan Skyline | 9 | Town, Industrial |
+| Porsche 911 GT3 | 10 | Town, Industrial |
+| Shelby Super Snake | 6 | Town, Industrial |
+| Toyota 4Runner | 22 | Farm, Village |
+| Toyota Supra MK IV | 8 | Town, Industrial |
+| Nemsis Dune Buggy | 3 total | Town |
 
-Vehicle spawns are configured in `custom/types_4kbossk.xml` and `custom/types_nemsis.xml`. The 4KBOSSK mod includes 163 color variants - change colors by swapping class names in the types file. Dune buggies can also be crafted from scratch using the Nemsis Craftingpack (buggy construction kit + scrap metal + engine).
+Spawn pool: `db/events.xml` (`Vehicle4KBOSSK`). Positions: `cfgeventspawns.xml`. Wheels/parts attached on spawn: `cfgspawnabletypes.xml`. CE type entries: `custom/types_4kbossk.xml` and `custom/types_nemsis.xml`. Dune buggies can also be crafted from scratch using the Nemsis Craftingpack (buggy construction kit + scrap metal + engine).
+
+### TP Apoc Vehicles
+
+Three apocalypse-styled vehicles from TPunisher87 spawn via the `VehicleTPApoc` event - one of each, at 8 curated positions (NWAF, Balota, Pavlovo, Myshkino, Green Mountain, Novodmitrovsk, Stary Sobor, Solnichniy):
+
+| Vehicle | Class | Notes |
+|---|---|---|
+| M1025 Humvee | `TP_Apoc_M1025` | Working 7.62 turret gun. Ammo is `FYG_762_Ammo` (spawns at military loot, also sold by the Vehicles Trader). Uses vanilla `Offroad_02_Wheel` |
+| Pickup | `TP_ApocPickup_Truck_Auto` | Automatic transmission. Wheel: `TP_ApocPickup_Wheel` |
+| SUV | `TP_Apoc_Suv_Auto` | Automatic transmission, roof rack with tent/shovel/axe slots. Wheel: `TP_ApocSuv_Wheel` |
+
+All three spawn road-ready (95% wheels, 85% battery/radiator/plug, 90% doors). The Vehicles Trader sells them under **TP Apoc Vehicles** and their wheels/ammo under **TP Apoc Parts**. Other colour variants (Black/Camo/Tan Humvee, 9 pickup colours, 8 SUV colours) exist in the mods but are not spawned - swap the class names in `db/events.xml` and `custom/types_tpapoc.xml` to change them.
+
+### Immersive Placing
+
+Immersive Placing Update adds precise item placement: hold the place action to freely rotate and raise/lower the hologram before dropping, plus quick-drop and quick-place actions. Server-side placement lifetime config is generated on first boot at `config/ImmersivePlacing/PlacementLifetime.json`.
 
 ### CookZ
 
@@ -1118,6 +1160,11 @@ mpmissions/dayzOffline.chernarusplus/storage_0/
 mpmissions/dayzOffline.chernarusplus/storage_1/
 config/Dayz-Dog/players/
 config/Zenarchist/Skills/PlayerDB/
+config/Zenarchist/Skills/DB/
+config/ExpansionMod/Settings/          (regenerates; restore from git to keep tweaks)
+config/ExpansionMod/Quests/PlayerData/
+config/ExpansionMod/Quests/GroupData/
+config/ExpansionMod/Quests/PersistentServerData.json
 config/DataCache/cache.ch
 config/DataCache/cache_lock
 ```

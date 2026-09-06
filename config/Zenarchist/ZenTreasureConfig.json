@@ -1,10 +1,12 @@
 {
-    "ConfigVersion": "1",
+    "ConfigVersion": "1.29.4",
     "DebugZenMapCompatibility": 0,
     "DebugTeleportToPhoto": 0,
     "DebugAlwaysSpawnStashID": -1,
-    "TreasurePersistenceSecs": 3600,
-    "IsWinterMap": 0,
+    "TreasureTriggerPersistenceSecs": 1209600,
+    "TreasureStashPersistenceSecs": 3600,
+    "TreasureStashSpawnTriggerDistance": 50.0,
+    "UseWinterPhotoTexture": 0,
     "SpawnPhotosOnZombiesChance": 0.009999999776482582,
     "SkipSpawnableRandomPhotosID": [
         -1
@@ -1012,5 +1014,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "TreasureLocationOverrides": {}
 }

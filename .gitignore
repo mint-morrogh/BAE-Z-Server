@@ -11,6 +11,7 @@
 !.gitignore
 !.gitattributes
 !README.md
+!TODO.md
 !serverDZ.cfg
 !start_server.bat
 !sync_client_mods.bat
@@ -132,11 +133,17 @@ config/*
 # Ignore player-specific runtime data inside Zenarchist
 config/Zenarchist/Skills/Analytics/
 config/Zenarchist/Skills/PlayerDB/
+config/Zenarchist/Skills/DB/
+*.vOLD
+*.v1
 config/Zenarchist/Skills/ZenSkillsHighscoresDB.json
 
 # Ignore runtime logs and data inside config
 config/Dayz-Dog/*.log
 config/ExpansionMod/Logs/
+config/ExpansionMod/Quests/PlayerData/
+config/ExpansionMod/Quests/GroupData/
+config/ExpansionMod/Quests/PersistentServerData.json
 config/EventManagerLog/
 config/WebApiLog/
 config/DataCache/

@@ -1,5 +1,5 @@
 {
-    "CONFIG_VERSION": "1",
+    "ConfigVersion": "1.29.1",
     "ServerConfig": {
         "DebugJumpEXP": 500,
         "AutoSaveTimerSecs": 900,

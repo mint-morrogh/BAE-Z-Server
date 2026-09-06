@@ -41,7 +41,7 @@ set UPDATED=0
 set MISSING=0
 
 :: ============================================================
-:: Workshop ID -> @ModName mapping (43 mods)
+:: Workshop ID -> @ModName mapping (53 mods)
 :: ============================================================
 call :install_mod 1559212036 CF
 call :install_mod 2291785308 DayZ-Expansion-Core
@@ -63,6 +63,7 @@ call :install_mod 1623711988 VanillaPlusPlusMap
 call :install_mod 1648967877 GoreZ
 call :install_mod 2444247391 Inventory-Move-Sounds
 call :install_mod 2051775667 PvZmoD
+call :install_mod 3702420204 ZenModCore
 call :install_mod 3601119520 ZenSkills
 call :install_mod 3571068454 CZOptics
 call :install_mod 3443562573 PercentageHUD
@@ -91,6 +92,10 @@ call :install_mod 3571685323 AJsWeapons
 call :install_mod 3671771423 JosiesLilBuggyZ
 call :install_mod 2291785437 DayZ-Expansion-Vehicles
 call :install_mod 3665840738 MBM_HarleyDavidsonFatBoy
+call :install_mod 3737385977 TP_Apoc_M1025
+call :install_mod 3738834788 TP_Apoc_Pickup
+call :install_mod 3738839427 TP_Apoc_SUV
+call :install_mod 3753472356 ImmersivePlacing
 
 :: ============================================================
 :: Post-install: Re-apply SurvivorAnims PBO patch
@@ -196,6 +201,15 @@ if exist "%SRC%\addons" (
         <nul set /p "=   [CHECK] @%MOD_NAME%... "
         xcopy /E /I /D /Y "%SRC%\Addons" "%DST%\addons" >nul 2>&1
         echo OK
+    )
+)
+
+:: Remove stale addon files the Workshop version no longer ships (renamed/removed
+:: PBOs left behind cause "Multiple declaration of class" errors and startup crashes)
+for %%f in ("%DST%\addons\*.pbo" "%DST%\addons\*.bisign") do (
+    if not exist "%SRC%\addons\%%~nxf" if not exist "%SRC%\Addons\%%~nxf" (
+        del /q "%%f" >nul 2>&1
+        echo   [STALE] @%MOD_NAME% - removed %%~nxf
     )
 )
 

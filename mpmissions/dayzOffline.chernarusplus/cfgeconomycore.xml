@@ -51,5 +51,6 @@ Do not forget to add attribute act="car", if root class represents moveable vehi
 		<file name="types_buggy.xml" type="types" />
 		<file name="types_expansion_vehicles.xml" type="types" />
 		<file name="types_lmhelicopters.xml" type="types" />
+		<file name="types_tpapoc.xml" type="types" />
 	</ce>
 </economycore>

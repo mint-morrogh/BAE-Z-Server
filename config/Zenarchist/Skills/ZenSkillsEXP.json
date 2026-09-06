@@ -1,5 +1,5 @@
 {
-    "CONFIG_VERSION": "1",
+    "ConfigVersion": "1.29.1",
     "ExpNerfConfig": {
         "GlobalExpMultiplier": 1.0,
         "EnableExpNerf": 1,
@@ -26,8 +26,8 @@
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1
                 },
-                "ActionTestBloodSelf": {
-                    "EXP": 25,
+                "DisinfectItem": {
+                    "EXP": 10,
                     "AllowModifier": 0,
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1
@@ -92,8 +92,8 @@
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1
                 },
-                "DisinfectItem": {
-                    "EXP": 10,
+                "ActionTestBloodSelf": {
+                    "EXP": 25,
                     "AllowModifier": 0,
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1
@@ -208,13 +208,13 @@
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1
                 },
-                "ActionDigWorms": {
+                "ActionSawPlanks": {
                     "EXP": 5,
                     "AllowModifier": 0,
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1
                 },
-                "ActionSawPlanks": {
+                "ActionDigWorms": {
                     "EXP": 5,
                     "AllowModifier": 0,
                     "ApplyNerf": 1,
@@ -244,14 +244,14 @@
                     "ApplyNerf": 0,
                     "ApplyBoosts": 0
                 },
-                "ActionHarvestCrops": {
-                    "EXP": 20,
+                "CraftWoodenPlank": {
+                    "EXP": 5,
                     "AllowModifier": 0,
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1
                 },
-                "CraftWoodenPlank": {
-                    "EXP": 5,
+                "ActionHarvestCrops": {
+                    "EXP": 20,
                     "AllowModifier": 0,
                     "ApplyNerf": 1,
                     "ApplyBoosts": 1

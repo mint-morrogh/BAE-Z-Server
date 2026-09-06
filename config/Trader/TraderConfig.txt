@@ -598,17 +598,12 @@
 		M67Grenade,                               1,		300,	100
 		M18SmokeGrenade_Red,                      1,		300,	100
 		M18SmokeGrenade_Green,                    1,		300,	100
-		M18SmokeGrenade_Yellow,                   1,		300,	100
-		M18SmokeGrenade_Purple,                   1,		300,	100
 		M18SmokeGrenade_White,                    1,		300,	100
-		RDG2SmokeGrenade_Black,                   1,		300,	100
 		RDG2SmokeGrenade_White,                   1,		300,	100
 		FlashGrenade,                             1,		300,	100
 		M79,                                      W,		2500,	1200
 		Ammo_40mm_Explosive,                      1,		500,	200
 		Ammo_40mm_Chemgas,                        1,		400,	150
-		Ammo_40mm_Smoke_Black,                    1,		200,	80
-		Ammo_40mm_Smoke_Green,                    1,		200,	80
 		Ammo_40mm_Smoke_Red,                      1,		200,	80
 		Ammo_40mm_Smoke_White,                    1,		200,	80
 		ExpansionRPG7,                            W,		5000,	2500
@@ -619,9 +614,6 @@
 		Expansion_M18SmokeGrenade_Teargas,        1,		300,	100
 		Expansion_M203_Smoke_White,               1,		200,	80
 		Expansion_M203_Smoke_Red,                 1,		200,	80
-		Expansion_M203_Smoke_Green,               1,		200,	80
-		Expansion_M203_Smoke_Yellow,              1,		200,	80
-		Expansion_M203_Smoke_Purple,              1,		200,	80
 		Expansion_M203_Smoke_Teargas,             1,		300,	100
 		Plastic_Explosive,                        1,		1500,	750
 
@@ -1936,6 +1928,11 @@
 	<Category> Buggies
 		LilBuggyZ,                                V,		15000,	8000
 
+	<Category> TP Apoc Vehicles
+		TP_Apoc_M1025,                            V,		60000,	30000
+		TP_ApocPickup_Truck_Auto,                 V,		30000,	15000
+		TP_Apoc_Suv_Auto,                         V,		28000,	14000
+
 	<Category> Expansion Vehicles
 		ExpansionUAZ,                             V,		18000,	10000
 		ExpansionUAZ_Black,                       V,		18000,	10000
@@ -1949,7 +1946,6 @@
 		Expansion_Landrover_Red,                  V,		22000,	12000
 		Expansion_Landrover_Grey,                 V,		22000,	12000
 		Expansion_Landrover_Orange,               V,		22000,	12000
-		ExpansionOldBike,                         V,		2000,	800
 
 	<Category> Expansion Boats
 		ExpansionZodiacBoat,                      V,		8000,	4000
@@ -1981,7 +1977,6 @@
 		Expansion_Landrover_Trunk,                *,		400,	140
 		Expansion_Landrover_Left,                 *,		400,	140
 		Expansion_Landrover_Right,                *,		400,	140
-		ExpansionOldBikeWheel,                    *,		200,	80
 
 	<Category> Expansion Aircraft Parts
 		ExpansionHelicopterBattery,               *,		800,	400
@@ -2001,6 +1996,12 @@
 		MBM_Harley_Plate_FatBoy,                  *,		200,	100
 		MBM_Harley_Plate_9A7218,                  *,		200,	100
 		LilBuggyZ_Wheel,                          *,		300,	150
+
+	<Category> TP Apoc Parts
+		Offroad_02_Wheel,                         *,		600,	250
+		TP_ApocPickup_Wheel,                      *,		600,	250
+		TP_ApocSuv_Wheel,                         *,		600,	250
+		FYG_762_Ammo,                             *,		800,	300
 
 	<Category> Engine & Fluids
 		HeadlightH7_Box,		*,		30,		15
@@ -2180,7 +2181,7 @@
 		MotorHome_Wheel,				*,		750,	350
 		Skyline_Wheel,					*,		750,	350
 		NissanGTRNismo_Wheel,			*,		750,	350
-		Porsche_911RWB_Front_Wheel,		*,		750,	350
+		Porsche_911_GT3_Wheel,			*,		750,	350
 		Supra_Wheel,					*,		750,	350
 		Tahoe_wheel,					*,		750,	350
 		Runner_Wheel,					*,		750,	350
@@ -3168,35 +3169,37 @@
 		Skyline_driverdoor_Pink,                 *,		500,	180
 		Skyline_driverdoor_Red,                  *,		500,	180
 
-	<Category> Porsche 911 RWB Parts
-		Porsche_911RWB_Hood,                     *,		400,	140
-		Porsche_911RWB_Hood_Black,               *,		400,	140
-		Porsche_911RWB_Hood_Blue,                *,		400,	140
-		Porsche_911RWB_Hood_Green,               *,		400,	140
-		Porsche_911RWB_Hood_Orange,              *,		400,	140
-		Porsche_911RWB_Hood_Pink,                *,		400,	140
-		Porsche_911RWB_Hood_Red,                 *,		400,	140
-		Porsche_911RWB_Trunk,                    *,		450,	150
-		Porsche_911RWB_Trunk_Black,              *,		450,	150
-		Porsche_911RWB_Trunk_Blue,               *,		450,	150
-		Porsche_911RWB_Trunk_Green,              *,		450,	150
-		Porsche_911RWB_Trunk_Orange,             *,		450,	150
-		Porsche_911RWB_Trunk_Pink,               *,		450,	150
-		Porsche_911RWB_Trunk_Red,                *,		450,	150
-		Porsche_911RWB_CoDriver_Door,            *,		500,	180
-		Porsche_911RWB_CoDriver_Door_Black,      *,		500,	180
-		Porsche_911RWB_CoDriver_Door_Blue,       *,		500,	180
-		Porsche_911RWB_CoDriver_Door_Green,      *,		500,	180
-		Porsche_911RWB_CoDriver_Door_Orange,     *,		500,	180
-		Porsche_911RWB_CoDriver_Door_Pink,       *,		500,	180
-		Porsche_911RWB_CoDriver_Door_Red,        *,		500,	180
-		Porsche_911RWB_Driver_Door,              *,		500,	180
-		Porsche_911RWB_Driver_Door_Black,        *,		500,	180
-		Porsche_911RWB_Driver_Door_Blue,         *,		500,	180
-		Porsche_911RWB_Driver_Door_Green,        *,		500,	180
-		Porsche_911RWB_Driver_Door_Orange,       *,		500,	180
-		Porsche_911RWB_Driver_Door_Pink,         *,		500,	180
-		Porsche_911RWB_Driver_Door_Red,          *,		500,	180
+	<Category> Porsche 911 GT3 Parts
+		Porsche_911_GT3_Driverdoor,                *,		500,	180
+		Porsche_911_GT3_Driverdoor_Black,          *,		500,	180
+		Porsche_911_GT3_Driverdoor_Blue,           *,		500,	180
+		Porsche_911_GT3_Driverdoor_DarkBlue,       *,		500,	180
+		Porsche_911_GT3_Driverdoor_LightBlue,      *,		500,	180
+		Porsche_911_GT3_Driverdoor_Orange,         *,		500,	180
+		Porsche_911_GT3_Driverdoor_Pink,           *,		500,	180
+		Porsche_911_GT3_Driverdoor_Red,            *,		500,	180
+		Porsche_911_GT3_Driverdoor_White,          *,		500,	180
+		Porsche_911_GT3_Driverdoor_Yellow,         *,		500,	180
+		Porsche_911_GT3_Codriver,                  *,		500,	180
+		Porsche_911_GT3_Codriver_Black,            *,		500,	180
+		Porsche_911_GT3_Codriver_Blue,             *,		500,	180
+		Porsche_911_GT3_Codriver_DarkBlue,         *,		500,	180
+		Porsche_911_GT3_Codriver_LightBlue,        *,		500,	180
+		Porsche_911_GT3_Codriver_Orange,           *,		500,	180
+		Porsche_911_GT3_Codriver_Pink,             *,		500,	180
+		Porsche_911_GT3_Codriver_Red,              *,		500,	180
+		Porsche_911_GT3_Codriver_White,            *,		500,	180
+		Porsche_911_GT3_Codriver_Yellow,           *,		500,	180
+		Porsche_911_GT3_Trunk,                     *,		400,	140
+		Porsche_911_GT3_Trunk_Black,               *,		400,	140
+		Porsche_911_GT3_Trunk_Blue,                *,		400,	140
+		Porsche_911_GT3_Trunk_DarkBlue,            *,		400,	140
+		Porsche_911_GT3_Trunk_LightBlue,           *,		400,	140
+		Porsche_911_GT3_Trunk_Orange,              *,		400,	140
+		Porsche_911_GT3_Trunk_Pink,                *,		400,	140
+		Porsche_911_GT3_Trunk_Red,                 *,		400,	140
+		Porsche_911_GT3_Trunk_White,               *,		400,	140
+		Porsche_911_GT3_Trunk_Yellow,              *,		400,	140
 
 	<Category> Toyota Runner Parts (Part 1)
 		Runner_Hood,                             *,		400,	140

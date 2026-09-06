@@ -1247,13 +1247,14 @@
     </children>
   </event>
   <!-- ============================================================ -->
-  <!-- 4KBOSSK + Nemsis Modded Vehicles — 23 total                  -->
-  <!-- Uses custom spawn positions in cfgeventspawns.xml             -->
-  <!-- 36 possible locations, CE picks 23 randomly = not abusable   -->
+  <!-- 4KBOSSK + Nemsis Modded Vehicles - 32 total (29 models + 3 buggies) -->
+  <!-- Every colour variant of a model is listed with max=1 min=1: CE   -->
+  <!-- spawns exactly one of each model and picks the colour at random. -->
+  <!-- Uses custom spawn positions in cfgeventspawns.xml (37 locations)  -->
   <!-- ============================================================ -->
   <event name="Vehicle4KBOSSK">
-    <nominal>23</nominal>
-    <min>23</min>
+    <nominal>32</nominal>
+    <min>32</min>
     <max>36</max>
     <lifetime>300</lifetime>
     <restock>0</restock>
@@ -1265,27 +1266,327 @@
     <limit>mixed</limit>
     <active>1</active>
     <children>
+      <!-- Audi R8 V10: 10 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_CustomPaint" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_CustomPaint2" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_R8_White" />
+      <!-- Audi RS6 ABT: 9 colours, CE picks 1 -->
       <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_MidNightBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_Teal" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Audi_RS6_ABT_Yellow" />
+      <!-- BMW M3: 7 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M3_Black" />
       <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M3_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M3_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M3_MidNightBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M3_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M3_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M3_White" />
+      <!-- BMW M5 G90: 9 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_LightBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="BMW_M5g90_Sadan_White" />
+      <!-- Chevrolet Napalm Nova: 15 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_CamoGreen" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_CamoRed" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_NightFrost" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Purple" />
       <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Red" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Orange" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_black" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Grey" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_CamoGreen" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Bronco_Rust" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_Blue" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Raptor_MonsterTruck" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Reptile" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Skull" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Topo" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Chevrolet_NapalmNova_Yellow" />
+      <!-- Honda Civic: 7 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Civic_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Civic_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Civic_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Civic_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Civic_RedCustom" />
       <child lootmax="0" lootmin="0" max="1" min="1" type="Civic_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Civic_Yellow" />
+      <!-- Dodge Challenger SRT Demon: 9 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Darkblue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Gray" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Dodge_ChallengerSRT_White" />
+      <!-- Dodge Charger Hellcat: 8 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_gray" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_lightblue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="dodgechargerhellcat_white" />
+      <!-- Dodge Ram 2021: 22 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_BlueTiger" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_ChinaLake" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Cyan" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_DUDB" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Mocha" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_ModernWoodland" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_RedTiger" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Rust" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Skulls" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_TopoGraphic" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_TopoTrip" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_VectorTrails" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Woodland_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Woodland_Nightfrost" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_BOSS_Woodland_Sand" />
+      <!-- Dodge Ram 3500: 16 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_AJ45" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_BlueTiger" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Cyan" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Grey" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_KBTGR" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_M81" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Purple" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_RealTree" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_RedTiger" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_ScamTopia" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="DodgeRam_3500_Yellow" />
+      <!-- Ford Bronco: 5 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Bronco_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Bronco_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Bronco_Hunter" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Bronco_Rust" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Bronco_White" />
+      <!-- Ford Crown Victoria: 13 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Police" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Police2" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Sheriff" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Sheriff2" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Sheriff2Rust" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Sheriff3" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Unmarked_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Unmarked_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Unmarked_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Unmarked_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Unmarked_Tan" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Unmarked_Teal" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordCrown_Victoria_Unmarked_White" />
+      <!-- Ford Mustang SVT: 15 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_CamoBlack" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_CamoBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_CamoRed" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_CamoRed2" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_CamoWhite" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Police" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="FordMustang_SVT_Yellow" />
+      <!-- Ford Mustang Shelby GT500: 8 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Mustang_Shelby_GT500_White" />
+      <!-- Ford Raptor Monster Truck: 6 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Raptor_MonsterTruck_Baja" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Raptor_MonsterTruck_Halo" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Raptor_MonsterTruck_Raptor" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Raptor_MonsterTruck_Roush" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Raptor_MonsterTruck_USA" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Ford_Raptor_MonsterTruck_WideOpen" />
+      <!-- GMC: 5 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GMC_BOSS_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GMC_BOSS_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GMC_BOSS_Police" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GMC_BOSS_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GMC_BOSS_White" />
+      <!-- Jeep Gladiator F9: 25 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_Brown" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_Cyan" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_Pink" />
       <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_abominable" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_blue2" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_bluetiger" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_dragonmoss" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_flecktarn" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_hunter" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_nightseas" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_pinkpython" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_redtiger" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_skulls" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_topotrip" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Jeep_GladiatorF9_BOSS_camo_vanished" />
+      <!-- Kamaz Typhoon K: 8 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_Black" />
       <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_CamoGreen" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="MotorHome_Rust" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_Blue" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRNismo_Red" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="Porsche_911RWB_Green" />
-      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_CamoGreen2" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_CamoGreen3" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_RedCamo" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_Rusty" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Kamaz_TyphoonK_White" />
+      <!-- Chevy Tahoe (lifted): 9 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_Blue" />
       <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_Brown" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_LightBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Tahoe_White" />
+      <!-- Mitsubishi Lancer Evo IX: 12 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_FastAnFurious" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_FastAnFurious2" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_bee" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_darkblue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_lightblue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_white" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MitsubishiEVO_yellow" />
+      <!-- MotorHome: 4 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MotorHome_Apo" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MotorHome_GreenCamo" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MotorHome_Rust" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="MotorHome_White" />
+      <!-- Nissan GTR Nismo: 4 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRNismo_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRNismo_DarkPurple" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRNismo_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRNismo_White" />
+      <!-- Nissan GTR: 6 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTR_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTR_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTR_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTR_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTR_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTR_White" />
+      <!-- Nissan GTR Custom: 4 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRCustom_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRCustom_Blood" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRCustom_LB" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="NissanGTRCustom_Pink" />
+      <!-- Nissan Skyline: 9 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_RustBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_RustRed" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_RustWhite" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Nissan_Skyline_White" />
+      <!-- Porsche 911 GT3: 10 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_LightBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_Pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_White" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="GT3_Yellow" />
+      <!-- Shelby Super Snake: 6 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Shelby_SuperSnake_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Shelby_SuperSnake_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Shelby_SuperSnake_DarkBlue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Shelby_SuperSnake_Orange" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Shelby_SuperSnake_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Shelby_SuperSnake_White" />
+      <!-- Toyota 4Runner: 22 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_BOSS" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_Brown" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_CamoWoodland" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_ChinaLake" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_Cyan" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_IceBreaker" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_OffGrid" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_SandStorm" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_UrbanTiegr" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_camoblack" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_camoblue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_camogreen" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_camopink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_camopurple" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_camored" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_camowhite" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_pink" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_red" />
       <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_white" />
-      <!-- Nemsis Scrapbuggy (dune buggy) — 3 on the map -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="ToyotaRunner_yellow" />
+      <!-- Toyota Supra MK IV: 8 colours, CE picks 1 -->
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_Black" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_Blue" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_FastF" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_Green" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_Lighting" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_Red" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_Sponge" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="Supra_White" />
+      <!-- Nemsis Scrapbuggy (dune buggy) - 3 on the map -->
       <child lootmax="0" lootmin="0" max="3" min="3" type="nm_Scrapbuggy" />
     </children>
   </event>
@@ -1398,7 +1699,6 @@
       <child lootmax="0" lootmin="0" max="2" min="2" type="ExpansionUAZ" />
       <child lootmax="0" lootmin="0" max="2" min="2" type="ExpansionUAZCargoRoofless" />
       <child lootmax="0" lootmin="0" max="2" min="2" type="Expansion_Landrover" />
-      <child lootmax="0" lootmin="0" max="5" min="5" type="ExpansionOldBike" />
     </children>
   </event>
 
@@ -1440,6 +1740,30 @@
     <children>
       <child lootmax="0" lootmin="0" max="2" min="2" type="ExpansionUtilityBoat" />
       <child lootmax="0" lootmin="0" max="2" min="2" type="ExpansionZodiacBoat" />
+    </children>
+  </event>
+
+  <!-- ============================================================ -->
+  <!-- TP Apoc vehicles - 1 M1025 Humvee (turret), 1 Pickup, 1 SUV      -->
+  <!-- Fixed positions in cfgeventspawns.xml (8 locations, CE picks 3)  -->
+  <!-- ============================================================ -->
+  <event name="VehicleTPApoc">
+    <nominal>3</nominal>
+    <min>3</min>
+    <max>8</max>
+    <lifetime>300</lifetime>
+    <restock>0</restock>
+    <saferadius>500</saferadius>
+    <distanceradius>300</distanceradius>
+    <cleanupradius>200</cleanupradius>
+    <flags deletable="0" init_random="0" remove_damaged="1" />
+    <position>fixed</position>
+    <limit>mixed</limit>
+    <active>1</active>
+    <children>
+      <child lootmax="0" lootmin="0" max="1" min="1" type="TP_Apoc_M1025" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="TP_ApocPickup_Truck_Auto" />
+      <child lootmax="0" lootmin="0" max="1" min="1" type="TP_Apoc_Suv_Auto" />
     </children>
   </event>
 

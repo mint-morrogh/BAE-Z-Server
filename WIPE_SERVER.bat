@@ -60,6 +60,15 @@ if exist "config\Zenarchist\Skills\PlayerDB" (
     mkdir "config\Zenarchist\Skills\PlayerDB"
     echo   [OK] Skill tree progress wiped
 )
+if exist "config\Zenarchist\Skills\DB" (
+    rd /s /q "config\Zenarchist\Skills\DB" 2>nul
+    echo   [OK] Skill highscore DB wiped
+)
+:: Expansion Quests runtime data (player quest progress, group data)
+if exist "config\ExpansionMod\Quests\PlayerData" rd /s /q "config\ExpansionMod\Quests\PlayerData" 2>nul
+if exist "config\ExpansionMod\Quests\GroupData" rd /s /q "config\ExpansionMod\Quests\GroupData" 2>nul
+del /q "config\ExpansionMod\Quests\PersistentServerData.json" 2>nul
+echo   [OK] Quest progress wiped
 if exist "config\ExpansionMod\Settings" (
     rd /s /q "config\ExpansionMod\Settings" 2>nul
     mkdir "config\ExpansionMod\Settings"
