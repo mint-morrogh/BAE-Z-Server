@@ -53,6 +53,31 @@
 		BakedBeansCan,			*,		5,		2
 		TacticalBaconCan,		*,		5,		3		
 
+	<Category> Snacks & Bars					// Food and Drinks mod
+		HM_Pringles_01,         *,		4,		2
+		HM_Pringles_02,         *,		4,		2
+		HM_Pringles_03,         *,		4,		2
+		HM_Cheetos_01,          *,		4,		2
+		HM_Cheetos_02,          *,		4,		2
+		HM_Cheetos_03,          *,		4,		2
+		HM_Lays_01,             *,		4,		2
+		HM_Lays_02,             *,		4,		2
+		HM_Lays_03,             *,		4,		2
+		HM_Bars_01,             *,		3,		1
+		HM_Bars_02,             *,		3,		1
+		HM_Bars_03,             *,		3,		1
+		HM_Bars_04,             *,		3,		1
+		HM_Bars_05,             *,		3,		1
+		HM_Bars_06,             *,		3,		1
+		HM_Snacks_01,           *,		3,		1
+		HM_Snacks_02,           *,		3,		1
+		HM_Snacks_03,           *,		3,		1
+		HM_Snacks_04,           *,		3,		1
+		HM_MRE_01,              *,		8,		4
+		HM_MRE_02,              *,		8,		4
+		HM_MRE_03,              *,		8,		4
+		HM_MRE_04,              *,		8,		4
+
 	<Category> Meat
 		ChickenBreastMeat,		S,		2,		1
 		GoatSteakMeat,			S,		3,		1
@@ -65,6 +90,30 @@
 		Sardines,				S,		7,		4
 		Carp,					S,		10,		5
 		Mackerel,				S,		10,		5
+		// KM_BetterFishing fish (sell only)
+		Fish_GrassCarp,         S,		-1,		5
+		Fish_Trout,             S,		-1,		5
+		Fish_Perch,             S,		-1,		4
+		Fish_Crucian,           S,		-1,		4
+		Fish_Crappie,           S,		-1,		4
+		Fish_Bluegill,          S,		-1,		4
+		Fish_Pike,              S,		-1,		7
+		Fish_Zander,            S,		-1,		7
+		Fish_TunaFish,          S,		-1,		15
+		Fish_SwordFish,         S,		-1,		20
+		Fish_SilverBack,        S,		-1,		20
+		// KM_BetterFishing fillets (sell only)
+		GrassCarp_FilletMeat,   S,		-1,		2
+		Trout_FilletMeat,       S,		-1,		2
+		Perch_FilletMeat,       S,		-1,		2
+		Crucian_FilletMeat,     S,		-1,		2
+		Crappie_FilletMeat,     S,		-1,		2
+		Bluegill_FilletMeat,    S,		-1,		2
+		Pike_FilletMeat,        S,		-1,		3
+		Zander_FilletMeat,      S,		-1,		3
+		TunaFish_FilletMeat,    S,		-1,		7
+		SwordFish_FilletMeat,   S,		-1,		10
+		SilverBack_FilletMeat,  S,		-1,		10
 
 	<Category> Animal Parts
 		Bone,					*,		2,		1
@@ -80,6 +129,18 @@
 		WaterBottle,			*,		5,		2
 		Canteen,				*,		8,		4
 		Vodka,					*,		12,		8
+
+	<Category> Energy Drinks & Booze			// Food and Drinks mod
+		HM_Monster_Energy,      *,		3,		1
+		HM_Redbull,             *,		3,		1
+		HM_Tornado,             *,		3,		1
+		HM_Rush,                *,		3,		1
+		HM_Burn,                *,		3,		1
+		HM_Mr_Coffee,           *,		3,		1
+		HM_Heineken,            *,		3,		1
+		HM_Cola_Light,          *,		3,		1
+		HM_Cola,                *,		3,		1
+		HM_JD,                  *,		15,		8
 
 	<Category> Medical Supplies
 		//Rag,					1,		1,		-1
@@ -185,6 +246,26 @@
 		Pot,					M,		25,		10
 		Tripod,					*,		35,		15
 		BearTrap,				*,		50,		30
+
+	<Category> Fishing Supplies					// KM_BetterFishing
+		KM_FishingRod_Improved, *,		120,		50
+		KM_FishingRod_Pro,      *,		200,		80
+		Red_RubberWorm,         *,		8,		3
+		Green_RubberWorm,       *,		8,		3
+		Yellow_RubberWorm,      *,		8,		3
+		Purple_RubberWorm,      *,		8,		3
+		Blue_RubberWorm,        *,		8,		3
+		GrassHopper,            *,		10,		4
+		Fishing_Lure1,          *,		15,		6
+		Fishing_Lure2,          *,		20,		8
+		Fishing_Lure3,          *,		25,		10
+		Fishing_Lure4,          *,		35,		14
+		Fishing_BaitBucket,     *,		40,		15
+		Fishing_TackleBox,      *,		60,		25
+		Fishing_TackleBox_Blue, *,		60,		25
+		Fishing_TackleBox_Red,  *,		60,		25
+		Fishing_TackleBox_Yellow,*,		60,		25
+		Fishing_TackleBox_Purple,*,		60,		25
 
 	<Category> Hardware Supplies
 		Paper,					*,		1,		0

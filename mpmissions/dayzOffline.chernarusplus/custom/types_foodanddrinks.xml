@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<types>
+    <!-- Food and Drinks (huntermods, Workshop 3570578065). Mod ships everything at nominal 15 / 4h lifetime
+         with no usage flags; BAE-Z mixes them in at reduced counts and trims the vanilla sodas/snacks to match
+         (see README "Food and Drinks"). Lifetime matches vanilla packaged food (5 days). -->
+    <!-- Energy drinks, sodas, beer: 12 each (vanilla SodaCan_* cut 56 -> 36) -->
+    <type name="HM_Monster_Energy">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Redbull">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Tornado">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Rush">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Burn">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Mr_Coffee">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Heineken">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Cola_Light">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Cola">
+        <nominal>12</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>9</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <!-- Jack Daniels: rare -->
+    <type name="HM_JD">
+        <nominal>4</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <!-- Chips: 8 each -->
+    <type name="HM_Pringles_01">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Pringles_02">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Pringles_03">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Cheetos_01">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Cheetos_02">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Cheetos_03">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Lays_01">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Lays_02">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Lays_03">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <!-- Candy bars: 8 each -->
+    <type name="HM_Bars_01">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <usage name="Hunting" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Bars_02">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <usage name="Hunting" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Bars_03">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <usage name="Hunting" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Bars_04">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <usage name="Hunting" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Bars_05">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <usage name="Hunting" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Bars_06">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <usage name="Hunting" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <!-- Snacks: 8 each -->
+    <type name="HM_Snacks_01">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Snacks_02">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Snacks_03">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <type name="HM_Snacks_04">
+        <nominal>8</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>6</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Town" />
+        <usage name="Village" />
+        <usage name="School" />
+        <usage name="Office" />
+        <usage name="Lunapark" />
+        <value name="Tier1" />
+        <value name="Tier2" />
+        <value name="Tier3" />
+    </type>
+    <!-- MREs: 4 each, military + hunting only -->
+    <type name="HM_MRE_01">
+        <nominal>4</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>3</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Military" />
+        <usage name="Hunting" />
+    </type>
+    <type name="HM_MRE_02">
+        <nominal>4</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>3</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Military" />
+        <usage name="Hunting" />
+    </type>
+    <type name="HM_MRE_03">
+        <nominal>4</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>3</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Military" />
+        <usage name="Hunting" />
+    </type>
+    <type name="HM_MRE_04">
+        <nominal>4</nominal>
+        <lifetime>432000</lifetime>
+        <restock>0</restock>
+        <min>3</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0" />
+        <category name="food" />
+        <usage name="Military" />
+        <usage name="Hunting" />
+    </type>
+</types>

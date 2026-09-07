@@ -1,5 +1,22 @@
 # BAE-Z - TODO
 
+## Needs in-game test (installed 2026-09-06, after full wipe)
+
+### KM_BetterFishing - INSTALLED
+- Workshop 3744242546 -> `@KM_BetterFishing` (client+server, end of `-mod=` list). Only depends on vanilla DZ_ addons.
+- Mods `ActionFishingNew`, `FishingRod`, `CatchingContextFishingRodAction`, vanilla fish classes, knives (`SetActions`), `PlayerBase.EEKilled`, `MissionServer.OnInit` - all call `super`. ZenSkills also mods `CatchingContextFishingRodAction` but different methods (bite chance vs bait consumption); Nemsis also mods the knives via `SetActions` - both chain.
+- Loot: `custom/types_kmbetterfishing.xml` (Coast + Village usage, mod ships everything at nominal 0), spawnabletypes block appended to `cfgspawnabletypes.xml`. Trader: Misc **Fishing Supplies**, Consume **Meat** buys the fish/fillets.
+- Config generated on first boot at `config/KM_BetterFishing/KM_BetterFishing.json` (tracked); `KM_BetterFishing_PlayerData.json` is XP (ignored, wiped).
+- **Test:** buy `KM_FishingRod_Pro` + a rubber worm at Misc Trader, fish at the coast; the worm should survive a catch; new fish should appear; check the fishing XP message. Find a tackle box on the coast. Sell a fish at Consume Trader.
+
+### Food and Drinks - INSTALLED
+- Workshop 3570578065 -> `@FoodAndDrinks` (client+server, after `@KM_BetterFishing` in `-mod=`). Single `HM_Food.pbo`, only mods `ModItemRegisterCallbacks`; 33 `Edible_Base` items, no config folder.
+- Loot: `custom/types_foodanddrinks.xml` (drinks 12, chips/bars/snacks 8, JD 4, MRE 4 military/hunting); vanilla sodas 56 -> 36 and Crackers/Zagorky/Marmalade/PowderedMilk/Pate/Pajka/Brisket trimmed ~30% in `db/types.xml` so total food stays flat. Trader: Consume **Snacks & Bars** + **Energy Drinks & Booze**.
+- **Test:** loot a few houses/supermarkets on the coast - branded cans/chips should show up alongside vanilla ones; eat/drink one (energy drink = 50 energy / 150 water); buy a Monster + Pringles at Consume Trader.
+
+### Batch files must be CRLF - FIXED (2026-09-06)
+- `INSTALL_MODS.bat` had LF line endings in the working copy; cmd's `call :label` mis-resumes in LF files, so every run re-executed the mod list 18 times (summaries went 17/17, 35/35, 50/50 ...). Harmless (xcopy /D) but slow. Converted `INSTALL_MODS.bat`, `START_SERVER.bat`, `WIPE_SERVER.bat` to CRLF; git stores LF and `core.autocrlf=true` checks out CRLF, so keep it that way. If a bat starts looping again, check `git ls-files --eol *.bat`.
+
 ## Needs in-game test (installed 2026-09-05, after full wipe)
 
 ### TP Apoc vehicles (M1025 / Pickup / SUV) - INSTALLED

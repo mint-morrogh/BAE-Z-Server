@@ -52,6 +52,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 - **700+ crafting recipes** - weapons, armor, ammo, vehicles (including a craftable dune buggy), bushcraft, NBC gear, and more via Nemsis Craftingpack
 - **Advanced cooking** - 30+ recipes you can discover via CookZ
 - **Skill tree** - earn XP and unlock perks in survival, crafting, hunting, and gathering
+- **Better fishing** - 11 new fish species (freshwater + ocean), improved/pro rods, reusable rubber bait and lures, bait buckets and tackle boxes, fish traps, and a fishing XP/level progression (KM_BetterFishing)
 - **Shake fruit trees** - hold action on fruit trees to shake loose 2-4 apples/pears/plums (75% drop chance, 30-min cooldown per tree)
 
 **Economy & Trading**
@@ -81,6 +82,7 @@ Everything is preconfigured. Clone the repo, subscribe to the Workshop mods, ins
 
 **World & Loot**
 - **Generous loot** - doubled canned food/drinks, 1.5x snacks and candy, tripled cooking pots, doubled frying pans, enabled crab cans
+- **Branded food & drinks** - Monster, Redbull, Coca Cola, Heineken, Jack Daniels, Pringles, Cheetos, Lays, Snickers, Mars, M&M's, Skittles, MREs and more (33 items) mixed into the same town/village loot as the vanilla cans (Food and Drinks)
 - **Long-lasting crops** - planted crops stay alive 3x longer after full maturity before spoiling (12 hours instead of 4)
 - **Boosted foraging** - doubled mushroom spawns under trees, boosted fruit drops from apple/pear/plum trees
 - **Pristine loot** - items spawn Pristine to Worn only (no more Damaged/Badly Damaged spawns)
@@ -453,6 +455,8 @@ These mods must be installed on both the **server** and **client**.
 | [TP Apoc Pickup](https://steamcommunity.com/sharedfiles/filedetails/?id=3738834788) | 3738834788 | Armoured apocalypse pickup truck (9 colours, auto/manual) |
 | [TP Apoc SUV](https://steamcommunity.com/sharedfiles/filedetails/?id=3738839427) | 3738839427 | Armoured apocalypse SUV with roof rack, tent, shovel and axe slots (8 colours, auto/manual) |
 | [Immersive Placing Update](https://steamcommunity.com/sharedfiles/filedetails/?id=3753472356) | 3753472356 | Precise item placement with rotation/elevation, quick drop and quick place actions |
+| [KM_BetterFishing](https://steamcommunity.com/sharedfiles/filedetails/?id=3744242546) | 3744242546 | Fishing overhaul - 11 new fish, better rods, reusable bait, lures, tackle boxes, fishing XP |
+| [Food and Drinks](https://steamcommunity.com/sharedfiles/filedetails/?id=3570578065) | 3570578065 | 33 branded drinks, chips, candy bars, snacks and MREs (huntermods) |
 
 ### Server-Only Mods
 
@@ -537,6 +541,13 @@ Workshop mods download to `Steam\steamapps\workshop\content\221100\`. `INSTALL_M
 | `3738834788` | `@TP_Apoc_Pickup` |
 | `3738839427` | `@TP_Apoc_SUV` |
 | `3753472356` | `@ImmersivePlacing` |
+
+**Added 2026-09-06:**
+
+| Workshop Folder | Rename To |
+|---|---|
+| `3744242546` | `@KM_BetterFishing` |
+| `3570578065` | `@FoodAndDrinks` |
 
 ### Gelya Backpacks - Pack Complete
 
@@ -762,6 +773,38 @@ Adds 30+ craftable food recipes - dishes, soups, sausages, marmalades, and chees
 CookZ Realistic Packaging replaces the default food textures with realistic-looking packaging. It's a visual-only addon - no gameplay changes.
 
 CookZ config auto-generates in `config/CookZ/` on first server start. Item definitions are in `custom/types_cookz.xml`.
+
+### KM Better Fishing
+
+KM_BetterFishing overhauls vanilla fishing (client+server, Workshop 3744242546):
+
+- **11 new fish** - freshwater Grass Carp, Trout, Perch, Crucian, Crappie, Bluegill; ocean Pike, Zander, Tuna, Swordfish, Silverback - each with its own fillet. Vanilla fish still catch too.
+- **Better rods** - `KM_FishingRod_Improved` and `KM_FishingRod_Pro` (higher catch chance / durability than the stick+rope rod). The vanilla rod still works.
+- **Reusable bait & lures** - 5 rubber worms, grasshopper, and 4 lures are not consumed on a catch (only when ruined). Vanilla worms still work.
+- **Containers** - bait bucket (bait only) and 5 tackle box colours (hooks, bait, lures + a knife slot).
+- **Fish traps** - vanilla small fish trap / net trap get the new fish pool.
+- **Fishing XP** - every catch gives XP; levels raise catch chance and rare-catch odds. Progress is per player in `config/KM_BetterFishing/KM_BetterFishing_PlayerData.json` (wiped by `WIPE_SERVER.bat`).
+
+Loot: rods, bait, lures and boxes spawn on the coast and in villages (`custom/types_kmbetterfishing.xml`); rods/boxes come pre-filled per `cfgspawnabletypes.xml`. Fish never spawn as loot. Trader: Misc Trader **Fishing Supplies** sells all gear; Consume Trader **Meat** buys every new fish and fillet. Mod config (catch chances, durability, fish lists, XP) is generated on first boot at `config/KM_BetterFishing/KM_BetterFishing.json` with a `README.txt` next to it.
+
+Compatibility: chains cleanly with ZenSkills (hunting perk modifies bite chance, KM only overrides bait consumption) and Nemsis (both add knife actions via `super.SetActions()`).
+
+### Food and Drinks
+
+huntermods' Food and Drinks (client+server, Workshop 3570578065) adds 33 branded consumables, all plain `Edible_Base` items with no config or scripts beyond eat/drink actions:
+
+| Group | Items | Nutrition |
+|---|---|---|
+| Drinks (9) | Monster, Redbull, Tornado, Rush, Burn, Mr Coffee, Heineken, Coca Cola, Coca Cola Light | 50 energy / 150 water per can (vanilla soda: 100 / 300) |
+| Booze (1) | Jack Daniels | bottle, 1000 quantity |
+| Chips (9) | Pringles x3, Cheetos x3, Lays x3 | 200-250 energy |
+| Candy bars (6) | Bounty, Nestle Fitness, Mars, Nesquik, Nestle Nuts, Snickers | 100 energy |
+| Snacks (4) | Mini Croissants, Croutons, M&M's, Skittles | 200 energy |
+| MREs (4) | 4 ration packs | 400 energy |
+
+**Loot mix** (`custom/types_foodanddrinks.xml`): the mod ships every item at nominal 15 with a 4-hour lifetime and no location flags. BAE-Z instead spawns drinks at 12 each, chips/bars/snacks at 8 each, Jack Daniels at 4 and MREs at 4 each (military + hunting only), all with the vanilla 5-day lifetime, in Town/Village/School/Office/Lunapark. To keep the total amount of food on the map roughly unchanged, the vanilla sodas were cut 56 -> 36 each and Crackers, Zagorky, Marmalade, Powdered Milk, Pate, Pajka and Brisket Spread trimmed ~30% in `db/types.xml` (still above stock DayZ). Net: ~290 drinks and ~170 snack items, about half branded.
+
+**Trader:** Consume Trader **Snacks & Bars** (chips 4/2, bars and snacks 3/1, MRE 8/4) and **Energy Drinks & Booze** (drinks 3/1, Jack Daniels 15/8).
 
 ### DayZ-Dog - Companion Dogs
 
@@ -1036,6 +1079,7 @@ DayZServer/
 │   │   └── config.json          # Care package loot, locations, timing
 │   ├── CookZ/                   # Auto-generated on first start
 │   ├── Dayz-Dog/                # Auto-generated - dog health & behaviour config
+│   ├── KM_BetterFishing/        # Auto-generated - fishing config + README; PlayerData.json = XP (wiped)
 │   ├── PvZmoD_CustomisableZombies_Profile/  # Auto-generated on first start
 │   │   ├── PvZmoD_CustomisableZombies_Globals.xml           # Speed/health/damage ratios (patched)
 │   │   ├── PvZmoD_CustomisableZombies_Characteristics.xml   # Per-zombie-type vision/speed/HP
@@ -1072,6 +1116,8 @@ DayZServer/
 ├── @LMsHelicopters/             # MH6 Little Bird + Ultralight
 ├── @CookZ/                      # Advanced cooking recipes
 ├── @CookZRealisticPackaging/    # Realistic food textures
+├── @KM_BetterFishing/           # Fishing overhaul
+├── @FoodAndDrinks/              # Branded food & drinks
 ├── @SleepTillMorning/           # Skip night when all players sleep
 ├── @4KBOSSKVehicles/            # 21 driveable vehicles
 ├── @DayZDog/                    # Companion dogs (17 breeds)
@@ -1177,6 +1223,7 @@ mpmissions/dayzOffline.chernarusplus/storage_1/
 config/Dayz-Dog/players/
 config/Zenarchist/Skills/PlayerDB/
 config/Zenarchist/Skills/DB/
+config/KM_BetterFishing/KM_BetterFishing_PlayerData.json
 config/ExpansionMod/Quests/PlayerData/
 config/ExpansionMod/Quests/GroupData/
 config/ExpansionMod/Quests/PersistentServerData.json

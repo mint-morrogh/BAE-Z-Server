@@ -4062,10 +4062,10 @@
         <value name="Tier1" />
     </type>
     <type name="BrisketSpread">
-        <nominal>46</nominal>
+        <nominal>32</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>36</min>
+        <min>25</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -5937,10 +5937,10 @@
         <category name="food" />
     </type>
     <type name="Crackers">
-        <nominal>46</nominal>
+        <nominal>32</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>36</min>
+        <min>25</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -13366,10 +13366,10 @@
         <value name="Tier1" />
     </type>
     <type name="Marmalade">
-        <nominal>56</nominal>
+        <nominal>39</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>44</min>
+        <min>30</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -15053,10 +15053,10 @@
         <usage name="Medic" />
     </type>
     <type name="Pajka">
-        <nominal>35</nominal>
+        <nominal>25</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>27</min>
+        <min>19</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -15212,10 +15212,10 @@
         <usage name="Lunapark" />
     </type>
     <type name="Pate">
-        <nominal>46</nominal>
+        <nominal>32</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>36</min>
+        <min>25</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -16077,10 +16077,10 @@
         <value name="Tier3" />
     </type>
     <type name="PowderedMilk">
-        <nominal>88</nominal>
+        <nominal>62</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>68</min>
+        <min>48</min>
         <quantmin>10</quantmin>
         <quantmax>100</quantmax>
         <cost>100</cost>
@@ -18719,10 +18719,10 @@
         <category name="clothes" />
     </type>
     <type name="SodaCan_Cola">
-        <nominal>56</nominal>
+        <nominal>36</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>44</min>
+        <min>28</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -18733,10 +18733,10 @@
         <value name="Tier3" />
     </type>
     <type name="SodaCan_Fronta">
-        <nominal>56</nominal>
+        <nominal>36</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>44</min>
+        <min>28</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -18747,10 +18747,10 @@
         <value name="Tier3" />
     </type>
     <type name="SodaCan_Kvass">
-        <nominal>56</nominal>
+        <nominal>36</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>44</min>
+        <min>28</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -18761,10 +18761,10 @@
         <value name="Tier3" />
     </type>
     <type name="SodaCan_Pipsi">
-        <nominal>56</nominal>
+        <nominal>36</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>44</min>
+        <min>28</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -18775,10 +18775,10 @@
         <value name="Tier3" />
     </type>
     <type name="SodaCan_Spite">
-        <nominal>56</nominal>
+        <nominal>36</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>44</min>
+        <min>28</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -21931,10 +21931,10 @@
         <value name="Tier4" />
     </type>
     <type name="Zagorky">
-        <nominal>23</nominal>
+        <nominal>16</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>18</min>
+        <min>12</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
@@ -21951,10 +21951,10 @@
         <value name="Tier3" />
     </type>
     <type name="ZagorkyChocolate">
-        <nominal>23</nominal>
+        <nominal>16</nominal>
         <lifetime>432000</lifetime>
         <restock>0</restock>
-        <min>18</min>
+        <min>12</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>

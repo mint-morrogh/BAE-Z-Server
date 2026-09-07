@@ -8249,4 +8249,182 @@
 		<attachments chance="1.00"><item name="TP_ApocSuv_Trunk" chance="0.90" /></attachments>
 	</type>
 
+	<!-- KM_BetterFishing spawnable types (from the mod Extra folder) -->
+    <!-- ========================================================= -->
+    <!-- KM_BetterFishing - Spawnable Attachments / Cargo Examples -->
+    <!-- All chances can be edited by server owners.               -->
+    <!-- ========================================================= -->
+
+    <!-- Fishing rods can spawn with hooks/lures attached -->
+
+    <type name="KM_FishingRod_Improved">
+        <attachments chance="0.50">
+            <item name="FishingHook" chance="0.40" />
+            <item name="BoneHook" chance="0.20" />
+            <item name="WoodenHook" chance="0.20" />
+            <item name="Fishing_Lure1" chance="0.05" />
+            <item name="Fishing_Lure2" chance="0.05" />
+            <item name="Fishing_Lure3" chance="0.05" />
+            <item name="Fishing_Lure4" chance="0.05" />
+        </attachments>
+    </type>
+
+    <type name="KM_FishingRod_Pro">
+        <attachments chance="0.70">
+            <item name="FishingHook" chance="0.25" />
+            <item name="BoneHook" chance="0.15" />
+            <item name="WoodenHook" chance="0.10" />
+            <item name="Fishing_Lure1" chance="0.10" />
+            <item name="Fishing_Lure2" chance="0.15" />
+            <item name="Fishing_Lure3" chance="0.15" />
+            <item name="Fishing_Lure4" chance="0.10" />
+        </attachments>
+    </type>
+
+    <!-- Bait bucket can spawn with bait only -->
+
+    <type name="Fishing_BaitBucket">
+        <cargo chance="0.75">
+            <item name="Worm" chance="0.25" />
+            <item name="Red_RubberWorm" chance="0.12" />
+            <item name="Green_RubberWorm" chance="0.12" />
+            <item name="Yellow_RubberWorm" chance="0.12" />
+            <item name="Purple_RubberWorm" chance="0.12" />
+            <item name="Blue_RubberWorm" chance="0.12" />
+            <item name="GrassHopper" chance="0.15" />
+        </cargo>
+    </type>
+
+    <!-- Tackle boxes can spawn with bait, hooks, lures, and a knife attachment -->
+
+    <type name="Fishing_TackleBox">
+        <attachments chance="0.35">
+            <item name="KitchenKnife" chance="0.25" />
+            <item name="SteakKnife" chance="0.25" />
+            <item name="HuntingKnife" chance="0.10" />
+            <item name="CombatKnife" chance="0.05" />
+            <item name="StoneKnife" chance="0.20" />
+            <item name="BoneKnife" chance="0.15" />
+        </attachments>
+        <cargo chance="0.85">
+            <item name="FishingHook" chance="0.16" />
+            <item name="BoneHook" chance="0.12" />
+            <item name="WoodenHook" chance="0.12" />
+            <item name="Red_RubberWorm" chance="0.08" />
+            <item name="Green_RubberWorm" chance="0.08" />
+            <item name="Yellow_RubberWorm" chance="0.08" />
+            <item name="Purple_RubberWorm" chance="0.08" />
+            <item name="Blue_RubberWorm" chance="0.08" />
+            <item name="GrassHopper" chance="0.08" />
+            <item name="Fishing_Lure1" chance="0.04" />
+            <item name="Fishing_Lure2" chance="0.04" />
+            <item name="Fishing_Lure3" chance="0.02" />
+            <item name="Fishing_Lure4" chance="0.02" />
+        </cargo>
+    </type>
+
+    <type name="Fishing_TackleBox_Blue">
+        <attachments chance="0.35">
+            <item name="KitchenKnife" chance="0.25" />
+            <item name="SteakKnife" chance="0.25" />
+            <item name="HuntingKnife" chance="0.10" />
+            <item name="CombatKnife" chance="0.05" />
+            <item name="StoneKnife" chance="0.20" />
+            <item name="BoneKnife" chance="0.15" />
+        </attachments>
+        <cargo chance="0.85">
+            <item name="FishingHook" chance="0.16" />
+            <item name="BoneHook" chance="0.12" />
+            <item name="WoodenHook" chance="0.12" />
+            <item name="Red_RubberWorm" chance="0.08" />
+            <item name="Green_RubberWorm" chance="0.08" />
+            <item name="Yellow_RubberWorm" chance="0.08" />
+            <item name="Purple_RubberWorm" chance="0.08" />
+            <item name="Blue_RubberWorm" chance="0.08" />
+            <item name="GrassHopper" chance="0.08" />
+            <item name="Fishing_Lure1" chance="0.04" />
+            <item name="Fishing_Lure2" chance="0.04" />
+            <item name="Fishing_Lure3" chance="0.02" />
+            <item name="Fishing_Lure4" chance="0.02" />
+        </cargo>
+    </type>
+
+    <type name="Fishing_TackleBox_Red">
+        <attachments chance="0.35">
+            <item name="KitchenKnife" chance="0.25" />
+            <item name="SteakKnife" chance="0.25" />
+            <item name="HuntingKnife" chance="0.10" />
+            <item name="CombatKnife" chance="0.05" />
+            <item name="StoneKnife" chance="0.20" />
+            <item name="BoneKnife" chance="0.15" />
+        </attachments>
+        <cargo chance="0.85">
+            <item name="FishingHook" chance="0.16" />
+            <item name="BoneHook" chance="0.12" />
+            <item name="WoodenHook" chance="0.12" />
+            <item name="Red_RubberWorm" chance="0.08" />
+            <item name="Green_RubberWorm" chance="0.08" />
+            <item name="Yellow_RubberWorm" chance="0.08" />
+            <item name="Purple_RubberWorm" chance="0.08" />
+            <item name="Blue_RubberWorm" chance="0.08" />
+            <item name="GrassHopper" chance="0.08" />
+            <item name="Fishing_Lure1" chance="0.04" />
+            <item name="Fishing_Lure2" chance="0.04" />
+            <item name="Fishing_Lure3" chance="0.02" />
+            <item name="Fishing_Lure4" chance="0.02" />
+        </cargo>
+    </type>
+
+    <type name="Fishing_TackleBox_Yellow">
+        <attachments chance="0.35">
+            <item name="KitchenKnife" chance="0.25" />
+            <item name="SteakKnife" chance="0.25" />
+            <item name="HuntingKnife" chance="0.10" />
+            <item name="CombatKnife" chance="0.05" />
+            <item name="StoneKnife" chance="0.20" />
+            <item name="BoneKnife" chance="0.15" />
+        </attachments>
+        <cargo chance="0.85">
+            <item name="FishingHook" chance="0.16" />
+            <item name="BoneHook" chance="0.12" />
+            <item name="WoodenHook" chance="0.12" />
+            <item name="Red_RubberWorm" chance="0.08" />
+            <item name="Green_RubberWorm" chance="0.08" />
+            <item name="Yellow_RubberWorm" chance="0.08" />
+            <item name="Purple_RubberWorm" chance="0.08" />
+            <item name="Blue_RubberWorm" chance="0.08" />
+            <item name="GrassHopper" chance="0.08" />
+            <item name="Fishing_Lure1" chance="0.04" />
+            <item name="Fishing_Lure2" chance="0.04" />
+            <item name="Fishing_Lure3" chance="0.02" />
+            <item name="Fishing_Lure4" chance="0.02" />
+        </cargo>
+    </type>
+
+    <type name="Fishing_TackleBox_Purple">
+        <attachments chance="0.35">
+            <item name="KitchenKnife" chance="0.25" />
+            <item name="SteakKnife" chance="0.25" />
+            <item name="HuntingKnife" chance="0.10" />
+            <item name="CombatKnife" chance="0.05" />
+            <item name="StoneKnife" chance="0.20" />
+            <item name="BoneKnife" chance="0.15" />
+        </attachments>
+        <cargo chance="0.85">
+            <item name="FishingHook" chance="0.16" />
+            <item name="BoneHook" chance="0.12" />
+            <item name="WoodenHook" chance="0.12" />
+            <item name="Red_RubberWorm" chance="0.08" />
+            <item name="Green_RubberWorm" chance="0.08" />
+            <item name="Yellow_RubberWorm" chance="0.08" />
+            <item name="Purple_RubberWorm" chance="0.08" />
+            <item name="Blue_RubberWorm" chance="0.08" />
+            <item name="GrassHopper" chance="0.08" />
+            <item name="Fishing_Lure1" chance="0.04" />
+            <item name="Fishing_Lure2" chance="0.04" />
+            <item name="Fishing_Lure3" chance="0.02" />
+            <item name="Fishing_Lure4" chance="0.02" />
+        </cargo>
+    </type>
+
 </spawnabletypes>

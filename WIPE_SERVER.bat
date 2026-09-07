@@ -63,6 +63,9 @@ if exist "config\Zenarchist\Skills\DB" (
     rd /s /q "config\Zenarchist\Skills\DB" 2>nul
     echo   [OK] Skill highscore DB wiped
 )
+:: KM_BetterFishing fishing XP / levels
+del /q "config\KM_BetterFishing\KM_BetterFishing_PlayerData.json" 2>nul
+echo   [OK] Fishing skill progress wiped
 :: Expansion Quests runtime data (player quest progress, group data)
 if exist "config\ExpansionMod\Quests\PlayerData" rd /s /q "config\ExpansionMod\Quests\PlayerData" 2>nul
 if exist "config\ExpansionMod\Quests\GroupData" rd /s /q "config\ExpansionMod\Quests\GroupData" 2>nul

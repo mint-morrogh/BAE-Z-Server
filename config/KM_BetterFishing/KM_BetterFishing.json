@@ -1,0 +1,368 @@
+{
+    "RodSettings": [
+        {
+            "RodClassName": "FishingRod",
+            "CatchChanceMultiplier": 1.0,
+            "JunkChanceMultiplier": 1.0,
+            "HookDamageMultiplier": 1.0,
+            "FishType": 0,
+            "Fish": [
+                "Carp",
+                "Bitterlings",
+                "SteelheadTrout",
+                "Fish_GrassCarp",
+                "Fish_Trout",
+                "Fish_Perch",
+                "Fish_Crucian",
+                "Fish_Crappie",
+                "Fish_Bluegill",
+                "Mackerel",
+                "Sardines",
+                "WalleyePollock",
+                "Fish_Pike",
+                "Fish_Zander",
+                "Fish_TunaFish",
+                "Fish_SwordFish",
+                "Fish_SilverBack"
+            ],
+            "AllowedJunk": [
+                "Wellies_Black",
+                "Wellies_Brown",
+                "Wellies_Green",
+                "Wellies_Grey",
+                "Pot"
+            ]
+        },
+        {
+            "RodClassName": "KM_FishingRod_Improved",
+            "CatchChanceMultiplier": 1.0800000429153443,
+            "JunkChanceMultiplier": 0.8999999761581421,
+            "HookDamageMultiplier": 0.8999999761581421,
+            "FishType": 0,
+            "Fish": [
+                "Carp",
+                "Bitterlings",
+                "SteelheadTrout",
+                "Fish_GrassCarp",
+                "Fish_Trout",
+                "Fish_Perch",
+                "Fish_Crucian",
+                "Fish_Crappie",
+                "Fish_Bluegill",
+                "Mackerel",
+                "Sardines",
+                "WalleyePollock",
+                "Fish_Pike",
+                "Fish_Zander",
+                "Fish_TunaFish",
+                "Fish_SwordFish",
+                "Fish_SilverBack"
+            ],
+            "AllowedJunk": [
+                "Wellies_Black",
+                "Wellies_Brown",
+                "Wellies_Green",
+                "Wellies_Grey",
+                "Pot"
+            ]
+        },
+        {
+            "RodClassName": "KM_FishingRod_Pro",
+            "CatchChanceMultiplier": 1.149999976158142,
+            "JunkChanceMultiplier": 0.75,
+            "HookDamageMultiplier": 0.800000011920929,
+            "FishType": 0,
+            "Fish": [
+                "Carp",
+                "Bitterlings",
+                "SteelheadTrout",
+                "Fish_GrassCarp",
+                "Fish_Trout",
+                "Fish_Perch",
+                "Fish_Crucian",
+                "Fish_Crappie",
+                "Fish_Bluegill",
+                "Mackerel",
+                "Sardines",
+                "WalleyePollock",
+                "Fish_Pike",
+                "Fish_Zander",
+                "Fish_TunaFish",
+                "Fish_SwordFish",
+                "Fish_SilverBack"
+            ],
+            "AllowedJunk": []
+        }
+    ],
+    "TrapSettings": [
+        {
+            "TrapClassName": "FishNetTrap",
+            "CatchChanceMultiplier": 1.100000023841858,
+            "FishType": 0,
+            "Fish": [
+                "Carp",
+                "Bitterlings",
+                "SteelheadTrout",
+                "Fish_GrassCarp",
+                "Fish_Trout",
+                "Fish_Perch",
+                "Fish_Crucian",
+                "Fish_Crappie",
+                "Fish_Bluegill",
+                "Mackerel",
+                "Sardines",
+                "WalleyePollock",
+                "Fish_Pike",
+                "Fish_Zander",
+                "Fish_TunaFish",
+                "Fish_SwordFish",
+                "Fish_SilverBack"
+            ]
+        },
+        {
+            "TrapClassName": "SmallFishTrap",
+            "CatchChanceMultiplier": 1.149999976158142,
+            "FishType": 1,
+            "Fish": [
+                "Carp",
+                "Bitterlings",
+                "SteelheadTrout",
+                "Fish_GrassCarp",
+                "Fish_Trout",
+                "Fish_Perch",
+                "Fish_Crucian",
+                "Fish_Crappie",
+                "Fish_Bluegill"
+            ]
+        }
+    ],
+    "BaitSettings": [
+        {
+            "BaitClassName": "Worm",
+            "CatchChanceMultiplier": 1.149999976158142,
+            "JunkChanceMultiplier": 0.8999999761581421,
+            "Reusable": 0,
+            "DamagePerCatch": 100.0
+        },
+        {
+            "BaitClassName": "FishingHook",
+            "CatchChanceMultiplier": 1.0,
+            "JunkChanceMultiplier": 1.0,
+            "Reusable": 0,
+            "DamagePerCatch": 100.0
+        },
+        {
+            "BaitClassName": "BoneHook",
+            "CatchChanceMultiplier": 0.949999988079071,
+            "JunkChanceMultiplier": 1.100000023841858,
+            "Reusable": 0,
+            "DamagePerCatch": 100.0
+        },
+        {
+            "BaitClassName": "WoodenHook",
+            "CatchChanceMultiplier": 0.8999999761581421,
+            "JunkChanceMultiplier": 1.2000000476837159,
+            "Reusable": 0,
+            "DamagePerCatch": 100.0
+        },
+        {
+            "BaitClassName": "Red_RubberWorm",
+            "CatchChanceMultiplier": 1.1200000047683716,
+            "JunkChanceMultiplier": 0.8500000238418579,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "Green_RubberWorm",
+            "CatchChanceMultiplier": 1.1200000047683716,
+            "JunkChanceMultiplier": 0.8500000238418579,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "Yellow_RubberWorm",
+            "CatchChanceMultiplier": 1.1200000047683716,
+            "JunkChanceMultiplier": 0.8500000238418579,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "Purple_RubberWorm",
+            "CatchChanceMultiplier": 1.1200000047683716,
+            "JunkChanceMultiplier": 0.8500000238418579,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "Blue_RubberWorm",
+            "CatchChanceMultiplier": 1.1200000047683716,
+            "JunkChanceMultiplier": 0.8500000238418579,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "GrassHopper",
+            "CatchChanceMultiplier": 1.2000000476837159,
+            "JunkChanceMultiplier": 0.75,
+            "Reusable": 1,
+            "DamagePerCatch": 25.0
+        },
+        {
+            "BaitClassName": "Fishing_Lure1",
+            "CatchChanceMultiplier": 1.100000023841858,
+            "JunkChanceMultiplier": 0.8999999761581421,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "Fishing_Lure2",
+            "CatchChanceMultiplier": 1.149999976158142,
+            "JunkChanceMultiplier": 0.8500000238418579,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "Fishing_Lure3",
+            "CatchChanceMultiplier": 1.2000000476837159,
+            "JunkChanceMultiplier": 0.800000011920929,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        },
+        {
+            "BaitClassName": "Fishing_Lure4",
+            "CatchChanceMultiplier": 1.25,
+            "JunkChanceMultiplier": 0.75,
+            "Reusable": 1,
+            "DamagePerCatch": 20.0
+        }
+    ],
+    "FishSizeSettings": [
+        {
+            "FishClassName": "Bitterlings",
+            "SizeName": "Small",
+            "QuantityMultiplier": 0.5
+        },
+        {
+            "FishClassName": "Sardines",
+            "SizeName": "Small",
+            "QuantityMultiplier": 0.5
+        },
+        {
+            "FishClassName": "Fish_Bluegill",
+            "SizeName": "Small",
+            "QuantityMultiplier": 0.550000011920929
+        },
+        {
+            "FishClassName": "Fish_Crappie",
+            "SizeName": "Small",
+            "QuantityMultiplier": 0.6499999761581421
+        },
+        {
+            "FishClassName": "Fish_Perch",
+            "SizeName": "Small",
+            "QuantityMultiplier": 0.75
+        },
+        {
+            "FishClassName": "Carp",
+            "SizeName": "Medium",
+            "QuantityMultiplier": 1.0
+        },
+        {
+            "FishClassName": "SteelheadTrout",
+            "SizeName": "Medium",
+            "QuantityMultiplier": 1.0
+        },
+        {
+            "FishClassName": "Mackerel",
+            "SizeName": "Medium",
+            "QuantityMultiplier": 1.0
+        },
+        {
+            "FishClassName": "WalleyePollock",
+            "SizeName": "Medium",
+            "QuantityMultiplier": 1.0
+        },
+        {
+            "FishClassName": "Fish_Crucian",
+            "SizeName": "Medium",
+            "QuantityMultiplier": 1.0
+        },
+        {
+            "FishClassName": "Fish_Trout",
+            "SizeName": "Medium",
+            "QuantityMultiplier": 1.100000023841858
+        },
+        {
+            "FishClassName": "Fish_GrassCarp",
+            "SizeName": "Medium",
+            "QuantityMultiplier": 1.149999976158142
+        },
+        {
+            "FishClassName": "Fish_Pike",
+            "SizeName": "Large",
+            "QuantityMultiplier": 1.399999976158142
+        },
+        {
+            "FishClassName": "Fish_Zander",
+            "SizeName": "Large",
+            "QuantityMultiplier": 1.350000023841858
+        },
+        {
+            "FishClassName": "Fish_SilverBack",
+            "SizeName": "Large",
+            "QuantityMultiplier": 1.600000023841858
+        },
+        {
+            "FishClassName": "Fish_TunaFish",
+            "SizeName": "Huge",
+            "QuantityMultiplier": 2.0
+        },
+        {
+            "FishClassName": "Fish_SwordFish",
+            "SizeName": "Huge",
+            "QuantityMultiplier": 2.5
+        }
+    ],
+    "RareCatchSettings": {
+        "RareCatchChance": 0.10000000149011612,
+        "RareCatchItems": [
+            "Compass",
+            "WaterBottle",
+            "CrabCan",
+            "Shrimp",
+            "AmmoBox_308Win_20Rnd",
+            "AmmoBox_762x54_20Rnd",
+            "AmmoBox_762x39_20Rnd"
+        ]
+    },
+    "FishingSkill": {
+        "Enabled": 1,
+        "FishCaughtPerLevel": 25,
+        "MaxLevel": 10,
+        "ResetOnDeath": 0,
+        "JunkReductionPerLevel": 0.019999999552965165,
+        "RareCatchBonusPerLevel": 0.0020000000949949028,
+        "BetterFishWeightBonusPerLevel": 0.05000000074505806,
+        "EnableSkillMessages": 1,
+        "LevelUpMessageText": "Your fishing skill increased to level %1"
+    },
+    "FishPreparation": {
+        "KnifeDamage": 4.0,
+        "SpawnBones": 1,
+        "BoneCount": 2,
+        "SpawnGuts": 1,
+        "GutCount": 1,
+        "SpawnFishRoe": 0,
+        "FishRoeChance": 25.0,
+        "FishRoeCount": 1,
+        "BonesClassName": "Bone",
+        "GutsClassName": "Guts",
+        "FishRoeClassName": "RedCaviar",
+        "SalmonellaChance": 100.0,
+        "PreserveTemperature": 1,
+        "PreserveFrozenState": 1
+    },
+    "FishYieldMultiplier": 1.100000023841858,
+    "EnableCatchMessages": 1,
+    "CatchMessageText": "You caught: %1"
+}

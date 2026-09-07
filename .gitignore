@@ -131,6 +131,9 @@ config/*
 config/SagaTreeShake/cooldowns.json
 !config/ImmersivePlacing/
 !config/ImmersivePlacing/**
+!config/KM_BetterFishing/
+!config/KM_BetterFishing/**
+config/KM_BetterFishing/KM_BetterFishing_PlayerData.json
 !config/LM/
 !config/LM/**
 !config/SFE_TransportDamageControl/

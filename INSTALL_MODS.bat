@@ -96,6 +96,8 @@ call :install_mod 3737385977 TP_Apoc_M1025
 call :install_mod 3738834788 TP_Apoc_Pickup
 call :install_mod 3738839427 TP_Apoc_SUV
 call :install_mod 3753472356 ImmersivePlacing
+call :install_mod 3744242546 KM_BetterFishing
+call :install_mod 3570578065 FoodAndDrinks
 
 :: ============================================================
 :: Post-install: Re-apply SurvivorAnims PBO patch
