@@ -197,6 +197,8 @@ config/@CREATE_GAMELABS_CFG_HERE/
 !@TraderBuyFix/addons/TraderBuyFix.pbo
 !@BatteryBoost/addons/
 !@BatteryBoost/addons/BatteryBoost.pbo
+!@InventoryMoveSoundsFix/addons/
+!@InventoryMoveSoundsFix/addons/InventoryMoveSoundsFix.pbo
 
 # Local-only debugging scratch notes
 ACTIVE_DEBUGGING.md

@@ -999,6 +999,12 @@ Custom client+server mod (`@StackableItems`). Increases the stack limit to 999 f
 
 Source code in `mod_src/StackableItems/`.
 
+### InventoryMoveSoundsFix - 1.29 Magazine Move Sound
+
+Custom client+server script mod (`@InventoryMoveSoundsFix`). Inventory Move Sounds (Workshop 2444247391) plays `MagRifle_empty_in_SoundSet` whenever a magazine, ammo pile or grenade is moved, but DayZ 1.29 removed that vanilla sound set, so every such move logged `EffectSound ... Invalid sound set` on the client (seen right before the Sep 7 2026 heap-corruption crash). The mod overrides `EffectSound.SetSoundSet()` (3_Game) and swaps that name for `MagRifle_fill_out_SoundSet`, which still exists. A config override was tried first and does not work: both IMS PBOs declare the same CfgPatches name (`IMS_Sounds`), so `requiredAddons` cannot order a patch after the `movesounds` config and its value wins. Must be on both sides (`LAUNCH_DAYZ.bat` syncs it to the client).
+
+Source code in `mod_src/InventoryMoveSoundsFix/`. Rebuild: `cd mod_src/InventoryMoveSoundsFix && pbo -b -H "prefix=InventoryMoveSoundsFix" ../../@InventoryMoveSoundsFix/addons/InventoryMoveSoundsFix.pbo config.cpp Scripts/3_Game/InventoryMoveSoundsFix.c`
+
 ### EnableInventoryInVehicle - Vehicle Inventory Access
 
 Custom client+server mod (`@EnableInventoryInVehicle`). Replaces the removed Workshop mod with a dog-mod-safe implementation. Unlocks inventory access while seated in vehicles. Includes a guard that prevents re-locking inventory when a scripted menu (e.g. DayZ-Dog's DogManageMenu) is open, fixing the input-capture bug that the Workshop version caused.
@@ -1172,6 +1178,9 @@ DayZServer/
 ├── @StackableItems/             # Custom client+server mod - increased stack sizes
 │   └── addons/
 │       └── StackableItems.pbo   # Roubles, nails, rags, etc. stack to 999
+├── @InventoryMoveSoundsFix/     # Custom client+server mod - 1.29 magazine move sound fix
+│   └── addons/
+│       └── InventoryMoveSoundsFix.pbo # EffectSound.SetSoundSet swap of the removed sound set
 ├── mod_src/                     # Source code for custom mods
 │   ├── DayZombieManager/        # Zombie manager source (culling + kill drops)
 │   ├── CampfireRegen/           # Campfire regen source
@@ -1187,6 +1196,7 @@ DayZServer/
 │   ├── EnableInventoryInVehicle/ # EnableInventoryInVehicle source (vehicle inventory access)
 │   ├── BAEZLoadingScreen/       # BAEZLoadingScreen source (custom loading screen)
 │   ├── MWGSM_TraderFix/         # MWGSM_TraderFix source (trader currency label fix)
+│   ├── InventoryMoveSoundsFix/  # InventoryMoveSoundsFix source (1.29 sound set swap)
 │   ├── pack_pbo.py              # PBO packer tool
 │   └── rapify.py                # config.cpp to config.bin converter
 └── mpmissions/

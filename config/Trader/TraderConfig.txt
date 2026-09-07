@@ -224,6 +224,7 @@
 		BatteryCharger,			*,		40,		20
 		BaseRadio,				*,		50,		30
 		Rangefinder,			*,		60,		35
+		GPSReceiver,			*,		80,		40
 		NVGoggles,				*,		400,	220
 
 	<Category> Fire & Lights
@@ -545,9 +546,7 @@
 		MassSVT40_Black,                          W,		550,	275
 		MassSVT40_Green,                          W,		550,	275
 		MassSVT40_Camo,                           W,		600,	300
-		MassAR15,                                 W,		1100,	550
 		MassScout556,                             W,		600,	300
-		MassPpskn,                                W,		700,	350
 		MassB52,                                  W,		800,	400
 		Massmini14,                               W,		600,	300
 		MassMini14_Black,                         W,		650,	325
@@ -565,7 +564,6 @@
 		Expansion_M16,                            W,		1200,	600
 		Expansion_G36,                            W,		1200,	600
 		Expansion_Kar98,                          W,		500,	250
-		Expansion_W1873,                          W,		380,	190
 
 	<Category> Assault Rifles
 		FAMAS,                                    W,		1000,	500
@@ -658,10 +656,10 @@
 		AJW_SCARH_TAN,                            W,		2500,	1250
 		AJW_SCARH_MCT,                            W,		2600,	1300
 		AJW_SCARH_White,                          W,		2600,	1300
-		AJW__AWM_FDE,                             W,		3000,	1500
-		AJW__AWM_AOR2,                            W,		3200,	1600
-		AJW__AWM_Green,                           W,		3200,	1600
-		AJW__AWM_Gold,                            W,		3500,	1750
+		AJW_AWM_FDE,                              W,		3000,	1500
+		AJW_AWM_AOR2,                             W,		3200,	1600
+		AJW_AWM_Green,                            W,		3200,	1600
+		AJW_AWM_Gold,                             W,		3500,	1750
 		AJW_GOL_Magnum_Green,                     W,		3000,	1500
 		Expansion_AWM,                            W,		3000,	1500
 		Expansion_AWM_Black,                      W,		3000,	1500
@@ -691,11 +689,11 @@
 		ExpansionAmmoRPG,                         1,		1000,	500
 		ExpansionLAW,                             W,		4000,	2000
 		ExpansionAmmoLAW,                         1,		800,	400
-		Expansion_M203_HE,                        1,		500,	200
+		Ammo_Expansion_M203_HE,                   1,		500,	200
 		Expansion_M18SmokeGrenade_Teargas,        1,		300,	100
-		Expansion_M203_Smoke_White,               1,		200,	80
-		Expansion_M203_Smoke_Red,                 1,		200,	80
-		Expansion_M203_Smoke_Teargas,             1,		300,	100
+		Ammo_Expansion_M203_Smoke_White,          1,		200,	80
+		Ammo_Expansion_M203_Smoke_Red,            1,		200,	80
+		Ammo_Expansion_M203_Smoke_Teargas,        1,		300,	100
 		Plastic_Explosive,                        1,		1500,	750
 
 <Trader> Weapon Supplies
@@ -751,13 +749,12 @@
 		AJW_Ammo_300WM,                           1,		12,	6
 		AJW_Ammo_762x25,                          1,		4,	2
 		AJW_Ammo_8mm,                             1,		4,	2
-		AJW__Ammo_338,                            1,		15,	8
-		AJW__AmmoBox_338mm_10Rnd,                 *,		120,	60
-		Expansion_338,                            1,		15,	8
-		Expansion_338_15rnd,                      *,		180,	90
-		Expansion_46x30,                          1,		5,	3
-		Expansion_46x30_25rnd,                    *,		100,	50
-		Expansion_8mm,                            1,		5,	3
+		AJW_Ammo_338,                             1,		15,	8
+		AJW_AmmoBox_338mm_10Rnd,                  *,		120,	60
+		Ammo_Expansion_338,                       1,		15,	8
+		AmmoBox_Expansion_338_15rnd,              *,		180,	90
+		Ammo_Expansion_46x30,                     1,		5,	3
+		AmmoBox_Expansion_46x30_25rnd,            *,		100,	50
 		Expansion_AmmoBox_8mm_15rnd,              *,		60,	30
 		Expansion_Ammo_ArrowBolt,                 1,		8,	4
 
@@ -785,7 +782,7 @@
 		AJW_Mag_Kimber1911_9Rnd,                  M,		40,	20
 		AJW_Mag_CZP09_20Rnd,                      M,		50,	25
 		AJW_Mag_DWX_20Rnd,                        M,		50,	25
-		AJW_Mag_CM_TaranTactical_9Rnd,            M,		40,	20
+		AJW_Mag_TaranTactical_9Rnd,               M,		40,	20
 		AJW_Mag_Vityaz_30Rnd_Black,               M,		120,	60
 		AJW_Mag_Vityaz_30Rnd_FDE,                 M,		120,	60
 		AJW_Mag_Vityaz_PMAG_30Rnd_Black,          M,		150,	75
@@ -794,7 +791,6 @@
 		AJW_Mag_EVO3_35rnd,                       M,		120,	60
 		AJW_Mag_PPSH_35rnd,                       M,		100,	50
 		AJW_Mag_PPSH_71rnd,                       M,		300,	150
-		BAW_Mag_Uzi_35Rnd,                        M,		120,	60
 		Mag_Expansion_M9_15Rnd,                   M,		40,	20
 		Mag_Expansion_MPX_50Rnd,                  M,		350,	175
 		Mag_Expansion_MP7_40Rnd,                  M,		250,	125
@@ -819,13 +815,12 @@
 		AJW_Mag_DMK12_5rnd,                       M,		80,	40
 		AJW_Mag_DMK12_10rnd,                      M,		120,	60
 		AJW_Mag_DMK12_25rnd,                      M,		250,	125
-		BAW_Mag_DMR_20rnd,                        M,		250,	125
 		AJW_Mag_SVD_10Rnd_Black,                  M,		250,	125
 		AJW_Mag_SVD_10Rnd_Rattle,                 M,		280,	140
 		AJW_Mag_SV98_10Rnd,                       M,		250,	125
 		AJW_Mag_R700_10Rnd,                       M,		200,	100
 		AJW_Mag_GOL_4rnd,                         M,		300,	150
-		AJW__AWM_Magazine_5rnd,                   M,		350,	175
+		AJW_AWM_Magazine_5rnd,                    M,		350,	175
 		AJW_Mag_PKM_200Rnd,                       M,		500,	250
 		AJW_Mag_PKM_200Rnd_Worn,                  M,		450,	225
 		AJW_Mag_PKM_200Rnd_WLPainted,             M,		550,	275
@@ -964,8 +959,6 @@
 		AJW_Optic_K98,                            *,		400,	200
 		AJW_Optic_LeupoldHoloDEVO,                *,		1200,	600
 		AJW_Optic_EoTechVudu,                     *,		1200,	600
-		AJW_Optic_LRHS,                           *,		1400,	700
-		AJW_Optic_LRHS_FDE,                       *,		1400,	700
 		AJW_Optic_Leupold_M3A,                    *,		1800,	900
 		ExpansionHAMROptic,                       *,		600,	300
 		Expansion_PMII25Optic,                    *,		1800,	900

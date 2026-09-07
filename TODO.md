@@ -2,6 +2,15 @@
 
 ## Needs in-game test (installed 2026-09-06, after full wipe)
 
+### Inventory Move Sounds on 1.29 - PATCHED (2026-09-07)
+- 1.29 removed vanilla `MagRifle_empty_in_SoundSet`; IMS plays it on every magazine/ammo/grenade move -> `EffectSound ... Invalid sound set` on the client (4x right before the Sep 7 heap-corruption crash). New `@InventoryMoveSoundsFix` (3_Game script, client+server, in both bat files) overrides `EffectSound.SetSoundSet()` and swaps the name for `MagRifle_fill_out_SoundSet`. A config override was tried and rejected: both IMS PBOs share the CfgPatches name `IMS_Sounds`, so it cannot be ordered after the movesounds config (server RPT showed our config processed first).
+- **Test:** move a magazine and a grenade in inventory; `%LOCALAPPDATA%\DayZ\script_*.log` must show no `MagRifle_empty_in_SoundSet` error, and a mag handling sound should play.
+
+### Trader dead entries - FIXED (2026-09-07)
+- Class check of every Weapon Trader Rifles..Optics entry against all vanilla + mod configs found 24 names that exist nowhere (listed but never buy/sell). Renamed 16 (`AJW__AWM_*` double underscore -> `AJW_AWM_*`, `Expansion_M203_*`/`Expansion_338`/`Expansion_46x30` -> `Ammo_Expansion_*`/`AmmoBox_Expansion_*`, `AJW__Ammo_338`, `AJW__AmmoBox_338mm_10Rnd`, `AJW_Mag_CM_TaranTactical_9Rnd` -> `AJW_Mag_TaranTactical_9Rnd`) and deleted 8 with no real class (`AJW_Optic_LRHS`, `AJW_Optic_LRHS_FDE`, `MassAR15`, `MassPpskn`, `Expansion_W1873`, `Expansion_8mm`, `BAW_Mag_Uzi_35Rnd`, `BAW_Mag_DMR_20rnd`).
+- **Test:** Weapon Trader > Sniper/Ammo/Optics: buy an `AJW_AWM_FDE`, an M203 HE round and a .338 box; they should spawn.
+- GPS was never in the trader: added `GPSReceiver, *, 80, 40` to Misc Trader > Electronics (between Rangefinder and NVGoggles). **Test:** buy/sell a GPS at Misc Trader.
+
 ### KM_BetterFishing - INSTALLED
 - Workshop 3744242546 -> `@KM_BetterFishing` (client+server, end of `-mod=` list). Only depends on vanilla DZ_ addons.
 - Mods `ActionFishingNew`, `FishingRod`, `CatchingContextFishingRodAction`, vanilla fish classes, knives (`SetActions`), `PlayerBase.EEKilled`, `MissionServer.OnInit` - all call `super`. ZenSkills also mods `CatchingContextFishingRodAction` but different methods (bite chance vs bait consumption); Nemsis also mods the knives via `SetActions` - both chain.
