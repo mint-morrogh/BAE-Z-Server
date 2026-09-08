@@ -1005,6 +1005,12 @@ Custom client+server script mod (`@InventoryMoveSoundsFix`). Inventory Move Soun
 
 Source code in `mod_src/InventoryMoveSoundsFix/`. Rebuild: `cd mod_src/InventoryMoveSoundsFix && pbo -b -H "prefix=InventoryMoveSoundsFix" ../../@InventoryMoveSoundsFix/addons/InventoryMoveSoundsFix.pbo config.cpp Scripts/3_Game/InventoryMoveSoundsFix.c`
 
+### TraderSearchFix - Trader Search Out-of-Memory Crash
+
+Custom client+server script mod (`@TraderSearchFix`). Typing in the Dr Jones Trader search box crashed the client with an out-of-memory error (reproduced by typing "smoke" at the Weapon Trader). `TraderMenu.Update()` re-runs `SearchForItems()` on every keystroke and ends it with `SelectRow(0)`; the changed row makes `Update()` call `updateItemPreview()`, which spawns a real 3D entity with `GetGame().CreateObject()`. The old preview is released with `ObjectDelete()`, which is deferred, so a five-character search queued five full item models - weapon models on the gun trader - and the client ran out of memory before the engine freed any of them. The mod debounces `updateItemPreview()` by 300 ms on `CALL_CATEGORY_GUI`: each new selection cancels the pending one, so a burst of keystrokes creates exactly one entity. The search list itself only reads configs and is left alone. Must be on both sides (`LAUNCH_DAYZ.bat` syncs it to the client).
+
+Source code in `mod_src/TraderSearchFix/`. Rebuild: `cd mod_src/TraderSearchFix && pbo -b -H "prefix=TraderSearchFix" ../../@TraderSearchFix/addons/TraderSearchFix.pbo config.cpp Scripts/4_World/TraderSearchFix.c`
+
 ### EnableInventoryInVehicle - Vehicle Inventory Access
 
 Custom client+server mod (`@EnableInventoryInVehicle`). Replaces the removed Workshop mod with a dog-mod-safe implementation. Unlocks inventory access while seated in vehicles. Includes a guard that prevents re-locking inventory when a scripted menu (e.g. DayZ-Dog's DogManageMenu) is open, fixing the input-capture bug that the Workshop version caused.
@@ -1181,6 +1187,9 @@ DayZServer/
 ├── @InventoryMoveSoundsFix/     # Custom client+server mod - 1.29 magazine move sound fix
 │   └── addons/
 │       └── InventoryMoveSoundsFix.pbo # EffectSound.SetSoundSet swap of the removed sound set
+├── @TraderSearchFix/            # Custom client+server mod - trader search OOM fix
+│   └── addons/
+│       └── TraderSearchFix.pbo   # Debounced TraderMenu item preview
 ├── mod_src/                     # Source code for custom mods
 │   ├── DayZombieManager/        # Zombie manager source (culling + kill drops)
 │   ├── CampfireRegen/           # Campfire regen source
@@ -1197,6 +1206,7 @@ DayZServer/
 │   ├── BAEZLoadingScreen/       # BAEZLoadingScreen source (custom loading screen)
 │   ├── MWGSM_TraderFix/         # MWGSM_TraderFix source (trader currency label fix)
 │   ├── InventoryMoveSoundsFix/  # InventoryMoveSoundsFix source (1.29 sound set swap)
+│   ├── TraderSearchFix/         # TraderSearchFix source (trader search preview debounce)
 │   ├── pack_pbo.py              # PBO packer tool
 │   └── rapify.py                # config.cpp to config.bin converter
 └── mpmissions/

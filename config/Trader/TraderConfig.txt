@@ -672,29 +672,10 @@
 		AJW_PKM_Worn,                             W,		2800,	1400
 		AJW_PKM_WL_Painted,                       W,		3200,	1600
 
-	<Category> Grenades
-		RGD5Grenade,                              1,		300,	100
-		M67Grenade,                               1,		300,	100
-		M18SmokeGrenade_Red,                      1,		300,	100
-		M18SmokeGrenade_Green,                    1,		300,	100
-		M18SmokeGrenade_White,                    1,		300,	100
-		RDG2SmokeGrenade_White,                   1,		300,	100
-		FlashGrenade,                             1,		300,	100
+	<Category> Launchers
 		M79,                                      W,		2500,	1200
-		Ammo_40mm_Explosive,                      1,		500,	200
-		Ammo_40mm_Chemgas,                        1,		400,	150
-		Ammo_40mm_Smoke_Red,                      1,		200,	80
-		Ammo_40mm_Smoke_White,                    1,		200,	80
 		ExpansionRPG7,                            W,		5000,	2500
-		ExpansionAmmoRPG,                         1,		1000,	500
 		ExpansionLAW,                             W,		4000,	2000
-		ExpansionAmmoLAW,                         1,		800,	400
-		Ammo_Expansion_M203_HE,                   1,		500,	200
-		Expansion_M18SmokeGrenade_Teargas,        1,		300,	100
-		Ammo_Expansion_M203_Smoke_White,          1,		200,	80
-		Ammo_Expansion_M203_Smoke_Red,            1,		200,	80
-		Ammo_Expansion_M203_Smoke_Teargas,        1,		300,	100
-		Plastic_Explosive,                        1,		1500,	750
 
 <Trader> Weapon Supplies
 	<Category> Ammunition
@@ -1263,6 +1244,45 @@
 		Expansion_M1A_RailAtt,                    *,		200,	100
 		Expansion_MP5ScopeRail,                   *,		150,	75
 		Expansion_MP5_RailAtt,                    *,		150,	75
+
+	<Category> Grenades & Explosives
+		RGD5Grenade,                              *,		300,	100
+		M67Grenade,                               *,		300,	100
+		FlashGrenade,                             *,		300,	100
+		nm_Improgren,                             *,		200,	80
+		nm_Shrapnelgren,                          *,		350,	150
+		nm_IncendiaryGren,                        *,		350,	150
+		M18SmokeGrenade_Red,                      *,		300,	100
+		M18SmokeGrenade_Green,                    *,		300,	100
+		M18SmokeGrenade_White,                    *,		300,	100
+		M18SmokeGrenade_Yellow,                   *,		300,	100
+		M18SmokeGrenade_Purple,                   *,		300,	100
+		RDG2SmokeGrenade_White,                   *,		300,	100
+		RDG2SmokeGrenade_Black,                   *,		300,	100
+		Expansion_M18SmokeGrenade_Teargas,        *,		300,	100
+		Grenade_ChemGas,                          *,		400,	150
+		Plastic_Explosive,                        *,		1500,	750
+		ClaymoreMine,                             *,		1200,	600
+		ImprovisedExplosive,                      *,		800,	400
+		LandMineTrap,                             *,		900,	450
+		RemoteDetonator,                          *,		400,	200
+		RemoteDetonatorReceiver,                  *,		300,	150
+		RemoteDetonatorTrigger,                   *,		300,	150
+		Ammo_40mm_Explosive,                      1,		500,	200
+		Ammo_40mm_Chemgas,                        1,		400,	150
+		Ammo_40mm_Smoke_Red,                      1,		200,	80
+		Ammo_40mm_Smoke_White,                    1,		200,	80
+		Ammo_40mm_Smoke_Green,                    1,		200,	80
+		Ammo_40mm_Smoke_Black,                    1,		200,	80
+		ExpansionAmmoRPG,                         1,		1000,	500
+		ExpansionAmmoLAW,                         1,		800,	400
+		Ammo_Expansion_M203_HE,                   1,		500,	200
+		Ammo_Expansion_M203_Smoke_White,          1,		200,	80
+		Ammo_Expansion_M203_Smoke_Red,            1,		200,	80
+		Ammo_Expansion_M203_Smoke_Green,          1,		200,	80
+		Ammo_Expansion_M203_Smoke_Yellow,         1,		200,	80
+		Ammo_Expansion_M203_Smoke_Purple,         1,		200,	80
+		Ammo_Expansion_M203_Smoke_Teargas,        1,		300,	100
 
 <Trader> Clothing Trader
 	<Category> Glasses

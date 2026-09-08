@@ -2,6 +2,13 @@
 
 ## Needs in-game test (installed 2026-09-06, after full wipe)
 
+### Trader grenades/explosives unsellable + search OOM - FIXED (2026-09-07)
+- **Grenades could never be sold.** Every throwable in the Grenades category had `1` in the quantity column. Trader's `DoItemSellChecks` tests `getItemAmount(item) >= amount`, and a grenade/mine is not a Magazine and has no `varQuantityMax`, so `getItemAmount` returns 0 and `0 >= 1` always failed - listed and buyable, but the sell button never found the item. Every other quantity-less item in the file (tools, clothing, optics) uses `*`, which the parser resolves to 0. The 40mm rounds sold fine because they are magazines with an ammo count (confirmed in `TM_TradesLog`). All non-magazine entries switched to `*`.
+- **Category moved** from Weapon Trader to **Weapon Supplies** (the ammo trader, where explosives are expected) and renamed `Grenades & Explosives`; the three launchers (M79, ExpansionRPG7, ExpansionLAW) stay on the Weapon Trader as `Launchers`.
+- **Nine items added** that spawn as loot but were never sellable: `ClaymoreMine`, `ImprovisedExplosive`, `LandMineTrap`, `RemoteDetonator(+Receiver/Trigger)`, `Grenade_ChemGas`, `nm_Improgren`, `nm_Shrapnelgren`, `nm_IncendiaryGren`. Safe in the safezone: Trader's own `Grenade_Base.InitiateExplosion` / `Grenade_ChemGas.OnExplode` overrides delete them instead of detonating.
+- **Search OOM fixed properly**, so the 8 smoke variants removed on 2026-09-05 are back (M18 Yellow/Purple, RDG2 Black, 40mm Smoke Green/Black, M203 Smoke Green/Yellow/Purple). New `@TraderSearchFix` (client+server `-mod=`, `mod_src/TraderSearchFix/`) debounces `TraderMenu.updateItemPreview()` by 300 ms via `CALL_CATEGORY_GUI`, so a burst of keystrokes creates one 3D preview entity instead of one per character. The old workaround only reduced how many items matched; the leak was the per-keystroke `CreateObject()` pile-up against deferred `ObjectDelete()`.
+- **Test:** Weapon Supplies > Grenades & Explosives: sell a found grenade and a smoke, buy an M67 and a Claymore. Then type "smoke" one character at a time in the search box at BOTH traders - no crash, and the preview should settle on the selected item.
+
 ### Inventory Move Sounds on 1.29 - PATCHED (2026-09-07)
 - 1.29 removed vanilla `MagRifle_empty_in_SoundSet`; IMS plays it on every magazine/ammo/grenade move -> `EffectSound ... Invalid sound set` on the client (4x right before the Sep 7 heap-corruption crash). New `@InventoryMoveSoundsFix` (3_Game script, client+server, in both bat files) overrides `EffectSound.SetSoundSet()` and swaps the name for `MagRifle_fill_out_SoundSet`. A config override was tried and rejected: both IMS PBOs share the CfgPatches name `IMS_Sounds`, so it cannot be ordered after the movesounds config (server RPT showed our config processed first).
 - **Test:** move a magazine and a grenade in inventory; `%LOCALAPPDATA%\DayZ\script_*.log` must show no `MagRifle_empty_in_SoundSet` error, and a mag handling sound should play.
@@ -104,8 +111,8 @@
 - Fixed pre-existing bugs found while doing it: `Ford_Raptor_MonsterTruck` base class is not spawnable (scope 0) - replaced with its 6 real variants; Civic spawned with `Wheel_Main` (Jeep wheel) instead of `Honda_Civic_Wheel`; MotorHome referenced non-existent `MotorHome_Wheel` (real class `MotorHomeRV_Wheel`). Wheel counts now match each model's slot count (Kamaz 6, Ram 2021 10, etc.).
 - `cfgspawnabletypes.xml` and `custom/types_4kbossk.xml` regenerated from the mod's actual configs.
 
-### Trader: Weapon Trader OOM on "smoke" search - DONE (2026-09-05)
-- Reduced smoke variants in Grenades: M18 Red/Green/White, RDG2 White, 40mm Smoke Red/White, M203 Smoke Red/White (8 lines removed).
+### Trader: Weapon Trader OOM on "smoke" search - DONE (2026-09-05), SUPERSEDED (2026-09-07)
+- First pass only reduced how many items matched the search (8 smoke lines removed). Root cause is fixed for real by `@TraderSearchFix` and all 8 lines are back - see the entry at the top of this file.
 
 ### Enable Inventory In Vehicle + Sit Emotes — DONE
 - Custom client+server mod (`-mod=`) replaces removed Workshop mod (3594596641).
