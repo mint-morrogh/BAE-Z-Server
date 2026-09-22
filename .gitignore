@@ -202,3 +202,18 @@ config/@CREATE_GAMELABS_CFG_HERE/
 
 # Local-only debugging scratch notes
 ACTIVE_DEBUGGING.md
+
+# --- HyperSpace (managed — do not edit inside this block) ---
+# v3
+.hyperspace/
+.claude/
+Obsidian/
+memento/
+CLAUDE.md
+tmpclaude-*
+.env
+.env.local
+.env.*.local
+convex/_generated/
+.convex/
+# --- end HyperSpace ---
